@@ -1,0 +1,332 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% block title %} {% trans 'تفاصيل العمل' %} {% endblock %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block content %}
+
+
+<div class="row mt-4 pt-4">
+
+    <h1 class="{% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}" data-aos="fade-left">
+        {% trans ' تفاصيل العمل' %}
+    </h1>
+
+    <div class="well col-lg-9 col-xs-12 job-card position-relative" data-aos="fade-in">
+
+
+        <!-- MINI MANU -->
+        {% if request.user.is_authenticated %}
+        <!-- <span id="span-menu" type="button"
+            class="span-menu {% if LANGUAGE_CODE == 'ar' %} float-right {% else %} float-left {% endif %}"><i
+                class="fa fa-ellipsis-v" aria-hidden="true"></i></span> -->
+        <div class="btn-group" role="group">
+            <span id="btnGroupDrop1" type="button" class="btn dropdown-toggle {% if LANGUAGE_CODE == 'ar' %} pr-0 {% else %} pl-0
+    {% endif %}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+            </span>
+            <div class="dropdown-menu {% if LANGUAGE_CODE == 'ar' %} right-0 {% endif %}"
+                aria-labelledby="btnGroupDrop1">
+                {% if request.user.is_authenticated and request.user.is_superuser %}
+                {% if job.publish == False %}
+                <form action="" class="confirm" method="post">
+                    {% csrf_token %} {{ form.publish }}
+                    <div class="form-group">
+                        <button type="submit" id="org_confirm_btn" class="dropdown-item"
+                            title="{% trans 'الموافقة على النشر' %}">{% trans 'الموافقة على النشر' %} <i class="fas fa-check {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></button>
+                    </div>
+                </form>
+                {% elif job.publish == True %}
+                <form action="" class="deconfirm" method="post">
+                    {% csrf_token %} {{ form.publish }}
+                    <div class="form-group">
+                        <button type="submit" id="org_deconfirm_btn" class="dropdown-item"
+                            title="{% trans 'إلغاء نشر فرصة العمل' %}">{% trans 'إلغاء نشر فرصة العمل' %} <i class="fa fa-ban {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}" aria-hidden="true"></i></button>
+                    </div>
+                </form>
+                {% endif %}
+                <a href="{% url 'jobs_edit' job.id %}" class="dropdown-item"
+                    title="{% trans 'تعديل فرصة عمل' %}">{% trans 'تعديل فرصة عمل' %} <i class="fas fa-edit {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></a>
+                <a href="{% url 'jobs_delete' job.id %}" class="dropdown-item"
+                    title="{% trans 'حذف' %}">{% trans 'حذف' %} <i class="far fa-trash-alt {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></a>
+                {% endif %}
+
+                {% if job.publish == False and not request.user.is_superuser %}
+                    {% if request.user == job.user %}
+                    <a href="{% url 'jobs_edit' job.id %}" class="dropdown-item"
+                        title="{% trans 'تعديل فرصة عمل' %}">{% trans 'تعديل فرصة عمل' %} <i class="fas fa-edit {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+                {% endif %}"></i></a>
+                    {% else %}
+                    <a href="#" class="dropdown-item text-wrap">
+                        {% trans 'ليس لديك الصلاحية' %}
+                    </a>
+                    {% endif %}
+
+                {% elif job.publish == True and not request.user.is_superuser %}
+                <a href="#" class="dropdown-item text-wrap">
+                    {% trans 'لا يمكنك التعديل بعد الموافقة على النشر أو ليس لديك الصلاحية' %}
+                </a>
+                {% endif %}
+
+
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- <div id="mini-menu"
+            class="list-group mini-menu d-none {% if LANGUAGE_CODE == 'ar' %} menu-right {% else %} menu-left {% endif %}">
+        </div> -->
+
+        <!-- START CART -->
+        <strong>
+            <h2 class="text-center mt-3" id="job_title"> {% trans "اسم فرصة العمل" %} : {{ job.job_title }}</h2>
+        </strong>
+
+        <hr>
+
+        <p class="text-muted row">
+            <span class="col-3">
+                <i class="far fa-clock ml-2 mr-2"></i>
+                {% trans "تاريخ الإضافة" %}
+            </span>
+            <span class="col-9">
+                : {{ job.created_at|date:"Y-m-d" }}
+            </span>
+        </p>
+
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <!-- ORG LOGO -->
+                {% if job.org_name %}
+                <figure>
+                    <img src="{{ job.org_name.logo.url }}" name="{{ job.title }}" title="{{ job.title }}"
+                        alt="{{ job.title }}" width="100%" class="img-thumbnail rounded">
+                </figure>
+                {% elif job.other_org_name %}
+                <figure>
+                    <img src="{{ job.other_org_name.logo.url }}" name="{{ job.title }}" title="{{ job.title }}"
+                        alt="{{ job.title }}" width="100%" class="img-thumbnail rounded">
+                </figure>
+                {% else %}
+
+                {% if other.job|floatformat:"2" == job.id|floatformat:"2" %}
+                <figure>
+                    <img src="{{ other.logo.url }}" name="{{ other.name }}" title="{{ other.name }}"
+                        alt="{{ other.name }}" width="100%" class="img-thumbnail rounded">
+                </figure>
+                {% endif %}
+
+                {% endif %}
+            </div>
+            <div class="col-md-6 col-sm-12 d-flex justify-content-start align-items-start">
+                <!-- ORG NAME -->
+                <h3 class="">
+                    {% trans 'اسم المنظمة' %}
+                    {% if job.org_name %}
+                    <a href="{% url 'particip_detail' job.org_name.id %}" class="nav-link text-dark pl-0 pr-0">
+                        {{ job.org_name }}</a>
+                    {% elif job.other_org_name %}
+                    {{ job.other_org_name }}
+                    {% elif other.job|floatformat:"2" == job.id|floatformat:"2" %}
+                    {{ other.name }}
+                    {% else %}
+                    : {% trans 'لم يذكر' %}
+                    {% endif %}
+                </h3>
+
+            </div>
+        </div>
+
+
+        {% if request.user.is_authenticated and request.user.is_superuser %}
+        <p class="mt-2 text-muted row">
+            <span class="col-3">
+                {% trans "اسم اللذي أضاف فرصة العمل" %}
+            </span>
+            <span class="col-9">
+                : {{ job.user }}
+            </span>
+        </p>
+        {% endif %}
+
+
+        <p class="row">
+            <span class="col-3">
+                {% trans "نوع الوظيفة" %}
+            </span>
+            <span class="col-9">
+                : {{ job.get_job_type_display }}
+            </span>
+        </p>
+        <p class="row">
+            <span class="col-3">
+                {% trans "مجال العمل" %}
+            </span>
+            <span class="col-9">
+                : {{ job.get_job_domain_display }}
+            </span>
+        </p>
+
+        <div class="safe-content">
+            <p class="row">
+                <span class="col-3">
+                    {% trans "وصف فرصة العمل" %} <br>
+                </span>
+                <span class="col-9">
+                    : {{ job.job_description|safe }}
+                </span>
+            </p>
+        </div>
+
+
+        <p class="row">
+            <span class="col-3">
+                {% trans "مكان العمل" %}
+            </span>
+            <span class="col-9">
+                : {{ job.get_position_work_display }}
+            </span>
+        </p>
+        <p class="row">
+            <span class="col-3">
+                {% trans "المدينة" %}
+            </span>
+            <span class="col-9">
+                {% if job.city_work %}
+                : {{ job.city_work }}
+                {% else %}
+                : {% trans 'لم يذكر' %}
+                {% endif %}
+            </span>
+        </p>
+        <p class="row">
+            <span class="col-3">
+                {% trans "المنطقة" %}
+            </span>
+            <span class="col-9">
+                {% if job.job_area %}
+                : {{ job.job_area }}
+                {% else %}
+                : {% trans 'لم يذكر' %}
+                {% endif %}
+            </span>
+        </p>
+
+        <p class="row">
+            <span class="col-3">
+                {% trans "مدة العمل" %}
+            </span>
+            <span class="col-9">
+                {% if job.period_months %}
+                : {{ job.period_months }}
+                {% else %}
+                : {% trans 'لم يذكر' %}
+                {% endif %}
+            </span>
+        </p>
+
+        <p class="row">
+            <span class="col-3">
+                {% trans "الخبرة المطلوبة" %}
+            </span>
+            <span class="col-9">
+                : {{ job.get_experience_display }}
+            </span>
+        </p>
+
+        <p class="row">
+            <span class="col-3">
+                {% trans "تاريخ إغلاق التقدم للوظيفة" %}
+            </span>
+            <span class="col-9">
+                <strong>
+                    : {{ job.dead_date|date:"c" }}
+                </strong>
+            </span>
+        </p>
+
+        <div class="safe-content">
+            <p class="row">
+                <span class="col-3">
+                    {% trans "طريقة التقدم للوظيفة" %} <br>
+                </span>
+                <span class="col-9">
+                    : {{ job.job_aplay|safe }}
+                </span>
+            </p>
+        </div>
+
+        <!-- SOCIAL -->
+
+        <div class="social-share col-1 position-absolute d-flex flex-column align-items-center {% if LANGUAGE_CODE == 'ar'%}
+      right {% else %} left {% endif %}">
+
+            <a href="#" class="facebook-btn" target="_blank" title="{% trans 'مشاركة على فيسبوك' %}">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="twitter-btn" target="_blank" title="{% trans 'مشاركة على تويتر' %}">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="linkedin-btn" target="_blank" title="{% trans 'مشاركة على لينكدين' %}">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="whatsapp-btn" target="_blank" title="{% trans 'مشاركة على واتس اب' %}">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+
+
+    </div>
+
+    <!-- THE LATEST JOBS  -->
+    {% if jobs.count > 0 %}
+    <div class="col-lg-3 d-none d-lg-block last3">
+        <h2 class="text-center mb-4 {% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}">
+            {% trans 'أحدث ثلاثة فرص عمل' %} </h2>
+        {% for job in jobs|slice:3 %}
+        <a href="{% url 'jobs_detail' job.id %}" class='bg-light nav-link border-bottom pb-3 mb-2'>
+            <div class="news-card">
+                <p class="text-dark"> {{ job.job_title }} </p>
+
+                <!-- ORG LOGO -->
+
+                <figure>
+
+                    {% if job.org_name %}
+                    <img src="{{ job.org_name.logo.url }}" name="{{ job.title }}" title="{{ job.title }}"
+                        alt="{{ job.title }}" class="w-100">
+
+                    {% elif job.other_org_name %}
+
+                    <img src="{{ job.other_org_name.logo.url }}" name="{{ job.title }}" title="{{ job.title }}"
+                        alt="{{ job.title }}" class="w-100">
+
+                    {% else %}
+
+                    {% if other.job|floatformat:"2" == job.id|floatformat:"2" %}
+
+                    <img src="{{ other.logo.url }}" name="{{ other.name }}" title="{{ other.name }}"
+                        alt="{{ other.name }}" class="w-100">
+
+                    {% endif %}
+                    {% endif %}
+                    <figcaption class="text-muted"><i class="far fa-clock ml-2 mr-2"></i>{{ job.created_at|timesince }}
+                    </figcaption>
+                </figure>
+
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+
+
+
+</div>
+{% endblock %}

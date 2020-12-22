@@ -1,0 +1,229 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% block title %} {% trans 'تفاصيل الخبر' %} {% endblock %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block content %}
+
+<!-- FROM FACEBOOK -->
+<!-- <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v9.0"
+  nonce="YVqJemAo"></script> -->
+
+
+<div class="row mt-4 pt-4">
+  <h1 class="{% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}" data-aos="fade-left">
+    {% trans 'تفاصيل الخبر' %} </h1>
+
+  <!-- NEWS DETAIL -->
+  <div class="well col-lg-9 job-card col-xs-12 position-relative" data-aos="fade-right">
+
+    <!-- MINI MANU -->
+    {% if request.user.is_authenticated %}
+    <!-- <span id="span-menu" type="button"
+      class="span-menu {% if LANGUAGE_CODE == 'ar' %} float-right {% else %} float-left {% endif %}"><i
+        class="fa fa-ellipsis-v" aria-hidden="true"></i></span> -->
+    <div class="btn-group" role="group">
+      <!-- BTN -->
+      <span id="btnGroupDrop1" type="button" class="btn dropdown-toggle {% if LANGUAGE_CODE == 'ar' %} pr-0 {% else %} pl-0
+    {% endif %}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+      </span>
+      <!-- MENU -->
+      <div class="dropdown-menu {% if LANGUAGE_CODE == 'ar' %} right-0 {% endif %}" aria-labelledby="btnGroupDrop1">
+        {% if request.user.is_authenticated and request.user.is_superuser %}
+        {% if new.publish == False %}
+        <form action="" class="confirm" method="post">
+          {% csrf_token %} {{ form.publish }}
+          <div class="form-group">
+            <button type="submit" id="org_confirm_btn" class="dropdown-item"
+              title="{% trans 'الموافقة على نشر الخبر' %}">{% trans 'الموافقة على نشر الخبر' %} <i class="fas fa-check {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></button>
+          </div>
+        </form>
+        {% elif new.publish == True %}
+        <form action="" class="deconfirm" method="post">
+          {% csrf_token %} {{ form.publish }}
+          <div class="form-group">
+            <button type="submit" id="org_deconfirm_btn" class="dropdown-item"
+              title="{% trans 'إلغاء نشر الخبر' %}">{% trans 'إلغاء نشر الخبر' %} <i class="fa fa-ban {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}" aria-hidden="true"></i></button>
+          </div>
+        </form>
+        {% endif %}
+        <a href="{% url 'news_edit' new.id %}" class="dropdown-item"
+          title="{% trans 'تعديل الخبر' %}">{% trans 'تعديل الخبر' %} <i class="fas fa-edit {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></a>
+
+        <a href="{% url 'news_delete' new.id %}" class="dropdown-item"
+          title="{% trans 'حذف الخبر' %}">{% trans 'حذف الخبر' %} <i class="far fa-trash-alt {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></a>
+        {% endif %}
+
+
+        {% if new.publish == False and not request.user.is_superuser %}
+        {% if request.user == new.user %}
+        <a href="{% url 'news_edit' new.id %}" class="dropdown-item"
+          title="{% trans 'تعديل الخبر' %}">{% trans 'تعديل الخبر' %} <i class="fas fa-edit {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></a>
+        {% else %}
+        <a href="#" class="dropdown-item text-wrap">
+          {% trans 'ليس لديك الصلاحية' %}
+        </a>
+        {% endif %}
+
+        {% elif new.publish == True and not request.user.is_superuser %}
+        <a href="#" class="dropdown-item text-wrap">
+          {% trans 'لا يمكنك التعديل بعد الموافقة على النشر أو ليس لديك الصلاحية' %} </a>
+        {% endif %}
+
+
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- <div id="mini-menu"
+      class="list-group mini-menu d-none {% if LANGUAGE_CODE == 'ar' %} menu-right {% else %} menu-left {% endif %}">
+    </div> -->
+
+    <!-- START CART -->
+
+    <strong>
+      <h1 class="text-center mt-3" id="post_title"> {{ new.title }}</h1>
+    </strong>
+
+    <p class="text-muted row">
+      <span class="col-3">
+        <i class="far fa-clock ml-2 mr-2"></i>
+        {% trans "تاريخ إضافة الخبر" %}
+      </span>
+      <span class="col-9">
+        : {{ new.created_at|date:"Y-m-d" }}
+      </span>
+    </p>
+
+
+    <h3 class="mt-4 row">
+      <span class="col-3">
+        {% trans "اسم المنظمة" %}
+      </span>
+      <span class="col-9">
+        <a href="{% url 'particip_detail' new.org_name.id %}" class="nav-link text-dark pl-0 pr-0">
+          : {{ new.org_name }}
+        </a>
+      </span>
+
+
+    </h3>
+
+    {% if request.user.is_authenticated and request.user.is_superuser %}
+    <p class="text-muted mt-4 row">
+      <span class="col-3">
+        {% trans "اسم اللذي أضاف الخبر" %}
+      </span>
+      <span class="col-9">
+        : {{ new.user }}
+        {% if new.user.is_staff %}
+        <i class="fas fa-star"></i>
+        {% endif %}
+      </span>
+    </p>
+    {% endif %}
+
+    <a href="">
+      <img src="{{ new.image.url }}" id="post_img" class="w-100" name="{{ new.title }}" title="{{ new.title }}"
+        alt="{{ new.title }}"></a>
+
+    <div class="safe-content">
+      <p class="h4 mt-3 text-al-just p-1" id="post_content"> {{ new.content|safe }}</p>
+    </div>
+
+
+    <!-- SOCIAL -->
+
+    <div class="social-share col-1 position-absolute d-flex flex-column align-items-center {% if LANGUAGE_CODE == 'ar'%}
+      right {% else %} left {% endif %}">
+      <!-- FACEBOOK -->
+      <!-- 
+      <iframe
+        src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fkhalilescm02.pythonanywhere.com%2Fnews_detail%2F3&layout=button_count&size=small&width=91&height=20&appId"
+        width="91" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> -->
+
+      <!-- <a target="_blank"
+        href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}&image={{ new.image.url }}"
+        class="btn position-relative mb-2" title="{% trans 'مشاركة على فيسبوك' %}">
+        <i class="fab fa-facebook-f"></i>
+      </a> -->
+
+      <!-- TWITTER -->
+
+      <!-- <a target="_blank" href="https://twitter.com/home?status={{ share_string }}%20{{ request.build_absolute_uri }}"
+        class="btn position-relative mt-2 mb-2 mt-0" title="{% trans 'مشاركة على تويتر' %}">
+        <i class="fab fa-twitter"></i>
+      </a> -->
+
+      <!-- LINKEDIN -->
+
+      <!-- <a target="_blank"
+        href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title={{ new.title }}&summary={{ share_string }}&source={{ request.build_absolute_uri }}"
+        class="btn position-relative mt-2 mt-0" title="{% trans 'مشاركة على لينكدين' %}">
+        <i class="fab fa-linkedin-in"></i>
+      </a> -->
+
+      <a href="#" class="facebook-btn" target="_blank" title="{% trans 'مشاركة على فيسبوك' %}">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="#" class="twitter-btn" target="_blank" title="{% trans 'مشاركة على تويتر' %}">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#" class="linkedin-btn" target="_blank" title="{% trans 'مشاركة على لينكدين' %}">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="#" class="whatsapp-btn" target="_blank" title="{% trans 'مشاركة على واتس اب' %}">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+
+      <!-- FROM FACEBOOK -->
+      <!-- <div class="fb-share-button" data-href="{{ request.build_absolute_uri }}/{{ new.id }}" data-layout="button_count"
+        data-size="small">
+        <a target="_blank"
+          href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2Fnews_detail%2F10&amp;src=sdkpreparse"
+          class="fb-xfbml-parse-ignore">Partager</a>
+
+      </div> -->
+
+    </div>
+
+
+  </div>
+
+  <!-- THE LATEST NEWS  -->
+  <div class="col-lg-3 d-none d-lg-block last3" data-aos="fade-right">
+    <h2 class="text-center mb-4 {% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}">
+      {% trans 'أحدث ثلاثة أخبار' %} </h2>
+    {% for new in news|slice:3 %}
+    <a href="{% url 'news_detail' new.id%}" class='bg-light nav-link border-bottom pb-3 mb-2'>
+      <div class="news-card">
+        <p class="text-dark"> {{ new.title }} </p>
+
+        <figure>
+          <img src="{{ new.image.url }}" class="w-100" name="{{ new.title }}" title="{{ new.title }}"
+            alt="{{ new.title }}">
+          <figcaption class="text-muted"> <i class="far fa-clock"></i> {{ new.created_at|timesince }} </figcaption>
+        </figure>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+
+
+
+
+</div>
+
+
+
+{% endblock %}

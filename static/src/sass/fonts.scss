@@ -1,0 +1,88 @@
+// FONTAWESOME
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+
+// @import url(//db.onlinewebfonts.com/c/f6e895d8c1d12739e54a0ca9df6903d5?family=NeoSansArabic);
+// @font-face {
+// font-family: "NeoSansArabic";
+// src: url("//db.onlinewebfonts.com/t/f6e895d8c1d12739e54a0ca9df6903d5.eot");
+// src: url("//db.onlinewebfonts.com/t/f6e895d8c1d12739e54a0ca9df6903d5.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/f6e895d8c1d12739e54a0ca9df6903d5.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/f6e895d8c1d12739e54a0ca9df6903d5.woff") format("woff"), url("//db.onlinewebfonts.com/t/f6e895d8c1d12739e54a0ca9df6903d5.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/f6e895d8c1d12739e54a0ca9df6903d5.svg#NeoSansArabic") format("svg");
+// }
+
+// https://scgmedia.blob.core.windows.net/static/dist%2F
+
+@font-face {
+    font-family: "Neo Sans Arabic Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Neo Sans Arabic Regular"),
+        url("../fonts/neo-sans-arabic-cufonfonts-webfont/Neo-Sans-Arabic-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Neo Sans Arabic Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Neo Sans Arabic Regular"),
+        url("../fonts/neo-sans-arabic-cufonfonts-webfont/NeoSansArabic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Neo Sans Arabic Light";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Neo Sans Arabic Light"),
+        url("../fonts/neo-sans-arabic-cufonfonts-webfont/NeoSansArabicLight.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Neo Sans Arabic Medium";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Neo Sans Arabic Medium"),
+        url("../fonts/neo-sans-arabic-cufonfonts-webfont/NeoSansArabicMedium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Neo Sans Arabic Bold";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Neo Sans Arabic Bold"),
+        url("../fonts/neo-sans-arabic-cufonfonts-webfont/NeoSansArabicBold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Neo Sans Arabic Black";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Neo Sans Arabic Black"),
+        url("../fonts/neo-sans-arabic-cufonfonts-webfont/NeoSansArabicBlack.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Neo Sans Arabic Ultra";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Neo Sans Arabic Ultra"),
+        url("../fonts/neo-sans-arabic-cufonfonts-webfont/NeoSansArabicUltra.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Neo Sans Medium";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Neo Sans Medium"),
+        url("../fonts/neo-sans-arabic-cufonfonts-webfont/Neo_Sans_Medium.woff") format("woff");
+}
+
+
+
+// Greta Arabic
+@font-face {
+    font-family: "GretaArabic-Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("GretaArabic-Regular"),
+        url("../fonts/Greta Arabic Regular/Greta Arabic Regular.ttf") format("ttf");
+}

@@ -1,0 +1,252 @@
+{% load static i18n phonenumber_filters %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+
+<div id="sidebar-wrapper" class=" {% if LANGUAGE_CODE == 'ar' %} br-left {% else %} br-right {% endif %}">
+    <button class="btn btn-up"><i class="fas fa-angle-double-up"></i></button>
+
+    <!-- DASBOARD ICONS -->
+    <!-- <div class="brand sidebar-brand d-flex justify-content-center align-items-center mb-3 pb-3">
+        <i class="fas fa-tachometer-alt text-white text-center display-3"></i>
+    </div> -->
+
+    <!-- SIDEBAR BTN -->
+    <!-- <a href=""
+        class=" position-absolute sidebar-btn {% if LANGUAGE_CODE == 'ar' %} btn-left {% else %} btn-right {% endif %} "
+        id="menu-toggle">
+        <i class="fa {% if LANGUAGE_CODE == 'ar' %} fa-angle-double-right {% else %} fa-angle-double-left {% endif %}"
+            aria-hidden="true"></i>
+    </a> -->
+
+    <!-- MENU -->
+    <ul class="sidebar-navbar">
+        <hr>
+        <li class="nav-item">
+            <a class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'لوحة التحكم الخاصة باﻹدارة' %}">
+                <i
+                    class="fas fa-tachometer-alt text-center {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %} "></i>
+            </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+            <!-- <a href="{% url 'password_change' %}" class="nav-link">
+                {% trans 'تغيير كلمة المرور' %}
+                <i class="fas fa-key {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %} "></i>
+            </a> -->
+
+            <a href="{% url 'password_change' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'تغيير كلمة المرور' %}">
+                <i class="fas fa-key {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %} "></i>
+            </a>
+
+        </li>
+        <hr class="{% if request.resolver_match.url_name == 'home' %} hr-home {% endif %}">
+        <li class="nav-item">
+            <!-- <a href="{% url 'org_profile' %}" class="nav-link">
+                {% trans 'تقديم طلب اشتراك جديد لمنظمة' %}
+                <i class="fa fa-id-card {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"></i>
+            </a> -->
+            <a href="{% url 'org_profile' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'تقديم طلب اشتراك جديد لمنظمة' %}">
+                <i class="fas fa-plus-square {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"></i>
+            </a>
+
+        </li>
+        <hr>
+        <li class="nav-item">
+            <!-- <a href="{% url 'orgs_orders_etude' %}" class="nav-link">
+                {% trans 'طلبات المنظمات قيد الدراسة' %}
+                <i
+                    class="fas fa-chalkboard-teacher {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"></i>
+            </a> -->
+            <a href="{% url 'orgs_orders_etude' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'طلبات المنظمات قيد الدراسة' %}">
+                <i
+                    class="fas fa-chalkboard-teacher {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"></i>
+            </a>
+
+        </li>
+        <hr>
+        <!-- <li class="nav-item">
+            <a href="{% url 'orgs_orders_published' %}" class="nav-link nav-link-icon d-flex justify-content-center" title="{% trans 'طلبات المنظمات الموافق عليها' %}">
+                <i class="fa fa-check-circle {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"
+                    aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr> -->
+        <li class="nav-item">
+            <a href="{% url 'orgs_add_news' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'إضافة خبر لمنظمة' %}">
+                <i class="fas fa-plus-square {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"
+                    aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+            <a href="{% url 'org_news_not_pub' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'أخبار المنظمات قيد الدراسة' %}">
+                <i class="fas fa-chalkboard-teacher {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"
+                    aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+            <a href="{% url 'add_rapport' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'إضافة تقرير أو دراسة لمنظمة' %}">
+                <i class="fas fa-plus-square {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"
+                    aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+            <a href="{% url 'orgs_rapport_not_pub' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'تقارير و دراسات المنظمات قيد الدراسة' %}">
+                <i class="fas fa-chalkboard-teacher {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"
+                    aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+            <a href="{% url 'add_data' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'إضافة بيان لمنظمة' %}">
+                <i class="fas fa-plus-square {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"
+                    aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+            <a href="{% url 'data_not_pub' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'بيانات المنظمات قيد الدراسة' %}">
+                <i class="fas fa-chalkboard-teacher {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"
+                    aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+            <a href="{% url 'add_media' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'إضافة محتوى سمعي و بصري لمنظمة' %}">
+                <i class="fas fa-plus-square {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"
+                    aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+            <a href="{% url 'media_not_pub' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'المحتوى السمعي و البصري للمنظمات قيد الدراسة' %}">
+                <i class="fas fa-chalkboard-teacher {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"
+                    aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+            <a href="{% url 'add_research' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'إضافة بحث خارجي لمنظمة' %}">
+                <i class="fas fa-plus-square {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"
+                    aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+            <a href="{% url 'research_not_pub' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'اﻷبحاث الخارجية للمنظمات قيد الدراسة' %}">
+                <i class="fas fa-chalkboard-teacher {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"
+                    aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+            <a href="{% url 'orgs_add_job' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'إضافة فرصة عمل' %}">
+                <i class="fas fa-plus-square {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"
+                    aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+            <a href="{% url 'org_jobs_not_pub' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'فرص العمل للمنظمات قيد الدراسة' %}">
+                <i class="fas fa-chalkboard-teacher {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"
+                    aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+            <a href="{% url 'orgs_add_funding' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'إضافة فرصة تمويل لمنظمة' %}">
+                <i class="fas fa-plus-square {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"
+                    aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+            <a href="{% url 'org_funding_not_pub' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'فرص تمويل المنظمات قيد الدراسة' %}">
+                <i class="fas fa-chalkboard-teacher {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"
+                    aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+            <a href="{% url 'add_finance_perso' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'إضافة فرصة تمويل للأفراد' %}">
+                <i class="fas fa-plus-square {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"
+                    aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+            <a href="{% url 'finance_perso_not_pub' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'فرص تمويل اﻷفراد قيد الدراسة' %}">
+                <i class="fas fa-chalkboard-teacher {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"
+                    aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+            <a href="{% url 'orgs_add_capacity' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'إضافة فرصة بناء القدرات' %}">
+                <i class="fas fa-plus-square {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"
+                    aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+            <a href="{% url 'org_capacity_not_pub' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'فرص بناء القدرات للمنظمات قيد الدراسة' %}">
+                <i class="fas fa-chalkboard-teacher {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"
+                    aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+            <a href="{% url 'orgs_add_devs' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'إضافة دليل تطوير' %}">
+                <i class="fas fa-plus-square {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"
+                    aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr>
+        <li class="nav-item">
+            <a href="{% url 'org_devs_not_pub' %}" class="nav-link nav-link-icon d-flex justify-content-center"
+                title="{% trans 'دليل التطوير للمنظمات قيد الدراسة' %}">
+                <i class="fas fa-chalkboard-teacher {% if LANGUAGE_CODE == 'ar' %} left {% else %} right {% endif %}"
+                    aria-hidden="true"></i>
+            </a>
+        </li>
+        <hr>
+
+        <!-- BACK -->
+        <hr>
+        <li class="nav-item">
+            <button type="button" class="nav-link active nav-link-icon d-flex justify-content-center"
+                onclick="history.back();" title="{% trans 'عودة إلى الصفحة السابقة' %}">
+                <i class="fa {% if LANGUAGE_CODE == 'ar' %} fa-chevron-circle-right left {% else %} fa-chevron-circle-left right {% endif %}"
+                    aria-hidden="true"></i>
+            </button>
+        </li>
+        <hr>
+    </ul>
+    <button class="btn btn-down"><i class="fas fa-angle-double-down"></i></button>
+</div>

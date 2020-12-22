@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static i18n  crispy_forms_tags %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block title %} {% trans 'دعوة صديق' %} {% endblock %}
+{% block content %}
+
+<div class="mt-5">
+    <h1 class="{% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}" data-aos="fade-left">
+        {% trans 'دعوة صديق' %}
+    </h1>
+
+    <form method="post" action="." class='register' data-aos="fade-right">
+        {% if LANGUAGE_CODE == 'ar' %}
+        <h3 class="text-center">
+            أدخل اسم و بريد الكتروني لصديق و اضغط إرسال دعوة لدعوة صديق للانضمام إلى الموقع
+        </h3>
+        {% elif LANGUAGE_CODE == 'en' %}
+        <h3 class="text-center">Enter your friend name and email below, and click "send invite" to invite your friend to
+            join the site:</h3>
+        {% elif LANGUAGE_CODE == 'ku' %}
+        <h3 class="text-center">Enter your friend name and email below, and click "send invite" to invite your friend to
+            join the site:</h3>
+
+        {% endif %}
+
+        {% csrf_token %}
+        {{ form|crispy}}
+        <input type="submit" value="{% trans 'إرسال دعوة' %}" class='btn btn-block' />
+    </form>
+</div>
+{% endblock %}

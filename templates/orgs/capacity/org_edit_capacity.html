@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static i18n crispy_forms_tags %}
+
+{% block title %} {% trans " تعديل فرصة بناء القدرات" %} {% endblock %}
+
+{% block content %}
+
+
+<div class="row mt-4 pt-4 mb-4">
+    <h1 class="{% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}" data-aos="fade-left">
+        {% trans "تعديل فرصة بناء القدرات" %} </h1>
+
+    {% if request.user.is_authenticated %}
+    {% if request.user == funding.user or request.user.is_staff %}
+
+    <form action="" method="post" id="add_capacity" data-cities-url="{% url 'ajax_load_cities' %}" class="register"
+        enctype="multipart/form-data" data-aos="fade-right">
+        {% csrf_token %}
+        {{ form.media }}
+
+        {% if request.user.is_authenticated and request.user.is_staff %}
+        <div class="for-group">
+            {{ form.org_name|as_crispy_field }}
+        </div>
+        {% endif %}
+        <div class="for-group">
+            {{ form.name_capacity|as_crispy_field }}
+        </div>
+        <div class="for-group">
+            {{ form.title_capacity|as_crispy_field }}
+        </div>
+        <div class="for-group">
+            {{ form.capacity_description|as_crispy_field }}
+        </div>
+        <div class="for-group">
+            {{ form.capacity_type|as_crispy_field }}
+        </div>
+        <div class="for-group">
+            {{ form.position_work|as_crispy_field }}
+        </div>
+        <div class="for-group">
+            {{ form.city_work|as_crispy_field }}
+        </div>
+        <div class="for-group">
+            {{ form.capacity_domain|as_crispy_field }}
+        </div>
+        <div class="for-group">
+            {{ form.capacity_dead_date|as_crispy_field }}
+        </div>
+        <div class="for-group">
+            {{ form.capacity_reqs|as_crispy_field }}
+        </div>
+        <div class="for-group">
+            {{ form.capacity_guid|as_crispy_field }}
+        </div>
+        <div class="for-group">
+            {{ form.capacity_url|as_crispy_field }}
+        </div>
+
+
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-block mt-3" value='{% trans "تعديل" %}'>
+        </div>
+
+
+    </form>
+    {% endif %}
+    {% endif %}
+
+
+</div>
+
+{% endblock %}

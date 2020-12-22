@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} تفاصيل بحث خارجي {% endblock %}
+
+{% block content %}
+<h1>تفاصيل بحث خارجي</h1>
+
+<div class="row">
+    <div class="col-3 pt-4">
+        <div class="card" style="width: 18rem;">
+
+            <div class="card-body">
+                <h5>اسم الجهة</h5>
+                <h5 class="card-title">عنوان البحث</h5>
+                <h5 class="card-title">مجال البحث</h5>
+                <p class="text-muted">تاريخ البحث</p>
+                
+
+                {% if id <= '4' %}
+                <a href="#" class="btn">موافق على النشر</a>
+                <a href="#" class="btn">رفض البحث</a>
+                {% endif %}
+                <a href="" class="btn btn-block btn-social btn-facebook mt-4"><span
+                        class="fa fa-facebook"></span> مشاركة على فيسبوك</a>
+            </div>
+            <a href="{% url 'research' %}" class="btn btn-block"> عودة إلى صفحة اﻷبحاث الخارجية </a>
+        </div>
+
+    </div>
+    <div class="col-9">
+        <p>ملف البحث</p>
+        <object data="{% static 'media/test.pdf' %}" type="application/pdf" title="rapport" width="800"
+            height="885"></object>
+    </div>
+</div>
+
+
+
+{% endblock %}

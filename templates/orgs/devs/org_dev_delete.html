@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static i18n crispy_forms_tags %}
+
+{% block title %} {% trans "حذف الدليل" %} {% endblock %}
+
+{% block content %}
+
+
+<div class="row mt-4 pt-4 mb-4">
+    <h1 class="mt-4 mb-4 pb-4 {% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}"
+        data-aos="fade-left">
+        {% trans "حذف دليل التطوير" %} </h1>
+
+    <h2> {% trans "هل أنت متأكد من رغبتك في حذف دليل التطوير بعنوان" %} : {{ devs.title_dev}} </h2>
+
+    <form action="" method="post" class="register" enctype="multipart/form-data" data-aos="fade-right">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-block mt-3" value='{% trans "حذف " %}'>
+        </div>
+        <button type="button" class="btn btn-block nav-link active nav-link-icon d-flex justify-content-center"
+            onclick="history.back();" title="{% trans 'عودة إلى الصفحة السابقة' %}">
+            {% trans 'عودة إلى الصفحة السابقة' %}
+        </button>
+    </form>
+
+
+
+
+</div>
+
+{% endblock %}

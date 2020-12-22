@@ -1,0 +1,378 @@
+{% extends 'base.html' %}
+{% load static i18n crispy_forms_tags %}
+
+{% block title %} {% trans "تفاصيل فرصة تمويل للأفراد" %} {% endblock %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block content %}
+
+
+<div class="row mt-4 pt-4">
+    <h1 class="{% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}" data-aos="fade-left">
+        {% trans "تفاصيل فرصة تمويل للأفراد" %} </h1>
+
+    <div class="well col-lg-9 col-xs-12 job-card position-relative" data-aos="fade-in">
+
+        <!-- MINI MANU -->
+        {% if request.user.is_authenticated %}
+        <!-- <span id="span-menu" type="button"
+            class="span-menu {% if LANGUAGE_CODE == 'ar' %} float-right {% else %} float-left {% endif %}"><i
+                class="fa fa-ellipsis-v" aria-hidden="true"></i></span> -->
+        <div class="btn-group" role="group">
+            <span id="btnGroupDrop1" type="button" class="btn dropdown-toggle {% if LANGUAGE_CODE == 'ar' %} pr-0 {% else %} pl-0
+    {% endif %}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+            </span>
+            <div class="dropdown-menu {% if LANGUAGE_CODE == 'ar' %} right-0 {% endif %}"
+                aria-labelledby="btnGroupDrop1">
+                {% if request.user.is_authenticated and request.user.is_superuser %}
+                {% if perso.publish == False %}
+                <form action="" class="confirm" method="post">
+                    {% csrf_token %} {{ form.publish }}
+                    <div class="form-group">
+                        <button type="submit" id="org_confirm_btn" class="dropdown-item"
+                            title="{% trans 'الموافقة على النشر' %}">{% trans 'الموافقة على النشر' %} <i class="fas fa-check {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></button>
+                    </div>
+                </form>
+                {% elif perso.publish == True %}
+                <form action="" class="deconfirm" method="post">
+                    {% csrf_token %} {{ form.publish }}
+                    <div class="form-group">
+                        <button type="submit" id="org_deconfirm_btn" class="dropdown-item"
+                            title="{% trans 'إلغاء نشر الدليل' %}">{% trans 'إلغاء نشر الدليل' %} <i class="fa fa-ban {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}" aria-hidden="true"></i></button>
+                    </div>
+                </form>
+                {% endif %}
+                <a href="{% url 'finance_perso_edit' perso.id %}" class="dropdown-item"
+                    title="{% trans 'تعديل فرصة التمويل' %}">{% trans 'تعديل فرصة التمويل' %} <i class="fas fa-edit {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></a>
+                <a href="{% url 'finance_perso_delete' perso.id %}" class="dropdown-item"
+                    title="{% trans 'حذف' %}">{% trans 'حذف' %}
+                    <i class="far fa-trash-alt {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></a>
+                {% endif %}
+
+
+                {% if perso.publish == False and not request.user.is_superuser %}
+                {% if request.user == perso.user or request.user.is_staff %}
+                <a href="{% url 'finance_perso_edit' perso.id %}" class="dropdown-item"
+                    title="{% trans 'تعديل فرصة التمويل' %}">{% trans 'تعديل فرصة التمويل' %} <i class="fas fa-edit {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></a>
+                {% else %}
+                {% if not request.user.is_superuser %}
+                <a href="#" class="dropdown-item text-wrap">
+                    {% trans 'ليس لديك الصلاحية' %} </a>
+                {% endif %}
+                {% endif %}
+                {% else %}
+                {% if not request.user.is_superuser %}
+                <a href="#" class="dropdown-item text-wrap">
+                    {% trans 'لا يمكنك التعديل بعد الموافقة على النشر أو ليس لديك الصلاحية' %} </a>
+                {% endif %}
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- <div id="mini-menu"
+            class="list-group mini-menu d-none {% if LANGUAGE_CODE == 'ar' %} menu-right {% else %} menu-left {% endif %}">
+        </div> -->
+
+        <!-- START CART -->
+        <strong>
+            <h1 class="text-center mt-3" id="perso_fund_domain"> {% trans 'نوع المنحة' %} :
+                {{ perso.get_fund_type_display }}</h1>
+        </strong>
+
+        <hr>
+
+        <p class="text-muted row">
+            <span class="col-3">
+                <i class="far fa-clock ml-2 mr-2"></i>
+                {% trans "تاريخ الإضافة" %}
+            </span>
+            <span class="col-9">
+                : {{ perso.created_at|timesince }}
+            </span>
+        </p>
+
+
+        <div class="row">
+            <div class="col">
+                {% if perso.logo %}
+                <figure>
+                    <img src="{{ perso.logo.url }}"
+                        name="{% if perso.org_name %} {{ perso.org_name }} {% else %} {{ perso.name_funding }} {% endif %}"
+                        title="{% if perso.org_name %} {{ perso.org_name }} {% else %} {{ perso.name_funding }} {% endif %}"
+                        alt="{% if perso.org_name %} {{ perso.org_name }} {% else %} {{ perso.name_funding }} {% endif %}"
+                        width="100%" class="img-thumbnail rounded">
+                </figure>
+                {% endif %}
+            </div>
+            <div class="col d-flex justify-content-start align-items-center">
+                <h2 class="">
+                    {% if perso.org_name %}
+                    <a href="{% url 'particip_detail' perso.org_name.id %}" class="nav-link text-dark pl-0 pr-0">
+                        {% trans "اسم المنظمة" %} : {{ perso.org_name }}</a>
+                    {% else %}
+                    {% trans 'الجهة المانحة' %} :
+                    {{ perso.name_funding }}
+                    {% endif %}
+                </h2>
+            </div>
+        </div>
+
+
+
+        {% if request.user.is_authenticated and request.user.is_superuser %}
+        <p class="mt-2 row">
+            <span class="col-3">
+                {% trans "اسم اللذي أضاف فرصة التمويل" %}
+            </span>
+            <span class="col-9">
+                : {{ perso.user }}
+            </span>
+        </p>
+        {% endif %}
+
+        <div class="safe-content">
+            <p class="row">
+                <span class="col-3">
+                    {% trans 'لمحة عن الجهة المانحة' %}
+                </span>
+                <span class="col-9">
+                    {% if perso.fund_org_description %}
+                    : {{ perso.fund_org_description|safe }}
+                    {% else %}
+                    : {% trans 'لم يذكر' %}
+                    {% endif %}
+                </span>
+            </p>
+        </div>
+
+        <p class="row">
+            <span class="col-3">
+                {% trans 'فئة المنحة' %}
+            </span>
+            <span class="col-9">
+                {% if perso.category %}
+                : {{ perso.get_category_display }}
+                {% else %}
+                : {% trans 'لم يذكر' %}
+                {% endif %}
+            </span>
+        </p>
+
+        <!-- <p class="row">
+            <span class="col-3">
+                {% trans 'نوع المنحة' %}
+            </span>
+            <span class="col-9">
+                : {{ perso.get_fund_type_display }}
+            </span>
+        </p> -->
+
+        <p class="row">
+            <span class="col-3">
+                {% trans 'المستوى التعليمي' %}
+            </span>
+            <span class="col-9">
+                {% if perso.study_level %}
+                : {{ perso.get_study_level_display }}
+                {% else %}
+                : {% trans 'لم يذكر' %}
+                {% endif %}
+            </span>
+        </p>
+
+        <p class="row">
+            <span class="col-3">
+                {% trans 'الاختصاص التعليمي' %}
+            </span>
+            <span class="col-9">
+                {% if perso.comp_study %}
+                : {{ perso.get_comp_study_display }}
+                {% else %}
+                : {% trans 'لم يذكر' %}
+                {% endif %}
+            </span>
+        </p>
+
+        <p class="row">
+            <span class="col-3">
+                {% trans 'قطاع المنحة' %}
+            </span>
+            <span class="col-9">
+                {% if perso.domain %}
+                : {{ perso.get_domain_desplay }}
+                {% else %}
+                : {% trans 'لم يذكر' %}
+                {% endif %}
+            </span>
+        </p>
+
+        <p class="row">
+            <span class="col-3">
+                {% trans 'دول المنحة' %}
+            </span>
+            <span class="col-9">
+                : {{ perso.position_work.name }} </p>
+        </span>
+        <p class="row">
+            <span class="col-3">
+                {% trans 'المحافظة' %}
+            </span>
+            <span class="col-9">
+                {% if perso.city_work %}
+                : {{ perso.city_work }}
+                {% else %}
+                : {% trans 'لم يذكر' %}
+                {% endif %}
+            </span>
+        </p>
+
+        <p> <strong class="row">
+                <span class="col-3">
+                    {% trans 'تاريخ إغلاق المنحة' %}
+                </span>
+                <span class="col-9">
+                    : {{ perso.funding_dead_date|date:"c" }}
+                </span>
+            </strong> </p>
+
+        <p> <strong class="row">
+                <span class="col-3">
+                    {% trans 'مدة المنحة' %}
+                </span>
+                <span class="col-9">
+                    : {{ perso.get_funding_period_display }}</strong>
+            </span>
+        </p>
+
+        <p> <strong class="row">
+                <span class="col-3">
+                    {% trans 'حجم المنحة' %}
+                </span>
+                <span class="col-9">
+                    : {{ perso.get_funding_amounte_display }}</strong>
+            </span>
+        </p>
+
+        <div class="safe-content">
+            <p class="row">
+                <span class="col-3">
+                    {% trans "وصف المنحة" %} <br>
+                </span>
+                <span class="col-9">
+                    : {{ perso.funding_description|safe }}
+                </span>
+            </p>
+        </div>
+
+        <hr class="m-0">
+
+        <div class="safe-content">
+            <p class="row">
+                <span class="col-3">
+                    {% trans "شروط المنحة" %}
+                </span>
+                <span class="col-9">
+                    : {{ perso.funding_conditions|safe }}
+                </span>
+            </p>
+        </div>
+
+        <hr class="m-0">
+
+        <div class="safe-content">
+            <p class="row">
+                <span class="col-3">
+                    {% trans "متطلبات التقديم" %}
+                </span>
+                <span class="col-9">
+                    : {{ perso.funding_reqs|safe }}
+                </span>
+            </p>
+        </div>
+
+        <hr class="m-0">
+
+        <div class="safe-content">
+            <p class="row">
+                <span class="col-3">
+                    {% trans "كيفية التقديم" %}
+                </span>
+                <span class="col-9">
+                    : {{ perso.funding_guid|safe }}
+                </span>
+            </p>
+        </div>
+
+        <p class="row">
+            <span class="col-3">
+                {% trans "الرابط الأصلي" %}
+            </span>
+            <span class="col-9">
+                {% if perso.funding %}
+                <a href="{{ perso.funding_url }}" class="text-dark" target="_blank">: {{ perso.funding_url }}</a>
+                {% else %}
+                : {% trans 'لم يذكر' %}
+                {% endif %}
+            </span>
+        </p>
+
+
+        <!-- SOCIAL -->
+
+        <div class="social-share col-1 position-absolute d-flex flex-column align-items-center {% if LANGUAGE_CODE == 'ar'%}
+      right {% else %} left {% endif %}">
+
+            <a href="#" class="facebook-btn" target="_blank" title="{% trans 'مشاركة على فيسبوك' %}">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="twitter-btn" target="_blank" title="{% trans 'مشاركة على تويتر' %}">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="linkedin-btn" target="_blank" title="{% trans 'مشاركة على لينكدين' %}">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="whatsapp-btn" target="_blank" title="{% trans 'مشاركة على واتس اب' %}">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+
+    </div>
+
+
+    <!-- THE LATEST FUNDING  -->
+
+    {% if persos.count > 0 %}
+    <div class="col-lg-3 d-none d-lg-block last3" data-aos="fade-left">
+        <h2 class="text-center mb-4 {% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}">
+            {% trans 'أحدث ثلاثة فرص تمويل للأفراد' %} </h2>
+        {% for perso in persos|slice:3 %}
+        <a href="{% url 'finance_perso_detail' perso.id%}" class='bg-light nav-link border-bottom pb-3 mb-2'>
+            <div class="news-card" data-aos="fade-in">
+                <!-- <p class="text-dark"> {{ perso.funding_description|safe|truncatechars:80 }} </p> -->
+
+                <figure>
+                    <img src="{{ perso.logo.url }}" class="w-100" name="{{ perso.title }}" title="{{ perso.title }}"
+                        alt="{{ perso.title }}">
+                    <figcaption class="text-muted"> <i class="far fa-clock"></i> {{ perso.created_at|timesince }}
+                    </figcaption>
+                </figure>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+
+
+
+
+</div>
+{% endblock %}

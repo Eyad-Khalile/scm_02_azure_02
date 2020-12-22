@@ -1,0 +1,63 @@
+{% extends 'base.html' %} {% load static i18n crispy_forms_tags %}
+{% block title %} {% trans 'تسجيل الدخول' %} {% endblock %}
+
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+
+<di class="mt-4 pt-4">
+  <h2 class="mt-4 pt-4 mb-4 {% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}">
+    {% trans 'لقد قمت بتسجيل الدخول مسبقاً , يمكنك الذهاب للصفحة الرئيسية' %}
+  </h2>
+  <a href="{% url 'home' %}" class="btn btn-block"> {% trans 'الذهاب إلى الصفحة الرئيسية' %} </a>
+</di>
+
+{% else %}
+
+
+<!-- <h1> {% trans 'تسجيل الدخول' %} </h1> -->
+
+<div class="text-center mt-5">
+
+
+
+  <form class="form-signin" method="POST">
+
+    <img class="mb-4" src="{% static 'media/main_logo/Logo.png' %}" alt="CIVIL SOCIETY GATEWAY" width="150" />
+
+    {% if form.non_field_errors %}
+    <ul class='form-errors'>
+      {% for error in form.non_field_errors %}
+      <p class=" text-danger ">
+        {{ error }}
+      </p>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    <h1 class="h3 mb-3 font-weight-normal">{% trans 'تسجيل الدخول' %}</h1>
+    {% csrf_token %}
+    <div class="form-group mb-2">{{ form.username|as_crispy_field }}</div>
+    <div class="form-group mt-2">{{ form.password|as_crispy_field }}</div>
+
+    <div class="form-group">
+      <button class="btn btn-lg btn-block mb-4" type="submit">
+        {% trans 'تسجيل الدخول' %}
+      </button>
+    </div>
+
+    <hr />
+    <p class="mt-4"> {% trans 'هل نسيت كلمة المرور' %} </p>
+    <a href="{% url 'password_reset' %}" class="btn btn-block"> {% trans 'إعادة تعيين كلمة المرور' %} </a>
+
+    <hr />
+    <p class="mt-4"> {% trans 'إذا لم يكن لديك حساب ! يمكنك' %} </p>
+    <a href="{% url 'signe_up' %}" class="btn btn-block"> {% trans 'إنشاء حساب' %} </a>
+    <!-- <p class="mt-5 mb-3 text-muted">&copy; 2020</p> -->
+  </form>
+</div>
+
+{% endif %}
+
+{% endblock %}

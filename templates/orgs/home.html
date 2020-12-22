@@ -1,0 +1,339 @@
+{% extends 'base.html' %} {% load static i18n crispy_forms_tags %}
+{% block title %} {% trans 'بوابة المجتمع المدني' %} {% endblock %}
+
+{% block content-home %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+<div id="carouselHomePage" class="carouselHomePage carousel slide carousel-fade" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item slide-item-1 active" {% if LANGUAGE_CODE == 'ar' %}
+      style='background-image: url(" {% static 'media/New_Slider/ar/01.jpg' %}")' {% elif LANGUAGE_CODE == 'en' %}
+      style='background-image: url(" {% static 'media/New_Slider/en/01.png' %}")' {% elif LANGUAGE_CODE == 'ku' %}
+      style='background-image: url(" {% static 'media/New_Slider/ku/01.png' %}")' {% endif %}>
+    </div>
+    <div class="carousel-item slide-item-2" {% if LANGUAGE_CODE == 'ar' %}
+      style='background-image: url(" {% static 'media/New_Slider/ar/02.jpg' %}")' {% elif LANGUAGE_CODE == 'en' %}
+      style='background-image: url(" {% static 'media/New_Slider/en/02.png' %}")' {% elif LANGUAGE_CODE == 'ku' %}
+      style='background-image: url(" {% static 'media/New_Slider/ku/02.png' %}")' {% endif %}>
+    </div>
+    <div class="carousel-item slide-item-3" {% if LANGUAGE_CODE == 'ar' %}
+      style='background-image: url(" {% static 'media/New_Slider/ar/03.jpg' %}")' {% elif LANGUAGE_CODE == 'en' %}
+      style='background-image: url(" {% static 'media/New_Slider/en/03.png' %}")' {% elif LANGUAGE_CODE == 'ku' %}
+      style='background-image: url(" {% static 'media/New_Slider/ku/03.png' %}")' {% endif %}>
+    </div>
+    <div class="carousel-item slide-item-4" {% if LANGUAGE_CODE == 'ar' %}
+      style='background-image: url(" {% static 'media/New_Slider/ar/04.jpg' %}")' {% elif LANGUAGE_CODE == 'en' %}
+      style='background-image: url(" {% static 'media/New_Slider/en/04.png' %}")' {% elif LANGUAGE_CODE == 'ku' %}
+      style='background-image: url(" {% static 'media/New_Slider/ku/04.png' %}")' {% endif %}>
+    </div>
+    <div class="carousel-item slide-item-5" {% if LANGUAGE_CODE == 'ar' %}
+      style='background-image: url(" {% static 'media/New_Slider/ar/05.jpg' %}")' {% elif LANGUAGE_CODE == 'en' %}
+      style='background-image: url(" {% static 'media/New_Slider/en/05.png' %}")' {% elif LANGUAGE_CODE == 'ku' %}
+      style='background-image: url(" {% static 'media/New_Slider/ku/05.png' %}")' {% endif %}>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselHomePage" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <!-- <span class="visually-hidden">Previous</span> -->
+  </a>
+  <a class="carousel-control-next" href="#carouselHomePage" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <!-- <span class="visually-hidden">Next</span> -->
+  </a>
+  <span class="sym-mouse"><i class="fas fa-angle-double-down"></i></span>
+</div>
+
+
+
+<div class="container">
+  <div class="row">
+    <h1 class="text-center mt-5 pt-5" data-aos="fade-down">
+      {% trans 'بوابة المجتمع المدني' %}
+    </h1>
+    <div class="col-lg-6 col-xs-12" data-aos="fade-left">
+      <article>
+
+        {% if LANGUAGE_CODE == 'ar' %}
+        <p class="text-right p-color text-al-just h4 text-arab pt-5 mt-5">"بوابة المجتمع المدني" هي منصة مخصصة لمنظمات
+          المجتمع
+          المدني
+          السورية، تهدف إلى تعزيز دور المجتمع المدني السوري، وتعميق المعرفة بمنظماته ومؤسساته مع عملها، من خلال خلق
+          مساحة
+          لهذه المنظمات في التواصل وتبادل الخبرات والمعرفة والموارد، في سبيل الوصول إلى آليات عمل مشتركة بينها، تقود
+          بالضرورة إلى تنسيق واستجابة أفضل ومشاركة أكثر فاعلية في الحياة الاجتماعية والسياسية لبناء مستقبل سوريا.
+          بوابة المجتمع المدني السوري هي منصة تابعة للمركز السوري للإعلام وحرية التعبير وهو مؤسّسة مدنيّة مستقلة غير
+          حكومية
+          وغير ربحية تعمل على بناء مجتمع يقوم على العدالة، ويضمن حرية التعبير والاعتقاد، ويحترم كرامة الإنسان وحقوقه.
+          تتيح المنصة للمنظمات، المسجلة فيها، إمكانية عرض بياناتها، أنشطتها، والتعريف بها، وأيضا نشر التقارير والأخبار
+          والدراسات، الصادرة عن المنظمات السورية وتلك الصادرة عن المنظمات الدولية ووكالات الأمم المتحدة، بالإضافة إلى
+          امكانية الاطلاع على إعلانات عن فرص العمل وفرص التمويل، التي ستكون متاحة للزائرين غير المسجلين أيضا.
+        </p>
+        {% elif LANGUAGE_CODE == 'en' %}
+        <p class="text-left p-color text-al-just h4 pt-5 mt-5">
+          The civil society gateway is a platform for the organizations of the Syrian civil society aiming at:
+          Strengthening the role of the Syrian civil society, and deepening the knowledge of its organizations and
+          institutes and how they work through creating a space for these organizations to communicate and exchange
+          experiences, knowledge and resources in order to reach mutual work mechanisms between them which necessarily
+          leads
+          to coordination a better response and more participation in social and political life for the building of
+          Syria’s
+          future.
+          The Syrian civil society gateway is a platform run by the Syrian Center for Media and Freedom of Expression
+          (SCM)
+          is an independent non-governmental non-profit organization. We seek to build a society that guarantees freedom
+          of
+          expression and belief, human rights, and justice. Our vision is a democratic world based on justice, freedom,
+          equality and respect for human rights and dignity.
+          The platform provides its organization with the possibility of displaying their data and activities and the
+          ability to identify them.
+          It also publishes the reports, studies and news issued by Syrian organizations and these international
+          organizations and UN agencies. Besides, the platform allows the visitors who are not registered to see ads for
+          work and funding opportunity.
+        </p>
+        {% elif LANGUAGE_CODE == 'ku'%}
+        <p class="text-left p-color text-al-just h4 pt-5 mt-5">
+          Bewaba bo Civaka Sivîl, ew pilatformeke taybete bo rêxistinên civaka sivîl yên Sûrî, armance xwe bo xortkirina
+          rola civaka sivîl a Sûrî, û zêde naskirin bi rêxistin û sazîyên wê û karên wan, di rêya pêdakirina derfetekê
+          ji van rêxistinan ra di danûstandinê da û lihevguhertina ezmûn û zaniyarî û çavkaniyan, bo gihiştin ber
+          rêkeftinê  di karên wan da, ku rê vedike ber bi hemahengî di navbera wan da bo sûdemendîyek pitir di warên
+          jiyan sivîl û siyasî da bo avakirina dehatiya Sûriya yê.
+          Bewaba bo Civaka Sivîl, ew pilatformeke girêdayî ye bi Navenda Sûrî ya Ragihandinê û Azadîya Derbirînê, ku
+          dezgeheke sivîl a serbixwe, nehikûmî û neqezencker e. li ser avakirina civakekê ku azadîya derbirînê, mafên
+          mirovan û gihaştina bo dadmendîyê garantî dike, dixebite.
+          Pilatform derfetê dide rêxistinên abonkirî, daku zaniyarî, çalakî û pênasayên xwe pişkêş bikin, her wiha, bo
+          belavkirina rapor, nûçe û vekolîn çi yên ji aliyên rêxistinên sûrî ve û yên ji aliyê rexistinên navdewletî û
+          saziyên Neteweyên Yekbûyî, digel şopandina derfetên kar, derfetên perepêdanê, bo tevahiya serdançiyên
+          malperê. 
+        </p>
+
+        {% endif  %}
+
+      </article>
+    </div>
+    <div
+      class="col-lg-6 col-xs-12 d-flex {% if LANGUAGE_CODE == 'ar'%} align-items-end pb-4 {% else  %} align-items-center {% endif %} pl-0 pr-0 justify-content-center"
+      data-aos="fade-right">
+      <video width="100%" controls poster="{% static 'media/main_logo/logo_3.png' %}">
+        <source src="{% static 'video/civil_gateway.mp4'%}" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <br />
+
+
+
+  <!-- ORGS SLIDER -->
+  {% if orgs|length > 2 %}
+  <div class="orgs_slide mt-4 pt-4" data-aos="fade-left">
+    <h2 class="text-center mb-4"> {% trans "المنظمات المضافة حديثاً" %} </h2>
+    <div id="carouselOrgs" class="carouselOrgs carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        {% for org in orgs|slice:3 %}
+        <div class="carousel-item {% if org.id == first_org %} slide-item-1 active {% endif %} ">
+          <div class=" well mh-100" id="org_{{org.id}}">
+            <center>
+              <a href="{% url 'particip_detail' org.id %}">
+                <img src="{{ org.logo.url }}" name="{{ org.name_en_ku }}" title="{{ org.name_en_ku }}" width="140"
+                  height="140" class="img-circle" /></a>
+              <h3 class="mt-4">{{ org.name }}</h3>
+              <p>{{ org.short_cut }}</p>
+              <!-- <p class="text-muted">{{ org.created_at|timesince }}</p>
+              <p class="text-muted">{{ org.published_at|timesince }}</p> -->
+              <!-- <p>{{ org.message|safe|truncatechars:80 }}</p> -->
+              <p>
+                <a href="{% url 'particip_detail' org.id %}" class="btn btn-block">
+                  {% trans 'للمزيد عن المنظمة' %}
+                </a>
+              </p>
+            </center>
+          </div>
+
+        </div>
+        {% endfor %}
+
+      </div>
+      <a class="carousel-control-prev" href="#carouselOrgs" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" href="#carouselOrgs" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </a>
+    </div>
+  </div>
+  {% endif %}
+
+
+  <!-- NEWS SLIDER -->
+  {% if news|length > 2 %}
+  <div class="news_slide mt-4 pt-4" data-aos="fade-right">
+    <h2 class="text-center mb-4"> {% trans "أحدث اﻷخبار" %} </h2>
+    <div id="carouselNews" class="carouselNews carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        {% for new in news|slice:3 %}
+        <div class="carousel-item {% if new.id == first_news %} slide-item-1 active {% endif %}">
+          <div class=" well" id="news_{{new.id}}">
+            <center>
+              <a href="{% url 'news_detail' new.id %}">
+                <img src="{{ new.image.url }}" name="{{ new.title }}" title="{{ new.title }}" width="140" height="140"
+                  class="img-circle" /></a>
+              <h3 class="mt-4">{{ new.org_name }}</h3>
+              <h3 class="mt-4">{{ new.title }}</h3>
+              <!-- <p>{{ new.content|safe|truncatechars:80 }}</p> -->
+              <p>
+                <a href="{% url 'news_detail' new.id %}" class="btn btn-block">
+                  {% trans 'للمزيد عن الخبر' %}
+                </a>
+              </p>
+            </center>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <a class="carousel-control-prev" href="#carouselNews" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" href="#carouselNews" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </a>
+    </div>
+  </div>
+  {% endif %}
+
+
+  <!-- JOBS SLIDER -->
+  {% if jobs|length > 2 %}
+  <div class="jobs_slide mt-4 pt-4" data-aos="fade-left">
+    <h2 class="text-center mb-4"> {% trans "أحدث فرص العمل" %} </h2>
+    <div id="carouselJobs" class="carouselJobs carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        {% for job in jobs|slice:3 %}
+        <div class="carousel-item {% if job.id == first_job %} slide-item-1 active {% endif %}">
+          <div class=" well" id="job_{{job.id}}">
+            <center>
+              <h3 class="mt-4">{{ job.org_name }}</h3>
+              <h3 class="mt-4">{{ job.job_title }}</h3>
+              <h3 class="mt-4">{{ job.job_type }}</h3>
+              <!-- <p>{{ job.job_description|safe|truncatechars:80 }}</p> -->
+              <p>
+                <a href="{% url 'jobs_detail' job.id %}" class="btn btn-block">
+                  {% trans 'للمزيد عن فرصة العمل' %}
+                </a>
+              </p>
+            </center>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <a class="carousel-control-prev" href="#carouselJobs" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" href="#carouselJobs" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </a>
+    </div>
+  </div>
+  {% endif %}
+
+
+  <!-- FINANCES SLIDER -->
+  {% if capacites|length > 2 %}
+  <div class="capacites_slide mt-4 pt-4" data-aos="fade-right">
+    <h2 class="text-center mb-4"> {% trans "أحدث فرص بناء القدرات" %} </h2>
+    <div id="carouselCapacites" class="carouselCapacites carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        {% for capacity in capacites|slice:3 %}
+        <div class="carousel-item {% if capacity.id == first_capacity %} slide-item-1 active {% endif %}">
+          <div class=" well" id="capacity_{{capacity.id}}">
+            <center>
+              <h3 class="mt-4">{{ capacity.org_name }}</h3>
+              <h3 class="mt-4">{{ capacity.name_capacity }}</h3>
+              <h3 class="mt-4">{{ capacity.title_capacity }}</h3>
+              <!-- <p>{{ capacity.capacity_description|safe|truncatechars:80 }}</p> -->
+              <p>
+                <a href="{% url 'capacity_detail' capacity.id %}" class="btn btn-block">
+                  {% trans 'للمزيد عن فرصة بناء القدرات' %}
+                </a>
+              </p>
+            </center>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <a class="carousel-control-prev" href="#carouselCapacites" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" href="#carouselCapacites" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </a>
+    </div>
+  </div>
+  {% endif %}
+
+
+
+  <!-- FORM NEWS LETTER -->
+  <div class="form-news-latter mt-4 p-5 rounded mb-4" id="newsletter" data-aos="fade-left">
+    <h1 class="text-center text-white border-bottom border-white pb-3"> {% trans "للاشتراك بآخر الأخبار" %} </h1>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <form action="" method="POST" class="form-news-latter">
+          {% csrf_token %}
+          <div class="form-group">
+            {{ formNews.name|as_crispy_field }}
+          </div>
+          <div class="form-group">
+            {{ formNews.work|as_crispy_field }}
+          </div>
+          <div class="form-group">
+            {{ formNews.org_name|as_crispy_field }}
+          </div>
+          <div class="form-group">
+            {{ formNews.email|as_crispy_field }}
+          </div>
+          <div class="form-group">
+            <button type="submit" id="newsletter_btn" class="btn btn-block"><i class="fa fa-paper-plane"
+                aria-hidden="true"></i> {% trans 'اشترك' %} </button>
+            </a>
+          </div>
+        </form>
+      </div>
+      <!-- <div class="col-md-6 col-sm-12">
+        <p class="text-white text-al-just">
+
+          Where does it come from?
+
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+          literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+          College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,
+          and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem
+          Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+          Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the
+          Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section
+          1.10.32.
+
+          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+          1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original
+          form, accompanied by English versions from the 1914 translation by H. Rackham.
+
+        </p>
+      </div> -->
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+{% endblock %}

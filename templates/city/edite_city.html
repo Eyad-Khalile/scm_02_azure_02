@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static i18n crispy_forms_tags %}
+
+{% block title %} {% trans "تعديل محافظة" %} {% endblock %}
+
+{% block content %}
+
+
+<div class="row mt-4 pt-4 mb-4">
+    <h1> {% trans "تعديل محافظة" %} </h1>
+
+
+    <form action="" method="post" class="register" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {% if request.user.is_authenticated and request.user.is_staff %}
+        <div class="for-group">
+            {{ form.position_work|as_crispy_field }}
+        </div>
+        <div class="for-group">
+            {{ form.city_work|as_crispy_field }}
+        </div>
+        {% endif %}
+        
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-block mt-3" value='{% trans "احفظ" %}'>
+        </div>
+
+    </form>
+
+
+</div>
+
+{% endblock %}

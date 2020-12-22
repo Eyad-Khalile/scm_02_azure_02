@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+{% load static i18n crispy_forms_tags %}
+
+{% block title %} {% trans "فرص بناء القدرات" %} {% endblock %}
+
+{% block content %}
+
+
+<div class="mt-4 pt-4">
+    <h1 class="{% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}" data-aos="fade-left">
+        {% trans "فرص بناء القدرات" %}
+    </h1>
+
+
+
+    <div class="d-flex mt-4">
+
+        {% if request.user.is_authenticated and request.user.is_staff %}
+        <a href="{% url 'orgs_add_capacity' %}"
+            class="btn btn-block mt-4 {% if LANGUAGE_CODE == 'ar' %} ml-2 {% else %} mr-2 {% endif %}"
+            title="{% trans 'اضافة فرصة بناء القدرات' %}" data-aos="fade-right"><i class="fas fa-plus"></i></a>
+        {% endif %}
+
+        {% if Capacitys %}
+        <a class="btn btn-block mt-4 mx-2" data-toggle="collapse" href="#collapseFiltre" aria-expanded="false"
+            aria-controls="collapseFiltre" title="{% trans 'فرز' %}" data-aos="fade-left"><i
+                class="fas fa-filter"></i></a>
+        {% endif %}
+
+        {% if request.user.is_authenticated and request.user.is_superuser %}
+        <a href="{% url 'org_capacity_not_pub' %}" class="btn btn-block mt-4 mx-2"
+            title="{% trans 'فرص بناء القدرات قيد الدراسة' %}" data-aos="fade-left"><i
+                class="fas fa-chalkboard-teacher"></i></a>
+        {% elif request.user.is_authenticated and request.user.is_staff %}
+        <a href="{% url 'org_capacity_not_pub' %}?user={{ request.user.id }}" class="btn btn-block mt-4 mx-2"
+            title="{% trans 'فرص بناء القدرات قيد الدراسة' %}" data-aos="fade-left"><i
+                class="fas fa-chalkboard-teacher"></i></a>
+        {% endif %}
+
+    </div>
+
+    <!-- FILTERS -->
+    <div class="pt-3 px-4 pb-2 mt-4 collapse" id="collapseFiltre">
+
+        <form action="" method="get"
+            class="row register justify-content-center align-items-center flex-wrap form my-2 my-lg-0">
+            <div class="col-sm-12 col-md-4  mt-3">
+                {{ myFilter.form.org_name|as_crispy_field }}
+            </div>
+            <div class="col-sm-12 col-md-4  mt-3">
+                {{ myFilter.form.name_capacity|as_crispy_field }}
+            </div>
+            <div class="col-sm-12 col-md-4  mt-3">
+                {{ myFilter.form.title_capacity|as_crispy_field }}
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 mt-3">
+                    {{ myFilter.form.position_work|as_crispy_field }}
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-4 mt-3">
+                    {{ myFilter.form.start_date_pub|as_crispy_field }}
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-4 mt-3">
+                    {{ myFilter.form.end_date_pub|as_crispy_field }}
+                </div>
+
+            </div>
+
+            <div class="form-group mt-3">
+                <button class="btn btn-block mt-3">{% trans 'بحث' %}</button>
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <div
+        class="row row-m-0 row-gutter-0 pt-4 pb-4 mb-4">
+        {% if Capacitys %}
+        {% for capacity in Capacitys %}
+
+        <div class="span3 well" data-aos="fade-left">
+            <span class="text-muted">
+                <i class="far fa-clock ml-2 mr-2"></i>
+                {{ capacity.created_at|timesince }}
+            </span>
+            <hr>
+            <center>
+
+                <h3 class="mt-4">
+                    {% if capacity.org_name %}
+                    {{ capacity.org_name }}
+                    {% else %}
+                    {{ capacity.name_capacity }}
+                    {% endif %}
+                </h3>
+
+                <p> <strong> {{ capacity.title_capacity }} </strong></p>
+                <hr>
+
+                <!-- <p>{{ capacity.capacity_description|safe|truncatechars:80 }}</p> -->
+
+                <!-- <p class="text-muted"> {{ capacity.created_at|date:'Y-m-d' }} </p> -->
+
+                <p>
+                    <a href="{% url 'capacity_detail' capacity.id %}" class="btn btn-block"
+                        title="{% trans 'لقراءة المزيد' %}"><i class="fas fa-book-reader"></i></a>
+                </p>
+
+            </center>
+        </div>
+
+        {% endfor %}
+
+
+        <div class="pagination row border-top mt-4 pt-4" dir="ltr">
+            <center>
+                {% if capacitys.paginator.num_pages > 1 %}
+                {% if capacitys.has_previous %}
+
+                <a href="?page=1" class="btn">
+                    <i class="fa fa-angle-double-left"></i>
+                </a>
+                <a href="?page={{ capacitys.previous_page_number }}" class="btn">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+
+                {% endif %}
+
+                {% for num in capacitys.paginator.page_range %}
+                {% if capacitys.number == num %}
+                <a href="?page={{ num }}" class="btn btn-current">{{ num }}</a>
+                {% elif num > capacitys.number|add:'-3' and num < capacitys.number|add:'3' %}
+                <a href="?page={{ num }}" class="btn">{{ num }}</a>
+                {% endif %}
+                {% endfor %}
+
+
+                {% if orgs.has_next %}
+                <a href="?page={{ capacitys.next_page_number }}" class="btn"><i class="fa fa-angle-right"></i></a>
+                <a href="?page={{ capacitys.paginator.num_pages }}" class="btn"><i
+                        class="fa fa-angle-double-right"></i></a>
+
+                {% endif %}
+                {% endif %}
+
+            </center>
+        </div>
+
+
+        {% else %}
+        <h3 class="{% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}">
+            {% trans " لا يوجد حالياً فرص بناء القدرات " %} </h3>
+        {% endif %}
+
+
+    </div>
+
+
+
+
+
+
+</div>
+
+{% endblock %}

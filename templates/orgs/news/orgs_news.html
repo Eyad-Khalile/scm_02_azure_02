@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block title %} {% trans "أخبار المجتمع المدني" %} {% endblock %}
+
+{% block content %}
+
+<div class="row mt-4 pt-4 orgs-news">
+  <div class="">
+    <article>
+      <h1 class="text-center mb-4 " data-aos="fade-left"> {% trans "أخبار المجتمع المدني" %} </h1>
+      <!-- Text Descriptions -->
+      {% if LANGUAGE_CODE == 'ar'%}
+      <p class="text-right text-al-just p-color h4" data-aos="fade-right">
+
+        يعرض هذا القسم آخر أخبار منظمات المجتمع المدني السوري المسجلة في المنصة، بما يتضمن ذلك انجازاتها وأنشطتها و كل
+        ما يتعلق بفعالياتها سواء في الميدان أو خارجه كالشراكات الاستراتيجية على سبيل المثال لا الحصر بهدف رفع مستوى
+        التنسيق بين مختلف المنظمات الفاعلة على الأرض
+
+
+        <span id="collapseText" class="collapse">
+          . <br><br> كما تم إلحاق قسم خاص بالأبحاث الصادرة عن المنظمات غير المسجلة في
+          الموقع وبخاصة المنظمات الدولية وأجهزتها و وكالاتها.<br>
+          ويضم هذا القسم خمس صفحات فرعية:
+          <ul id="list-collapse">
+            <li><strong>اخبار المنظمات :</strong> يتضمن اخر اخبار المنظمات المسجلة وأنشطتها ومشاريعها.</li>
+            <li><strong>تقارير ودراسات :</strong> يتضمن التقارير والدراسات التي تصدرها منظمات المجتمع المدني المسجلة
+              والتي تعتبر ركيزة
+              مهمة
+              للمنظمات الأخرى في فهم سياق العمل وخاصة أثناء مرحلة التخطيط للمشاريع القادمة</li>
+            <li><strong>البيانات :</strong> يتضمن جميع البيانات الصادرة عن المنظمات المسجلة.</li>
+            <li><strong>محتوى سمعي وبصري :</strong> وفيه تجدون الفيديوهات والسمعيات المنتجة والمصممة من قبل المنظمات
+              المسجلة.</li>
+            <li><strong>أبحاث خارجية :</strong> يتضمن التقارير والدراسات والمحتويات السمعية والبصرية والبيانات الصادرة
+              عن المنظمات غير
+              المسجلة
+              في المنصة بما في ذلك المنظمات الدولية وأجهزتها ووكالاتها</li>
+          </ul>
+        </span>
+      </p>
+
+      {% elif LANGUAGE_CODE == 'en'%}
+      <p class="text-right text-al-just p-color h4">
+        This section issues the latest news of the Syrian civil society organizations registered in the platform,
+        including their achievements and activities inside the field or outside like the strategic partnerships to raise
+        the level of coordination between various organizations working on the ground, for example. A special section
+        for the researches done by the unregistered organizations in the field especially the international
+        organizations with their agencies and apparatuses was annexed to this section. <br><br>
+        <span id="collapseText" class="collapse">
+          The section includes five sub-pages:
+          <ul id="list-collapse">
+            <li>
+              <strong>Organizations news</strong>(latest news of the registered organizations, their activities and
+              projects).
+            </li>
+            <li>
+              <strong>Reports and studies:</strong> all the reports and studies issued by the registered organizations
+              of the civil society are considered a very important basis for the other organizations to understand the
+              context of work especially the planning stage for the next projects.
+            </li>
+            <li>
+              <strong>Data: </strong> this section includes all the data issued by the registered organizations.
+            </li>
+            <li>
+              <strong>Audio-Visual content section: </strong>here one can find the videos and audios designed and
+              produced by the registered organizations.
+            </li>
+            <li>
+              <strong>Foreign researches section including </strong>the reports, studies, audio-visual contents, and
+              data issues by the unregistered organizations in the platform, including the international organization
+              with their apparatuses and agencies.
+            </li>
+          </ul>
+        </span>
+
+      </p>
+      {% elif LANGUAGE_CODE == 'ku'%}
+      <p class="text-right text-al-just p-color h4">
+        Di vê beşê da, nûçeyên rêxistinên civaka sivîl yên Sûrî ku aboneyên xwe hene li ser pilatformê tên pêşkêş kirin,
+        wek mînak,  serkeftin û çalakiyên wan, û her tiştê ku bi çalakiyên wê va girêdayî ye, çi li qadê û çi jî li
+        derveyî, wekî hevkariyên stratejîk,  ew jî bo bilindkirina asta rêkeftinê di navbera rêxistinên li ser erdê da.
+        Her wiha beşek heye taybet bi lêkolînên rêxistinên ne abonekirî hatiye girêdan, wek rêxistin û saziyên
+        navdewletî. <br><br>
+        <span id="collapseText" class="collapse">
+          Ev beş pênc rûpelan li xwe digre:
+          <ul id="list-collapse">
+            <li>
+              <strong>Nûçeyên rêxistinan: </strong> nûçe, çalakî û pirojeyên rêxistinên abonkirî.
+            </li>
+            <li>
+              <strong>Rapor û xwendin: </strong>ew rapor û xwendinên ku ji aliyê rêxistinên civaka sivîl belavdibin, ku
+              ew bingeha herî giringe di karên rêxistinan da, daku baş fambikin çawa kar bi rêve diçe, bi taybet di
+              qûnaxa pilandana pirojeyan da.
+            </li>
+            <li>
+              <strong>Zanîyarî: </strong>zanîyariyên tevahiya rêxistinên abonekirî.
+            </li>
+            <li>
+              <strong>Naveroka deng û dîtinê: </strong>berhemên vîdiyoî û dengî yên rêxistinên abonekirî.
+            </li>
+            <li>
+              <strong>Lêkolînê giştî: </strong> rapor, xwendin, naverokên mediyayî û zaniyariyên ku belav dibin ji aliyê
+              rêxistin û saziyên navdewletî ve.
+            </li>
+          </ul>
+        </span>
+
+      </p>
+      {% endif %}
+
+      <a href="#collapseText" id="collapsRead" class="nav-toggle text-decoration-none" data-toggle="collapse">
+        {% trans "إقراء المزيد" %}
+      </a>
+    </article>
+
+
+    <hr>
+    <!-- Les Cercles -->
+    <div class="row org-work mb-2">
+      <h2 class="text-center mb-4"> {% trans "اﻷخبار" %} </h2>
+
+
+      <div class="d-flex justify-content-center align-items-center flex-wrap">
+        <div class="">
+          <a href="{% url 'orgs_news' %}"
+            class="btn btn-button d-flex justify-content-center align-items-center border-0 text-wrap" data-aos="fade-right">
+            {% trans "أخبار المنظمات" %} </a>
+        </div>
+        <div class="">
+          <a href="{% url 'orgs_rapport' %}"
+            class="btn btn-button d-flex justify-content-center align-items-center border-0 text-wrap" data-aos="fade-right">
+            {% trans "تقارير ودراسات" %} </a>
+        </div>
+        <div class="">
+          <a href="{% url 'data' %}"
+            class="btn btn-button d-flex justify-content-center align-items-center border-0 text-wrap" data-aos="fade-right">
+            {% trans "بيانات" %} </a>
+        </div>
+        <div class="">
+          <a href="{% url 'media' %}"
+            class="btn btn-button d-flex justify-content-center align-items-center border-0 text-wrap" data-aos="fade-right">
+            {% trans "سمعي وبصري" %} </a>
+        </div>
+        <div class="">
+          <a href="{% url 'research' %}"
+            class="btn btn-button d-flex justify-content-center align-items-center border-0 text-wrap" data-aos="fade-right">
+            {% trans "أبحاث خارجية" %}
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+{% endblock %}

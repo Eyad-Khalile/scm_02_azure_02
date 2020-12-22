@@ -1,0 +1,221 @@
+{% extends 'base.html' %}
+{% load static i18n crispy_forms_tags%}
+{% block title %} {% trans 'تفاصيل البيان' %} {% endblock %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block content %}
+
+
+<div class="row mt-4 pt-4">
+  <h1 class="{% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}" data-aos="fade-left">
+    {% trans 'تفاصيل البيان' %} </h1>
+
+
+  <div class="well col-lg-9 job-card col-xs-12 position-relative" data-aos="fade-right">
+
+    <!-- MINI MANU -->
+    {% if request.user.is_authenticated %}
+    <!-- <span id="span-menu" type="button"
+      class="span-menu {% if LANGUAGE_CODE == 'ar' %} float-right {% else %} float-left {% endif %}"><i
+        class="fa fa-ellipsis-v" aria-hidden="true"></i></span> -->
+    <div class="btn-group" role="group">
+      <span id="btnGroupDrop1" type="button" class="btn dropdown-toggle {% if LANGUAGE_CODE == 'ar' %} pr-0 {% else %} pl-0
+    {% endif %}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+      </span>
+      <div class="dropdown-menu {% if LANGUAGE_CODE == 'ar' %} right-0 {% endif %}" aria-labelledby="btnGroupDrop1">
+        {% if request.user.is_authenticated and request.user.is_superuser %}
+        {% if data.publish == False %}
+        <form action="" class="confirm" method="post">
+          {% csrf_token %} {{ form.publish }}
+          <div class="form-group">
+            <button type="submit" id="org_confirm_btn" class="dropdown-item"
+              title="{% trans 'الموافقة على نشر البيان' %}">{% trans 'الموافقة على نشر البيان' %} <i class="fas fa-check {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></button>
+          </div>
+        </form>
+        {% elif data.publish == True %}
+        <form action="" class="deconfirm" method="post">
+          {% csrf_token %} {{ form.publish }}
+          <div class="form-group">
+            <button type="submit" id="org_deconfirm_btn" class="dropdown-item"
+              title="{% trans 'إلغاء نشر البيان' %}">{% trans 'إلغاء نشر البيان' %} <i class="fa fa-ban {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}" aria-hidden="true"></i></button>
+          </div>
+        </form>
+        {% endif %}
+        <a href="{% url 'edit_data' data.id %}" class="dropdown-item"
+          title="{% trans 'تعديل البيان' %}">{% trans 'تعديل البيان' %} <i class="fas fa-edit {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></a>
+        <a href="{% url 'delete_data' data.id %}" class="dropdown-item"
+          title="{% trans 'حذف البيان' %}">{% trans 'حذف البيان' %} <i class="far fa-trash-alt {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></a>
+        {% endif %}
+
+
+        {% if data.publish == False and not request.user.is_superuser %}
+        {% if request.user == data.user %}
+        <a href="{% url 'edit_data' data.id %}" class="dropdown-item"
+          title="{% trans 'تعديل البيان' %}">{% trans 'تعديل البيان' %} <i class="fas fa-edit {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></a>
+        {% else %}
+        <a href="#" class="dropdown-item text-wrap">
+          {% trans 'ليس لديك الصلاحية' %}
+        </a>
+        {% endif %}
+
+        {% elif data.publish == True and not request.user.is_superuser %}
+        <a href="#" class="dropdown-item text-wrap">
+          {% trans 'لا يمكنك التعديل بعد الموافقة على النشر أو ليس لديك الصلاحية' %} </a>
+        {% endif %}
+
+
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- <div id="mini-menu"
+      class="list-group mini-menu d-none {% if LANGUAGE_CODE == 'ar' %} menu-right {% else %} menu-left {% endif %}">
+    </div> -->
+
+    <!-- START CART -->
+
+
+    <strong>
+      {# {% trans "عنوان البيان" %} #}
+      <h1 class="text-center mt-3"> {{ data.title }}</h1>
+    </strong>
+
+    <p class="text-muted row">
+      <span class="col-3">
+        <i class="far fa-clock ml-2 mr-2"></i>
+        {% trans "تاريخ إضافة البيان" %}
+      </span>
+      <span class="col-9">
+        {% if data.created_at %}
+        : {{ data.created_at|date:"Y-m-d" }}
+        {% else %}
+        {% trans 'لم يذكر'%}
+        {% endif %}
+      </span>
+    </p>
+
+    <h3 class="mt-4 row">
+      <span class="col-3">
+        {% trans "اسم المنظمة" %}
+      </span>
+      <span class="col-9">
+        <a href="{% url 'particip_detail' data.org_name.id %}" class="nav-link text-dark p-0">
+          : {{ data.org_name }}
+        </a>
+      </span>
+    </h3>
+
+    {% if request.user.is_authenticated and request.user.is_superuser %}
+    <p class="text-muted mt-4 row">
+      <span class="col-3">
+        {% trans "اسم اللذي أضاف البيان" %}
+      </span>
+      <span class="col-9">
+        : {{ data.user }}
+      </span>
+    </p>
+    {% endif %}
+
+
+    <!-- {{ request.scheme }} <br> {{ request.META.HTTP_HOST }} <br> {{ request.path }} <br> -->
+    <!-- {# {{ request.GET.urlencode }} #} -->
+
+    <p class="row">
+      <span class="col-3">
+        {% trans "محتوى البيان" %} <br>
+      </span>
+      <span class="col-9">
+        :
+      </span>
+    </p>
+
+
+    {% if '.pdf' in data.media.url %}
+    <h5 class="text-center pt-3 mt-3">
+      <!-- <a href="{{ data.media.url }}" class="text-decoration-none" target="_blank"> {% trans 'للاطلاع على البيان' %} :
+        {{data.title}}</a> -->
+    </h5>
+    <object data="{{ data.media.url }}" type="application/pdf" title="{{data.title}}" width="100%" height="885">
+      <embed src="{{ data.media.url  }}">
+    </object>
+    <!-- <object data="{{ data.media.url }}" type="application/pdf" width="600" height="800">
+      lie alternatif : <a href="{{ data.media.url }}" target=_blank>test.pdf</a>
+    </object>
+    <embed src="{{ data.media.url }}" width=800 height=500 type='application/pdf' /> -->
+    <!-- <iframe src="{{ request.scheme }}://{{ request.META.HTTP_HOST }}{{ data.media.url }}"
+      style="width:600px; height:500px;" frameborder="0"></iframe> -->
+    <!-- <iframe src="{{ data.media.url  }}" width="800" height="600" align="middle"></iframe> -->
+    {% else %}
+    <a href="">
+      <img src="{{ data.media.url }}" name="{{ data.title }}" title="{{ data.title }}" alt="{{ data.title }}"
+        width="100%"></a>
+    {% endif %}
+
+
+    <!-- SOCIAL -->
+
+    <!-- <div class="social-share col-1 position-absolute d-flex flex-column align-items-center {% if LANGUAGE_CODE == 'ar'%}
+      right {% else %} left {% endif %}">
+
+      <a href="#" class="facebook-btn" target="_blank" title="{% trans 'مشاركة على فيسبوك' %}">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="#" class="twitter-btn" target="_blank" title="{% trans 'مشاركة على تويتر' %}">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#" class="linkedin-btn" target="_blank" title="{% trans 'مشاركة على لينكدين' %}">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="#" class="whatsapp-btn" target="_blank" title="{% trans 'مشاركة على واتس اب' %}">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div> -->
+
+
+
+
+  </div>
+
+  <!-- THE LATEST MEDIA  -->
+  {% if datas.count > 0 %}
+  <div class="col-lg-3 d-none d-lg-block last3" data-aos="fade-left">
+    <h2 class="text-center mb-4 {% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}">
+      {% trans 'أحدث ثلاثة بيانات' %} </h2>
+    {% for data in datas|slice:3 %}
+    <a href="{% url 'data_detail' data.id %}" class='bg-light nav-link border-bottom pb-3 mb-2'>
+      <div class="news-card">
+        <p class="text-dark"> {{ data.title }} </p>
+
+        <figure>
+          {% if not '.pdf' in data.media.url %}
+          <img src="{{ data.media.url }}" class="w-100" name="{{ data.title }}" title="{{ data.title }}"
+            alt="{{ data.title }}">
+          {% else %}
+          <p class="text-muted">{% trans 'لعرض ملف المحتوى , ادخل على التفاصيل' %}</p>
+          <hr>
+          {% endif %}
+          <figcaption class="text-muted"><i class="far fa-clock ml-2 mr-2"></i>{{ data.created_at|timesince }}
+          </figcaption>
+        </figure>
+
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+
+
+
+</div>
+
+
+
+{% endblock %}

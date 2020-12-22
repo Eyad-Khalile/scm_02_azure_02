@@ -1,0 +1,35 @@
+{% autoescape off %}
+Welcome : {{ user.username }},
+
+Please click on the link below to confirm your registration:
+
+http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+Your username, in case you've forgotten: {{ user.get_username }}
+{% endautoescape %}
+
+
+
+
+
+
+{% autoescape off %}
+مرحبا : {{ user.username }},
+
+
+رجاء اضغط على الرابط التالي لتأكيد التسجيل
+
+http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+{% endautoescape %}
+
+
+
+
+
+
+{% autoescape off %}
+Bienvenue : {{ user.username }},
+
+Veuillez cliquer sur le lien ci-dessous pour confirmer votre inscription :
+
+http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+{% endautoescape %}

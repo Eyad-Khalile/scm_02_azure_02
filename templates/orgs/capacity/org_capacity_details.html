@@ -1,0 +1,283 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% block title %} {% trans 'تفاصيل فرصة بناء القدرات' %} {% endblock %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block content %}
+
+
+<div class="row mt-4 pt-4">
+    <h1 class="{% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}" data-aos="fade-left">
+        {% trans 'تفاصيل فرصة بناء القدرات' %} </h1>
+
+    <div class="well col-lg-9 job-card col-xs-12 position-relative" data-aos="fade-right">
+
+        <!-- MIMI MENU -->
+
+        {% if request.user.is_authenticated %}
+        <!-- <span id="span-menu" type="button"
+            class="span-menu {% if LANGUAGE_CODE == 'ar' %} float-right {% else %} float-left {% endif %}"><i
+                class="fa fa-ellipsis-v" aria-hidden="true"></i></span> -->
+        <div class="btn-group" role="group">
+            <span id="btnGroupDrop1" type="button" class="btn dropdown-toggle {% if LANGUAGE_CODE == 'ar' %} pr-0 {% else %} pl-0
+    {% endif %}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+            </span>
+            <div class="dropdown-menu {% if LANGUAGE_CODE == 'ar' %} right-0 {% endif %}"
+                aria-labelledby="btnGroupDrop1">
+                {% if request.user.is_authenticated and request.user.is_superuser %}
+                {% if capacity.publish == False %}
+                <form action="" class="confirm" method="post">
+                    {% csrf_token %} {{ form.publish }}
+                    <div class="form-group">
+                        <button type="submit" id="org_confirm_btn" class="dropdown-item"
+                            title="{% trans 'الموافقة على النشر' %}">{% trans 'الموافقة على النشر' %} <i class="fas fa-check {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></button>
+                    </div>
+                </form>
+                {% elif capacity.publish == True %}
+                <form action="" class="deconfirm" method="post">
+                    {% csrf_token %} {{ form.publish }}
+                    <div class="form-group">
+                        <button type="submit" id="org_deconfirm_btn" class="dropdown-item"
+                            title="{% trans 'إلغاء نشر الدليل' %}">{% trans 'إلغاء نشر الدليل' %} <i class="fa fa-ban {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}" aria-hidden="true"></i></button>
+                    </div>
+                </form>
+                {% endif %}
+                <a href="{% url 'capacity_edit' capacity.id %}" class="dropdown-item"
+                    title="{% trans 'تعديل فرصة بناءالقدرات' %}">{% trans 'تعديل فرصة بناءالقدرات' %} <i class="fas fa-edit {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></a>
+                <a href="{% url 'capacity_delete' capacity.id %}" class="dropdown-item"
+                    title="{% trans 'حذف ' %}">{% trans 'حذف ' %} <i class="far fa-trash-alt {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></a>
+                {% endif %}
+
+                {% if capacity.publish == False and not request.user.is_superuser %}
+                {% if request.user == capacity.user or request.user.is_staff %}
+                <a href="{% url 'capacity_edit' capacity.id %}" class="dropdown-item"
+                    title="{% trans 'تعديل فرصة بناءالقدرات' %}">{% trans 'تعديل فرصة بناءالقدرات' %} <i class="fas fa-edit {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></a>
+                {% else %}
+                {% if not request.user.is_superuser %}
+                <a href="#" class="dropdown-item text-wrap">
+                    {% trans 'ليس لديك الصلاحية' %} </a>
+                {% endif %}
+                {% endif %}
+                {% else %}
+                {% if not request.user.is_superuser %}
+                <a href="#" class="dropdown-item text-wrap">
+                    {% trans 'لا يمكنك التعديل بعد الموافقة على النشر أو ليس لديك الصلاحية' %} </a>
+                {% endif %}
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- <div id="mini-menu"
+            class="list-group mini-menu d-none {% if LANGUAGE_CODE == 'ar' %} menu-right {% else %} menu-left {% endif %}">
+        </div> -->
+
+
+        <!-- START CART -->
+        <strong>
+            <h1 class="text-center mt-3 mt-3"> {% trans "عنوان الفرصة" %} : {{ capacity.title_capacity }}</h1>
+        </strong>
+
+        <hr>
+
+        <p class="text-muted row">
+            <span class="col-3">
+                <i class="far fa-clock ml-2 mr-2"></i>
+                {% trans "تاريخ الإضافة" %}
+            </span>
+            <span class="col-9">
+                : {{ capacity.created_at|date:"Y-m-d" }}
+            </span>
+        </p>
+
+        <h3 class="mt-4 row">
+            <span class="col-3">
+                {% if capacity.org_name %}
+                {% trans "اسم المنظمة" %}
+                {% else %}
+                {% trans "اسم الجهة المانحة" %}
+                {% endif %}
+            </span>
+            <span class="col-9">
+                {% if capacity.org_name %}
+                <a href="{% url 'particip_detail' capacity.org_name.id %}" class="nav-link text-dark pl-0 pr-0">:
+                    {{ capacity.org_name }}</a>
+                {% else %}
+                : {{ capacity.name_capacity }}
+                {% endif %}
+            </span>
+        </h3>
+
+
+        {% if request.user.is_authenticated and request.user.is_superuser %}
+        <p class="text-muted mt-4 row">
+            <span class="col-3">
+                {% trans "اسم اللذي أضاف فرصة بناء القدرات" %}
+            </span>
+            <span class="col-9">
+                : {{ capacity.user }}
+            </span>
+        </p>
+        {% endif %}
+
+        <p class="row">
+            <span class="col-3">
+                {% trans "نوع الفرصة" %}
+            </span>
+            <span class="col-9">
+                : {{ capacity.get_capacity_type_display }}
+            </span>
+        </p>
+
+        <p class="row">
+            <span class="col-3">
+                {% trans "قطاع الفرصة" %}
+            </span>
+            <span class="col-9">
+                : {{ capacity.get_capacity_domain_display }}
+            </span>
+        </p>
+
+        <div class="safe-content">
+            <p class="row ">
+                <span class="col-3">
+                    {% trans "وصف فرصة التمويل" %} <br>
+                </span>
+                <span class="col-9">
+                    : {{ capacity.capacity_description|safe }}
+                </span>
+            </p>
+        </div>
+
+
+
+        <p class="row">
+            <span class="col-3">
+                {% trans "مكان الفرصة" %}
+            </span>
+            <span class="col-9">
+                : {{ capacity.get_position_work_display }}
+            </span>
+        </p>
+
+        <p class="row">
+            <span class="col-3">
+                {% trans "المدينة" %}
+            </span>
+            <span class="col-9">
+                {% if capacity.city_work %}
+                : {{ capacity.get_city_work_display }}
+                {% else %}
+                : {% trans 'لم يذكر' %}
+                {% endif %}
+            </span>
+        </p>
+
+
+        <p> <strong class="row">
+                <span class="col-3">
+                    {% trans "تاريخ إغلاق المنحة" %}
+                </span>
+                <span class="col-9">
+                    : {{ capacity.capacity_dead_date|date:"Y-m-d" }}
+                </span>
+            </strong>
+        </p>
+
+        <div class="safe-content">
+            <p class="row">
+                <span class="col-3">
+                    {% trans "متطلبات التقديم" %}
+                </span>
+                <span class="col-9">
+                    : {{ capacity.capacity_reqs|safe }}
+                </span>
+            </p>
+        </div>
+
+        <hr class="m-0">
+
+        <div class="safe-content">
+            <p class="row">
+                <span class="col-3">
+                    {% trans "طريقة التقديم" %}
+                </span>
+                <span class="col-9">
+                    : {{ capacity.capacity_guid|safe }}
+                </span>
+            </p>
+        </div>
+
+        <p class="row">
+            <span class="col-3">
+                {% trans "الرابط" %}
+            </span>
+            <span class="col-9">
+                {% if capacity.capacity_url %}
+                : {{ capacity.capacity_url }}
+                {% else %}
+                : {% trans 'لم يذكر' %}
+                {% endif %}
+            </span>
+        </p>
+
+
+        <!-- SOCIAL -->
+
+        <!-- <div class="social-share col-1 position-absolute d-flex flex-column align-items-center {% if LANGUAGE_CODE == 'ar'%}
+      right {% else %} left {% endif %}">
+
+            <a href="#" class="facebook-btn" target="_blank" title="{% trans 'مشاركة على فيسبوك' %}">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="twitter-btn" target="_blank" title="{% trans 'مشاركة على تويتر' %}">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="linkedin-btn" target="_blank" title="{% trans 'مشاركة على لينكدين' %}">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="whatsapp-btn" target="_blank" title="{% trans 'مشاركة على واتس اب' %}">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div> -->
+
+
+
+
+    </div>
+
+    <!-- THE LATEST DEVS  -->
+    {% if capacites.count > 0 %}
+    <div class="col-lg-3 d-none d-lg-block last3" data-aos="fade-left">
+        <h2 class="text-center mb-4 {% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}">
+            {% trans 'أحدث ثلاثة فرص بناء القدرات' %} </h2>
+        {% for cap in capacites|slice:3 %}
+        <a href="{% url 'capacity_detail' cap.id %}" class='bg-light nav-link border-bottom pb-3 mb-2'>
+            <div class="news-card">
+                <p class="text-muted">
+                    <i class="far fa-clock ml-2 mr-2"></i>
+                    {{ cap.created_at|timesince }}
+                </p>
+                <hr>
+                <p class="text-dark"> {{ cap.title_capacity }} </p>
+                <p class="text-dark"> {% trans "نوع الفرصة" %} : {{ cap.get_capacity_type_display }}</p>
+
+                <p class="text-dark"> {% trans "قطاع الفرصة" %} : {{ cap.get_capacity_domain_display }}</p>
+
+
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+</div>
+
+{% endblock %}

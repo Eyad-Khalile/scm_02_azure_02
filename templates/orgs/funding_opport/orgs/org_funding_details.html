@@ -1,0 +1,314 @@
+{% extends 'base.html' %}
+{% load static i18n crispy_forms_tags %}
+{% block title %} {% trans 'تفاصيل فرصة التمويل' %} {% endblock %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block content %}
+
+<div class="row mt-4 pt-4">
+  <h1 class="{% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}" data-aos="fade-left">
+    {% trans 'تفاصيل فرصة التمويل' %}
+  </h1>
+
+  <div class="well col-lg-9 col-xs-12 job-card position-relative" data-aos="fade-in">
+
+    <!-- MINI MANU -->
+    {% if request.user.is_authenticated %}
+    <!-- <span id="span-menu" type="button"
+      class="span-menu {% if LANGUAGE_CODE == 'ar' %} float-right {% else %} float-left {% endif %}"><i
+        class="fa fa-ellipsis-v" aria-hidden="true"></i></span> -->
+    <div class="btn-group" role="group">
+      <span id="btnGroupDrop1" type="button" class="btn dropdown-toggle {% if LANGUAGE_CODE == 'ar' %} pr-0 {% else %} pl-0
+    {% endif %}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+      </span>
+      <div class="dropdown-menu {% if LANGUAGE_CODE == 'ar' %} right-0 {% endif %}" aria-labelledby="btnGroupDrop1">
+        {% if request.user.is_authenticated and request.user.is_superuser %}
+        {% if funding.publish == False %}
+        <form action="" class="confirm" method="post">
+          {% csrf_token %} {{ form.publish }}
+          <div class="form-group">
+            <button type="submit" id="org_confirm_btn" class="dropdown-item"
+              title="{% trans 'الموافقة على النشر' %}">{% trans 'الموافقة على النشر' %} <i class="fas fa-check {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></button>
+          </div>
+        </form>
+        {% elif funding.publish == True %}
+        <form action="" class="deconfirm" method="post">
+          {% csrf_token %} {{ form.publish }}
+          <div class="form-group">
+            <button type="submit" id="org_deconfirm_btn" class="dropdown-item"
+              title="{% trans 'إلغاء نشر الدليل' %}">{% trans 'إلغاء نشر الدليل' %} <i class="fa fa-ban {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}" aria-hidden="true"></i></button>
+          </div>
+        </form>
+        {% endif %}
+        <a href="{% url 'funding_edit' funding.id %}" class="dropdown-item"
+          title="{% trans 'تعديل فرصة التمويل' %}">{% trans 'تعديل فرصة التمويل' %} <i class="fas fa-edit {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></a>
+        <a href="{% url 'funding_delete' funding.id %}" class="dropdown-item"
+          title="{% trans 'حذف' %}">{% trans 'حذف' %} <i class="far fa-trash-alt {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></a>
+        {% endif %}
+
+
+        {% if funding.publish == False and not request.user.is_superuser %}
+        {% if request.user == funding.user or request.user.is_staff %}
+        <a href="{% url 'funding_edit' funding.id %}" class="dropdown-item"
+          title="{% trans 'تعديل فرصة التمويل' %}">{% trans 'تعديل فرصة التمويل' %} <i class="fas fa-edit {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></a>
+        {% else %}
+        {% if not request.user.is_superuser %}
+        <a href="#" class="dropdown-item text-wrap">
+          {% trans 'ليس لديك الصلاحية' %} </a>
+        {% endif %}
+        {% endif %}
+        {% else %}
+        {% if not request.user.is_superuser %}
+        <a href="#" class="dropdown-item text-wrap">
+          {% trans 'لا يمكنك التعديل بعد الموافقة على النشر أو ليس لديك الصلاحية' %} </a>
+        {% endif %}
+        {% endif %}
+
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- <div id="mini-menu"
+      class="list-group mini-menu d-none {% if LANGUAGE_CODE == 'ar' %} menu-right {% else %} menu-left {% endif %}">
+    </div> -->
+
+    <!-- SRART CARD -->
+    <strong>
+      <h1 class="text-center mt-3" id="org_fund_domain"> {% trans 'قطاع المنحة' %} :
+        {{ funding.get_work_domain_display }} </h1>
+    </strong>
+
+    <hr>
+
+    <p class="text-muted row">
+      <span class="col-3">
+        <i class="far fa-clock ml-2 mr-2"></i>
+        {% trans "تاريخ الإضافة" %}
+      </span>
+      <span class="col-9">
+        : {{ funding.created_at|timesince }}
+      </span>
+    </p>
+
+    <div class="row">
+      <div class="col">
+        {% if funding.logo %}
+        <figure>
+          <img src="{{ funding.logo.url }}"
+            name="{% if funding.org_name %} {{ funding.org_name }} {% else %} {{ funding.name_funding }} {% endif %}"
+            title="{% if funding.org_name %} {{ funding.org_name }} {% else %} {{ funding.name_funding }} {% endif %}"
+            alt="{% if funding.org_name %} {{ funding.org_name }} {% else %} {{ funding.name_funding }} {% endif %}"
+            width="100%" class="img-thumbnail rounded">
+        </figure>
+        {% endif %}
+      </div>
+      <div class="col d-flex justify-content-start align-items-center">
+        <h2 class="">
+          {% if funding.org_name %}
+          <a href="{% url 'particip_detail' funding.org_name.id %}" class="nav-link text-dark pl-0 pr-0">
+            {% trans "اسم المنظمة" %} : {{ funding.org_name }}</a>
+          {% else %}
+          {% trans 'الجهة المانحة' %} :
+          {{ funding.name_funding }}
+          {% endif %}
+        </h2>
+      </div>
+    </div>
+
+
+
+
+
+    {% if request.user.is_authenticated and request.user.is_superuser %}
+    <p class="mt-2 row">
+      <span class="col-3">
+        {% trans "اسم اللذي أضاف فرصة التمويل" %}
+      </span>
+      <span class="col-9">
+        : {{ funding.user }}
+      </span>
+    </p>
+    {% endif %}
+
+    <div class="safe-content">
+      <p class="row">
+        <span class="col-3">
+          {% trans 'لمحة عن الجهة المانحة' %}
+        </span>
+        <span class="col-9">
+          : {{ funding.funding_org_description|safe }}
+        </span>
+      </p>
+    </div>
+
+
+    <p class="row">
+      <span class="col-3">
+        {% trans 'دول المنحة' %}
+      </span>
+      <span class="col-9">
+        : {{ funding.position_work.name }}
+      </span>
+    </p>
+    <p class="row">
+      <span class="col-3">
+        {% trans 'المحافظة' %}
+      </span>
+      <span class="col-9">
+        {% if funding.city_work %}
+        : {{ funding.city_work }}
+        {% else %}
+        : {% trans 'لم يذكر' %}
+        {% endif %}
+      </span>
+    </p>
+
+    <p> <strong class="row">
+        <span class="col-3">
+          {% trans 'تاريخ إغلاق المنحة' %}
+        </span>
+        <span class="col-9">
+          : {{ funding.funding_dead_date|date:"c" }}
+        </span>
+      </strong> </p>
+
+    <p> <strong class="row">
+        <span class="col-3">
+          {% trans 'مدة المنحة' %}
+        </span>
+        <span class="col-9">
+          : {{ funding.get_funding_period_display }}
+        </span>
+      </strong> </p>
+
+    <p> <strong class="row">
+        <span class="col-3">
+          {% trans 'حجم المنحة' %}
+        </span>
+        <span class="col-9">
+          : {{ funding.get_funding_amounte_display }}
+        </span>
+      </strong> </p>
+
+    <div class="safe-content">
+      <p class="row">
+        <span class="col-3">
+          {% trans "وصف المنحة" %} <br>
+        </span>
+        <span class="col-9">
+          : {{ funding.funding_description|safe }}
+        </span>
+      </p>
+    </div>
+
+    <hr class="m-0">
+
+    <div class="safe-content">
+      <p class="row">
+        <span class="col-3">
+          {% trans "شروط المنحة" %}
+        </span>
+        <span class="col-9">
+          : {{ funding.funding_conditions|safe }}
+        </span>
+      </p>
+    </div>
+
+    <hr class="m-0">
+
+    <div class="safe-content">
+      <p class="row">
+        <span class="col-3">
+          {% trans "متطلبات التقديم" %}
+        </span>
+        <span class="col-9">
+          : {{ funding.funding_reqs|safe }}
+        </span>
+      </p>
+    </div>
+
+    <hr class="m-0">
+
+    <div class="safe-content">
+      <p class="row">
+        <span class="col-3">
+          {% trans "كيفية التقديم" %}
+        </span>
+        <span class="col-9">
+          : {{ funding.funding_guid|safe }}
+        </span>
+      </p>
+    </div>
+
+    <p class="row">
+      <span class="col-3">
+        {% trans "الرابط الأصلي" %}
+      </span>
+      <span class="col-9">
+        {% if funding.funding_url %}
+        <a href="{{ funding.funding_url }}" target="_blank">: {{ funding.funding_url }}</a>
+        {% else %}
+        : {% trans 'لم يذكر' %}
+        {% endif %}
+      </span>
+    </p>
+
+
+    <!-- SOCIAL -->
+
+    <div class="social-share col-1 position-absolute d-flex flex-column align-items-center {% if LANGUAGE_CODE == 'ar'%}
+      right {% else %} left {% endif %}">
+
+      <a href="#" class="facebook-btn" target="_blank" title="{% trans 'مشاركة على فيسبوك' %}">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="#" class="twitter-btn" target="_blank" title="{% trans 'مشاركة على تويتر' %}">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#" class="linkedin-btn" target="_blank" title="{% trans 'مشاركة على لينكدين' %}">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="#" class="whatsapp-btn" target="_blank" title="{% trans 'مشاركة على واتس اب' %}">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+  </div>
+
+
+  <!-- THE LATEST FUNDING  -->
+
+  {% if fundings|length > 0 %}
+  <div class="col-lg-3 d-none d-lg-block last3">
+    <h2 class="text-center mb-4 {% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}">
+      {% trans 'أحدث فرص تمويل المنظمات' %} </h2>
+    {% for funding in fundings|slice:3 %}
+    <a href="{% url 'funding_detail' funding.id%}" class='bg-light nav-link border-bottom pb-3 mb-2'>
+      <div class="news-card">
+        <!-- <p class="text-dark"> {{ funding.funding_description|safe|truncatechars:80 }} </p> -->
+
+        <figure>
+          <img src="{{ funding.logo.url }}" class="w-100" name="{{ funding.title }}" title="{{ funding.title }}"
+            alt="{{ funding.title }}">
+          <figcaption class="text-muted"> <i class="far fa-clock"></i> {{ funding.created_at|timesince }} </figcaption>
+        </figure>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+
+
+
+
+
+</div>
+{% endblock %}

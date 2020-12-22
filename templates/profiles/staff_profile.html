@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static i18n phonenumber_filters %}
+{% block title %} {% trans 'الملف الشخصي' %} {% endblock %}
+
+{% block content %}
+
+{% if request.user.is_authenticated and request.user.is_staff %}
+
+
+
+
+<div class="row pt-4 mt-4">
+
+    <div class="col">
+        <a href="{% url 'org_profile' %}" class="btn btn-block"> {% trans 'تقديم طلب اشتراك لمنظمة' %} </a>
+    </div>
+
+
+
+
+    <div class="row  mt-4 pt-2"></div>
+    <!-- CHNAGE PASSWORD -->
+    <div class="col">
+        <a href="{% url 'password_change' %}" class="btn btn-block mt-2 mb-2"> {% trans 'تغيير كلمة المرور' %} </a>
+    </div>
+
+
+    <div class="col">
+        <a href="{% url 'guide' %}" class="btn btn-block mt-2 mb-2">
+            {% trans 'عودة إلى صفحة دليل المجتمع المدني' %}
+        </a>
+    </div>
+
+</div>
+
+{% endif %}
+
+{% endblock %}

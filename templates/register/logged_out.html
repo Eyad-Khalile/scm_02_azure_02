@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% load static i18n %}
+{% block title %} {% trans 'تسجيل الخروج' %} {% endblock %}
+
+{% block content %}
+<div class="mt-4">
+    <h1 class="pt-5 {% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}">
+        {% trans 'لقد تم تسجيل الخروج بنجاح' %} </h1>
+    <!-- <p> {% trans 'يمكنك اﻵن' %} </p> -->
+    <a href="{% url 'signe_in' %}" class="btn btn-block mt-3 p-3"> {% trans 'إعادة تسجيل الدخول' %} </a>
+    <a href="{% url 'home' %}" class="btn btn-block mt-3 p-3"> {% trans 'الذهاب للصفحة الرئيسية' %} </a>
+
+</div>
+
+{% endblock %}

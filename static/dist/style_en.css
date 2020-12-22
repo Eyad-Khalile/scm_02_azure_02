@@ -1,0 +1,9 @@
+span.asteriskField {
+    right: -8px !important;
+}
+body [class*="span"] {
+    /* float: left;
+    min-height: 1px; */
+    margin-right: 30px !important;
+    margin-left: 0 !important;
+}

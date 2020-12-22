@@ -1,0 +1,189 @@
+{% load static i18n %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}" {% if LANGUAGE_CODE == 'ar' %} dir="rtl" {% endif %}>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <!-- <meta http-equiv="Content-Type" content="en, ar, ku; charset=utf-8" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- FACEBOOK -->
+  <!-- <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+  <meta property="og:type" content="CIVIL SOCIETY GATEWAY" />
+  <meta property="og:title" content="SCM" />
+  <meta property="og:description" content="CIVIL SOCIETY GATEWAY" />
+  <meta property="og:image" content="{% static 'media/scroll-logo.jpg' %}" /> -->
+
+  <!-- Favicon -->
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="{% static 'media/favicon_io/apple-touch-icon.png' %}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'media/favicon_io/favicon-32x32.png' %}" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'media/favicon_io/favicon-16x16.png' %}" />
+  <link rel="manifest" href="{% static 'media/favicon_io/site.webmanifest' %}" /> -->
+
+  <link rel="apple-touch-icon" sizes="57x57" href="{% static 'media/favico_main/apple-icon-57x57.png' %}">
+  <link rel="apple-touch-icon" sizes="60x60" href="{% static 'media/favico_main/apple-icon-60x60.png' %}">
+  <link rel="apple-touch-icon" sizes="72x72" href="{% static 'media/favico_main/apple-icon-72x72.png' %}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{% static 'media/favico_main/apple-icon-76x76.png' %}">
+  <link rel="apple-touch-icon" sizes="114x114" href="{% static 'media/favico_main/apple-icon-114x114.png' %}">
+  <link rel="apple-touch-icon" sizes="120x120" href="{% static 'media/favico_main/apple-icon-120x120.png' %}">
+  <link rel="apple-touch-icon" sizes="144x144" href="{% static 'media/favico_main/apple-icon-144x144.png' %}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{% static 'media/favico_main/apple-icon-152x152.png' %}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'media/favico_main/apple-icon-180x180.png' %}">
+  <link rel="icon" type="image/png" sizes="192x192" href="{% static 'media/favico_main/android-icon-192x192.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'media/favico_main/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="96x96" href="{% static 'media/favico_main/favicon-96x96.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'media/favico_main/favicon-16x16.png' %}">
+  <link rel="manifest" href="{% static 'media/favico_main/manifest.json' %}">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="{% static 'media/favico_main/ms-icon-144x144.png' %}">
+  <meta name="theme-color" content="#ffffff">
+
+
+
+  <!-- FONT AWESOME -->
+  <!-- <link rel="stylesheet" href="{% static 'src/fonts/font-awesome/css/font-awesome.min.css' %}" /> -->
+
+  <!-- GOOGLE FONTS -->
+  <!-- <link rel="stylesheet" href="{% static 'src/fonts/Almarai/Almarai-Regular.woff' %}" />
+  <link rel="stylesheet" href="{% static 'src/fonts/Tajawal/Tajawal-Regular.woff' %}" />
+  <link rel="stylesheet" href="{% static 'src/fonts/Greta Arabic Regular/Greta Arabic Regular.ttf' %}" /> -->
+
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap" rel="stylesheet" /> -->
+
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="{% static 'dist/aos/aos.css' %}" />
+  <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+  <!-- SITE STYLES -->
+  <link rel="stylesheet" href="{% static 'dist/app.bundle.css' %}" />
+
+  {% if LANGUAGE_CODE != 'ar' %}
+  <link rel="stylesheet" href="{% static 'dist/style_en.css' %}" />
+  {% endif %}
+
+  <title>{% block title %} {% endblock %}</title>
+</head>
+
+<body class="{% if request.resolver_match.url_name == 'home' %} pt-0 {% endif %}">
+  <header>{% include 'combonents/main-navbar.html' %}</header>
+
+
+  <!-- ============ BODY CONTENT ========= -->
+  <div class=" main-container overflow-hidden min-vh-100">
+
+    <div class="d-flex flex-row p-0">
+      {% if request.user.is_authenticated and request.user.is_superuser %}
+      <div class="sidebar-bg ">
+
+        <div id="wrapper" class="pt-1 mt-1">
+          <!-- SIDEBAR -->
+          {% include 'combonents/sidebar_dashboard.html' %}
+        </div>
+
+      </div>
+      {% endif %}
+      <div class="main-content p-0 col-12 mb-4 min-vh-100">
+
+        <div class="loader">
+          <img src="{% static 'media/pre_loader/Spinner-2.3s-200px.gif' %}" alt="loader">
+        </div>
+
+        <!-- MESSAGES -->
+        <!-- <div
+          class="container messages-container  {% if request.resolver_match.url_name == 'home' %} d-flex justify-content-center {% endif %} ">
+          <div class="messages {% if request.resolver_match.url_name == 'home' %} position-home {% endif %}"> -->
+        <!-- ======== L'affichage des Messages ====== -->
+        <!-- {# {% if messages %}
+            {% for message in messages %}
+            {% if message.tags == 'error' %} #}
+            <div class="alert alert-danger">
+              {# {{ message }} #}
+            </div>
+            {# {% else %} #}
+            <div class="alert alert-{{message.tags}}">
+              {# {{ message }} #}
+            </div>
+            {# {% endif %} 
+            {% endfor %}
+            {% endif %} #}
+          </div>
+        </div> -->
+
+        <!-- MESSAGES -->
+        <!-- Modal -->
+        {% if messages %}
+        {% for message in messages %}
+
+        <div class="modal fade messagesModale alert zindex-modal {% if message.tags == 'error' %} alert-danger {% else %}
+          alert-{{message.tags}} {% endif %}" id="messagesModale" tabindex="-1" aria-labelledby="messagesModale"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg ">
+            <div class="modal-content ">
+
+              <!-- <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                </div> -->
+
+              <div class="modal-body ">
+                {{ message }}
+              </div>
+
+              <!-- <div class="modal-footer"> -->
+              <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+              <!-- <input class="btn" value="Close" data-dismiss="modal"> -->
+              <!-- </div> -->
+
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+        {% endif %}
+
+
+
+        {% if request.resolver_match.url_name == "home" %}
+        <div class="container-fluid p-0">
+          {% block content-home %} {% endblock %}
+        </div>
+        {% else %}
+        <div class="container">
+          {% block content %} {% endblock %}
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="page-footer font-small text-white pt-4  mt-5" data-aos="fade-in">
+    {% include 'combonents/footer.html' %}
+  </footer>
+
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+  <script src="{% static 'dist/aos/aos.js' %}"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+    });
+  </script>
+  <script src="{% static 'dist/app.bundle.js' %}"></script>
+
+  {% block javascript %} {% endblock %}
+</body>
+
+</html>

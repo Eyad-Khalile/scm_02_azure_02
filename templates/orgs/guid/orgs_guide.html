@@ -1,0 +1,216 @@
+{% extends 'base.html' %}
+{% load static i18n crispy_forms_tags %}
+{% block title %} {% trans 'دليل المجتمع المدني' %} {% endblock %}
+
+{% block content %}
+
+
+
+<div class="pt-4 mt-4">
+
+
+    <h1 class="text-center mb-4" data-aos="fade-left"> {% trans 'دليل المجتمع المدني' %} </h1>
+    <!--<p class="text-right text-al-just p-color h4" data-aos="fade-right">
+                "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور
+
+                أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد
+
+                أكسير سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات . ديواس
+
+                أيوتي أريري دولار إن ريبريهينديرأيت فوليوبتاتي فيلايت أيسسي كايلليوم دولار أيو فيجايت
+
+                نيولا باراياتيور. أيكسسيبتيور ساينت أوككايكات كيوبايداتات نون بروايدينت ,سيونت ان كيولبا
+
+                كيو أوفيسيا ديسيريونتموليت انيم أيدي ايست لابوريوم."
+
+                <span id="collapseText" class="collapse">
+
+                    "سيت يتبيرسبايكياتيس يوندي أومنيس أستي ناتيس أيررور سيت فوليبتاتيم أكيسأنتييوم
+
+                    دولاريمكيو لايودانتيوم,توتام ريم أبيرأم,أيكيو أبسا كيواي أب أللو أنفينتوري فيرأتاتيس ايت
+
+                    كياسي أرشيتيكتو بيتاي فيتاي ديكاتا سيونت أكسبليكابو. نيمو أنيم أبسام فوليوباتاتيم كيواي
+
+                    فوليوبتاس سايت أسبيرناتشر أيوت أودايت أيوت فيوجايت, سيد كيواي كونسيكيونتشر ماجناي
+
+                    دولارس أيوس كيواي راتاشن فوليوبتاتيم سيكيواي نيسكايونت. نيكيو بوررو كيوايسكيوم
+
+                    ايست,كيواي دولوريم ايبسيوم كيوا دولار سايت أميت, كونسيكتيتيور,أديبايسكاي فيلايت, سيد
+
+                    كيواي نون نيومكيوام ايايوس موداي تيمبورا انكايديونت يوت لابوري أيت دولار ماجنام
+
+                    ألايكيوام كيوايرات فوليوبتاتيم. يوت اينايم أد مينيما فينيام, كيواس نوستريوم أكسيركايتاشيم
+
+                    يلامكوربوريس سيوسكايبيت لابورايوسام, نايساي يوت ألايكيوايد أكس أيا كوموداي
+
+                    كونسيكيواتشر؟ كيوايس أيوتيم فيل أيوم أيوري ريبريهينديرايت كيواي ان إيا فوليوبتاتي
+
+                    فيلايت ايسسي كيوم نايهايل موليستايا كونسيكيواتيو,فيلايليوم كيواي دولوريم أيوم فيوجايات كيو
+
+                    فوليوبتاس نيولا باراياتيور؟"
+                </span>
+            </p>
+            <a href="#collapseText" id="collapsRead" class="nav-toggle text-decoration-none" data-toggle="collapse">
+                {% trans "إقراء المزيد" %}
+            </a>
+        </article> -->
+
+
+
+
+    <h2 class="{% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}" data-aos="fade-left">
+        {% trans 'قائمة منظمات المجتمع المدني' %} </h2>
+
+    <div class="d-flex mt-4">
+
+        {% if request.user.is_authenticated %}
+        {% if not request.user.orgprofile_set.all or request.user.is_staff %}
+        <a href="{% url 'org_profile' %}"
+            class="btn btn-block mt-4 {% if LANGUAGE_CODE == 'ar' %} ml-2 {% else %} mr-2 {% endif %}"
+            title="{% trans 'تقديم طلب اشتراك' %}" data-aos="fade-right"><i class="fas fa-plus"></i></a>
+        {% endif %}
+        {% endif %}
+
+        {% if orgs %}
+        <a class="btn btn-block mt-4 mx-2" data-toggle="collapse" href="#collapseFiltre" aria-expanded="false"
+            aria-controls="collapseFiltre" title="{% trans 'فرز' %}" data-aos="fade-right"><i
+                class="fas fa-filter"></i></a>
+        {% endif %}
+
+
+        {% if request.user.is_authenticated and request.user.is_superuser %}
+        <a href="{% url 'guide_conf' %}" class="btn btn-block mt-4 mx-2"
+            title="{% trans 'طلبات اشتراك المنظمات قيد الدراسة' %}" data-aos="fade-right"><i
+                class="fas fa-chalkboard-teacher"></i>
+        </a>
+        {% elif request.user.is_authenticated and request.user.is_staff %}
+        <a href="{% url 'guide_conf' %}?staff={{ request.user.username }}" class="btn btn-block mt-4 mx-2"
+            title="{% trans 'طلبات اشتراك المنظمات قيد الدراسة' %}" data-aos="fade-right"><i
+                class="fas fa-chalkboard-teacher"></i>
+        </a>
+        {% endif %}
+
+    </div>
+
+
+    {% if orgs %}
+    <!-- SECTION 2 -->
+    <div class="pt-3 px-4 pb-2 mt-4 collapse" id="collapseFiltre">
+        <!-- FILTERS -->
+        <form action="" method="get"
+            class="row register justify-content-center align-items-center flex-wrap form my-2 my-lg-0">
+            <div class="col-sm-12 col-md-4  mt-3">
+                {{ myFilter.form.name|as_crispy_field }}
+            </div>
+            <div class="col-sm-12 col-md-4 mt-3">
+                {{ myFilter.form.work_domain|as_crispy_field }}
+            </div>
+            <div class="col-sm-12 col-md-4  mt-3">
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-4 mt-3">
+                    {{ myFilter.form.start_date|as_crispy_field }}
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-4 mt-3">
+                    {{ myFilter.form.end_date|as_crispy_field }}
+                </div>
+                <div class="col-sm-12 col-md-4 mt-3">
+                    {{ myFilter.form.target_cat|as_crispy_field }}
+                </div>
+
+            </div>
+
+            <div class="d-flex form-group mt-3">
+                <button class="btn btn-block mt-3 mx-1">{% trans 'بحث' %}</button>
+                <a href="{% url 'guide' %}" class="btn btn-block mt-3 mx-1"> {% trans 'كافة المنظمات' %} </a>
+            </div>
+        </form>
+    </div>
+
+
+
+    <div class="row row-m-0 row-gutter-0 pt-4 pb-4 mb-4">
+        <br>
+        <br>
+        {% for org in orgs %}
+
+        <div class="span3 well" data-aos="fade-left">
+            <span class="text-muted">
+                <i class="far fa-clock ml-2 mr-2"></i>
+                {{ org.created_at|timesince }}
+            </span>
+            <center class="mt-3">
+                <a href="{% url 'particip_detail' org.id %}">
+                    <img src="{{ org.logo.url }}" name="{{ org.name_en_ku }}" title="{{ org.name_en_ku }}" width="140"
+                        height="140" class="img-circle"></a>
+                <h3 class="mt-4">{{ org.name }}</h3>
+                {% if org.short_cut %}
+                <p>{{ org.short_cut }}</p>
+                {% endif %}
+                <!-- <p>{{ org.message|safe|truncatechars:80 }}</p> -->
+                <p>
+                    <a href="{% url 'particip_detail' org.id %}" class="btn btn-block"
+                        title="{% trans 'للمزيد عن المنظمة' %}"><i class="fas fa-book-reader"></i>
+                    </a>
+                </p>
+
+            </center>
+        </div>
+        {% endfor %}
+
+
+
+        <div class="pagination row border-top mt-4 pt-4" dir="ltr">
+            <center>
+                {% if orgs.paginator.num_pages > 1 %}
+                {% if orgs.has_previous %}
+
+                <a href="?page=1" class="btn">
+                    <i class="fa fa-angle-double-left"></i>
+                </a>
+                <a href="?page={{ orgs.previous_page_number }}" class="btn">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+
+                {% endif %}
+
+                {% for num in orgs.paginator.page_range %}
+                {% if orgs.number == num %}
+                <a href="?page={{ num }}" class="btn btn-current">{{ num }}</a>
+                {% elif num > orgs.number|add:'-3' and num < orgs.number|add:'3' %}
+                <a href="?page={{ num }}" class="btn">{{ num }}</a>
+                {% endif %}
+                {% endfor %}
+
+                <span> {% trans "إجمالي عدد المنظمات" %} ( {{ orgs.paginator.count }} ) </span>
+                {% if orgs.has_next %}
+                <a href="?page={{ orgs.next_page_number }}" class="btn"><i class="fa fa-angle-right"></i></a>
+                <a href="?page={{ orgs.paginator.num_pages }}" class="btn"><i class="fa fa-angle-double-right"></i></a>
+
+                {% endif %}
+                {% endif %}
+
+            </center>
+        </div>
+
+
+
+
+    </div>
+    {% else %}
+    <h3 class="{% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}">
+        {% trans 'حالياً لا يوجد منظمات مسجله او موافق عليها' %} </h3>
+    {% endif %}
+
+    <!-- <p>{{ orgs.has_previous }}</p>
+            <p>{{ orgs.number }}</p>
+            <p>{{ orgs.paginator.count }}</p>
+            <p>{{ orgs.paginator.num_pages }}</p>
+            <p>{{ orgs.paginator.page_range }}</p>
+            <p>{{ orgs.has_next }}</p> -->
+
+
+
+</div>
+
+{% endblock %}

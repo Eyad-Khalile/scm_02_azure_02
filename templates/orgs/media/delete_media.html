@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static i18n crispy_forms_tags%}
+{% block title %} {% trans 'حذف المحتوى السمعي و البصري' %} {% endblock %}
+
+{% block content %}
+
+
+
+<div class="row pt-4 mt-4 mb-4">
+    <h1 class="{% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}" data-aos="fade-left">
+        {% trans 'حذف المحتوى السمعي و البصري' %}</h1>
+
+    <h2> {% trans "هل أنت متأكد من رغبتك في حذف المحتوى بعنوان" %} : {{ media.title }} </h2>
+
+    <form action="" method="post" class="register" enctype="multipart/form-data" data-aos="fade-right">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-block mt-3" value='{% trans "حذف المحتوى" %}'>
+        </div>
+        <button type="button" class="btn btn-block nav-link active nav-link-icon d-flex justify-content-center"
+            onclick="history.back();" title="{% trans 'عودة إلى الصفحة السابقة' %}">
+            {% trans 'عودة إلى الصفحة السابقة' %}
+        </button>
+    </form>
+
+
+
+</div>
+
+
+
+{% endblock %}

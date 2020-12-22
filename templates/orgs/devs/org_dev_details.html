@@ -1,0 +1,257 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% block title %} {% trans 'تفاصيل دليل التطوير' %} {% endblock %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block content %}
+
+
+<div class="row mt-4 pt-4">
+  <h1 class="{% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}" data-aos="fade-left">
+    {% trans 'تفاصيل دليل التطوير' %}
+  </h1>
+
+  <div class="well col-lg-9 job-card col-xs-12 position-relative" data-aos="fade-right">
+
+    <!-- MINI MANU -->
+    {% if request.user.is_authenticated %}
+    <!-- <span id="span-menu" type="button"
+      class="span-menu {% if LANGUAGE_CODE == 'ar' %} float-right {% else %} float-left {% endif %}"><i
+        class="fa fa-ellipsis-v" aria-hidden="true"></i></span> -->
+    <div class="btn-group" role="group">
+      <span id="btnGroupDrop1" type="button" class="btn dropdown-toggle {% if LANGUAGE_CODE == 'ar' %} pr-0 {% else %} pl-0
+    {% endif %}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+      </span>
+      <div class="dropdown-menu {% if LANGUAGE_CODE == 'ar' %} right-0 {% endif %}" aria-labelledby="btnGroupDrop1">
+        {% if request.user.is_authenticated and request.user.is_superuser %}
+        {% if dev.publish == False %}
+        <form action="" class="confirm" method="post">
+          {% csrf_token %} {{ form.publish }}
+          <div class="form-group">
+            <button type="submit" id="org_confirm_btn" class="dropdown-item"
+              title="{% trans 'الموافقة على النشر' %}">{% trans 'الموافقة على النشر' %} <i class="fas fa-check {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></button>
+          </div>
+        </form>
+        {% elif dev.publish == True %}
+        <form action="" class="deconfirm" method="post">
+          {% csrf_token %} {{ form.publish }}
+          <div class="form-group">
+            <button type="submit" id="org_deconfirm_btn" class="dropdown-item"
+              title="{% trans 'إلغاء نشر الدليل' %}">{% trans 'إلغاء نشر الدليل' %} <i class="fa fa-ban {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}" aria-hidden="true"></i></button>
+          </div>
+        </form>
+        {% endif %}
+        <a href="{% url 'dev_edit' dev.id %}" class="dropdown-item"
+          title="{% trans 'تعديل الدليل' %}">{% trans 'تعديل الدليل' %} <i class="fas fa-edit {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></a>
+        <a href="{% url 'dev_delete' dev.id %}" class="dropdown-item" title="{% trans 'حذف' %}">{% trans 'حذف' %} <i
+            class="far fa-trash-alt {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></a>
+        {% endif %}
+
+
+        {% if dev.publish == False and not request.user.is_superuser %}
+        {% if request.user == dev.user or request.user.is_staff %}
+        <a href="{% url 'dev_edit' dev.id %}" class="dropdown-item"
+          title="{% trans 'تعديل الدليل' %}">{% trans 'تعديل الدليل' %} <i class="fas fa-edit {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+    {% endif %}"></i></a>
+        {% else %}
+        {% if not request.user.is_superuser %}
+        <a href="#" class="dropdown-item text-wrap">
+          {% trans 'ليس لديك الصلاحية' %} </a>
+        {% endif %}
+        {% endif %}
+        {% else %}
+        {% if not request.user.is_superuser %}
+        <a href="#" class="dropdown-item text-wrap">
+          {% trans 'لا يمكنك التعديل بعد الموافقة على النشر أو ليس لديك الصلاحية' %} </a>
+        {% endif %}
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- <div id="mini-menu"
+      class="list-group mini-menu d-none {% if LANGUAGE_CODE == 'ar' %} menu-right {% else %} menu-left {% endif %}">
+    </div> -->
+
+    <!-- START CART -->
+
+    <strong>
+      <h1 class="text-center mt-3"> {% trans "عنوان" %} : {{ dev.title_dev }}</h1>
+    </strong>
+
+    <hr>
+
+    <p class="text-muted  row">
+      <span class="col-3">
+        <i class="far fa-clock ml-2 mr-2"></i>
+        {% trans "  تاريخ الإضافة " %}
+      </span>
+      <span class="col-9">
+        {{ dev.created_at|timesince }}
+      </span>
+    </p>
+
+    <p class="row">
+      <span class="col-3">
+        {% trans  "موضوع المادة" %}
+      </span>
+      <span class="col-9">
+        : {{ dev.get_subject_display }}
+      </span>
+    </p>
+
+    <h3 class="mt-4  row">
+      <span class="col-3">
+        {% if dev.org_name %}
+        {% trans "اسم المنظمة" %}
+        {% else %}
+        {% trans 'اسم الجهة' %}
+        {% endif %}
+      </span>
+      <span class="col-9">
+        {% if dev.org_name %}
+        <a href="{% url 'particip_detail' dev.org_name.id %}" class="nav-link text-dark pl-0 pr-0">:
+          {{ dev.org_name }}</a>
+        {% else %}
+        : {{ dev.name_dev }}
+        {% endif %}
+      </span>
+    </h3>
+
+    {% if request.user.is_authenticated and request.user.is_superuser %}
+    <p class="text-muted mt-4 row">
+      <span class="col-3">
+        {% trans "اسم اللذي أضاف دليل التطوير" %}
+      </span>
+      <span class="col-9">
+        : {{ dev.user }}
+      </span>
+    </p>
+    {% endif %}
+
+    <!-- CONTENT المادة -->
+
+    <!-- IF PDF -->
+    {% if dev.get_extension == ".pdf" %}
+    <object data="{{ dev.content.url }}" type="application/pdf" title="{{dev.title_dev}}" width="100%" height="885">
+      <embed src="{{ dev.content.url  }}">
+    </object>
+    <!-- IF IMAGE -->
+    {% else %}
+    <figure>
+      <img src="{{ dev.content.url }}" class="w-100" name="{{ dev.title_dev }}" title="{{ dev.title_dev }}"
+        alt="{{ dev.title_dev }}">
+    </figure>
+    {% endif %}
+
+    <div class="safe-content">
+      <p>
+        <div class="text-wrap">
+          <span class="col-3">
+            {% trans  "لمحة عن الجهة" %} <br>
+          </span>
+          <span class="col-9 text-wrap">
+            : {{ dev.dev_description|safe }}
+          </span>
+        </div>
+      </p>
+    </div>
+
+    <p class="row">
+      <span class="col-3">
+        {% trans 'تاريخ الإعداد أو النشر أو التأليف' %}
+      </span>
+      <span class="col-9">
+        {% if dev.dev_date %}
+        : {{ dev.dev_date }}
+        {% else %}
+        : {% trans 'لم يذكر' %}
+        {% endif %}
+      </span>
+    </p>
+
+
+
+
+    {% if dev.video %}
+    <div class="d-flex justify-content-center">
+      <!-- {{ article.youtube|truncatechars:9 }}  -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ dev.video|slice:'17:' }}?rel=0"
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    {% endif %}
+
+    <!-- SOCIAL -->
+
+    <!-- <div class="social-share col-1 position-absolute d-flex flex-column align-items-center {% if LANGUAGE_CODE == 'ar'%}
+      right {% else %} left {% endif %}">
+
+      <a href="#" class="facebook-btn" target="_blank" title="{% trans 'مشاركة على فيسبوك' %}">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="#" class="twitter-btn" target="_blank" title="{% trans 'مشاركة على تويتر' %}">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#" class="linkedin-btn" target="_blank" title="{% trans 'مشاركة على لينكدين' %}">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="#" class="whatsapp-btn" target="_blank" title="{% trans 'مشاركة على واتس اب' %}">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div> -->
+
+
+    <!-- PARTAGE RESEAUX SOCIAL -->
+    <!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2">
+    </script>
+    <div class="fb-like" data-href="http://127.0.0.1:8000/devs_detail/2" og:image data-layout="standard"
+      data-action="like" data-size="large" data-show-faces="false" data-share="true"></div><br> -->
+
+
+
+  </div>
+
+
+
+  <!-- THE LATEST DEVS  -->
+  {% if devs.count > 0 %}
+  <div class="col-lg-3 d-none d-lg-block last3" data-aos="fade-left">
+    <h2 class="text-center mb-4 {% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}">
+      {% trans 'أحدث ثلاثة دليل تطوير' %} </h2>
+    {% for dev in devs|slice:3 %}
+    <a href="{% url 'devs_detail' dev.id %}" class='bg-light nav-link border-bottom pb-3 mb-2'>
+      <div class="news-card">
+        <p class="text-dark"> {{ dev.title_dev }} </p>
+
+        {% if not dev.get_extension == ".pdf" %}
+        <figure>
+          <img src="{{ dev.content.url }}" class="w-100" name="{{ dev.title_dev }}" title="{{ dev.title_dev }}"
+            alt="{{ dev.title_dev }}">
+          <figcaption class="text-muted"><i class="far fa-clock ml-2 mr-2"></i>{{ dev.created_at|timesince }}
+          </figcaption>
+        </figure>
+        {% endif %}
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}

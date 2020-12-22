@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static i18n crispy_forms_tags %}
+
+{% block title %} {% trans "فرص التمويل" %} {% endblock %}
+
+{% block content %}
+
+<div class="row mt-4 pt-4 orgs-news">
+  <div class="">
+    <article>
+      <h1 class="text-center mb-4 {% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}">
+        {% trans "فرص التمويل" %} </h1>
+      <!-- Text Descriptions -->
+
+
+    </article>
+
+
+    <hr>
+    <!-- Les Cercles -->
+    <div class="row org-work mb-2">
+
+      <div class="d-flex justify-content-center align-items-center flex-wrap">
+        <div class="">
+          <a href="{% url 'orgs_funding' %}"
+            class="btn btn-button d-flex justify-content-center align-items-center border-0 wrapp-yes" data-aos="fade-in">
+            {% trans "فرص تمويل المنظمات" %}
+          </a>
+        </div>
+        <div class="">
+          <a href="{% url 'finance_perso' %}"
+            class="btn btn-button d-flex justify-content-center align-items-center border-0 wrapp-yes" data-aos="fade-in">
+            {% trans "فرص تمويل الأفراد" %}
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  {% endblock %}

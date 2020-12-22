@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% block title %} {% trans "دليل المجتمع المدني بحسب مجال العمل" %} {% endblock %}
+
+{% block content %}
+<!-- <h1>دليل المجتمع المدني بحسب مجال العمل</h1> -->
+        <!-- TABLE FOR ORGS WITH FILTERS -->
+
+        
+        
+
+        <h1> قائمة منظمات المجتمع المدني بحسب مجال ( {{list_work}} )</h1>
+        
+ 
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">اسم المنظمة</th>
+                        <th scope="col">الاسم المختصر</th>
+                        <th scope="col">نوع المنظمة</th>
+                        <th scope="col">مكان العمل</th>
+                        <th scope="col">اللوغو</th>
+                        <th scope="col">الرؤية والرسالة</th>
+                        <th scope="col">التواصل</th>
+                        <th scope="col">مجال العمل</th>
+                        <th scope="col">الفئات المستهدفة</th>
+                        <th scope="col">تاريخ التأسيس</th>
+                        <th scope="col">نبذة عن المشاريع الحالية أو السابقة</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>{{list_work}}</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>{{list_work}}</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>Jacob</td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>{{list_work}}</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>Larry</td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>{{list_work}}</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>Larry</td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>{{list_work}}</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>Larry</td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>{{list_work}}</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>Larry</td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>{{list_work}}</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>Larry</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        
+        <a href="{% url 'home' %}" class="btn"> العودة إلى الصفحة الرئيسية </a>
+        <a href="{% url 'guide' %}" class="btn"> الذهاب إلى دليل المجتمع المدني</a>
+
+
+{% endblock %}

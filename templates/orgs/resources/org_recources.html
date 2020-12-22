@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block title %} {% trans "مصادر المجتمع المدني" %} {% endblock %}
+
+{% block content %}
+
+<div class="row mt-4 pt-4 orgs-news">
+  <div class="">
+    <article>
+      <h1 class="text-center mb-4" data-aos="fade-left"> {% trans "مصادر المجتمع المدني" %} </h1>
+      <!-- Text Descriptions -->
+
+      {% if LANGUAGE_CODE == 'ar' %}
+      <p class="text-right text-al-just p-color h4" data-aos="fade-right">
+
+        يعرض هذا القسم فرص العمل والتمويل والموارد المتاحة سواء لمنظمات المجتمع المدني السوري والعاملين فيها، وأيضا
+        للأفراد السوريين، ويضم هذا القسم أربع صفحات فرعية:
+
+
+        <span id="collapseText" class="collapse">
+
+          <ul id="list-collapse">
+            <li>
+              <strong>فرص العمل :</strong> يتضمن أحدث فرص العمل والتطوع والتدريب التي تطرحها المنظمات المسجلة في المنصة
+              وغير المسجلة بما
+              في
+              ذلك المنظمات الدولية.
+            </li>
+            <li>
+              <strong>فرص التمويل :</strong> يعرض المنح وفرص التمويل سواء الخاصة بالأفراد أو المنظمات.
+            </li>
+            <li>
+              <strong>فرص بناء القدرات :</strong> يعرض فرص وأجندة ورشات العمل والتدريب في مجالات مختلفة (مجالات التنمية،
+              مجالات الإغاثة
+              الإنسانية، مجالات الحوكمة والإدارة... الخ).
+            </li>
+            <li>
+              <strong>دليل التطوير :</strong> وهو مكتبة الكترونية مليئة بالمراجع التي تهم العاملين في مجال المجتمع
+              المدني وإدارة المشاريع،
+              الحوكمة التنظيمية، المناصرة والحملات... الخ
+            </li>
+          </ul>
+
+        </span>
+      </p>
+      {% elif LANGUAGE_CODE == 'en' %}
+      <p class="text-right text-al-just p-color h4">
+        This section offers work opportunities, funding, and available resources either for the Syrian civil society
+        organizations and the people working there or for Syrian individuals. This section has four sub-pages: <br> <br>
+        <span id="collapseText" class="collapse">
+
+          <ul id="list-collapse">
+            <li>
+              <strong>Work opportunities:</strong> offering latest work opportunities and volunteering and training put
+              forward by registered organizations in the platform and those unregistered including international
+              organizations.
+            </li>
+            <li>
+              <strong>Funding opportunities:</strong>offering grants and funding opportunities whether for individuals
+              or organizations.
+            </li>
+            <li>
+              <strong>Opportunities for capability building:</strong> offering opportunities and programs for training
+              and workshops in different field (development and human relief, areas of governance and management etc.)
+            </li>
+            <li>
+              <strong>Guide of improvement:</strong> an electronic library full of references of interest to the
+              employees in the field civil society, project management, organizing governance, support and campaigns
+              etc.
+            </li>
+          </ul>
+        </span>
+      </p>
+      {% elif LANGUAGE_CODE == 'ku' %}
+      <p class="text-right text-al-just p-color h4">
+        Di vê beşê da, derfetên kar, û yên perpêdanê û çavakaniyan  bo rêxistinên civaka sivîl û karmendên wan, û her
+        wiha bo hemwelatiyên sûrî belav dike. <br> <br>
+        <span id="collapseText" class="collapse">
+          Ev beş bo ji çar binbeşan ava dibe:
+          <ul id="list-collapse">
+            <li>
+              <strong>Derfetên kar: </strong>derftên kar, derfetên xwebexşî, derfetên rahênanê pêşkêş dike, yên ji aliyê
+              rêxistinên abonkirî yan jî rêxistinên navdewletî.
+            </li>
+            <li>
+              <strong>Derfetên Perepêdanê: </strong>ew pişgîrî û derfetên perepêdanê pêşkêş dike çi bo kesan çi bo
+              rêxistinan.
+            </li>
+            <li>
+              <strong>Derfetên avakirina şiyanan: </strong>Ew derfetên û bernameyên atolyan û hîndekariyê di warên cuda
+              da (geşepêdan, arîkariya mirovî, rêveberî ... hwd) pêşkêşî dike.
+            </li>
+            <li>
+              <strong>Rêberên pêşvedanê: </strong>Ew pirtûkxaneyek elektronîkî ye û tijî çavkanî ye ku ji karmendên
+              civaka sivîl re balkêş in wekî rêveberiya projeyan, rêveberiya rêxistinan, parêzvanî û kampanya ... hwd
+            </li>
+          </ul>
+        </span>
+
+      </p>
+      {% endif %}
+
+      <a href="#collapseText" id="collapsRead" class="nav-toggle text-decoration-none" data-toggle="collapse">
+        {% trans "إقراء المزيد" %}
+      </a>
+    </article>
+
+
+    <hr>
+    <!-- Les Cercles -->
+    <div class="row org-work mb-2">
+      <h2 class="text-center mb-4"> {% trans "المصادر" %} </h2>
+
+      <div class="d-flex justify-content-center align-items-center flex-wrap">
+        <div class="">
+          <a href="{% url 'orgs_jobs' %}"
+            class="btn btn-button d-flex justify-content-center align-items-center border-0 text-wrap" data-aos="fade-left">
+            {% trans "فرص العمل" %}
+          </a>
+        </div>
+        <div class="">
+          <a href="{% url 'funding' %}"
+            class="btn btn-button d-flex justify-content-center align-items-center border-0 text-wrap" data-aos="fade-left">
+            {% trans "فرص التمويل" %}
+          </a>
+        </div>
+
+        <div class="">
+          <a href="{% url 'orgs_capacity' %}"
+            class="btn btn-button d-flex justify-content-center align-items-center border-0 text-wrap" data-aos="fade-left">
+            {% trans "فرص بناء القدرات" %} </a>
+        </div>
+        <div class="">
+          <a href="{% url 'orgs_devs' %}"
+            class="btn btn-button d-flex justify-content-center align-items-center border-0 text-wrap" data-aos="fade-left">
+            {% trans 'دليل التطوير' %}
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+{% endblock %}

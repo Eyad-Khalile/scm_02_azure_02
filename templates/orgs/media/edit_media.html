@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static i18n crispy_forms_tags %}
+{% block title %} {% trans 'تعديل المحتوى السمعي و البصري' %} {% endblock %}
+
+{% block content %}
+
+<div class="row pt-4 mt-4 mb-4">
+    <h1 class="{% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}" data-aos="fade-left">
+        {% trans 'تعديل المحتوى السمعي و البصري' %}</h1>
+    <hr>
+
+    <form action="" id="form_rapport" method="post" class="register" enctype="multipart/form-data" data-aos="fade-right">
+        {% csrf_token %}
+        {% if request.user.is_authenticated and request.user.is_staff %}
+        {{ form.org_name|as_crispy_field }}
+        {% endif %}
+        {{ form.title|as_crispy_field }}
+        {{ form.media|as_crispy_field }}
+        {{ form.url|as_crispy_field }}
+        <input type="submit" value="{% trans 'تعديل' %}" class="btn btn-block">
+    </form>
+
+
+
+</div>
+
+
+{% endblock %}

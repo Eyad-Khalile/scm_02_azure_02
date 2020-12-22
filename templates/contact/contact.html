@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static i18n crispy_forms_tags %}
+{% block title %} {% trans "اتصل بنا" %} {% endblock %}
+
+{% block content %}
+
+<div class="mt-4 pt-4">
+    <h1 class="{% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}">
+        {% trans "اتصل بنا" %}
+    </h1>
+
+    <form class="register" action="{% url 'contact' %}" method="post">
+        {% csrf_token %}
+        <div class="form-group mt-2 mb-2 d-flex justify-content-between">
+            <div class="col-lg-6 col-sm-12 ">
+                {{ form.contact_name|as_crispy_field }}
+            </div>
+            <div class="col-lg-6 col-sm-12 ">
+                {{ form.contact_email|as_crispy_field }}
+            </div>
+        </div>
+        <div class="form-group mt-2 mb-2">
+            {{ form.contact_subject|as_crispy_field }}
+        </div>
+        <div class="form-group mt-2 mb-2">
+            {{ form.contact_message|as_crispy_field }}
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-block"> {% trans 'أرسل' %} </button>
+        </div>
+    </form>
+
+</div>
+
+
+<!-- <ul class="list-unstyled pr-0">
+    <li>
+        <p>
+            <i class="fa fa-home" aria-hidden="true"></i> New York, NY 10012, US</p>
+    </li>
+    <li>
+        <p>
+            <i class="fa fa-envelope" aria-hidden="true"></i> info@example.com</p>
+    </li>
+    <li>
+        <p>
+            <i class="fa fa-phone" aria-hidden="true"></i> + 01 234 567 88</p>
+    </li>
+    <li>
+        <p>
+            <i class="fa fa-print" aria-hidden="true"></i> + 01 234 567 89</p>
+    </li>
+</ul> -->
+
+
+{% endblock %}

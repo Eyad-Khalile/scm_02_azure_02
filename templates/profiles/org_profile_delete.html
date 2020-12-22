@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static i18n crispy_forms_tags %}
+
+{% block title %} {% trans "حذف الملف" %} {% endblock %}
+
+{% block content %}
+
+{% if request.user.is_authenticated and request.user.is_superuser %}
+<div class="row mt-4 pt-4 mb-4">
+    <h1 class="mt-4 mb-4 pb-4 {% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}"
+        data-aos="fade-left">
+        {% trans "حذف الملف" %} </h1>
+
+    <h2 data-aos="fade-right"> {% trans "هل أنت متأكد من رغبتك في حذف الملف الشخصي" %} : {{ org_prof }} </h2>
+
+    <form action="" method="post" class="register" enctype="multipart/form-data" data-aos="fade-left">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-block mt-3" value='{% trans "حذف الملف" %}'>
+        </div>
+        <button type="button" class="btn btn-block nav-link active nav-link-icon d-flex justify-content-center"
+            onclick="history.back();" title="{% trans 'عودة إلى الصفحة السابقة' %}">
+            {% trans 'عودة إلى الصفحة السابقة' %}
+        </button>
+    </form>
+
+
+
+
+</div>
+{% else %}
+<h1 class="{% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}">
+    {% trans 'لا يوجد لديك الصلاحية للدخول إلى هذه الصفحة' %} </h1>
+{% endif %}
+
+{% endblock %}

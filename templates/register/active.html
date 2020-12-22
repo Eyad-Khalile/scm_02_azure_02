@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+<!-- Activer -->
+{% block title %} {% trans 'تنشيط الحساب' %} {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <!-- Compte Activer -->
+    <h1 class="{% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}"> {% trans 'تنشيط الحساب' %} </h1>
+
+</div>
+
+{% endblock %}

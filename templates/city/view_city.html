@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static i18n crispy_forms_tags %}
+
+{% block title %} {% trans "محافظات دول الجوار لسوريا" %} {% endblock %}
+
+{% block content %}
+
+
+<div class="row mt-4 pt-4 mb-4">
+    <h1> {% trans "محافظات دول الجوار لسوريا" %} </h1>
+
+    {% for city in cityes %}
+
+    <p> {{ city.id }} : {{ city.position_work }} : {{ city.city_work }}</p>
+
+    {% endfor  %}
+
+
+</div>
+
+{% endblock %}

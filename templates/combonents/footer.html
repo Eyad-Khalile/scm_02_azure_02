@@ -1,0 +1,154 @@
+{% load static i18n crispy_forms_tags %}
+{% get_current_language as LANGUAGE_CODE %}
+
+<!-- Footer -->
+
+<!-- Footer Links -->
+<div class="container {% if LANGUAGE_CODE == 'ar'%} text-md-right {% endif %}">
+
+
+    <!-- Grid row -->
+    <div class="row">
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-3 mr-auto my-md-4 my-0 mb-1">
+
+            <!-- SCM LOGO -->
+            <a href="https://scm.bz/" target="_blank" class="logo  d-block"
+                title="{% trans 'المركز السوري للإعلام و حرية التعبير' %}">
+                <img src="{% static 'media/scroll-logo.png' %}" width="90" alt="Logo" loading="lazy" />
+            </a>
+
+            <!-- GATEWAY LOGO -->
+            <a href="{% url 'home' %}">
+                <img src="{% static 'media/main_logo/Logo.png' %}" alt="CIVIL SOCIETY GATEWAY" width="200">
+            </a>
+
+
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">
+                <a href="{% url 'home' %}" class="text-white"> {% trans "بوابة المجتمع المدني" %} </a>
+            </h5>
+
+
+            <!-- BTN SCROLL UP -->
+            <h5 class="font-weight-bold text-uppercase mt-4 pt-4 d-none " id="f-5-top">
+                <a href="" id="scroll_top" class="btn-scroll-top" title="Top"><i class="fas fa-angle-double-up"></i></a>
+            </h5>
+
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none" />
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+            <!-- <a href="#collapseContact" data-toggle="collapse" class="btn btn-block mb-2" role="button"
+                aria-expanded="false" aria-controls="collapseContact">
+                
+            </a> -->
+            <h5 class="border-bottom pb-2 font-weight-bold text-uppercase mb-5"> {% trans "للتواصل معنا" %} </h5>
+
+            <div class="{% if LANGUAGE_CODE == 'ar'%} icon-ml {% else %} icon-mr {% endif %}" id="collapseContact">
+                <ul class="list-unstyled pr-0">
+                    <li>
+                        <p>
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            <span dir="ltr">17 passage de la Main d’Or,</span> <br>
+                            <span class="{% if LANGUAGE_CODE == 'ar'%} pr-4 {% else %} pl-4 {% endif %}">75011 Paris,
+                                France</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            info@csgateway.ngo
+                        </p>
+                    </li>
+                    <!-- <li>
+                        <p>
+                            <i class="fa fa-phone" aria-hidden="true"></i> <span dir="ltr">+ 01 234 567
+                                88</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fa fa-print" aria-hidden="true"></i> <span dir="ltr">+ 01 234 567
+                                89</span>
+                        </p>
+                    </li> -->
+                </ul>
+            </div>
+
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none" />
+
+        <!-- Grid column -->
+        <div class="col-md-6 social col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+            <!-- Social buttons -->
+            <h5 class="font-weight-bold text-uppercase mb-4 border-bottom pb-2"> {% trans "تابعونا على" %} </h5>
+
+            <div class="social-icon">
+                <!-- Facebook -->
+                <a role="button" class="btn btn-floating btn-fb">
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                </a>
+                <!-- Twitter -->
+                <a href="https://twitter.com/EnBlJf51NKMzIrD" target="_blanck" role="button"
+                    class="btn btn-floating btn-tw">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+
+                <!-- Dribbble -->
+                <a role="button" class="btn btn-floating btn-dribbble">
+                    <i class="fab fa-dribbble" aria-hidden="true"></i>
+                </a>
+            </div>
+
+
+            <!-- Contact details -->
+
+            <!-- <a href="{% url 'site_politic' %}" class="btn"> سياسة الخصوصية </a> -->
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none" />
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-3 mx-auto my-4 overflow-hidden">
+            <!-- Email -->
+            <h5 class="font-weight-bold text-uppercase mb-5 border-bottom pb-2">
+                {% trans "للاشتراك بآخر الأخبار" %}
+            </h5>
+            <!-- <a href="#collapseForm" data-toggle="collapse" class="btn btn-block mb-2" role="button"
+                aria-expanded="false" aria-controls="collapseForm">
+                اشترك معنا
+            </a> -->
+            <div class="" id="collapseForm">
+                <a href="{% url 'home' %}#newsletter"
+                    class="btn btn-block text-uppercase">{% trans 'إملأ النموذج التالي' %}</a>
+            </div>
+
+            <br />
+            <h5 class="font-weight-bold mt-5 text-uppercase">
+                <a href="{% url 'site_politic' %}" class="text-white">
+                    {% trans "سياسة الخصوصية" %}
+                </a>
+            </h5>
+        </div>
+        <!-- Grid column -->
+    </div>
+    <!-- Grid row -->
+</div>
+<!-- Footer Links -->
+
+<!-- Copyright -->
+<div class="footer-copyright text-center py-3">
+    © 2020 Copyright :
+    <a href="https://scm.bz/" target="_blanck" class="footer-brand"> SCM</a>
+</div>
+<!-- Copyright -->
+
+<!-- Footer -->

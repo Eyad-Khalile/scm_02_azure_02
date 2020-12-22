@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static i18n crispy_forms_tags %}
+
+{% block title %} {% trans "تعديل خبر" %} {% endblock %}
+
+{% block content %}
+
+
+<div class="row mt-4 pt-4 mb-4">
+    <h1 class="{% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}" data-aos="fade-left">
+        {% trans "تعديل خبر" %} </h1>
+
+    {% if request.user.is_authenticated %}
+    {% if request.user == new.user or request.user.is_staff %}
+
+    <form action="" method="post" class="register" enctype="multipart/form-data" data-aos="fade-right">
+        {% csrf_token %}
+
+        {{ form.media }}
+
+        {% if request.user.is_authenticated and request.user.is_staff %}
+        <div class="for-group">
+            {{ form.org_name|as_crispy_field }}
+        </div>
+        {% endif %}
+        <div class="for-group">
+            {{ form.title|as_crispy_field }}
+        </div>
+        <div class="for-group">
+            {{ form.content|as_crispy_field }}
+        </div>
+        <div class="for-group">
+            {{ form.image|as_crispy_field }}
+        </div>
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-block mt-3" value='{% trans "تعديل الخبر" %}'>
+        </div>
+
+
+
+    </form>
+    {% endif %}
+    {% endif %}
+
+
+</div>
+
+{% endblock %}

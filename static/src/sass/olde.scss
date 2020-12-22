@@ -1,0 +1,208 @@
+// @import 'general.scss';
+
+/* ::::::::::::::: - OLDE - ::::::::::::::: */
+
+// HOME PAGE
+.org-work {
+  div {
+    span {
+      position: relative;
+      background: linear-gradient(to top, transparent, rgba($color-1, 0.4));
+      background-size: 100px,
+        180px;
+      background-repeat: no-repeat;
+      border-top-left-radius: 100px;
+      border-bottom-left-radius: 100px;
+      width: 200px;
+      height: 200px;
+      top: 0;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: org_btn 4s linear infinite;
+      perspective: 1200px;
+      perspective-origin: 50% 50%;
+
+      // -webkit-box-reflect: below 1px linear-gradient(#0001, #0004);
+      // -moz-box-reflect: below 1px linear-gradient(#0001, #0004);
+      // -o-box-reflect: below 1px linear-gradient(#0001, #0004);
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 13px;
+        height: 13px;
+        background: #a6d5f7;
+        border-radius: 50%;
+        z-index: 10;
+        box-shadow: 0 0 10px #a6d5f7,
+          0 0 20px #a6d5f7,
+          0 0 30px #a6d5f7,
+          0 0 40px #a6d5f7,
+          0 0 50px #a6d5f7,
+          0 0 60px #a6d5f7,
+          0 0 70px #a6d5f7,
+          0 0 80px #a6d5f7,
+          0 0 90px #a6d5f7,
+          0 0 100px #a6d5f7;
+      }
+
+      .btn-button {
+        @include work-btn;
+
+        position: absolute;
+        animation: org_btn_env 4s linear infinite;
+
+        &:hover {
+          // background-image: $bg-color-new-hover !important;
+          // background: #fff !important;
+          border: 1px solid $color-1 !important;
+          box-shadow: 1px 1px 30px $color-1 !important;
+          // color: $color-1;
+        }
+
+        .shadow {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+          transform: rotateX(90deg) translateZ(-150px);
+          z-index: -1;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 1%;
+          left: 5%;
+          width: 90%;
+          height: 90%;
+          border-radius: 50%;
+          background: radial-gradient(circle at 50% 0px, #ffffff, rgba(255, 255, 255, 0) 58%);
+          filter: blur(5px);
+          z-index: 2;
+        }
+
+        &::after {
+          .ball:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 5%;
+            left: 10%;
+            border-radius: 50%;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 14%, rgba(255, 255, 255, 0) 24%);
+            transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+            filter: blur(10px);
+          }
+
+          // &::before {
+          //   content: "";
+          //   position: absolute;
+          //   top: 10px;
+          //   // left: 0;
+          //   width: 10px;
+          //   height: 10px;
+          //   background: rgba(255, 0, 0, 0.5);
+          //   border-radius: 50%;
+          //   animation: org_btn 2s infinite;
+          // }
+        }
+      }
+    }
+  }
+}
+
+.fieldset {
+  /* border: 1px solid #1490C2; */
+  border-radius: 20px;
+  // background-color: rgba(20, 144, 194, 0.5);
+  background-image: $bg-color;
+  padding-bottom: 2rem !important;
+  color: #fff;
+}
+
+/* ======= FORM SIGNE-IN ====== */
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+
+  .checkbox {
+    font-weight: 400;
+  }
+
+  .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+
+    &:focus {
+      z-index: 2;
+    }
+  }
+
+  input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+
+// ANIMATIONS
+
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+
+
+
+.orgs-news {
+  .btn-button {
+    @include work-btn;
+    background: $color-1 !important;
+  
+
+    &:hover {
+      border: 1px solid $color-1 !important;
+      // box-shadow: 1px 1px 10px tomato !important;
+      background: #fff !important;
+      color: $color-1 !important;
+    }
+
+
+  }
+
+}

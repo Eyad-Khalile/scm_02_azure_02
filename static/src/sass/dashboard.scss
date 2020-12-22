@@ -1,0 +1,28 @@
+.admin-cont-dashboard {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    min-height: 300px;
+    background-color: #fff;
+    border-radius: 7px;
+}
+
+.dash-slide-height {
+    min-height: 200px !important;
+    padding-top: 5%;
+    color: $color-1;
+
+    svg {
+
+        path {
+            fill: $color-1;
+        }
+    }
+}
+
+
+.numbre {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1;
+    margin: 1rem auto;
+}

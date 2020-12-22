@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static i18n crispy_forms_tags %}
+
+{% block title %} {% trans "إضافة دليل تطوير" %} {% endblock %}
+
+{% block content %}
+
+{% if request.user.is_authenticated and request.user.is_staff %}
+
+<div class="row mt-4 pt-4 mb-4">
+    <h1 class="{% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}" data-aos="fade-left">
+        {% trans "اضافة دليل تطوير" %}
+    </h1>
+
+    <form action="" method="post" id="dev_form" class="register" enctype="multipart/form-data" data-aos="fade-right">
+        {% csrf_token %}
+        {{ form.media }}
+
+        {% if request.user.is_authenticated and request.user.is_staff %}
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                {{ form.org_name|as_crispy_field }}
+            </div>
+            <div class="col-md-6 col-sm-12">
+                {{ form.name_dev|as_crispy_field }}
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="for-group">
+            {{ form.dev_description|as_crispy_field }}
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                {{ form.title_dev|as_crispy_field }}
+            </div>
+            <div class="col-md-6 col-sm-12">
+                {{ form.dev_date|as_crispy_field }}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                {{ form.subject|as_crispy_field }}
+            </div>
+            <div class="col-md-6 col-sm-12">
+                {{ form.content|as_crispy_field }}
+            </div>
+        </div>
+        {{ form.video|as_crispy_field }}
+
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-block mt-3" value='{% trans "انشر دليل التطوير" %}'>
+        </div>
+
+    </form>
+
+
+</div>
+
+{% else %}
+<h2 class="text center pt-4 mt-4">{% trans 'ليس لديك الصلاحية لدخول هذه الصفحة' %}</h2>
+{% endif %}
+
+{% endblock %}
