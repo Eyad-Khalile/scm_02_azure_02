@@ -17,7 +17,6 @@ import os
 from decouple import config
 from django.utils.translation import gettext_lazy as _
 # import django_heroku
-# from . import richtext_config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -53,12 +52,12 @@ INSTALLED_APPS = [
     'django_filters',
     'multiselectfield',
     'ckeditor',
+    'storages',
 
     #  'django_social_share',
 
 ]
 
-# RICHTEXT
 # CKEDITOR_CONFIGS = {
 #     "default": {
 #         "removePlugins": "stylesheetparser",
@@ -143,12 +142,11 @@ CKEDITOR_CONFIGS = {
     }
 }
 
-
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -294,13 +292,13 @@ LOGOUT_REDIRECT_URL = 'home'
 STATIC_URL = '/static/'
 
 # ON DEV
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static/')
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static/')
+# ]
 
 # ON PROD
-# STATIC_ROOT = (os.path.join(BASE_DIR, 'static/'))
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+STATIC_ROOT = (os.path.join(BASE_DIR, 'static/'))
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # MEDIA
 MEDIA_URL = '/media/'
@@ -318,7 +316,7 @@ MEDIA_ROOT = (os.path.join(BASE_DIR, 'media'))
 # SENDGRID
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_PASSWORD = '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'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -327,3 +325,14 @@ DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 
 # KEROKU
 # django_heroku.settings(locals())
+# azure storage
+DEFAULT_FILE_STORAGE = 'scm.custom_azure.AzureMediaStorage'
+STATICFILES_STORAGE = 'scm.custom_azure.AzureStaticStorage'
+
+STATIC_LOCATION = "static"
+MEDIA_LOCATION = "media"
+
+AZURE_ACCOUNT_NAME = "scgmedia"
+AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
+STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
+MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
