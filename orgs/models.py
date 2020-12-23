@@ -172,12 +172,12 @@ class MyChoices(models.Model):
         ('Babil', _('بابل')),
         ('Baghdad', _('بغداد')),
         ('Basra', _('البصرة')),
-        ('Halabja ', _('حلبجة')),
+        ('Halabja', _('حلبجة')),
         ('Duhok', _('دهوك')),
         ('Al-Qādisiyyah', _('القادسية')),
         ('Diyala', _('ديالي')),
         ('Dhi Qar', _('ذي قار')),
-        ('Sulaymaniyah ', _('السليمانية')),
+        ('Sulaymaniyah', _('السليمانية')),
         ('Saladin', _('صلاح الدين')),
         ('Kirkuk', _('كركوك')),
         ('Karbala', _('كربلاء')),
@@ -214,7 +214,7 @@ class MyChoices(models.Model):
         ('Child 0-18', _('أطفال 0-18')),
         ('Religious groups', _('مجموعات دینیة')),
         ('Ethnic groups', _('مجموعة عرقیة')),
-        ('Persons lacking breadwinner ', _('فاقدي المعیل')),
+        ('Persons lacking breadwinner', _('فاقدي المعیل')),
         ('Handicapped', _('ذوي الاحتیاجات الخاصة')),
         ('Refugees', _('لاجئین')),
         ('Displaced', _('نازحین')),
@@ -924,16 +924,6 @@ class OrgCapacityOpp(models.Model):
     type_CHOICES = (
         ('traning', _('تدريب')),
         ('college', _('زمالة')),
-
-    )
-    amount_CHOICES = (
-        ('less than 5000 ', _('أقل من 5000 دولار')),
-        ('from 5000 to 10000 dollar', _('بين 5000 و 10000 دولار')),
-        ('from 10000 to 50000', _('بين 10000 و50000 دولار')),
-        ('from 50000 to 100000', _('بين 50000 و100000 دولار')),
-        ('more than  100000', _('بين 50000 و100000 دولار')),
-        ('other', _('أخرى')),
-
     )
 
     user = models.ForeignKey(
