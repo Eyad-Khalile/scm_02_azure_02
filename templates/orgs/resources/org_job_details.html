@@ -223,7 +223,12 @@
             </span>
             <span class="col-9">
                 {% if job.period_months %}
-                : {{ job.period_months }}
+                : {{ job.period_months }} 
+                {% if job.period_months == 1 %}
+                {% trans 'شهر' %}
+                {% else %}
+                {% trans 'أشهر' %}
+                {% endif %}
                 {% else %}
                 : {% trans 'لم يذكر' %}
                 {% endif %}

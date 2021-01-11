@@ -71,10 +71,10 @@ class OrgsFilter(django_filters.FilterSet):
             'name',
             # 'position_work',
             'work_domain',
-            'start_date',
-            'end_date',
             'target_cat',
             'published_at',
+            'start_date',
+            'end_date',
         ]
 
         # def filter_work_domain(self, queryset, name, work_domain):
@@ -317,7 +317,7 @@ class OrgsDevFilter(django_filters.FilterSet):
         fields = [
             'user',
             'org_name',
-            'name_dev',
+            'name_devv',
             'title_dev',
             'dev_date',
             'subject',

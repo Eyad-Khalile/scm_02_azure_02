@@ -12,12 +12,8 @@
         data-aos="fade-left">
         {% trans "حذف فرصة تمويل للأفراد" %} </h1>
 
-    <h2> {% trans "هل أنت متأكد من رغبتك في حذف فرصة التمويل بعنوان" %} :
-        {% if funding.name_funding %}
-        {{ funding.name_funding }}
-        {% else %}
-        {{ funding.org_name }}
-        {% endif%}
+    <h2> {% trans "هل أنت متأكد من رغبتك في حذف فرصة التمويل" %} :
+        {{ funding.fund_type }}
     </h2>
 
     <form action="" method="post" class="register" enctype="multipart/form-data" data-aos="fade-right">

@@ -19,30 +19,27 @@
         {{ form.media }}
 
         {% if request.user.is_authenticated and request.user.is_staff %}
-        <div class="for-group">
+        <div class="form-group">
             {{ form.org_name|as_crispy_field }}
-            {{ form.name_dev|as_crispy_field }}
+            {{ form.name_devv|as_crispy_field }}
         </div>
         {% endif %}
-        <div class="for-group">
+        <div class="form-group">
             {{ form.title_dev|as_crispy_field }}
         </div>
-        <div class="for-group">
+        <div class="form-group">
             {{ form.dev_date|as_crispy_field }}
         </div>
-        <div class="for-group">
+        <div class="form-group">
             {{ form.dev_description|as_crispy_field }}
         </div>
-        <div class="for-group">
-            {{ form.name_dev|as_crispy_field }}
-        </div>
-        <div class="for-group">
+        <div class="form-group">
             {{ form.subject|as_crispy_field }}
         </div>
-        <div class="for-group">
+        <div class="form-group">
             {{ form.content|as_crispy_field }}
         </div>
-        <div class="for-group">
+        <div class="form-group">
             {{ form.video|as_crispy_field }}
         </div>
 

@@ -27,7 +27,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'l=2j+l)(khert5i(rrgqqst66gr5y&8t3byb&zj+16)(8bg^cd'
-SECRET_KEY = 'xb4ivb08fx=un%@%-v22egze+_kn4lh#6^uvjcw$am+9kjbsen'
+# SECRET_KEY = 'xb4ivb08fx=un%@%-v22egze+_kn4lh#6^uvjcw$am+9kjbsen'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
@@ -54,8 +55,6 @@ INSTALLED_APPS = [
     'multiselectfield',
     'ckeditor',
     'storages',
-
-    #  'django_social_share',
 
 ]
 
@@ -333,11 +332,18 @@ EMAIL_HOST_PASSWORD = 'tqhbfR8cFptECbU'
 # DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 
 
+
+# RECAPTCHA
+# GOOGLE_RECAPTCHA_SECRET_KEY = '6LdN0iEaAAAAADqR4f40Muhh-z6kKQz8wrfbvg3v'
+
+
+
 # KEROKU
 # django_heroku.settings(locals())
 # azure storage
 DEFAULT_FILE_STORAGE = 'scm.custom_azure.AzureMediaStorage'
 STATICFILES_STORAGE = 'scm.custom_azure.AzureStaticStorage'
+
 
 STATIC_LOCATION = "static"
 MEDIA_LOCATION = "media"

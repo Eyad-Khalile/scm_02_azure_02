@@ -197,7 +197,13 @@
             </div>
             <div class="col-6">
               {% for country in org_position %}
-              {{ country.get_position_work_display }} |
+                {% if country.position_work %}
+                  {{ country.get_position_work_display }} |
+                {% else %}
+                  <span class="text-muted">
+                    {% trans 'لم يذكر' %} | 
+                  </span>
+                {% endif %}
               {% endfor %}
             </div>
           </p>
@@ -211,27 +217,14 @@
               {% if city.city_work %}
               {{ city.city_work }} |
               {% else %}
-              {% if city.city_work != None %}
               <span class="text-muted">
-                {% trans 'لم يذكر' %} </span>
-                {% endif %}
+                {% trans 'لم يذكر' %} | </span>
+              <!-- {# {% if city.city_work != None %} #} -->
+              <!-- {# {% endif %} #} -->
               {% endif %}
               {% endfor %}
             </div>
           </p>
-
-          <div class="safe-content">
-            <p>{% trans 'الرؤية و الرسالة' %}</p>
-            <p class="text-al-just">
-              {% if org.message %}
-              {{ org.message|safe }}
-              {% else %}
-              <span class="text-muted">
-                {% trans "لم يذكر" %}
-              </span>
-              {% endif %}
-            </p>
-          </div>
 
 
         </div>
@@ -413,7 +406,27 @@
                 </p>
               </div>
             </div>
+
+            <hr>
+
+            <div class="row bg-white p-3">
+              <p class="font-weight-bold">{% trans 'الرؤية و الرسالة' %}</p>
+              <p class="text-al-just">
+                {% if org.message %}
+                {{ org.message|safe }}
+                {% else %}
+                <span class="text-muted">
+                  {% trans "لم يذكر" %}
+                </span>
+                {% endif %}
+              </p>
+            </div>
+
           </div>
+
+
+
+
           <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
             <div class="row">
               <div class="col-md-6">
@@ -573,14 +586,15 @@
             <div class="row">
               <div class="col-md-6">
                 <p>
-                  <a href="{% url 'research' %}?org_name={{org.id}}"
-                    class="btn nav-link">{% trans "اﻷبحاث الخارجية للمنظمة" %}</a>
+                  <a href="{% url 'orgs_jobs' %}?org_name={{org.id}}"
+                    class="btn nav-link">{% trans "فرص العمل للمنظمة" %}</a>
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </form>
 </div>

@@ -27555,7 +27555,8 @@ function news() {
   let post_title = encodeURI($('#post_title').text());
   let image = encodeURI($('#post_img').attr('src'));
   let description = encodeURI($('#post_content').text());
-  facebookBtn.attr('href', `https://www.facebook.com/sharer.php?u=${url}&title=${post_title}&image=${image}`);
+  facebookBtn.attr('href', `https://www.facebook.com/sharer.php?u=${url}` // `https://www.facebook.com/sharer.php?u=${url}&title=${post_title}&image=${image}`
+  );
   twitterBtn.attr('href', `https://twitter.com/share?url=${url}&text=${post_title}`);
   linkedinkBtn.attr('href', `https://www.linkedin.com/shareArticle?url=${url}&title=${post_title}`);
   whatsappBtn.attr('href', `https://api.whatsapp.com/send?text=${post_title} ${url}`);

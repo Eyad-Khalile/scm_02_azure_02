@@ -15,6 +15,7 @@ const twitterBtn = $('.twitter-btn');
 const linkedinkBtn = $('.linkedin-btn');
 const whatsappBtn = $('.whatsapp-btn');
 
+
 function news() {
     let url = encodeURI(document.location.href);
     let post_title = encodeURI($('#post_title').text());
@@ -23,7 +24,8 @@ function news() {
 
     facebookBtn.attr(
         'href',
-        `https://www.facebook.com/sharer.php?u=${url}&title=${post_title}&image=${image}`
+        `https://www.facebook.com/sharer.php?u=${url}`
+        // `https://www.facebook.com/sharer.php?u=${url}&title=${post_title}&image=${image}`
     );
     twitterBtn.attr(
         'href',

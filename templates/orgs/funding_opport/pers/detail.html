@@ -102,9 +102,9 @@
 
         <div class="row">
             <div class="col">
-                {% if perso.logo %}
+                {% if perso.logoo %}
                 <figure>
-                    <img src="{{ perso.logo.url }}"
+                    <img src="{{ perso.logoo.url }}"
                         name="{% if perso.org_name %} {{ perso.org_name }} {% else %} {{ perso.name_funding }} {% endif %}"
                         title="{% if perso.org_name %} {{ perso.org_name }} {% else %} {{ perso.name_funding }} {% endif %}"
                         alt="{% if perso.org_name %} {{ perso.org_name }} {% else %} {{ perso.name_funding }} {% endif %}"
@@ -359,7 +359,7 @@
                 <!-- <p class="text-dark"> {{ perso.funding_description|safe|truncatechars:80 }} </p> -->
 
                 <figure>
-                    <img src="{{ perso.logo.url }}" class="w-100" name="{{ perso.title }}" title="{{ perso.title }}"
+                    <img src="{{ perso.logoo.url }}" class="w-100" name="{{ perso.title }}" title="{{ perso.title }}"
                         alt="{{ perso.title }}">
                     <figcaption class="text-muted"> <i class="far fa-clock"></i> {{ perso.created_at|timesince }}
                     </figcaption>

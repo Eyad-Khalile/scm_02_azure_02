@@ -41,9 +41,12 @@ from django.template import Context
 # SendGrid
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
-
+import urllib
+import json
 
 # ::::::::::::: SIGNE UP :::::::::::::::
+
+
 def signe_up(request):
 
     if request.user.is_authenticated and not request.user.is_superuser:
@@ -59,6 +62,23 @@ def signe_up(request):
             # user_email = request.POST.get('email')
             # if user_email not in emails:
             if form.is_valid():
+
+                # RECAPTCHA
+                # recaptcha_response = request.POST.get('g-recaptcha-response')
+                # url = 'https://www.google.com/recaptcha/api/siteverify'
+                # values = {
+                #     'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY,
+                #     'response': recaptcha_response
+                # }
+                # data = urllib.parse.urlencode(values).encode()
+                # req = urllib.request.Request(url, data=data)
+                # response = urllib.request.urlopen(req)
+                # result = json.loads(response.read().decode())
+
+                # if result['success']:
+                # else:
+                #     messages.error(request, 'recptcha not valide')
+
                 user = form.save(commit=False)
                 if request.user.is_superuser:
                     user.is_active = True
@@ -389,7 +409,7 @@ def news(request):
 # ORGS NEWS / NEWS PUBLISHED أخبار المنظمات
 def orgs_news(request):
     news = OrgNews.objects.filter(Q(publish=True) & ~Q(
-        org_name__name='khalil')).order_by('-created_at')
+        org_name__name='فريق البوابة')).order_by('-created_at')
     if request.user.is_authenticated:
         org_prof_pub_check = OrgProfile.objects.filter(
             user=request.user).first()
@@ -458,7 +478,7 @@ def orgs_add_news(request):
 @login_required(login_url='signe_in')
 def org_news_not_pub(request):
     news = OrgNews.objects.filter(Q(publish=False) & ~Q(
-        org_name__name='khalil')).order_by('-created_at')
+        org_name__name='فريق البوابة')).order_by('-created_at')
 
     filter_user_id = request.GET.get('user', None)
 
@@ -492,7 +512,7 @@ def org_news_not_pub(request):
 @login_required(login_url='signe_in')
 def our_news_not_pub(request):
     news = OrgNews.objects.filter(Q(publish=False) & Q(
-        org_name__name='khalil')).order_by('-created_at')
+        org_name__name='فريق البوابة')).order_by('-created_at')
 
     filter_user_id = request.GET.get('user', None)
 
@@ -1317,18 +1337,20 @@ def contact(request):
 
         contact_name = request.POST['contact_name']
         contact_email = request.POST['contact_email']
-        contact_subject = request.POST['contact_email']
+        contact_subject = request.POST['contact_subject']
         contact_message = request.POST['contact_message']
+
+        # print('========================== : ', contact_name, contact_email, contact_subject, contact_message)
 
         send_mail(
             # subject,
             # message,
             # from email,
             # to email,
-            contact_subject + ' ' + contact_name + ' ' + contact_email,
-            contact_message,
+            contact_subject,
+            contact_message + '\n \n' + 'هذه الرسالة مرسلة من قبل ' + contact_email,
             contact_email,
-            ['khalile.eyad@gmail.com'],
+            ['Civil.Society.Portal@csgateway.ngo'],
 
         )
 
@@ -1547,41 +1569,70 @@ def jobs_detail(request, job_id):
 def jobs_edit(request, job_id):
     job = get_object_or_404(OrgJob, id=job_id)
     other = OtherOrgs.objects.filter(job=job_id).first()
+    print(other)
     # other = get_object_or_404(OtherOrgs, job=job_id)
 
     if request.method == 'POST':
         form = JobsForm(request.POST or None,
                         files=request.FILES, instance=job)
         form_other = OtherOrgsForm(
-            request.POST or None, files=request.FILES, instance=other)
+            request.POST or None, instance=other)
 
         if form.is_valid() and form_other.is_valid():
 
-            other_org_name = form_other.cleaned_data.get('name')
+            org_name = form.cleaned_data.get('org_name')
+            other_org_name = form.cleaned_data.get('other_org_name')
+            other_name = form_other.cleaned_data.get('name')
+            # other_org_name = form_other.cleaned_data.get('name')
 
             at = form.save(commit=False)
             at.updated_at = datetime.utcnow()
 
-            if other_org_name:
-                other = form_other.save(commit=False)
-                other.created_by = request.user
-                other.job = at
-                other.save()
-
-                at.other_org_name = other
+            if org_name:
+                at.org_name = org_name
                 at.save()
 
                 messages.success(request, _(
                     'لقد تم تعديل فرصة العمل بنجاح'))
+
+                return redirect('orgs_jobs')
+
+            elif other_org_name:
+                at.other_org_name = other_org_name
+                at.save()
+
+                messages.success(request, _(
+                    'لقد تم تعديل فرصة العمل بنجاح'))
+
+                return redirect('orgs_jobs')
+
+            elif other_name:
+                creater = form_other.save(commit=False)
+                creater.created_by = request.user
+                creater.staff = request.user
+                creater.job = job
+                creater.save()
+
+                at.other_org_name = creater
+                at.save()
+
+                messages.success(request, _(
+                    'لقد تم تعديل فرصة العمل بنجاح'))
+
                 return redirect('orgs_jobs')
 
             else:
-                at.other_org_name = other
+                # EN CASE ORG -> USER
+                request_org_name = OrgProfile.objects.filter(
+                    user=request.user).first()
+                at.org_name = request_org_name
                 at.save()
 
-            messages.success(request, _(
-                'لقد تم تعديل فرصة العمل بنجاح'))
-            return redirect('orgs_jobs')
+                messages.success(request, _(
+                    'لقد تمت إضافة فرصة العمل بنجاح و ستتم دراستها قريباً'))
+
+                return redirect('orgs_jobs')
+
     else:
         form = JobsForm(instance=job)
         form_other = OtherOrgsForm(instance=other)
@@ -1740,7 +1791,7 @@ def finance_perso_delete(request, pk):
 
         messages.success(request, _(
             'لقد تم حذف فرصة التمويل بنجاح'))
-        return redirect('orgs_jobs')
+        return redirect('finance_perso')
 
     context = {
         'funding': funding,
@@ -1965,8 +2016,10 @@ def orgs_add_capacity(request):
     if request.method == 'POST':
         form = CapacityForm(request.POST or None, files=request.FILES)
         if form.is_valid():
+
             org_name = form.cleaned_data.get('org_name')
             name_capacity = form.cleaned_data.get('name_capacity')
+
             if org_name or name_capacity:
                 user = form.save(commit=False)
                 user.user = request.user
@@ -2058,7 +2111,6 @@ def capacity_edit(request, capacity_id):
         form = CapacityForm(request.POST or None,
                             files=request.FILES, instance=capacity)
         if form.is_valid():
-            print('salut')
             at = form.save(commit=False)
             at.updated_at = datetime.utcnow()
             at.save()
@@ -2126,19 +2178,24 @@ def orgs_add_devs(request):
     if request.method == 'POST':
         form = DevForm(request.POST or None, files=request.FILES)
         if form.is_valid():
+            org_name = form.cleaned_data.get('org_name')
+            name_dev = form.cleaned_data.get('name_devv')
+
             user = form.save(commit=False)
             user.user = request.user
-            org_name = form.cleaned_data.get('org_name')
-            if org_name:
-                user.org_name = org_name
-            # else:
-            #     user.org_name = request.user
-            user.save()
 
-            messages.success(request, _(
-                'لقد تمت إضافة دليل تطوير بنجاح و ستتم دراسته قريباً'))
+            if org_name or name_dev:
+                user.created_by = request.user
+                user.save()
 
-            return redirect('orgs_devs')
+                messages.success(request, _(
+                    'لقد تمت إضافة دليل تطوير بنجاح و ستتم دراسته قريباً'))
+                return redirect('orgs_devs')
+
+            else:
+                messages.error(request, _(
+                    'رجاءً أدخل اسم المنظمة او اسم الجهة المانحة'))
+
     else:
         form = DevForm()
 
@@ -2201,9 +2258,9 @@ def devs_detail(request, devs_id):
         'share_string': share_string,
     }
     return render(request, 'orgs/devs/org_dev_details.html', context)
+
+
 # dev edit to modify dev details
-
-
 @login_required(login_url='signe_in')
 def dev_edit(request, devs_id):
     devs = get_object_or_404(DevOrgOpp, id=devs_id)
@@ -2212,13 +2269,22 @@ def dev_edit(request, devs_id):
         form = DevForm(request.POST or None,
                        files=request.FILES, instance=devs)
         if form.is_valid():
-            at = form.save(commit=False)
-            at.updated_at = datetime.utcnow()
-            at.save()
+            org_name = form.cleaned_data.get('org_name')
+            name_dev = form.cleaned_data.get('name_devv')
 
-            messages.success(request, _(
-                'لقد تم تعديل دليل التطوير بنجاح'))
-            return redirect('orgs_devs')
+            inst = form.save(commit=False)
+            if org_name or name_dev:
+                inst.updated_at = datetime.utcnow()
+                inst.save()
+
+                messages.success(request, _(
+                    'لقد تم تعديل دليل التطوير بنجاح'))
+                return redirect('orgs_devs')
+
+            else:
+                messages.error(request, _(
+                    'رجاءً أدخل اسم المنظمة او اسم الجهة المانحة'))
+
     else:
         form = DevForm(instance=devs)
 
@@ -2229,47 +2295,27 @@ def dev_edit(request, devs_id):
     return render(request, 'orgs/devs/org_edit_dev.html', context)
 
 
-# delete dev bulding
+# DELETE DEVS
 @login_required(login_url='signe_in')
 def dev_delete(request, devs_id):
-    devs = DevOrgOpp.objects.filter(publish=True).order_by('-created_at')
+    devs = get_object_or_404(DevOrgOpp, id=devs_id)
 
-    myFilter = OrgsDevFilter(request.GET, queryset=devs)
-    devs = myFilter.qs
-
-    # PAGINATEUR
-    paginator = Paginator(devs, 12)
-    page = request.GET.get('page')
-    try:
-        devs = paginator.get_page(page)
-    except(EmptyPage, InvalidPage):
-        devs = paginator.page(paginator.num_pages)
+    if request.method == 'POST' and request.user.is_superuser:
+        devs.delete()
+        messages.success(request, _('لقد تم حذف دليل التطوير بنجاح'))
+        return redirect('orgs_devs')
 
     context = {
         'devs': devs,
-        'myFilter': myFilter,
     }
-    return render(request, 'orgs/devs/org_devs.html', context)
 
-
-# @login_required(login_url='signe_in')
-# def dev_delete(request, devs_id):
-#     devs = get_object_or_404(DevOrgOpp, id=devs_id)
-
-#     if request.method == 'POST' and request.user.is_superuser:
-# 	devs.delete()
-
-# 	messages.success(request, _(
-#             'لقد تم حذف دليل التطوير بنجاح'))
-# 	return redirect('orgs_devs')
+    return render(request, 'orgs/devs/org_dev_delete.html', context)
 
 
 # our news is filter of all the news that publiched by our site
-
-
 def orgs_our_news(request):
     news = OrgNews.objects.filter(Q(publish=True) & Q(
-        org_name__name='khalil')).order_by('-created_at')
+        org_name__name='فريق البوابة')).order_by('-created_at')
 
     myFilter = OrgsNewsFilter(request.GET, queryset=news)
     news = myFilter.qs

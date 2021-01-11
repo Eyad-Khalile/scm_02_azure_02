@@ -14,6 +14,16 @@ from django.db.models import F
 class SignUpForm(UserCreationForm):
     email = forms.EmailField(max_length=254,  required=True,
                              help_text=_('حقل إجباري, يرجى إدخال بريد إلكتروني صحيح لتتمكن من تفعيل حسابك'), label=_('عنوان بريد إلكتروني'))
+    # captcha = ReCaptchaField(
+    #     public_key='76wtgdfsjhsydt7r5FFGFhgsdfytd656sad75fgh',
+    #     private_key='98dfg6df7g56df6gdfgdfg65JHJH656565GFGFGs',
+    #     # widget=form.ReCaptchaV2Checkbox(
+    #     #     attrs={
+    #     #         'data-theme': 'dark',
+    #     #         'data-size': 'compact',
+    #     #     }
+    #     # )
+    # )
 
     class Meta:
         model = User
@@ -496,7 +506,7 @@ class PersoFunForm(forms.ModelForm):
         fields = [
             'org_name',
             'name_funding',
-            'logo',
+            'logoo',
             'category',
             'fund_type',
             'study_level',
@@ -594,16 +604,16 @@ class CapacityConfirmForm(forms.ModelForm):
         fields = [
             'publish',
         ]
+
+
 # dev form
-
-
 class DevForm(forms.ModelForm):
 
     class Meta:
         model = DevOrgOpp
         fields = [
             'org_name',
-            'name_dev',
+            'name_devv',
             'title_dev',
             'dev_date',
             'dev_description',
@@ -627,24 +637,24 @@ class DevConfirmForm(forms.ModelForm):
 
 
 class NewsLetterForm(forms.ModelForm):
-    name = forms.CharField(max_length=255, min_length=3, label='',
+    nl_name = forms.CharField(max_length=255, min_length=3, label='',
                            help_text=_(
                                ''),
                            widget=forms.TextInput(
                                attrs={'placeholder': _('الاسم و الكنية')}))
-    work = forms.CharField(max_length=255, min_length=3, label='',
+    nl_work = forms.CharField(max_length=255, min_length=3, label='',
                            help_text=_(
                                ''),
                            widget=forms.TextInput(
                                attrs={'placeholder': _('العمل')}))
 
-    org_name = forms.CharField(max_length=255, min_length=3, label='',
+    nl_org_name = forms.CharField(max_length=255, min_length=3, label='',
                                help_text=_(
                                    ''),
                                widget=forms.TextInput(
                                    attrs={'placeholder': _('اسم المنظمة')}))
 
-    email = forms.EmailField(max_length=255, min_length=3, label='',
+    nl_email = forms.EmailField(max_length=255, min_length=3, label='',
                              help_text=_(
                                  ''),
                              widget=forms.EmailInput(
@@ -653,10 +663,10 @@ class NewsLetterForm(forms.ModelForm):
     class Meta:
         model = NewsLetter
         fields = [
-            'name',
-            'work',
-            'org_name',
-            'email',
+            'nl_name',
+            'nl_work',
+            'nl_org_name',
+            'nl_email',
         ]
 
     def clean_email(self):

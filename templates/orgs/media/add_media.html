@@ -3,6 +3,16 @@
 {% block title %} {% trans 'إضافة محتوى سمعي و بصري' %} {% endblock %}
 
 {% block content %}
+<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#id_org_name").select2({
+            'width': '50%'
+        });
+    });
+</script>
 
 {% if request.user.is_authenticated %}
 {% if org_prof_pub_check.publish == True or request.user.is_staff %}

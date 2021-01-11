@@ -46,7 +46,9 @@
                 aria-expanded="false" aria-controls="collapseContact">
                 
             </a> -->
-            <h5 class="border-bottom pb-2 font-weight-bold text-uppercase mb-5"> {% trans "للتواصل معنا" %} </h5>
+            <h5 class="border-bottom pb-2 font-weight-bold text-uppercase mb-5">
+                <button class="btn" disabled>{% trans "للتواصل معنا" %}</button>
+            </h5>
 
             <div class="{% if LANGUAGE_CODE == 'ar'%} icon-ml {% else %} icon-mr {% endif %}" id="collapseContact">
                 <ul class="list-unstyled pr-0">
@@ -88,9 +90,11 @@
         <!-- Grid column -->
         <div class="col-md-6 social col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
             <!-- Social buttons -->
-            <h5 class="font-weight-bold text-uppercase mb-4 border-bottom pb-2"> {% trans "تابعونا على" %} </h5>
+            <h5 class="font-weight-bold text-uppercase mb-4 border-bottom pb-2 text-center">
+                <button class="btn" disabled>{% trans "تابعونا على" %} </button>
+            </h5>
 
-            <div class="social-icon">
+            <div class="d-flex justify-content-center align-middle">
                 <!-- Facebook -->
                 <a href="https://www.facebook.com/%D8%A8%D9%88%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D9%85%D8%AC%D8%AA%D9%85%D8%B9-%D8%A7%D9%84%D9%85%D8%AF%D9%86%D9%8A-104202391588103"
                     role="button" class="btn btn-floating btn-fb" target="_blank">
@@ -103,9 +107,9 @@
                 </a>
 
                 <!-- Dribbble -->
-                <a role="button" class="btn btn-floating btn-dribbble">
+                <!-- <a role="button" class="btn btn-floating btn-dribbble">
                     <i class="fab fa-dribbble" aria-hidden="true"></i>
-                </a>
+                </a> -->
             </div>
 
 
@@ -121,7 +125,7 @@
         <div class="col-md-6 col-lg-3 mx-auto my-4 overflow-hidden">
             <!-- Email -->
             <h5 class="font-weight-bold text-uppercase mb-5 border-bottom pb-2">
-                {% trans "للاشتراك بآخر الأخبار" %}
+                <button class="btn" disabled>{% trans "للاشتراك بآخر الأخبار" %}</button>
             </h5>
             <!-- <a href="#collapseForm" data-toggle="collapse" class="btn btn-block mb-2" role="button"
                 aria-expanded="false" aria-controls="collapseForm">

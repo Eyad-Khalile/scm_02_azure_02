@@ -853,7 +853,7 @@ class PersFundingOpp(models.Model):
 
     name_funding = models.CharField(max_length=255, null=True, blank=True,
                                     verbose_name=_("الجهة المانحة"))
-    logo = models.ImageField(upload_to="funding_logos",
+    logoo = models.ImageField(upload_to="funding_logos",
                              null=True, blank=True, default='org_logos/default_logo.jpg', verbose_name=_("لوغو الجهة المانحة"))
 
     category = models.CharField(max_length=100, null=True, blank=True,
@@ -990,8 +990,7 @@ class DevOrgOpp(models.Model):
     staff = models.CharField(max_length=100, null=True, blank=True)
     org_name = models.ForeignKey(
         OrgProfile, on_delete=models.CASCADE, null=True, blank=True, verbose_name=_('اسم المنظمة'))
-    name_dev = models.CharField(max_length=255, null=True, blank=True,
-                                verbose_name=_("اسم الجهة "))
+    name_devv = models.CharField(max_length=255, null=True, blank=True, verbose_name=_("اسم الجهة "))
 
     title_dev = models.CharField(
         max_length=255, null=False, verbose_name=_("عنوان المادة"))
@@ -1032,26 +1031,25 @@ class DevOrgOpp(models.Model):
     #             img.save(self.content.path)
 
 
+
 # News letter for members in our site
-
-
 class NewsLetter(models.Model):
-    name = models.CharField(max_length=255, null=False,
+    nl_name = models.CharField(max_length=255, null=False,
                             verbose_name=_('الاسم و الكنية'))
-    work = models.CharField(max_length=255, null=False,
+    nl_work = models.CharField(max_length=255, null=False,
                             verbose_name=_('العمل'))
-    org_name = models.CharField(
+    nl_org_name = models.CharField(
         max_length=255, null=True, blank=True, verbose_name=_('اسم المنظمة'))
-    email = models.EmailField(
+    nl_email = models.EmailField(
         max_length=255, null=False, verbose_name=_('البريد الاكتروني'))
 
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.name
+
+
 # Invitation Modle to invite orgs
-
-
 class Invitation(models.Model):
     sender = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=50, null=True,

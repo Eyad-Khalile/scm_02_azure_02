@@ -6,7 +6,7 @@
 
 {% block content %}
 
-
+<script src="https://www.google.com/recaptcha/api.js"></script>
 
 
 <div class="register">
@@ -29,8 +29,8 @@
             <form action="" method="post">
                 {% csrf_token %}
                 {{ form|crispy }}
-
                 <div class="form-group">
+                    <!-- <div class="g-recaptcha" data-sitekey="6LdN0iEaAAAAAHrUTn-fnSObfy-ngf-5QtLuI9ZH"></div> -->
                     <input type="submit" class="btn btn-block mt-3" value="{% trans 'اشترك' %}">
                 </div>
 

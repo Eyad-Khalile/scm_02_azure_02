@@ -76,7 +76,7 @@
             <span class="text-muted">{{ funding.created_at|timesince }}</span>
             <center>
                 <a href="{% url 'finance_perso_detail' funding.id %}">
-                    <img src="{{ funding.logo.url }}"
+                    <img src="{{ funding.logoo.url }}"
                         name="{% if funding.org_name %} {{ funding.org_name }} {% else %} {{ funding.name_funding }} {% endif %}"
                         title="{% if funding.org_name %} {{ funding.org_name }} {% else %} {{ funding.name_funding }} {% endif %}"
                         alt="{% if funding.org_name %} {{ funding.org_name }} {% else %} {{ funding.name_funding }} {% endif %}"

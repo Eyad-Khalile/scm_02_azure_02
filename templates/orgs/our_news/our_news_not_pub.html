@@ -85,7 +85,7 @@
                         width="140" height="140" class="img-circle"></a>
                 <h3 class="mt-4">{{ new.org_name }}</h3>
                 <p class="font-weight-bold">{{ new.title }}</p>
-                <!-- <p>{{ new.content|safe|truncatechars:80 }}</p> -->
+                <p>{{ new.content|truncatechars:80|safe }}</p>
                 <p>
                     <a href="{% url 'news_detail' new.id %}" class="btn btn-block"
                         title="{% trans 'لقراءة المزيد' %}"><i class="fas fa-book-reader"></i>

@@ -214,7 +214,7 @@
             <center>
               <h3 class="mt-4">{{ job.org_name }}</h3>
               <h3 class="mt-4">{{ job.job_title }}</h3>
-              <h3 class="mt-4">{{ job.job_type }}</h3>
+              <h3 class="mt-4">{{ job.get_job_type_display }}</h3>
               <!-- <p>{{ job.job_description|safe|truncatechars:80 }}</p> -->
               <p>
                 <a href="{% url 'jobs_detail' job.id %}" class="btn btn-block">
@@ -281,16 +281,16 @@
         <form action="" method="POST" class="form-news-latter">
           {% csrf_token %}
           <div class="form-group">
-            {{ formNews.name|as_crispy_field }}
+            {{ formNews.nl_name|as_crispy_field }}
           </div>
           <div class="form-group">
-            {{ formNews.work|as_crispy_field }}
+            {{ formNews.nl_work|as_crispy_field }}
           </div>
           <div class="form-group">
-            {{ formNews.org_name|as_crispy_field }}
+            {{ formNews.nl_org_name|as_crispy_field }}
           </div>
           <div class="form-group">
-            {{ formNews.email|as_crispy_field }}
+            {{ formNews.nl_email|as_crispy_field }}
           </div>
           <div class="form-group">
             <button type="submit" id="newsletter_btn" class="btn btn-block"><i class="fa fa-paper-plane"
