@@ -24,14 +24,17 @@
             {{ form.name_devv|as_crispy_field }}
         </div>
         {% endif %}
+        <div class="for-group">
+            {{ form.lang|as_crispy_field }}
+        </div>
+        <div class="for-group">
+            {{ form.dev_description|as_crispy_field }}
+        </div>
         <div class="form-group">
             {{ form.title_dev|as_crispy_field }}
         </div>
         <div class="form-group">
             {{ form.dev_date|as_crispy_field }}
-        </div>
-        <div class="form-group">
-            {{ form.dev_description|as_crispy_field }}
         </div>
         <div class="form-group">
             {{ form.subject|as_crispy_field }}

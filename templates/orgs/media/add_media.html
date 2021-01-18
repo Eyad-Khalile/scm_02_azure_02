@@ -27,6 +27,7 @@
         {% if request.user.is_authenticated and request.user.is_staff %}
         {{ form.org_name|as_crispy_field }}
         {% endif %}
+        {{ form.lang|as_crispy_field }}
         {{ form.title|as_crispy_field }}
         {{ form.media|as_crispy_field }}
         {{ form.url|as_crispy_field }}

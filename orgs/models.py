@@ -1,3 +1,4 @@
+from django.urls import reverse
 import PIL
 from django.core.files.storage import default_storage as storage
 from multiselectfield import MultiSelectField
@@ -313,10 +314,13 @@ class MyChoices(models.Model):
         ('15', _('قانون ودراسات قانونية')),
         ('16', _('هندسة وعلوم هندسية')),
     )
+    lang_CHOICES = (
+        ('ar', _('عربي')),
+        ('en', _('English')),
+        ('ku', _('Kurdî')),
+    )
 
 # PROFILE / AUTO CREATE
-
-
 class Profile(models.Model):
     user = models.OneToOneField(
         User, on_delete=models.CASCADE)
@@ -451,6 +455,9 @@ class OrgProfile(models.Model):
             # return '%s' % (self.user.username) + ' / ' + '%s' % (self.name)
             return self.name
 
+    def get_absolute_url(self):
+        return reverse("particip_detail", kwargs={"par_id": self.id})
+
     # def formatted_phone(self, country=None):
     #     return phonenumbers.parse(self.phone, country)
 
@@ -496,6 +503,7 @@ class Position(models.Model):
 
 # :::::::::::::: ORGS NEWS ::::::::::::::::
 class OrgNews(models.Model):
+    lang = models.CharField(max_length=100, choices=MyChoices.lang_CHOICES, null=False, blank=False, default='ar', verbose_name=_('اللغة'))
     user = models.ForeignKey(
         User, on_delete=models.CASCADE)
     staff = models.CharField(max_length=100, null=True, blank=True)
@@ -518,6 +526,9 @@ class OrgNews(models.Model):
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return reverse("news_detail", kwargs={"news_id": self.id})
+
     # def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
     #     super().save(force_insert, force_update, using, update_fields)
     #     path = 'https://scgmedia.blob.core.windows.net/media'
@@ -527,10 +538,11 @@ class OrgNews(models.Model):
     #         img.thumbnail(output_size)
     #         img.save(self.image.path)
 
+
 # :::::::::: ORGS RAPPORT :::::::::::::::::
-
-
 class OrgRapport(models.Model):
+    lang = models.CharField(max_length=100, choices=MyChoices.lang_CHOICES,
+                            null=False, blank=False, default='ar', verbose_name=_('اللغة'))
     user = models.ForeignKey(
         User, on_delete=models.CASCADE)
     staff = models.CharField(max_length=100, null=True, blank=True)
@@ -552,6 +564,9 @@ class OrgRapport(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse("orgs_rapport_detail", kwargs={"rapport_id": self.id})
 
     # def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
     #     super().save(force_insert, force_update, using, update_fields)
@@ -580,10 +595,11 @@ class OrgRapport(models.Model):
     #     self.media.delete()
     #     super().delete(force_insert, force_update, using, update_fields)
 
+
 # :::::::::: ORGS DATA :::::::::::::::::
-
-
 class OrgData(models.Model):
+    lang = models.CharField(max_length=100, choices=MyChoices.lang_CHOICES,
+                            null=False, blank=False, default='ar', verbose_name=_('اللغة'))
     user = models.ForeignKey(
         User, on_delete=models.CASCADE)
     staff = models.CharField(max_length=100, null=True, blank=True)
@@ -604,6 +620,9 @@ class OrgData(models.Model):
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return reverse("data_detail", kwargs={"data_id": self.id})
+
     # def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
     #     super().save(force_insert, force_update, using, update_fields)
     #     extension = os.path.splitext(self.media.name)
@@ -615,10 +634,11 @@ class OrgData(models.Model):
     #             img.thumbnail(output_size)
     #             img.save(self.media.path)
 
+
 # :::::::::: ORGS MEDIA :::::::::::::::::
-
-
 class OrgMedia(models.Model):
+    lang = models.CharField(max_length=100, choices=MyChoices.lang_CHOICES,
+                            null=False, blank=False, default='ar', verbose_name=_('اللغة'))
     user = models.ForeignKey(
         User, on_delete=models.CASCADE)
     staff = models.CharField(max_length=100, null=True, blank=True)
@@ -641,6 +661,9 @@ class OrgMedia(models.Model):
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return reverse("media_detail", kwargs={"media_id": self.id})
+
     # def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
     #     super().save(force_insert, force_update, using, update_fields)
     #     extension = os.path.splitext(self.media.name)
@@ -656,6 +679,8 @@ class OrgMedia(models.Model):
 # :::::::::: ORGS RESEARCH :::::::::::::::::
 class OrgResearch(models.Model):
 
+    lang = models.CharField(max_length=100, choices=MyChoices.lang_CHOICES,
+                            null=False, blank=False, default='ar', verbose_name=_('اللغة'))
     user = models.ForeignKey(
         User, on_delete=models.CASCADE)
     # org_name = models.ForeignKey(
@@ -682,6 +707,9 @@ class OrgResearch(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse("research_detail", kwargs={"research_id": self.id})
 
     # def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
     #     super().save(force_insert, force_update, using, update_fields)
@@ -725,7 +753,8 @@ class OtherOrgs(models.Model):
 
 
 class OrgJob(models.Model):
-
+    lang = models.CharField(max_length=100, choices=MyChoices.lang_CHOICES,
+                            null=False, blank=False, default='ar', verbose_name=_('اللغة'))
     user = models.ForeignKey(
         User, on_delete=models.CASCADE)
     staff = models.CharField(max_length=100, null=True, blank=True)
@@ -768,6 +797,9 @@ class OrgJob(models.Model):
     def __str__(self):
         return self.job_title
 
+    def get_absolute_url(self):
+        return reverse("jobs_detail", kwargs={"job_id": self.id})
+
     # def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
     #     super().save(force_insert, force_update, using, update_fields)
     #     path = 'https://scgmedia.blob.core.windows.net/media'
@@ -780,7 +812,8 @@ class OrgJob(models.Model):
 
 # Organizations funding opportunities
 class OrgFundingOpp(models.Model):
-
+    lang = models.CharField(max_length=100, choices=MyChoices.lang_CHOICES,
+                            null=False, blank=False, default='ar', verbose_name=_('اللغة'))
     user = models.ForeignKey(
         User, on_delete=models.CASCADE)
     staff = models.CharField(max_length=100, null=True, blank=True)
@@ -832,6 +865,9 @@ class OrgFundingOpp(models.Model):
         else:
             return self.org_name
 
+    def get_absolute_url(self):
+        return reverse("funding_detail", kwargs={"funding_id": self.id})
+
     # def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
     #     super().save(force_insert, force_update, using, update_fields)
     #     path = 'https://scgmedia.blob.core.windows.net/media'
@@ -844,7 +880,8 @@ class OrgFundingOpp(models.Model):
 
 # Persons funding opportunities
 class PersFundingOpp(models.Model):
-
+    lang = models.CharField(max_length=100, choices=MyChoices.lang_CHOICES,
+                            null=False, blank=False, default='ar', verbose_name=_('اللغة'))
     user = models.ForeignKey(
         User, on_delete=models.CASCADE)
     staff = models.CharField(max_length=100, null=True, blank=True)
@@ -854,7 +891,7 @@ class PersFundingOpp(models.Model):
     name_funding = models.CharField(max_length=255, null=True, blank=True,
                                     verbose_name=_("الجهة المانحة"))
     logoo = models.ImageField(upload_to="funding_logos",
-                             null=True, blank=True, default='org_logos/default_logo.jpg', verbose_name=_("لوغو الجهة المانحة"))
+                              null=True, blank=True, default='org_logos/default_logo.jpg', verbose_name=_("لوغو الجهة المانحة"))
 
     category = models.CharField(max_length=100, null=True, blank=True,
                                 choices=MyChoices.cat_CHOICES, verbose_name=_('فئة المنحة'))
@@ -908,6 +945,9 @@ class PersFundingOpp(models.Model):
         else:
             return self.org_name
 
+    def get_absolute_url(self):
+        return reverse("finance_perso_detail", kwargs={"pk": self.id})
+
     # def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
     #     super().save(force_insert, force_update, using, update_fields)
     #     path = 'https://scgmedia.blob.core.windows.net/media'
@@ -926,6 +966,8 @@ class OrgCapacityOpp(models.Model):
         ('college', _('زمالة')),
     )
 
+    lang = models.CharField(max_length=100, choices=MyChoices.lang_CHOICES,
+                            null=False, blank=False, default='ar', verbose_name=_('اللغة'))
     user = models.ForeignKey(
         User, on_delete=models.CASCADE)
     staff = models.CharField(max_length=100, null=True, blank=True)
@@ -972,9 +1014,12 @@ class OrgCapacityOpp(models.Model):
 
     def __str__(self):
         return self.name_capacity
+
+    def get_absolute_url(self):
+        return reverse("capacity_detail", kwargs={"capacity_id": self.id})
+
+
 # dev guid
-
-
 class DevOrgOpp(models.Model):
 
     subject_CHOICES = (
@@ -985,12 +1030,15 @@ class DevOrgOpp(models.Model):
         ('other', _('أخرى')),
     )
 
+    lang = models.CharField(max_length=100, choices=MyChoices.lang_CHOICES,
+                            null=False, blank=False, default='ar', verbose_name=_('اللغة'))
     user = models.ForeignKey(
         User, on_delete=models.CASCADE)
     staff = models.CharField(max_length=100, null=True, blank=True)
     org_name = models.ForeignKey(
         OrgProfile, on_delete=models.CASCADE, null=True, blank=True, verbose_name=_('اسم المنظمة'))
-    name_devv = models.CharField(max_length=255, null=True, blank=True, verbose_name=_("اسم الجهة "))
+    name_devv = models.CharField(
+        max_length=255, null=True, blank=True, verbose_name=_("اسم الجهة "))
 
     title_dev = models.CharField(
         max_length=255, null=False, verbose_name=_("عنوان المادة"))
@@ -1019,6 +1067,9 @@ class DevOrgOpp(models.Model):
         title_dev, extension = os.path.splitext(self.content.name)
         return self.extension
 
+    def get_absolute_url(self):
+        return reverse("devs_detail", kwargs={"devs_id": self.id})
+
     # def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
     #     super().save(force_insert, force_update, using, update_fields)
     #     extension = os.path.splitext(self.content.name)
@@ -1031,13 +1082,12 @@ class DevOrgOpp(models.Model):
     #             img.save(self.content.path)
 
 
-
 # News letter for members in our site
 class NewsLetter(models.Model):
     nl_name = models.CharField(max_length=255, null=False,
-                            verbose_name=_('الاسم و الكنية'))
+                               verbose_name=_('الاسم و الكنية'))
     nl_work = models.CharField(max_length=255, null=False,
-                            verbose_name=_('العمل'))
+                               verbose_name=_('العمل'))
     nl_org_name = models.CharField(
         max_length=255, null=True, blank=True, verbose_name=_('اسم المنظمة'))
     nl_email = models.EmailField(

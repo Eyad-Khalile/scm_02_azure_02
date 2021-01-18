@@ -285,6 +285,7 @@ class NewsForm(forms.ModelForm):
     class Meta:
         model = OrgNews
         fields = [
+            'lang',
             'org_name',
             'title',
             'content',
@@ -307,6 +308,7 @@ class RapportForm(forms.ModelForm):
     class Meta:
         model = OrgRapport
         fields = [
+            'lang',
             'org_name',
             'title',
             'domain',
@@ -328,6 +330,7 @@ class DataForm(forms.ModelForm):
     class Meta:
         model = OrgData
         fields = [
+            'lang',
             'org_name',
             'title',
             'media',
@@ -348,6 +351,7 @@ class MediaForm(forms.ModelForm):
     class Meta:
         model = OrgMedia
         fields = [
+            'lang',
             'org_name',
             'title',
             'media',
@@ -369,6 +373,7 @@ class ResearchForm(forms.ModelForm):
     class Meta:
         model = OrgResearch
         fields = [
+            'lang',
             'name_entity',
             'title',
             'domaine',
@@ -384,9 +389,9 @@ class ResearchConfirmForm(forms.ModelForm):
         fields = [
             'publish',
         ]
+
+
 #:::::::::::::::::org job::::::::::::::::::::::::::::
-
-
 class OtherOrgsForm(forms.ModelForm):
     class Meta:
         model = OtherOrgs
@@ -401,6 +406,7 @@ class JobsForm(forms.ModelForm):
     class Meta:
         model = OrgJob
         fields = [
+            'lang',
             'org_name',
             'other_org_name',
             'job_title',
@@ -452,6 +458,7 @@ class FundingForm(forms.ModelForm):
     class Meta:
         model = OrgFundingOpp
         fields = [
+            'lang',
             'org_name',
             'name_funding',
             'logo',
@@ -504,6 +511,7 @@ class PersoFunForm(forms.ModelForm):
     class Meta:
         model = PersFundingOpp
         fields = [
+            'lang',
             'org_name',
             'name_funding',
             'logoo',
@@ -561,6 +569,7 @@ class CapacityForm(forms.ModelForm):
     class Meta:
         model = OrgCapacityOpp
         fields = [
+            'lang',
             'org_name',
             'name_capacity',
             'title_capacity',
@@ -612,6 +621,7 @@ class DevForm(forms.ModelForm):
     class Meta:
         model = DevOrgOpp
         fields = [
+            'lang',
             'org_name',
             'name_devv',
             'title_dev',

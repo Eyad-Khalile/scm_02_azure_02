@@ -22,6 +22,9 @@
         </div>
         {% endif %}
         <div class="for-group">
+            {{ form.lang|as_crispy_field }}
+        </div>
+        <div class="for-group">
             {{ form.name_capacity|as_crispy_field }}
         </div>
         <div class="for-group">

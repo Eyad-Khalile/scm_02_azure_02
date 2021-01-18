@@ -114,7 +114,6 @@ def org_profile(request):
 
 
 # update
-
 @login_required(login_url='signe_in')
 def org_profile_edit(request, pk):
     org_prof = OrgProfile.objects.get(id=pk)
@@ -165,7 +164,7 @@ def org_profile_edit(request, pk):
 
             messages.success(
                 request, _('لقد تم تعديل الملف الشخصي بنجاح'))
-            return redirect('guide')
+            return redirect(org_prof)
 
         else:
             messages.error(request, 'The form profile is not valide')
@@ -205,9 +204,8 @@ def orgs_orders_etude(request):
     }
     return render(request, 'profiles/orgs_orders_etude.html', context)
 
+
 # L'AFFICHAGE DES ORGS NOT PUBLISHED
-
-
 def guide_not_pub(request):
     orgs = OrgProfile.objects.filter(publish=False).order_by('-created_at')
 
@@ -233,7 +231,6 @@ def guide_not_pub(request):
 
 
 # published
-
 @login_required(login_url='signe_in')
 def orgs_orders_published(request):
     orgs = OrgProfile.objects.filter(publish=True).order_by('-created_at')
@@ -271,7 +268,7 @@ def particip_detail(request, par_id):
             messages.success(request, _(
                 'لقد تم تغيير حالة الطلب للمنظمة بنجاح'))
 
-            return redirect('guide')
+            return redirect(org)
     else:
         form = OrgConfirmForm(instance=org)
 
@@ -323,8 +320,6 @@ def profile_staff(request):
 
 
 # delete profile
-
-
 @login_required(login_url='signe_in')
 def org_profile_delete(request, pk):
     org_prof = OrgProfile.objects.get(id=pk)
@@ -334,7 +329,7 @@ def org_profile_delete(request, pk):
 
         messages.success(request, _(
             'لقد تم حذف الملف بنجاح'))
-        return redirect('home')
+        return redirect('guide')
 
     context = {
         'org_prof': org_prof,
