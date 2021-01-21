@@ -633,7 +633,7 @@ class DevForm(forms.ModelForm):
         ]
         help_texts = {
             'video': _('رابط يوتيوب فقط'),
-            'content': _('صورة أو ملف PDF فقط '),
+            'content': _('فقط ملف PDF أو صورة'),
         }
 
 

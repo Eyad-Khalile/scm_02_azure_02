@@ -430,7 +430,7 @@ def admin_dashboard(request):
             ('count', "@counts"),
 
         ]
-        p = figure(x_range=days_to_present, plot_height=250, title="عدد الأخبار المنشورة باليوم",
+        p = figure(x_range=days_to_present, plot_height=250, title=_("عدد الأخبار المنشورة باليوم"),
                    tools="pan,wheel_zoom,box_zoom,save,zoom_in,hover,zoom_out,reset", tooltips=TOOLTIPS)
         p.vbar(x='days_to_present', top='counts', width=0.9, source=source, legend_field="days_to_present",
                line_color='white', fill_color=factor_cmap('days_to_present', palette=Spectral6, factors=days_to_present))
@@ -459,7 +459,7 @@ def admin_dashboard(request):
             ('count', "@counts_org"),
 
         ]
-        p_org = figure(x_range=days_to_present, plot_height=250, title="عدد المنظمات المنشورة باليوم",
+        p_org = figure(x_range=days_to_present, plot_height=250, title=_("عدد المنظمات المنشورة باليوم"),
                        tools="pan,wheel_zoom,box_zoom,save,zoom_in,hover,zoom_out,reset", tooltips=TOOLTIPS)
         p_org.vbar(x='days_to_present', top='counts_org', width=0.9, source=source, legend_field="days_to_present",
                    line_color='white', fill_color=factor_cmap('days_to_present', palette=Spectral6, factors=days_to_present))
@@ -497,7 +497,7 @@ def admin_dashboard(request):
             ('count', "@counts_report"),
 
         ]
-        p_report = figure(x_range=days_to_present, plot_height=250, title="عدد التقارير المنشورة باليوم",
+        p_report = figure(x_range=days_to_present, plot_height=250, title=_("عدد التقارير المنشورة باليوم"),
                           tools="pan,wheel_zoom,box_zoom,save,zoom_in,hover,zoom_out,reset", tooltips=TOOLTIPS)
         p_report.vbar(x='days_to_present', top='counts_report', width=0.9, source=source, legend_field="days_to_present",
                       line_color='white', fill_color=factor_cmap('days_to_present', palette=Spectral6, factors=days_to_present))
@@ -535,7 +535,7 @@ def admin_dashboard(request):
             ('count', "@counts_jobs"),
 
         ]
-        p_jobs = figure(x_range=days_to_present, plot_height=250, title="عدد التقارير المنشورة باليوم",
+        p_jobs = figure(x_range=days_to_present, plot_height=250, title=_("عدد التقارير المنشورة باليوم"),
                         tools="pan,wheel_zoom,box_zoom,save,zoom_in,hover,zoom_out,reset", tooltips=TOOLTIPS)
         p_jobs.vbar(x='days_to_present', top='counts_jobs', width=0.9, source=source, legend_field="days_to_present",
                     line_color='white', fill_color=factor_cmap('days_to_present', palette=Spectral6, factors=days_to_present))

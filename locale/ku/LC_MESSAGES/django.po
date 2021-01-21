@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#: orgs/forms.py:41 orgs/forms.py:472 orgs/forms.py:477 orgs/forms.py:483
-#: orgs/forms.py:489
+#: orgs/forms.py:99 orgs/forms.py:652 orgs/forms.py:657 orgs/forms.py:663
+#: orgs/forms.py:669
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-10 14:24+0000\n"
+"POT-Creation-Date: 2021-01-21 21:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,3418 +19,3724 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: orgs/admin.py:7 orgs/admin.py:8
+#: orgs/admin.py:12 orgs/admin.py:13
 msgid "إدارة موقع SCM "
-msgstr "SCM"
+msgstr "Rêveberiya malpera SCM"
 
-#: orgs/filters.py:15
+#: orgs/filters.py:15 orgs/models.py:193
+msgid "اﻹعلام و المناصرة"
+msgstr "Medya û parêzvanî"
+
+#: orgs/filters.py:16 orgs/models.py:194
+msgid "تعليم"
+msgstr "Xwendin"
+
+#: orgs/filters.py:17 orgs/models.py:195
+msgid "حماية و الصحة النفسية"
+msgstr "Parastin û tenduristiya derûnî"
+
+#: orgs/filters.py:18 orgs/models.py:196
+msgid "سبل العيش واﻷمن الغذائي"
+msgstr "Awayên jiyanê û Asayişa Xorakê"
+
+#: orgs/filters.py:20 orgs/models.py:198
+msgid "النظافة والمياه والصرف الصحي"
+msgstr "Paqijî, av û paqijkirin"
+
+#: orgs/filters.py:21 orgs/models.py:199
+msgid "تنمية و بناء قدرات و ثقافة"
+msgstr "Kapasîte û pêşkeftin û çand"
+
+#: orgs/filters.py:22 orgs/models.py:201
+msgid "المواطنة و الحوكمة و الديموقراطية و السلام و السياسة"
+msgstr "Hemwelatîbûn, rêveberî, demokrasî, aştî û siyaset"
+
+#: orgs/filters.py:23 orgs/models.py:202
+msgid "اﻷسرة و الجندرة و قضايا المرأة"
+msgstr "Pirsgirêkên malbat, zayend û jinan"
+
+#: orgs/filters.py:24 orgs/models.py:203
+msgid "المأوى و البنى التحتية"
+msgstr "Shelter û binesazî"
+
+#: orgs/filters.py:25 orgs/models.py:204
+msgid "تنسيق و تجمعات المجتمع المدني"
+msgstr "Koordînasyon û civînên civaka sivîl"
+
+#: orgs/filters.py:26 orgs/models.py:205
+msgid "صحة"
+msgstr "Tenirustî"
+
+#: orgs/filters.py:27 orgs/models.py:206
+msgid "دراسات وأبحاث"
+msgstr "Xwendin û lêkolîn"
+
+#: orgs/filters.py:28 orgs/models.py:207 orgs/models.py:224 orgs/models.py:244
+#: orgs/models.py:263 orgs/models.py:272 orgs/models.py:280 orgs/models.py:1030
+msgid "أخرى"
+msgstr "Dîtir"
+
+#: orgs/filters.py:46 orgs/filters.py:212 orgs/forms.py:156 orgs/models.py:425
+#: orgs/models.py:785 templates/orgs/resources/org_job_details.html:168
+#: templates/profiles/particip_detail.html:263
+#: templates/profiles/profile.html:161
+msgid "مجال العمل"
+msgstr "Warê kar"
+
+#: orgs/filters.py:49
 msgid "تاريخ التأسيس / من :"
-msgstr "DATE"
+msgstr "Dîroka damezrandinê / Ji:"
 
-#: orgs/filters.py:17 orgs/filters.py:23 orgs/filters.py:52 orgs/filters.py:73
-#: orgs/filters.py:94 orgs/filters.py:114 orgs/filters.py:135
-#: orgs/filters.py:167 orgs/filters.py:200 orgs/filters.py:231
-#: orgs/filters.py:262 orgs/filters.py:282
+#: orgs/filters.py:51 orgs/filters.py:57 orgs/filters.py:96 orgs/filters.py:118
+#: orgs/filters.py:140 orgs/filters.py:161 orgs/filters.py:183
+#: orgs/filters.py:216 orgs/filters.py:250 orgs/filters.py:281
+#: orgs/filters.py:313 orgs/filters.py:335
 msgid "إلى :"
-msgstr ""
+msgstr "Bo :"
 
-#: orgs/filters.py:19 orgs/forms.py:39 orgs/forms.py:485 orgs/models.py:360
-#: orgs/models.py:457 orgs/models.py:621 orgs/models.py:674 orgs/models.py:734
-#: orgs/models.py:821 orgs/models.py:912 orgs/models.py:923
-#: templates/orgs/capacity/org_capacity_details.html:17
-#: templates/orgs/data/detail_data.html:19
-#: templates/orgs/devs/org_dev_details.html:17
-#: templates/orgs/media/media_detail.html:19
-#: templates/orgs/news/orgs_news_detail.html:23
-#: templates/orgs/rapport/detail_rapport.html:19
-#: templates/orgs/resources/jobs_not_pub.html:46
-#: templates/orgs/resources/org_job_details.html:39
-#: templates/orgs/resources/org_jobs.html:102
-#: templates/profiles/particip_detail.html:26
-#: templates/profiles/profile.html:32 templates/profiles/staff_profile.html:25
+#: orgs/filters.py:53 orgs/forms.py:97 orgs/forms.py:665 orgs/models.py:376
+#: orgs/models.py:487 orgs/models.py:511 orgs/models.py:550 orgs/models.py:607
+#: orgs/models.py:646 orgs/models.py:762 orgs/models.py:821 orgs/models.py:889
+#: orgs/models.py:975 orgs/models.py:1039 orgs/models.py:1092
+#: orgs/models.py:1106 templates/orgs/capacity/org_capacity_details.html:103
+#: templates/orgs/data/detail_data.html:106
+#: templates/orgs/devs/org_dev_details.html:112
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:116
+#: templates/orgs/funding_opport/pers/detail.html:119
+#: templates/orgs/media/media_detail.html:104
+#: templates/orgs/news/orgs_news_detail.html:109
+#: templates/orgs/rapport/detail_rapport.html:104
+#: templates/orgs/resources/jobs_not_pub.html:114
+#: templates/orgs/resources/org_job_details.html:129
+#: templates/orgs/resources/org_jobs.html:109
+#: templates/profiles/particip_detail.html:96
+#: templates/profiles/profile.html:31
 msgid "اسم المنظمة"
-msgstr "SCM"
+msgstr "Navê rêxistinê"
 
-#: orgs/filters.py:21 orgs/filters.py:50
+#: orgs/filters.py:55 orgs/filters.py:94
 msgid "تاريخ نشر الخبر / من :"
-msgstr "DATE"
-
-#: orgs/filters.py:45
-msgid "كلمات من عنوان الخبر"
-msgstr ""
-
-#: orgs/filters.py:47
-msgid "كلمات من تفاصيل الخبر"
-msgstr ""
-
-#: orgs/filters.py:68
-msgid "كلمات من عنوان التقرير"
-msgstr ""
-
-#: orgs/filters.py:71
-msgid "تاريخ نشر التقرير / من :"
-msgstr ""
+msgstr "Dîroka belavkirina nûçeyê / Ji :"
 
 #: orgs/filters.py:89
+msgid "كلمات من عنوان الخبر"
+msgstr "Peyvin ji navnîşana nûçeyê"
+
+#: orgs/filters.py:91
+msgid "كلمات من تفاصيل الخبر"
+msgstr "Peyvin ji hurguliyên nûçeyê"
+
+#: orgs/filters.py:113
+msgid "كلمات من عنوان التقرير"
+msgstr "Peyvin ji navnîşana raportê"
+
+#: orgs/filters.py:116
+msgid "تاريخ نشر التقرير / من :"
+msgstr "Dîroka belavkirina raportê / Ji :"
+
+#: orgs/filters.py:135
 msgid "كلمات من عنوان البيان"
-msgstr ""
+msgstr "Peyvin ji navnîşana daxuyaniyê"
 
-#: orgs/filters.py:92
+#: orgs/filters.py:138
 msgid "تاريخ نشر البيان / من :"
-msgstr ""
+msgstr "Dîroka belavkirina daxuyaniyê / Ji :"
 
-#: orgs/filters.py:109
+#: orgs/filters.py:156
 msgid "كلمات من عنوان المحتوى"
-msgstr ""
+msgstr "peyvin ji navnîşana naverokê"
 
-#: orgs/filters.py:112
+#: orgs/filters.py:159
 msgid "تاريخ نشر المحتوى / من :"
-msgstr ""
+msgstr "Dîroka belavkirina naverokê / Ji :"
 
-#: orgs/filters.py:128
+#: orgs/filters.py:176
 msgid "كلمات من اسم الجهة"
-msgstr ""
+msgstr "Peyvin ji navê layen"
 
-#: orgs/filters.py:130
+#: orgs/filters.py:178
 msgid "كلمات من عنوان البحث"
-msgstr ""
+msgstr "Peyvin ji navnîşana lêkolînê"
 
-#: orgs/filters.py:133
+#: orgs/filters.py:181
 msgid "تاريخ نشر البحث / من :"
-msgstr ""
+msgstr "Dîroka belavkirina lêkolînê / Ji :"
 
-#: orgs/filters.py:153
+#: orgs/filters.py:202
 msgid "كلمات من فرصة العمل  "
-msgstr ""
+msgstr "Peyvin ji derfeta kar"
 
-#: orgs/filters.py:155 orgs/models.py:632
-#: templates/orgs/resources/org_job_details.html:61
+#: orgs/filters.py:204 orgs/models.py:773
+#: templates/orgs/resources/org_job_details.html:160
 msgid "نوع الوظيفة"
-msgstr ""
+msgstr "Corê kar"
 
-#: orgs/filters.py:157 orgs/models.py:634
+#: orgs/filters.py:206 orgs/models.py:775
 msgid "الخبرة"
-msgstr ""
+msgstr "Şarezahî"
 
-#: orgs/filters.py:159 orgs/filters.py:190 orgs/models.py:368
-#: orgs/models.py:636 templates/orgs/resources/jobs_not_pub.html:62
-#: templates/orgs/resources/org_job_details.html:70
-#: templates/orgs/resources/org_jobs.html:118
-#: templates/profiles/particip_detail.html:113
-#: templates/profiles/profile.html:57 templates/profiles/staff_profile.html:50
-msgid "مكان العمل"
-msgstr ""
-
-#: orgs/filters.py:161 orgs/filters.py:192 orgs/models.py:370
-#: orgs/models.py:638 orgs/models.py:688 orgs/models.py:756 orgs/models.py:840
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:48
-#: templates/orgs/funding_opport/pers/detail.html:90
-#: templates/profiles/particip_detail.html:122
-#: templates/profiles/profile.html:58 templates/profiles/staff_profile.html:51
+#: orgs/filters.py:210 orgs/models.py:495 orgs/models.py:779 orgs/models.py:835
+#: orgs/models.py:911 orgs/models.py:994
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:162
+#: templates/orgs/funding_opport/pers/detail.html:226
+#: templates/profiles/particip_detail.html:213
+#: templates/profiles/profile.html:101
 msgid "المحافظة"
-msgstr ""
+msgstr "Parêzgeh"
 
-#: orgs/filters.py:163 orgs/filters.py:194 orgs/models.py:403
-#: orgs/models.py:644 templates/orgs/resources/org_job_details.html:65
-#: templates/profiles/particip_detail.html:177
-#: templates/profiles/profile.html:97 templates/profiles/staff_profile.html:90
-msgid "مجال العمل"
-msgstr ""
-
-#: orgs/filters.py:165
+#: orgs/filters.py:214
 msgid "تاريخ نشر فرصة العمل / من :"
-msgstr ""
+msgstr "Dîroka belavkirina derfeta kar / Ji :"
 
-#: orgs/filters.py:188 orgs/filters.py:257 orgs/models.py:677
-#: orgs/models.py:737
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:12
-#: templates/orgs/funding_opport/pers/detail.html:15
+#: orgs/filters.py:238 orgs/models.py:824 orgs/models.py:892
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:118
+#: templates/orgs/funding_opport/pers/detail.html:121
 msgid "الجهة المانحة"
-msgstr ""
+msgstr "Aliyê bexşende"
 
-#: orgs/filters.py:196
+#: orgs/filters.py:246
 msgid "حسب المبلغ المالي"
-msgstr ""
+msgstr "Li gorî gujmê diravî"
 
-#: orgs/filters.py:198 orgs/filters.py:229 orgs/filters.py:260
-#: orgs/filters.py:280
+#: orgs/filters.py:248 orgs/filters.py:279 orgs/filters.py:311
+#: orgs/filters.py:333
 msgid "تاريخ نشر المنحة  / من :"
-msgstr ""
+msgstr "Dîroka belavkirina bexşînê / Ji :"
 
-#: orgs/filters.py:227 orgs/filters.py:255 orgs/models.py:883
+#: orgs/filters.py:277
+msgid "عنوان الفرصة "
+msgstr "Sernavê derfetê"
+
+#: orgs/filters.py:306 orgs/models.py:1044
 msgid "عنوان المادة"
-msgstr ""
+msgstr "Navnîşana madeyê"
 
-#: orgs/forms.py:13
+#: orgs/filters.py:308 orgs/models.py:1048
+#: templates/orgs/devs/org_dev_details.html:157
+msgid "لمحة عن الجهة"
+msgstr "Kurteyek li ser layen"
+
+#: orgs/forms.py:16
 msgid "حقل إجباري, يرجى إدخال بريد إلكتروني صحيح لتتمكن من تفعيل حسابك"
 msgstr ""
+"Neçarî ye, ji kerema xwe, Emaileke rast binvîse da ku tu hesabê xwe çalak "
+"bikî"
 
-#: orgs/forms.py:13
+#: orgs/forms.py:16
 msgid "عنوان بريد إلكتروني"
-msgstr ""
+msgstr "Navnşîana Emailekê"
 
-#: orgs/forms.py:43 orgs/forms.py:47 orgs/forms.py:51 orgs/forms.py:58
-#: orgs/forms.py:62 orgs/forms.py:78 orgs/forms.py:86 orgs/forms.py:90
-msgid "هذا الحقل لا يقبل الحروف الخاصه و الرموز"
-msgstr ""
-
-#: orgs/forms.py:45 orgs/models.py:362
-#: templates/profiles/particip_detail.html:36
-#: templates/profiles/profile.html:33 templates/profiles/staff_profile.html:26
-msgid "اسم المنظمة باللغة الانكليزية أو الكردية"
-msgstr ""
-
-#: orgs/forms.py:49 orgs/models.py:364
-#: templates/profiles/particip_detail.html:52
-msgid "الاسم المختصر"
-msgstr ""
-
-#: orgs/forms.py:56 orgs/models.py:379
-#: templates/profiles/particip_detail.html:151
-#: templates/profiles/profile.html:71 templates/profiles/staff_profile.html:64
-msgid "اسم رئيس مجلس اﻹدارة"
-msgstr ""
-
-#: orgs/forms.py:60 orgs/models.py:381
-#: templates/profiles/particip_detail.html:165
-#: templates/profiles/profile.html:85 templates/profiles/staff_profile.html:78
-msgid "اسم المدير التنفيذي"
-msgstr ""
-
-#: orgs/forms.py:65 orgs/models.py:385
-#: templates/profiles/particip_detail.html:339
-#: templates/profiles/profile.html:268
-#: templates/profiles/staff_profile.html:261
-msgid "الموقع الالكتروني"
-msgstr ""
-
-#: orgs/forms.py:68 orgs/models.py:387
-#: templates/profiles/particip_detail.html:353
-#: templates/profiles/profile.html:282
-#: templates/profiles/staff_profile.html:275
-msgid "صفحة فيسبوك"
-msgstr ""
-
-#: orgs/forms.py:71 orgs/models.py:389
-#: templates/profiles/particip_detail.html:367
-#: templates/profiles/profile.html:296
-#: templates/profiles/staff_profile.html:289
-msgid "صفحة تويتر"
-msgstr ""
-
-#: orgs/forms.py:74 orgs/forms.py:491 orgs/models.py:391 orgs/models.py:914
-#: orgs/models.py:924 templates/profiles/particip_detail.html:381
-#: templates/profiles/profile.html:310
-#: templates/profiles/staff_profile.html:303
-msgid "البريد الاكتروني"
-msgstr ""
-
-#: orgs/forms.py:76 orgs/models.py:395
-#: templates/profiles/particip_detail.html:407
-#: templates/profiles/profile.html:334
-#: templates/profiles/staff_profile.html:327
-msgid "اسم الشخص المسؤول عن التواصل"
-msgstr ""
-
-#: orgs/forms.py:82 orgs/models.py:397
-#: templates/profiles/particip_detail.html:421
-#: templates/profiles/profile.html:348
-#: templates/profiles/staff_profile.html:341
-msgid "البريد الاكتروني للشخص المسؤول عن التواصل"
-msgstr ""
-
-#: orgs/forms.py:84 orgs/models.py:399
-#: templates/profiles/particip_detail.html:325
-#: templates/profiles/profile.html:254
-#: templates/profiles/staff_profile.html:247
-msgid "عنوان المقر الرئيسي"
-msgstr ""
-
-#: orgs/forms.py:88 orgs/models.py:422
-msgid "اسم الشبكة / التحالف"
-msgstr ""
-
-#: orgs/forms.py:474 orgs/models.py:908
-msgid "الاسم و الكنية"
-msgstr ""
-
-#: orgs/forms.py:479 orgs/models.py:910
-msgid "العمل"
-msgstr ""
-
-#: orgs/forms.py:507
+#: orgs/forms.py:38 orgs/forms.py:687
 msgid "هذا البريد الالكتروني موجود مسبقاً"
-msgstr ""
+msgstr "Ev email berê heye"
 
-#: orgs/models.py:21
+#: orgs/forms.py:101 orgs/forms.py:105 orgs/forms.py:109 orgs/forms.py:116
+#: orgs/forms.py:120 orgs/forms.py:136 orgs/forms.py:144 orgs/forms.py:148
+msgid "هذا الحقل لا يقبل الحروف الخاصه و الرموز"
+msgstr "Ev valahî, tîpên taybet û nîşanan napejirîne"
+
+#: orgs/forms.py:103 orgs/models.py:378
+#: templates/profiles/particip_detail.html:106
+#: templates/profiles/profile.html:36
+msgid "اسم المنظمة باللغة الانكليزية أو الكردية"
+msgstr "Navê rêxistinê bi zimanê Ingilîzî yan Kurdî"
+
+#: orgs/forms.py:107 orgs/models.py:380
+#: templates/profiles/particip_detail.html:122
+msgid "الاسم المختصر"
+msgstr "Navê kurtkirî"
+
+#: orgs/forms.py:114 orgs/models.py:401
+#: templates/profiles/particip_detail.html:237
+#: templates/profiles/profile.html:135
+msgid "اسم رئيس مجلس اﻹدارة"
+msgstr "Navê serokê Encûmena Rêvebir"
+
+#: orgs/forms.py:118 orgs/models.py:403
+#: templates/profiles/particip_detail.html:251
+#: templates/profiles/profile.html:149
+msgid "اسم المدير التنفيذي"
+msgstr "Navê Rêvebirê Cîbicîkar"
+
+#: orgs/forms.py:123 orgs/models.py:407
+#: templates/profiles/particip_detail.html:447
+#: templates/profiles/profile.html:332
+msgid "الموقع الالكتروني"
+msgstr "Malpera elektironî"
+
+#: orgs/forms.py:126 orgs/models.py:409
+#: templates/profiles/particip_detail.html:461
+#: templates/profiles/profile.html:346
+msgid "صفحة فيسبوك"
+msgstr "Rûpela Facebookê"
+
+#: orgs/forms.py:129 orgs/models.py:411
+#: templates/profiles/particip_detail.html:475
+#: templates/profiles/profile.html:360
+msgid "صفحة تويتر"
+msgstr "Rûpela twitterê"
+
+#: orgs/forms.py:132 orgs/forms.py:671 orgs/models.py:413 orgs/models.py:1094
+#: orgs/models.py:1108 templates/profiles/particip_detail.html:489
+#: templates/profiles/profile.html:374
+msgid "البريد الاكتروني"
+msgstr "Email"
+
+#: orgs/forms.py:134 orgs/models.py:417
+#: templates/profiles/particip_detail.html:515
+#: templates/profiles/profile.html:398
+msgid "اسم الشخص المسؤول عن التواصل"
+msgstr "Navê berpirsê peywendiyê"
+
+#: orgs/forms.py:140 orgs/models.py:419
+#: templates/profiles/particip_detail.html:529
+#: templates/profiles/profile.html:412
+msgid "البريد الاكتروني للشخص المسؤول عن التواصل"
+msgstr "Emaila berpirsê peywendiyê"
+
+#: orgs/forms.py:142 orgs/models.py:421
+#: templates/profiles/particip_detail.html:433
+#: templates/profiles/profile.html:318
+msgid "عنوان المقر الرئيسي"
+msgstr "Navnîşana baregeha sereke"
+
+#: orgs/forms.py:146 orgs/models.py:444
+msgid "اسم الشبكة / التحالف"
+msgstr "Navê torê / Hevpeymaniyê"
+
+#: orgs/forms.py:154
+msgid "لتحديد أكثر من مجال يرجى الاختيار مع استمرار الضغط على زر ال CTRL"
+msgstr ""
+"Ji bo ku ji yekê zêdetir qadek hilbijêrin, ji kerema xwe dema ku bişkoja "
+"CTRL digirin hilbijêrin"
+
+#: orgs/forms.py:160
+msgid "لتحديد أكثر من هدف يرجى الاختيار مع استمرار الضغط على زر ال CTRL"
+msgstr ""
+"Ji bo ku ji yekê zêdetir hedef diyar bike, ji kerema xwe bişkoja CTRL "
+"hilbijêrin û bigirin"
+
+#: orgs/forms.py:162 orgs/models.py:427
+#: templates/profiles/particip_detail.html:273
+#: templates/profiles/profile.html:173
+msgid "الفئات المستهدفة"
+msgstr "Beşên armanckirî"
+
+#: orgs/forms.py:167
+msgid "لتحديد أكثر من سياسة يرجى الاختيار مع استمرار الضغط على زر ال CTRL"
+msgstr ""
+"Ji bo zêdetirî yek polîtîkayê diyar bike, ji kerema xwe bişkoja CTRL "
+"hilbijêrin û bigirin"
+
+#: orgs/forms.py:169 orgs/models.py:440
+#: templates/profiles/particip_detail.html:351
+#: templates/profiles/profile.html:254
+msgid "السياسات واللوائح المكتوبة"
+msgstr "Siyaset û tabloyên nivîsandî"
+
+#: orgs/forms.py:635
+msgid "رابط يوتيوب فقط"
+msgstr "Tenê Youtube Link"
+
+#: orgs/forms.py:636
+msgid "فقط ملف PDF أو صورة"
+msgstr "Tenê pelê PDF an wêneyek"
+
+#: orgs/forms.py:654 orgs/forms.py:711 orgs/models.py:1088
+msgid "الاسم و الكنية"
+msgstr "Nav û paşnav"
+
+#: orgs/forms.py:659 orgs/models.py:1090
+msgid "العمل"
+msgstr "Kar"
+
+#: orgs/forms.py:713
+msgid "البريد الالكتروني"
+msgstr "E-name"
+
+#: orgs/forms.py:715
+msgid "العنوان"
+msgstr "Navnîşan"
+
+#: orgs/forms.py:717
+msgid "الرسالة"
+msgstr "peyam"
+
+#: orgs/models.py:27
 msgid "العراق"
-msgstr ""
+msgstr "Îraq"
 
-#: orgs/models.py:22
+#: orgs/models.py:28
 msgid "لبنان"
-msgstr ""
-
-#: orgs/models.py:23
-msgid "اﻷردن"
-msgstr ""
-
-#: orgs/models.py:24
-msgid "سوريا"
-msgstr ""
-
-#: orgs/models.py:25
-msgid "تركيا"
-msgstr ""
+msgstr "Lubnan"
 
 #: orgs/models.py:29
-msgid "مؤسسة"
-msgstr ""
+msgid "اﻷردن"
+msgstr "Urdun"
 
 #: orgs/models.py:30
-msgid "جمعية أو منظمة"
-msgstr ""
+msgid "تركيا"
+msgstr "Turkiye"
 
 #: orgs/models.py:31
-msgid "مبادرة / فريق"
-msgstr ""
+msgid "سوريا"
+msgstr "Sûriye"
 
-#: orgs/models.py:32
-msgid "اتحاد / تحالف / تجمع"
-msgstr ""
+#: orgs/models.py:35
+msgid "مؤسسة"
+msgstr "Sazî"
 
-#: orgs/models.py:33
-msgid "لجنة / تنسيقية / مجموعة"
-msgstr ""
+#: orgs/models.py:36
+msgid "جمعية أو منظمة"
+msgstr "Komele yan rêxistin"
 
 #: orgs/models.py:37
-msgid "حلب"
-msgstr ""
+msgid "مبادرة / فريق"
+msgstr "Destpêşxerî / tîm"
 
 #: orgs/models.py:38
-msgid "دمشق"
-msgstr ""
+msgid "اتحاد / تحالف / تجمع"
+msgstr "Yekîtî / Hevpeymanî / Kombûn"
 
 #: orgs/models.py:39
-msgid "ريف دمشق"
-msgstr ""
-
-#: orgs/models.py:40
-msgid "درعا"
-msgstr ""
-
-#: orgs/models.py:41
-msgid "دير الزور"
-msgstr ""
-
-#: orgs/models.py:42
-msgid "حماه"
-msgstr ""
+msgid "لجنة / تنسيقية / مجموعة"
+msgstr "Komîte / Hevrêz / Girûp"
 
 #: orgs/models.py:43
-msgid "الحسكة"
-msgstr ""
+msgid "حلب"
+msgstr "Heleb"
 
 #: orgs/models.py:44
-msgid "حمص"
-msgstr ""
+msgid "دمشق"
+msgstr "Dîmeşq"
 
 #: orgs/models.py:45
-msgid "إدلب"
-msgstr ""
+msgid "ريف دمشق"
+msgstr "Gundewarê Dîmeşqê"
 
 #: orgs/models.py:46
-msgid "اللاذقية"
-msgstr ""
+msgid "درعا"
+msgstr "Der`a"
 
 #: orgs/models.py:47
-msgid "القنيطرة"
-msgstr ""
+msgid "دير الزور"
+msgstr "Dêr Ezzor"
 
 #: orgs/models.py:48
-msgid "الرقة"
-msgstr ""
+msgid "حماه"
+msgstr "Hema"
 
 #: orgs/models.py:49
-msgid "السويداء"
-msgstr ""
+msgid "الحسكة"
+msgstr "Hisiça"
 
 #: orgs/models.py:50
-msgid "طرطوس"
-msgstr ""
+msgid "حمص"
+msgstr "Hims"
+
+#: orgs/models.py:51
+msgid "إدلب"
+msgstr "Idlib"
+
+#: orgs/models.py:52
+msgid "اللاذقية"
+msgstr "Laziqiyê"
+
+#: orgs/models.py:53
+msgid "القنيطرة"
+msgstr "Qunêtira"
 
 #: orgs/models.py:54
-msgid "أضنة"
-msgstr ""
+msgid "الرقة"
+msgstr "Reqa"
 
 #: orgs/models.py:55
-msgid "أديامان"
-msgstr ""
+msgid "السويداء"
+msgstr "Siwêdaa"
 
 #: orgs/models.py:56
-msgid "أفيون"
-msgstr ""
-
-#: orgs/models.py:57
-msgid "أغري"
-msgstr ""
-
-#: orgs/models.py:58
-msgid "أماسيا"
-msgstr ""
-
-#: orgs/models.py:59
-msgid "أنقرة"
-msgstr ""
+msgid "طرطوس"
+msgstr "Tertûs"
 
 #: orgs/models.py:60
-msgid "أنطاليا"
-msgstr ""
+msgid "أضنة"
+msgstr "Edena"
 
 #: orgs/models.py:61
-msgid "أرتوين"
-msgstr ""
+msgid "أديامان"
+msgstr "Adiyaman"
 
 #: orgs/models.py:62
-msgid "أيطن"
-msgstr ""
+msgid "أفيون"
+msgstr "Afiyon"
 
 #: orgs/models.py:63
-msgid "بالق أسير"
-msgstr ""
+msgid "أغري"
+msgstr "Agrî"
 
 #: orgs/models.py:64
-msgid "بيله جك"
-msgstr ""
+msgid "أماسيا"
+msgstr "Amasiya"
 
 #: orgs/models.py:65
-msgid "بينكُل"
-msgstr ""
+msgid "أنقرة"
+msgstr "Enqere"
 
 #: orgs/models.py:66
-msgid "بيطليس"
-msgstr ""
+msgid "أنطاليا"
+msgstr "Antaliya"
 
 #: orgs/models.py:67
-msgid "بولو"
-msgstr ""
+msgid "أرتوين"
+msgstr "Artoyîn"
 
 #: orgs/models.py:68
-msgid "بوردور"
-msgstr ""
+msgid "أيطن"
+msgstr "Aytin"
 
 #: orgs/models.py:69
-msgid "بورصة"
-msgstr ""
+msgid "بالق أسير"
+msgstr "Baliq Asîr"
 
 #: orgs/models.py:70
-msgid "جاناكالي"
-msgstr ""
+msgid "بيله جك"
+msgstr "Bîle Cek"
 
 #: orgs/models.py:71
-msgid "جانقري"
-msgstr ""
+msgid "بينكُل"
+msgstr "Bingul"
 
 #: orgs/models.py:72
-msgid "جوروم"
-msgstr ""
+msgid "بيطليس"
+msgstr "Bidlîs"
 
 #: orgs/models.py:73
-msgid "دنيزلي"
-msgstr ""
+msgid "بولو"
+msgstr "Bolo"
 
 #: orgs/models.py:74
-msgid "ديار بكر"
-msgstr ""
+msgid "بوردور"
+msgstr "Bordor"
 
 #: orgs/models.py:75
-msgid "أدرنة"
-msgstr ""
+msgid "بورصة"
+msgstr "Borsa"
 
 #: orgs/models.py:76
-msgid "إلازِغ"
-msgstr ""
+msgid "جاناكالي"
+msgstr "Canakalî"
 
 #: orgs/models.py:77
-msgid "أرزينجان"
-msgstr ""
+msgid "جانقري"
+msgstr "Canqirî"
 
 #: orgs/models.py:78
-msgid "أرضروم"
-msgstr ""
+msgid "جوروم"
+msgstr "Corum"
 
 #: orgs/models.py:79
-msgid "أسكي شهر"
-msgstr ""
+msgid "دنيزلي"
+msgstr "Denizlî"
 
 #: orgs/models.py:80
-msgid "غازي عينتاب"
-msgstr ""
+msgid "ديار بكر"
+msgstr "Diyar Bekir"
 
 #: orgs/models.py:81
-msgid "غيرسون"
-msgstr ""
+msgid "أدرنة"
+msgstr "Adirne"
 
 #: orgs/models.py:82
-msgid "كوموش خانة"
-msgstr ""
+msgid "إلازِغ"
+msgstr "Îlazix"
 
 #: orgs/models.py:83
-msgid "حقاري"
-msgstr ""
+msgid "أرزينجان"
+msgstr "Ezerbîcan"
 
 #: orgs/models.py:84
-msgid "خطاي"
-msgstr ""
+msgid "أرضروم"
+msgstr "Erzirûm"
 
 #: orgs/models.py:85
-msgid "إسبرطة"
-msgstr ""
+msgid "أسكي شهر"
+msgstr "Eskî Şehir"
 
 #: orgs/models.py:86
-msgid "مرسين"
-msgstr ""
+msgid "غازي عينتاب"
+msgstr "Xazî Êntap"
 
 #: orgs/models.py:87
-msgid "إسطنبول"
-msgstr ""
+msgid "غيرسون"
+msgstr "Gîrson"
 
 #: orgs/models.py:88
-msgid "إزمير"
-msgstr ""
+msgid "كوموش خانة"
+msgstr "Komuş Xane"
 
 #: orgs/models.py:89
-msgid "كارس"
-msgstr ""
+msgid "حقاري"
+msgstr "Heqarî"
 
 #: orgs/models.py:90
-msgid "قسطموني"
-msgstr ""
+msgid "خطاي"
+msgstr "Xetayî"
 
 #: orgs/models.py:91
-msgid "قيصرية"
-msgstr ""
+msgid "إسبرطة"
+msgstr "Ispirte"
 
 #: orgs/models.py:92
-msgid "كيركلاريلي"
-msgstr ""
+msgid "مرسين"
+msgstr "Mêrsîn"
 
 #: orgs/models.py:93
-msgid "قرشهر"
-msgstr ""
+msgid "إسطنبول"
+msgstr "Istenbul"
 
 #: orgs/models.py:94
-msgid "قوجه ايلي"
-msgstr ""
+msgid "إزمير"
+msgstr "Izmîr"
 
 #: orgs/models.py:95
-msgid "قونية"
-msgstr ""
+msgid "كارس"
+msgstr "Karis"
 
 #: orgs/models.py:96
-msgid "كوتاهيا"
-msgstr ""
+msgid "قسطموني"
+msgstr "Qestimûnî"
 
 #: orgs/models.py:97
-msgid "ملاطية"
-msgstr ""
+msgid "قيصرية"
+msgstr "Qeyseriye"
 
 #: orgs/models.py:98
-msgid "مانيسا"
-msgstr ""
+msgid "كيركلاريلي"
+msgstr "Kîrkilarîlî"
 
 #: orgs/models.py:99
-msgid "كارامان"
-msgstr ""
+msgid "قرشهر"
+msgstr "Qerşehir"
 
 #: orgs/models.py:100
-msgid "ماردين"
-msgstr ""
+msgid "قوجه ايلي"
+msgstr "Quce Îlî"
 
 #: orgs/models.py:101
-msgid "موغلا"
-msgstr ""
+msgid "قونية"
+msgstr "Qoniye"
 
 #: orgs/models.py:102
-msgid "موس"
-msgstr ""
+msgid "كوتاهيا"
+msgstr "Kotahiya"
 
 #: orgs/models.py:103
-msgid "نوشهر"
-msgstr ""
+msgid "ملاطية"
+msgstr "Melatiya"
 
 #: orgs/models.py:104
-msgid "نيدا"
-msgstr ""
+msgid "مانيسا"
+msgstr "Manîsa"
 
 #: orgs/models.py:105
-msgid "أردو"
-msgstr ""
+msgid "كارامان"
+msgstr "Karaman"
 
 #: orgs/models.py:106
-msgid "ريزه"
-msgstr ""
+msgid "ماردين"
+msgstr "Mêrdîn"
 
 #: orgs/models.py:107
-msgid "صقاريا"
-msgstr ""
+msgid "موغلا"
+msgstr "Moxla"
 
 #: orgs/models.py:108
-msgid "سامسون"
-msgstr ""
+msgid "موس"
+msgstr "Mûs"
 
 #: orgs/models.py:109
-msgid "سيرت"
-msgstr ""
+msgid "نوشهر"
+msgstr "Nûşehir"
 
 #: orgs/models.py:110
-msgid "سينوب"
-msgstr ""
+msgid "نيدا"
+msgstr "Nîda"
 
 #: orgs/models.py:111
-msgid "سيواس"
-msgstr ""
+msgid "أردو"
+msgstr "Ardo"
 
 #: orgs/models.py:112
-msgid "تكيرطاغ"
-msgstr ""
+msgid "ريزه"
+msgstr "Rîze"
 
 #: orgs/models.py:113
-msgid "توكات"
-msgstr ""
+msgid "صقاريا"
+msgstr "Seqariya"
 
 #: orgs/models.py:114
-msgid "طرابزون"
-msgstr ""
+msgid "سامسون"
+msgstr "Semsûn"
 
 #: orgs/models.py:115
-msgid "تونجلي"
-msgstr ""
+msgid "سيرت"
+msgstr "Sêrt"
 
 #: orgs/models.py:116
-msgid "شانلي أورفا"
-msgstr ""
+msgid "سينوب"
+msgstr "Sînob"
 
 #: orgs/models.py:117
-msgid "أوشاك"
-msgstr ""
+msgid "سيواس"
+msgstr "Sîwas"
 
 #: orgs/models.py:118
-msgid "وان"
-msgstr ""
+msgid "تكيرطاغ"
+msgstr "Tikîrtax"
 
 #: orgs/models.py:119
-msgid "يوزكات"
-msgstr ""
+msgid "توكات"
+msgstr "Tûkat"
 
 #: orgs/models.py:120
-msgid "زونغولداك"
-msgstr ""
+msgid "طرابزون"
+msgstr "Tirabzon"
 
 #: orgs/models.py:121
-msgid "أق سراي"
-msgstr ""
+msgid "تونجلي"
+msgstr "Tûncilî"
 
 #: orgs/models.py:122
-msgid "بايبورت"
-msgstr ""
+msgid "شانلي أورفا"
+msgstr "Orfa"
 
 #: orgs/models.py:123
-msgid "قرة مان"
-msgstr ""
+msgid "أوشاك"
+msgstr "Oşak"
 
 #: orgs/models.py:124
-msgid "كيرِك قلعة"
-msgstr ""
+msgid "وان"
+msgstr "Wan"
 
 #: orgs/models.py:125
-msgid "باتمان"
-msgstr ""
+msgid "يوزكات"
+msgstr "Yûzkat"
 
 #: orgs/models.py:126
-msgid "شرناق"
-msgstr ""
+msgid "زونغولداك"
+msgstr "Zungoldag"
 
 #: orgs/models.py:127
-msgid "بارتين"
-msgstr ""
+msgid "أق سراي"
+msgstr "Aq Sirayî"
 
 #: orgs/models.py:128
-msgid "أرض خان"
-msgstr ""
+msgid "بايبورت"
+msgstr "Baybûrt"
 
 #: orgs/models.py:129
-msgid "إغدير"
-msgstr ""
+msgid "قرة مان"
+msgstr "Qereman"
 
 #: orgs/models.py:130
-msgid "يالوفا"
-msgstr ""
+msgid "كيرِك قلعة"
+msgstr "Kîrik Qel`e"
 
 #: orgs/models.py:131
-msgid "قرة بوك"
-msgstr ""
+msgid "باتمان"
+msgstr "Batman"
 
 #: orgs/models.py:132
-msgid "كيليس"
-msgstr ""
+msgid "شرناق"
+msgstr "Şienex"
 
 #: orgs/models.py:133
-msgid "عثمانية"
-msgstr ""
+msgid "بارتين"
+msgstr "Bartîn"
 
 #: orgs/models.py:134
-msgid "دوزجه"
-msgstr ""
+msgid "أرض خان"
+msgstr "Erz Xan"
+
+#: orgs/models.py:135
+msgid "إغدير"
+msgstr "Ixdîr"
+
+#: orgs/models.py:136
+msgid "يالوفا"
+msgstr "Yalûfa"
+
+#: orgs/models.py:137
+msgid "قرة بوك"
+msgstr "Qere Bûk"
 
 #: orgs/models.py:138
-msgid "إربد"
-msgstr ""
+msgid "كيليس"
+msgstr "Kilis"
 
 #: orgs/models.py:139
-msgid "البلقاء"
-msgstr ""
+msgid "عثمانية"
+msgstr "Osmaniye"
 
 #: orgs/models.py:140
-msgid "جرش"
-msgstr ""
-
-#: orgs/models.py:141
-msgid "الزرقاء"
-msgstr ""
-
-#: orgs/models.py:142
-msgid "الطفيلة"
-msgstr ""
-
-#: orgs/models.py:143
-msgid "عجلون"
-msgstr ""
+msgid "دوزجه"
+msgstr "Duzce"
 
 #: orgs/models.py:144
-msgid "العقبة"
-msgstr ""
+msgid "إربد"
+msgstr "Irbid"
 
 #: orgs/models.py:145
-msgid "عمان"
-msgstr ""
+msgid "البلقاء"
+msgstr "Belqaa"
 
 #: orgs/models.py:146
-msgid "الكرك"
-msgstr ""
+msgid "جرش"
+msgstr "Ceriş"
 
 #: orgs/models.py:147
-msgid "مادبا"
-msgstr ""
+msgid "الزرقاء"
+msgstr "Zerqaa"
 
 #: orgs/models.py:148
-msgid "معان"
-msgstr ""
+msgid "الطفيلة"
+msgstr "Tufeyliye"
 
 #: orgs/models.py:149
-msgid "المفرق"
-msgstr ""
+msgid "عجلون"
+msgstr "`Eclûn"
+
+#: orgs/models.py:150
+msgid "العقبة"
+msgstr "`Eqebe"
+
+#: orgs/models.py:151
+msgid "عمان"
+msgstr "`Uman"
+
+#: orgs/models.py:152
+msgid "الكرك"
+msgstr "Kerk"
 
 #: orgs/models.py:153
-msgid "بيروت"
-msgstr ""
+msgid "مادبا"
+msgstr "Madeba"
 
 #: orgs/models.py:154
-msgid "جبل لبنان"
-msgstr ""
+msgid "معان"
+msgstr "Me`an"
 
 #: orgs/models.py:155
-msgid "لبنان الشمالي"
-msgstr ""
-
-#: orgs/models.py:156
-msgid "لبنان الجنوبي"
-msgstr ""
-
-#: orgs/models.py:157
-msgid "البقاع"
-msgstr ""
-
-#: orgs/models.py:158
-msgid "النبطية"
-msgstr ""
+msgid "المفرق"
+msgstr "Mefriq"
 
 #: orgs/models.py:159
-msgid "عكار"
-msgstr ""
+msgid "بيروت"
+msgstr "Beyrût"
 
 #: orgs/models.py:160
-msgid "بعبلك الهرمل"
-msgstr ""
+msgid "جبل لبنان"
+msgstr "Cebel Lubnan"
 
 #: orgs/models.py:161
-msgid "كسروان جبيل"
-msgstr ""
+msgid "لبنان الشمالي"
+msgstr "Lubnana Bakur"
+
+#: orgs/models.py:162
+msgid "لبنان الجنوبي"
+msgstr "Lubnana Başûr"
+
+#: orgs/models.py:163
+msgid "البقاع"
+msgstr "Bîqa`"
+
+#: orgs/models.py:164
+msgid "النبطية"
+msgstr "Nebetiye"
 
 #: orgs/models.py:165
-msgid "أربيل"
-msgstr ""
+msgid "عكار"
+msgstr "`Akar"
 
 #: orgs/models.py:166
-msgid "اﻷنبار"
-msgstr ""
+msgid "بعبلك الهرمل"
+msgstr "Be`elbek Elhirmil"
 
 #: orgs/models.py:167
-msgid "بابل"
-msgstr ""
-
-#: orgs/models.py:168
-msgid "بغداد"
-msgstr ""
-
-#: orgs/models.py:169
-msgid "البصرة"
-msgstr ""
-
-#: orgs/models.py:170
-msgid "حلبجة"
-msgstr ""
+msgid "كسروان جبيل"
+msgstr "Kesrewan Cibêl"
 
 #: orgs/models.py:171
-msgid "دهوك"
-msgstr ""
+msgid "أربيل"
+msgstr "Erbîl"
 
 #: orgs/models.py:172
-msgid "القادسية"
-msgstr ""
+msgid "اﻷنبار"
+msgstr "Enbar"
 
 #: orgs/models.py:173
-msgid "ديالي"
-msgstr ""
+msgid "بابل"
+msgstr "Babil"
 
 #: orgs/models.py:174
-msgid "ذي قار"
-msgstr ""
+msgid "بغداد"
+msgstr "Bexdad"
 
 #: orgs/models.py:175
-msgid "السليمانية"
-msgstr ""
+msgid "البصرة"
+msgstr "Besra"
 
 #: orgs/models.py:176
-msgid "صلاح الدين"
-msgstr ""
+msgid "حلبجة"
+msgstr "Helebçe"
 
 #: orgs/models.py:177
-msgid "كركوك"
-msgstr ""
+msgid "دهوك"
+msgstr "Duhok"
 
 #: orgs/models.py:178
-msgid "كربلاء"
-msgstr ""
+msgid "القادسية"
+msgstr "Qadisiye"
 
 #: orgs/models.py:179
-msgid "المثنى"
-msgstr ""
+msgid "ديالي"
+msgstr "Diyala"
 
 #: orgs/models.py:180
-msgid "ميسان"
-msgstr ""
+msgid "ذي قار"
+msgstr "Zî Qar"
 
 #: orgs/models.py:181
-msgid "النجف"
-msgstr ""
+msgid "السليمانية"
+msgstr "Sulêmanî"
 
 #: orgs/models.py:182
-msgid "نينوى"
-msgstr ""
+msgid "صلاح الدين"
+msgstr "Selaheddîn"
 
 #: orgs/models.py:183
-msgid "واسط"
-msgstr ""
+msgid "كركوك"
+msgstr "Kerkûk"
+
+#: orgs/models.py:184
+msgid "كربلاء"
+msgstr "Kerbelaa"
+
+#: orgs/models.py:185
+msgid "المثنى"
+msgstr "Musena"
+
+#: orgs/models.py:186
+msgid "ميسان"
+msgstr "Mîsan"
 
 #: orgs/models.py:187
-msgid "إعلام"
-msgstr ""
+msgid "النجف"
+msgstr "Necef"
 
 #: orgs/models.py:188
-msgid "تعليم"
-msgstr ""
+msgid "نينوى"
+msgstr "Neynewa"
 
 #: orgs/models.py:189
-msgid "حماية"
-msgstr ""
-
-#: orgs/models.py:190
-msgid "سبل العيش واﻷمن الغذائي"
-msgstr ""
-
-#: orgs/models.py:192
-msgid "مشاريع النظافة والمياه والصرف الصحي"
-msgstr ""
-
-#: orgs/models.py:193
-msgid "تنمية"
-msgstr ""
-
-#: orgs/models.py:194
-msgid "قانون و مناصرة و سیاسة"
-msgstr ""
-
-#: orgs/models.py:195
-msgid "مانحین و دعم العمل التطوعي"
-msgstr ""
-
-#: orgs/models.py:196
-msgid "منظمات دینیة"
-msgstr ""
-
-#: orgs/models.py:197
-msgid "تجمعات و اتحادات مھنیة"
-msgstr ""
-
-#: orgs/models.py:198
-msgid "صحة"
-msgstr ""
-
-#: orgs/models.py:199
-msgid "دراسات وأبحاث"
-msgstr ""
-
-#: orgs/models.py:200 orgs/models.py:217 orgs/models.py:237 orgs/models.py:256
-#: orgs/models.py:265 orgs/models.py:273 orgs/models.py:814 orgs/models.py:872
-msgid "أخرى"
-msgstr ""
-
-#: orgs/models.py:204
-msgid "لا يوجد فئة محددة"
-msgstr ""
-
-#: orgs/models.py:205
-msgid "نساء"
-msgstr ""
-
-#: orgs/models.py:206
-msgid "رجال"
-msgstr ""
-
-#: orgs/models.py:207
-msgid "شباب 18-24"
-msgstr ""
-
-#: orgs/models.py:208
-msgid "أطفال 0-18"
-msgstr ""
-
-#: orgs/models.py:209
-msgid "مجموعات دینیة"
-msgstr ""
-
-#: orgs/models.py:210
-msgid "مجموعة عرقیة"
-msgstr ""
+msgid "واسط"
+msgstr "Wasit"
 
 #: orgs/models.py:211
-msgid "فاقدي المعیل"
-msgstr ""
+msgid "لا يوجد فئة محددة"
+msgstr "Beşekî destnîşankirî tuneye"
 
 #: orgs/models.py:212
-msgid "ذوي الاحتیاجات الخاصة"
-msgstr ""
+msgid "نساء"
+msgstr "Jin"
 
 #: orgs/models.py:213
-msgid "لاجئین"
-msgstr ""
+msgid "رجال"
+msgstr "Mêr"
 
 #: orgs/models.py:214
-msgid "نازحین"
-msgstr ""
+msgid "شباب 18-24"
+msgstr "Ciwan 18-24"
 
 #: orgs/models.py:215
-msgid "عائدین"
-msgstr ""
+msgid "أطفال 0-18"
+msgstr "Zarok 0-18"
 
 #: orgs/models.py:216
-msgid "منظمات مجتمع مدني اخرى"
-msgstr ""
+msgid "مجموعات دینیة"
+msgstr "Girûpine olî"
+
+#: orgs/models.py:217
+msgid "مجموعة عرقیة"
+msgstr "Girûpine isnî"
+
+#: orgs/models.py:218
+msgid "فاقدي المعیل"
+msgstr "Bê malxwê"
+
+#: orgs/models.py:219
+msgid "ذوي الاحتیاجات الخاصة"
+msgstr "Xwedan pêdiviyên taybet"
+
+#: orgs/models.py:220
+msgid "لاجئین"
+msgstr "Penaber"
 
 #: orgs/models.py:221
-msgid "لا"
-msgstr ""
+msgid "نازحین"
+msgstr "Derbider"
 
-#: orgs/models.py:222 templates/profiles/particip_detail.html:282
-#: templates/profiles/profile.html:211
-#: templates/profiles/staff_profile.html:204
-msgid "نعم"
-msgstr ""
+#: orgs/models.py:222
+msgid "عائدین"
+msgstr "Vegeryane"
 
-#: orgs/models.py:226 orgs/views.py:706
-msgid "لا يوجد"
-msgstr ""
-
-#: orgs/models.py:227
-msgid "مدونة السلوك"
-msgstr ""
+#: orgs/models.py:223
+msgid "منظمات مجتمع مدني اخرى"
+msgstr "Rêxistinine din yên civaka sivîl"
 
 #: orgs/models.py:228
-msgid "حماية الطفل"
-msgstr ""
+msgid "لا"
+msgstr "Na"
 
-#: orgs/models.py:229
-msgid "مكافحة الفساد"
-msgstr ""
+#: orgs/models.py:229 templates/profiles/particip_detail.html:368
+#: templates/profiles/profile.html:275
+msgid "نعم"
+msgstr "Belê"
 
-#: orgs/models.py:230
-msgid "سياسة الموارد البشرية"
-msgstr ""
-
-#: orgs/models.py:231
-msgid "سياسة المشتريات"
-msgstr ""
-
-#: orgs/models.py:232
-msgid "سياسة التطوع"
-msgstr ""
-
-#: orgs/models.py:233
-msgid "سياسة منع التحرش"
-msgstr ""
+#: orgs/models.py:233 orgs/views.py:294
+msgid "لا يوجد"
+msgstr "Tuneye"
 
 #: orgs/models.py:234
-msgid "السياسة المالية"
-msgstr ""
+msgid "مدونة السلوك"
+msgstr "Reftarname"
 
 #: orgs/models.py:235
-msgid "سياسة استخدام المعدات"
-msgstr ""
+msgid "حماية الطفل"
+msgstr "Parastina zarokî"
 
-#: orgs/models.py:236 templates/combonents/footer.html:27
-#: templates/orgs/politic.html:3 templates/orgs/politic.html:7
-msgid "سياسة الخصوصية"
-msgstr ""
+#: orgs/models.py:236
+msgid "مكافحة الفساد"
+msgstr "Rûbirûbûna gendeliyê"
+
+#: orgs/models.py:237
+msgid "سياسة الموارد البشرية"
+msgstr "Siyaseta Çavkaniyên mirovî"
+
+#: orgs/models.py:238
+msgid "سياسة المشتريات"
+msgstr "Siyaseta kirînan"
+
+#: orgs/models.py:239
+msgid "سياسة التطوع"
+msgstr "Siyaseta xwebexşiyê"
+
+#: orgs/models.py:240
+msgid "سياسة منع التحرش"
+msgstr "Siyaseta qedexeya destdirêjiyê"
+
+#: orgs/models.py:241
+msgid "السياسة المالية"
+msgstr "Siyaseta darayî"
 
 #: orgs/models.py:242
+msgid "سياسة استخدام المعدات"
+msgstr "Siyaseta bikaranîna amêran"
+
+#: orgs/models.py:243 templates/combonents/footer.html:142
+#: templates/orgs/politic.html:4 templates/orgs/politic.html:11
+msgid "سياسة الخصوصية"
+msgstr "Siyaseta taybetmendiyê"
+
+#: orgs/models.py:249
 msgid "دوام كامل"
-msgstr ""
+msgstr "Dewam-tevahiya rojê"
 
-#: orgs/models.py:243
+#: orgs/models.py:250
 msgid "دوام جزئي"
-msgstr ""
-
-#: orgs/models.py:244
-msgid "استشاري"
-msgstr ""
-
-#: orgs/models.py:245 orgs/models.py:804
-msgid "تدريب"
-msgstr ""
-
-#: orgs/models.py:246
-msgid "تطوع"
-msgstr ""
-
-#: orgs/models.py:247 orgs/models.py:805
-msgid "زمالة"
-msgstr ""
+msgstr "Parçedewam"
 
 #: orgs/models.py:251
-msgid "الخبرة غير ضرورية"
-msgstr ""
+msgid "استشاري"
+msgstr "Rawêjkar"
 
-#: orgs/models.py:252
-msgid "1-2 سنة"
-msgstr ""
+#: orgs/models.py:252 orgs/models.py:965
+msgid "تدريب"
+msgstr "Rahênan"
 
 #: orgs/models.py:253
+msgid "تطوع"
+msgstr "Xwebexşî"
+
+#: orgs/models.py:254 orgs/models.py:966
+msgid "زمالة"
+msgstr "Hevpîşeyî"
+
+#: orgs/models.py:258
+msgid "الخبرة غير ضرورية"
+msgstr "Şarezahî ne giring e"
+
+#: orgs/models.py:259
+msgid "1-2 سنة"
+msgstr "1-2 sal"
+
+#: orgs/models.py:260
 msgid "2-5 سنة"
-msgstr ""
-
-#: orgs/models.py:254
-msgid "5-9 سنة"
-msgstr ""
-
-#: orgs/models.py:255
-msgid "10 وفوق"
-msgstr ""
+msgstr "2-5 sal"
 
 #: orgs/models.py:261
-msgid "أقل من 6 أشهر"
-msgstr ""
+msgid "5-9 سنة"
+msgstr "5-9 sal"
 
 #: orgs/models.py:262
+msgid "10 وفوق"
+msgstr "Û ser 10"
+
+#: orgs/models.py:268
+msgid "أقل من 6 أشهر"
+msgstr "Kêmtir ji 6 mehan"
+
+#: orgs/models.py:269
 msgid "ستة أشهر لسنة"
-msgstr ""
+msgstr "Şeş meh ta salekê"
 
-#: orgs/models.py:263
+#: orgs/models.py:270
 msgid "سنة إلى سنتين"
-msgstr ""
+msgstr "Salek ta du salan"
 
-#: orgs/models.py:264
+#: orgs/models.py:271
 msgid "أكثر من سنتين"
-msgstr ""
+msgstr "Bihtir ji du salan"
 
-#: orgs/models.py:268 orgs/models.py:809
+#: orgs/models.py:275
 msgid "أقل من 5000 دولار"
-msgstr ""
+msgstr "Kêmtir ji 5000 Dolarî"
 
-#: orgs/models.py:269 orgs/models.py:810
+#: orgs/models.py:276
 msgid "بين 5000 و 10000 دولار"
-msgstr ""
+msgstr "Navbera 5000 û 10000 Dolarî"
 
-#: orgs/models.py:270 orgs/models.py:811
+#: orgs/models.py:277
 msgid "بين 10000 و50000 دولار"
-msgstr ""
+msgstr "Navbera 10000 û 50000 Dolarî"
 
-#: orgs/models.py:271 orgs/models.py:272 orgs/models.py:812 orgs/models.py:813
+#: orgs/models.py:278 orgs/models.py:279
 msgid "بين 50000 و100000 دولار"
-msgstr ""
+msgstr "Navbera 50000 û 100000 Dolarî"
 
-#: orgs/models.py:278
+#: orgs/models.py:285
 msgid "كلية"
-msgstr ""
+msgstr "Tevahî"
 
-#: orgs/models.py:279
+#: orgs/models.py:286
 msgid "جزئية"
-msgstr ""
-
-#: orgs/models.py:282
-msgid "دراسية"
-msgstr ""
-
-#: orgs/models.py:283
-msgid "انتاجية"
-msgstr ""
-
-#: orgs/models.py:284
-msgid "دراسات و أبحاث"
-msgstr ""
-
-#: orgs/models.py:287
-msgid "إجازة جامعية"
-msgstr ""
-
-#: orgs/models.py:288
-msgid "دبلوم"
-msgstr ""
+msgstr "Barçeyî"
 
 #: orgs/models.py:289
-msgid "ماجيستير"
-msgstr ""
+msgid "دراسية"
+msgstr "Xwendinî"
 
 #: orgs/models.py:290
-msgid "دكتوراه"
-msgstr ""
+msgid "انتاجية"
+msgstr "Berhemî"
 
-#: orgs/models.py:293
-msgid "إعلام/ اتصالات/ علاقات عامة"
-msgstr ""
+#: orgs/models.py:291
+msgid "دراسات و أبحاث"
+msgstr "Xwendin û lêkolîn"
 
 #: orgs/models.py:294
-msgid "أعمال وإدارة"
-msgstr ""
+msgid "إجازة جامعية"
+msgstr "Moleta zanîngehî"
 
 #: orgs/models.py:295
-msgid "اقتصاد/ محاسبة"
-msgstr ""
+msgid "دبلوم"
+msgstr "Diblom"
 
 #: orgs/models.py:296
-msgid "تعليم/ تربية/ رياض أطفال"
-msgstr ""
+msgid "ماجيستير"
+msgstr "Majistêr"
 
 #: orgs/models.py:297
-msgid "حاسوب وتكنولوجيا المعلومات"
-msgstr ""
-
-#: orgs/models.py:298
-msgid "دراسات إسلامية"
-msgstr ""
-
-#: orgs/models.py:299
-msgid "دراسات إنسانية/ لغات"
-msgstr ""
+msgid "دكتوراه"
+msgstr "Diktora"
 
 #: orgs/models.py:300
-msgid "زراعة وعلوم بيئية"
-msgstr ""
+msgid "إعلام/ اتصالات/ علاقات عامة"
+msgstr "Ragihandin / Peywendî / Peywendiyên giştî"
 
 #: orgs/models.py:301
-msgid "سياحة وعلوم فندقية"
-msgstr ""
+msgid "أعمال وإدارة"
+msgstr "Kar û rêveberî"
 
 #: orgs/models.py:302
-msgid "علوم إنسانية"
-msgstr ""
+msgid "اقتصاد/ محاسبة"
+msgstr "Aborî / jimêryarî"
 
 #: orgs/models.py:303
-msgid "علوم طبية/ طب/ صيدلة/ تمريض"
-msgstr ""
+msgid "تعليم/ تربية/ رياض أطفال"
+msgstr "Xwendin / perwerde / bexçeyên zarokan"
 
 #: orgs/models.py:304
-msgid "علوم طبيعية"
-msgstr ""
+msgid "حاسوب وتكنولوجيا المعلومات"
+msgstr "Kompiyûter û teknolojiyaya zaniyariyan"
 
 #: orgs/models.py:305
-msgid "عمارة وتصميم"
-msgstr ""
+msgid "دراسات إسلامية"
+msgstr "Lêkolînine islamî"
 
 #: orgs/models.py:306
-msgid "فنون ومسارح وموسيقى"
-msgstr ""
+msgid "دراسات إنسانية/ لغات"
+msgstr "Lêkolînine mirovî / ziman"
 
 #: orgs/models.py:307
-msgid "قانون ودراسات قانونية"
-msgstr ""
+msgid "زراعة وعلوم بيئية"
+msgstr "Çandinî û zanistine jîngehî"
 
 #: orgs/models.py:308
+msgid "سياحة وعلوم فندقية"
+msgstr "Geştûguzar û zanistine hotêlî"
+
+#: orgs/models.py:309
+msgid "علوم إنسانية"
+msgstr "Zanistine mirovî"
+
+#: orgs/models.py:310
+msgid "علوم طبية/ طب/ صيدلة/ تمريض"
+msgstr "Zanistine pizîşkî / pizîşknasî / dermansazî / perestarî"
+
+#: orgs/models.py:311
+msgid "علوم طبيعية"
+msgstr "Zanistine sirûştî"
+
+#: orgs/models.py:312
+msgid "عمارة وتصميم"
+msgstr "Avakirin û dêzayn"
+
+#: orgs/models.py:313
+msgid "فنون ومسارح وموسيقى"
+msgstr "Huner û şano û mûzîk"
+
+#: orgs/models.py:314
+msgid "قانون ودراسات قانونية"
+msgstr "Yasa û lêkolînine yasayî"
+
+#: orgs/models.py:315
 msgid "هندسة وعلوم هندسية"
-msgstr ""
+msgstr "Endazyarî û zanistine endazyariyê"
 
-#: orgs/models.py:341
+#: orgs/models.py:318 scm/settings.py:181 scm/settings_olde.py:263
+#: scm/settings_olde_2.py:266
+msgid "عربي"
+msgstr "عربي"
+
+#: orgs/models.py:319 scm/settings.py:182 scm/settings_olde.py:264
+#: scm/settings_olde_2.py:267
+msgid "English"
+msgstr "English"
+
+#: orgs/models.py:320 scm/settings.py:184 scm/settings_olde.py:266
+#: scm/settings_olde_2.py:269
+msgid "Kurdî"
+msgstr "Kurdî"
+
+#: orgs/models.py:351
 msgid "الدولة"
-msgstr ""
+msgstr "Welat"
 
-#: orgs/models.py:343
+#: orgs/models.py:353
 msgid "اسم المحافظة"
-msgstr ""
+msgstr "Navê parêzgehê"
 
-#: orgs/models.py:357 templates/profiles/particip_detail.html:68
+#: orgs/models.py:355
+msgid "اسم المدينة بالانكليزية"
+msgstr "Navê bajêr bi Englishngilîzî"
+
+#: orgs/models.py:357
+msgid "اسم المدينة بالكردية"
+msgstr "Navê bajêr bi Kurdî ye"
+
+#: orgs/models.py:371 orgs/models.py:485
+#: templates/profiles/particip_detail.html:138
 msgid "اسم المستخدم"
-msgstr ""
+msgstr "Navê bikarhêner"
 
-#: orgs/models.py:366 templates/profiles/particip_detail.html:104
-#: templates/profiles/profile.html:56 templates/profiles/staff_profile.html:49
+#: orgs/models.py:371
+msgid "المستخدمون الذين ليس لديهم طلبات بروفايل فقط"
+msgstr "Tenê bikarhênerên ku profîlek wan tune"
+
+#: orgs/models.py:382 templates/profiles/particip_detail.html:187
+#: templates/profiles/profile.html:83
 msgid "نوع المنظمة"
-msgstr ""
+msgstr "Corê rêxistinê"
 
-#: orgs/models.py:374 orgs/models.py:599
+#: orgs/models.py:396 orgs/models.py:737
 msgid "شعار المنظمة"
-msgstr ""
+msgstr "Silogana rêxistinê"
 
-#: orgs/models.py:376 templates/profiles/particip_detail.html:134
-#: templates/profiles/profile.html:61 templates/profiles/staff_profile.html:54
+#: orgs/models.py:398 templates/profiles/particip_detail.html:413
+#: templates/profiles/profile.html:115
 msgid "الرؤية و الرسالة"
-msgstr ""
+msgstr "Dîtin û name"
 
-#: orgs/models.py:393 templates/profiles/particip_detail.html:393
-#: templates/profiles/profile.html:322
-#: templates/profiles/staff_profile.html:315
+#: orgs/models.py:415 templates/profiles/particip_detail.html:501
+#: templates/profiles/profile.html:386
 msgid "رقم الهاتف"
-msgstr ""
+msgstr "Hejmara telefonê"
 
-#: orgs/models.py:405 templates/profiles/particip_detail.html:187
-#: templates/profiles/profile.html:109
-#: templates/profiles/staff_profile.html:102
-msgid "الفئات المستهدفة"
-msgstr ""
-
-#: orgs/models.py:407 templates/profiles/particip_detail.html:195
-#: templates/profiles/profile.html:121
-#: templates/profiles/staff_profile.html:114
+#: orgs/models.py:429 templates/profiles/particip_detail.html:281
+#: templates/profiles/profile.html:185
 msgid "تاريخ سنة التأسيس"
-msgstr ""
+msgstr "Sala damezrandinê"
 
-#: orgs/models.py:409 templates/profiles/particip_detail.html:209
-#: templates/profiles/profile.html:135
-#: templates/profiles/staff_profile.html:128
+#: orgs/models.py:431 templates/profiles/particip_detail.html:295
+#: templates/profiles/profile.html:199
 msgid "هل المنظمة مسجلة ؟"
-msgstr ""
+msgstr "Rêxistin tomarkirî ye?"
 
-#: orgs/models.py:411 templates/profiles/particip_detail.html:223
-#: templates/profiles/profile.html:148
-#: templates/profiles/staff_profile.html:141
+#: orgs/models.py:433 templates/profiles/particip_detail.html:309
+#: templates/profiles/profile.html:212
 msgid "بلد التسجيل"
-msgstr ""
+msgstr "Welatê lê tomarkirî"
 
-#: orgs/models.py:414 templates/profiles/particip_detail.html:237
-#: templates/profiles/profile.html:162
-#: templates/profiles/staff_profile.html:155
+#: orgs/models.py:436 templates/profiles/particip_detail.html:323
+#: templates/profiles/profile.html:226
 msgid "عدد اﻷعضاء"
-msgstr ""
+msgstr "Hejmara endaman"
 
-#: orgs/models.py:416 templates/profiles/particip_detail.html:251
-#: templates/profiles/profile.html:176
-#: templates/profiles/staff_profile.html:169
+#: orgs/models.py:438 templates/profiles/particip_detail.html:337
+#: templates/profiles/profile.html:240
 msgid "عدد النساء من اﻷعضاء"
-msgstr ""
+msgstr "Hejmara endamên jin"
 
-#: orgs/models.py:418 templates/profiles/particip_detail.html:265
-#: templates/profiles/profile.html:190
-#: templates/profiles/staff_profile.html:183
-msgid "السياسات واللوائح المكتوبة"
-msgstr ""
-
-#: orgs/models.py:420 templates/profiles/particip_detail.html:276
-#: templates/profiles/profile.html:205
-#: templates/profiles/staff_profile.html:198
+#: orgs/models.py:442 templates/profiles/particip_detail.html:362
+#: templates/profiles/profile.html:269
 msgid "ھل المؤسسة عضو في اي شبكة او تحالف او جسم تنسیقي؟"
-msgstr ""
+msgstr "Rêxistin di ti tor yan hevpeyman yan laşekî hevrêzkarî de endam e?"
 
-#: orgs/models.py:460 templates/orgs/centre_news.html:17
-#: templates/orgs/centre_news_detail.html:11
+#: orgs/models.py:493 orgs/models.py:777
+#: templates/orgs/resources/jobs_not_pub.html:130
+#: templates/orgs/resources/org_job_details.html:189
+#: templates/orgs/resources/org_jobs.html:125
+#: templates/profiles/particip_detail.html:196
+#: templates/profiles/profile.html:92
+msgid "مكان العمل"
+msgstr "Cihê kar"
+
+#: orgs/models.py:506 orgs/models.py:545 orgs/models.py:602 orgs/models.py:641
+#: orgs/models.py:683 orgs/models.py:757 orgs/models.py:816 orgs/models.py:884
+#: orgs/models.py:970 orgs/models.py:1034
+msgid "اللغة"
+msgstr "Ziman"
+
+#: orgs/models.py:514
 msgid "عنوان الخبر"
-msgstr ""
+msgstr "Navnîşana nûçeyê"
 
-#: orgs/models.py:462 templates/orgs/centre_news_detail.html:3
-#: templates/orgs/centre_news_detail.html:6
-#: templates/orgs/news/orgs_news_detail.html:3
-#: templates/orgs/news/orgs_news_detail.html:9
+#: orgs/models.py:516 templates/orgs/news/orgs_news_detail.html:3
+#: templates/orgs/news/orgs_news_detail.html:17
 msgid "تفاصيل الخبر"
-msgstr ""
+msgstr "Hurguliyên nûçeyê"
 
-#: orgs/models.py:464
+#: orgs/models.py:518
 msgid "صورة الخبر"
-msgstr ""
+msgstr "Wêneya nûçeyê"
 
-#: orgs/models.py:496 templates/orgs/rapport/detail_rapport.html:22
-#: templates/orgs/rapport/detail_rapport.html:25
+#: orgs/models.py:553
 msgid "عنوان التقرير"
-msgstr ""
+msgstr "Navnîşana raportê"
 
-#: orgs/models.py:498
+#: orgs/models.py:555 templates/orgs/rapport/detail_rapport.html:127
+#: templates/orgs/rapport/rapport.html:94
 msgid "مجال التقرير"
-msgstr ""
+msgstr "Warê raportê"
 
-#: orgs/models.py:500
+#: orgs/models.py:557
 msgid "صورة او ملف التقرير"
-msgstr ""
+msgstr "Wêne yan dosiyaya raportê"
 
-#: orgs/models.py:521 templates/orgs/data/detail_data.html:22
+#: orgs/models.py:610
 msgid "عنوان البيان"
-msgstr ""
+msgstr "Navnîşana daxuyaniyê"
 
-#: orgs/models.py:523
+#: orgs/models.py:612
 msgid "صورة او ملف البيان"
-msgstr ""
+msgstr "Wêne yan dosiyaya daxuyaniyê"
 
-#: orgs/models.py:544 templates/orgs/media/media_detail.html:22
+#: orgs/models.py:649
 msgid "عنوان المحتوى"
-msgstr ""
+msgstr "Navnîşana naverokê"
 
-#: orgs/models.py:546
+#: orgs/models.py:651
 msgid "صورة او ملف المحتوى"
-msgstr ""
+msgstr "Wêne yan dosiyaya naverokê"
 
-#: orgs/models.py:548 templates/orgs/media/media_detail.html:23
+#: orgs/models.py:653 templates/orgs/media/media_detail.html:142
 msgid "رابط المحتوى"
-msgstr ""
+msgstr "Lînka naverokê"
 
-#: orgs/models.py:569 templates/orgs/research/detail_research.html:18
+#: orgs/models.py:691 templates/orgs/devs/org_dev_details.html:114
+#: templates/orgs/research/detail_research.html:104
 msgid "اسم الجهة"
-msgstr ""
+msgstr "Navê layen"
 
-#: orgs/models.py:572 templates/orgs/research/detail_research.html:21
+#: orgs/models.py:694
 msgid "عنوان البحث"
-msgstr ""
+msgstr "Navnîşana lêkolînê"
 
-#: orgs/models.py:574 templates/orgs/research/detail_research.html:22
+#: orgs/models.py:696 templates/orgs/research/detail_research.html:128
 msgid "مجال البحث"
-msgstr ""
+msgstr "Warê lêkolînê"
 
-#: orgs/models.py:576
-msgid "ملف البحث"
-msgstr ""
+#: orgs/models.py:698
+msgid "ملف أو صورة البحث"
+msgstr "pel an wêneyê lêgerînê"
 
-#: orgs/models.py:578 templates/orgs/research/detail_research.html:24
+#: orgs/models.py:700 templates/orgs/research/detail_research.html:138
 msgid "رابط البحث"
-msgstr ""
+msgstr "Lînka lêkolînê"
 
-#: orgs/models.py:597
+#: orgs/models.py:735
 msgid "اضف اسم المنظمة اﻷخرى"
-msgstr ""
+msgstr "Navê rêxistina din serbar bike"
 
-#: orgs/models.py:623
+#: orgs/models.py:764
 msgid "اسم المنظمة اﻷخرى"
-msgstr ""
+msgstr "Navê rêxistina din"
 
-#: orgs/models.py:626
+#: orgs/models.py:767
 msgid "عنوان الوظيفة"
-msgstr ""
+msgstr "Navnîşana femanberiyê"
 
-#: orgs/models.py:628
+#: orgs/models.py:769
 msgid "مدة العقد بالأشهر"
-msgstr ""
+msgstr "Dema girêbestê bi mehan"
 
-#: orgs/models.py:630
-msgid "وصف الوضيفة"
-msgstr ""
+#: orgs/models.py:771
+msgid "وصف الوظيفة"
+msgstr "Danasîna fermanberiyê"
 
-#: orgs/models.py:642 templates/orgs/resources/org_job_details.html:82
+#: orgs/models.py:783 templates/orgs/resources/org_job_details.html:209
 msgid "المنطقة"
-msgstr ""
+msgstr "Navçe"
 
-#: orgs/models.py:646
+#: orgs/models.py:787
 msgid "تاريخ إغلاق الوظيفة"
-msgstr ""
+msgstr "Dîroka daxistina fermanberiyê"
 
-#: orgs/models.py:648 templates/orgs/resources/org_job_details.html:110
+#: orgs/models.py:789 templates/orgs/resources/org_job_details.html:261
 msgid "طريقة التقدم للوظيفة"
-msgstr ""
+msgstr "Awayê pêşkêşkirinê li ser fermanberiyê"
 
-#: orgs/models.py:679 orgs/models.py:739
+#: orgs/models.py:826 orgs/models.py:894
 msgid "لوغو الجهة المانحة"
-msgstr ""
+msgstr "Silogana aliyê bexşende"
 
-#: orgs/models.py:682 orgs/models.py:759
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:43
-#: templates/orgs/funding_opport/pers/detail.html:46
+#: orgs/models.py:829 orgs/models.py:914
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:143
+#: templates/orgs/funding_opport/pers/detail.html:144
 msgid "لمحة عن الجهة المانحة"
-msgstr ""
+msgstr "Kurteyek li ser aliyê bexşende"
 
-#: orgs/models.py:684 orgs/models.py:751
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:45
-#: templates/orgs/funding_opport/pers/detail.html:80
+#: orgs/models.py:831 orgs/models.py:906
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:84
+#: templates/orgs/funding_opport/pers/detail.html:206
 msgid "قطاع المنحة"
-msgstr ""
+msgstr "Warê bexşînê"
 
-#: orgs/models.py:686 orgs/models.py:754
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:46
-#: templates/orgs/funding_opport/pers/detail.html:88
+#: orgs/models.py:833 orgs/models.py:909
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:154
+#: templates/orgs/funding_opport/pers/detail.html:219
 msgid "دول المنحة"
-msgstr ""
+msgstr "Welatê bexşînê"
 
-#: orgs/models.py:690 orgs/models.py:762 orgs/models.py:845
-#: templates/orgs/capacity/org_capacity_details.html:45
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:56
-#: templates/orgs/funding_opport/pers/detail.html:98
+#: orgs/models.py:837 orgs/models.py:917 orgs/models.py:999
+#: templates/orgs/capacity/org_capacity_details.html:186
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:175
+#: templates/orgs/funding_opport/pers/detail.html:239
 msgid "تاريخ إغلاق المنحة"
-msgstr ""
+msgstr "Dîroka daxistina bexşînê"
 
-#: orgs/models.py:692 orgs/models.py:764
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:57
-#: templates/orgs/funding_opport/pers/detail.html:99
+#: orgs/models.py:839 orgs/models.py:919
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:184
+#: templates/orgs/funding_opport/pers/detail.html:248
 msgid "مدة المنحة"
-msgstr ""
+msgstr "Dema bexşînê"
 
-#: orgs/models.py:694 orgs/models.py:766
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:58
-#: templates/orgs/funding_opport/pers/detail.html:100
+#: orgs/models.py:841 orgs/models.py:921
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:193
+#: templates/orgs/funding_opport/pers/detail.html:257
 msgid "حجم المنحة"
-msgstr ""
+msgstr "Qebareya bexşînê"
 
-#: orgs/models.py:696 orgs/models.py:768
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:59
-#: templates/orgs/funding_opport/pers/detail.html:101
+#: orgs/models.py:845 orgs/models.py:925
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:203
+#: templates/orgs/funding_opport/pers/detail.html:267
 msgid "وصف المنحة"
-msgstr ""
+msgstr "Danasîna bexşînê"
 
-#: orgs/models.py:698 orgs/models.py:770
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:60
-#: templates/orgs/funding_opport/pers/detail.html:102
+#: orgs/models.py:847 orgs/models.py:927
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:216
+#: templates/orgs/funding_opport/pers/detail.html:280
 msgid "شروط المنحة"
-msgstr ""
+msgstr "Mercên bexşînê"
 
-#: orgs/models.py:700 orgs/models.py:772 orgs/models.py:847
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:61
-#: templates/orgs/funding_opport/pers/detail.html:103
+#: orgs/models.py:849 orgs/models.py:929 orgs/models.py:1002
+#: templates/orgs/capacity/org_capacity_details.html:197
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:229
+#: templates/orgs/funding_opport/pers/detail.html:293
 msgid "متطلبات التقديم"
-msgstr ""
+msgstr "Xwestekên pêşkêşkirinê"
 
-#: orgs/models.py:702 orgs/models.py:774
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:62
-#: templates/orgs/funding_opport/pers/detail.html:104
+#: orgs/models.py:851 orgs/models.py:931
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:242
+#: templates/orgs/funding_opport/pers/detail.html:306
 msgid "كيفية التقديم"
-msgstr ""
+msgstr "Çawaniya pêşkêşkirinê"
 
-#: orgs/models.py:705 orgs/models.py:777 orgs/models.py:852
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:63
-#: templates/orgs/funding_opport/pers/detail.html:105
+#: orgs/models.py:854 orgs/models.py:934 orgs/models.py:1007
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:252
+#: templates/orgs/funding_opport/pers/detail.html:316
 msgid "الرابط الأصلي"
-msgstr ""
+msgstr "Lînka resen"
 
-#: orgs/models.py:742 templates/orgs/funding_opport/pers/detail.html:54
+#: orgs/models.py:897 templates/orgs/funding_opport/pers/detail.html:158
 msgid "فئة المنحة"
-msgstr ""
+msgstr "Beşê bexşînê"
 
-#: orgs/models.py:744 templates/orgs/funding_opport/pers/detail.html:62
+#: orgs/models.py:899 templates/orgs/funding_opport/pers/detail.html:86
+#: templates/orgs/funding_opport/pers/detail.html:171
 msgid "نوع المنحة"
-msgstr ""
+msgstr "Corê bexşînê"
 
-#: orgs/models.py:747 templates/orgs/funding_opport/pers/detail.html:64
+#: orgs/models.py:902 templates/orgs/funding_opport/pers/detail.html:180
 msgid "المستوى التعليمي"
-msgstr ""
+msgstr "Asta xwendinê"
 
-#: orgs/models.py:749 templates/orgs/funding_opport/pers/detail.html:72
+#: orgs/models.py:904 templates/orgs/funding_opport/pers/detail.html:193
 msgid "الاختصاص التعليمي"
-msgstr ""
+msgstr "Pisporiya xwendinê"
 
-#: orgs/models.py:824
+#: orgs/models.py:978
 msgid "اسم الجهة الممولة"
-msgstr ""
+msgstr "Navê aliyê diravpêder"
 
-#: orgs/models.py:826 templates/orgs/capacity/org_capacity_details.html:27
+#: orgs/models.py:980 templates/orgs/capacity/org_capacity_details.html:85
 msgid "عنوان الفرصة"
-msgstr ""
+msgstr "Navnîşana derfetê"
 
-#: orgs/models.py:828
+#: orgs/models.py:982
 msgid "وصف الفرصة"
-msgstr ""
+msgstr "Danasîna derfetê"
 
-#: orgs/models.py:830 templates/orgs/capacity/org_capacity_details.html:31
+#: orgs/models.py:984 templates/orgs/capacity/org_capacity_details.html:132
+#: templates/orgs/capacity/org_capacity_details.html:270
 msgid "نوع الفرصة"
-msgstr ""
+msgstr "Corê derfetê"
 
-#: orgs/models.py:838 templates/orgs/capacity/org_capacity_details.html:33
-#: templates/orgs/capacity/org_capacity_details.html:35
+#: orgs/models.py:992 templates/orgs/capacity/org_capacity_details.html:163
 msgid "مكان الفرصة"
-msgstr ""
+msgstr "Cihê derfetê"
 
-#: orgs/models.py:843 templates/orgs/capacity/org_capacity_details.html:43
+#: orgs/models.py:997 templates/orgs/capacity/org_capacity_details.html:141
+#: templates/orgs/capacity/org_capacity_details.html:272
 msgid "قطاع الفرصة"
-msgstr ""
+msgstr "Warê derfetê"
 
-#: orgs/models.py:849 templates/orgs/capacity/org_capacity_details.html:47
-#: templates/orgs/capacity/org_capacity_details.html:49
+#: orgs/models.py:1004 templates/orgs/capacity/org_capacity_details.html:210
 msgid "طريقة التقديم"
-msgstr ""
+msgstr "Awayê pêşkêşkirinê"
 
-#: orgs/models.py:868
+#: orgs/models.py:1026
 msgid "تطوير وإدارة المشاريع"
-msgstr ""
+msgstr "Pêşxistin û rêvebirina pirojeyan"
 
-#: orgs/models.py:869
+#: orgs/models.py:1027
 msgid "الحوكمة التنظيمية"
-msgstr ""
+msgstr "Desthilatgeriya rêxistinî"
 
-#: orgs/models.py:870
+#: orgs/models.py:1028
 msgid "المناصرة والحملات"
-msgstr ""
+msgstr "Palpiştî û hilmet"
 
-#: orgs/models.py:871
+#: orgs/models.py:1029
 msgid "مكتبة المجتمع المدني"
-msgstr ""
+msgstr "Pirtûkxaneya civaka sivîl"
 
-#: orgs/models.py:880
+#: orgs/models.py:1041
 msgid "اسم الجهة "
-msgstr ""
+msgstr "Navê layen"
 
-#: orgs/models.py:885 templates/orgs/devs/org_dev_details.html:34
+#: orgs/models.py:1046
 msgid "تاريخ الإعداد/النشر/التأليف"
-msgstr ""
+msgstr "Dîroka berhevkirinê / belavkirin / nivîsîn"
 
-#: orgs/models.py:887
-msgid "لمحة عن الجهة"
-msgstr ""
-
-#: orgs/models.py:890 templates/orgs/devs/org_dev_details.html:42
+#: orgs/models.py:1051 templates/orgs/devs/org_dev_details.html:102
 msgid "موضوع المادة"
-msgstr ""
+msgstr "Babeta madeyê"
 
-#: orgs/models.py:892
+#: orgs/models.py:1053
 msgid "المادة "
-msgstr ""
+msgstr "Made"
 
-#: orgs/views.py:81
+#: orgs/models.py:1055
+msgid "رابط فيديو"
+msgstr "Link vîdyoyê"
+
+#: orgs/views.py:109
 #, python-brace-format
 msgid ""
 "تم إنشاء حسابك بنجاح باسم المستخدم ( {username} ) !, يرجى تأكيد عنوان بريدك "
 "الإلكتروني لإكمال التسجيل "
 msgstr ""
+"Hisabê te bi navê bikarhêner ( {username} ) !  bi serkeftî çêbû, ji kerema "
+"xwe ji bo timamkirina tomarkirinê Emailê piştrast bike"
 
-#: orgs/views.py:89
+#: orgs/views.py:117
 #, python-brace-format
-msgid ""
-"يرجى التسجيل باستخدام عنوان بريد إلكتروني آخر، هذا البريد الإلكتروني "
-"( {user_email} ) مستخدم مسبقاً"
-msgstr ""
+msgid "لقد تم تسجيل حساب المستخدم ( {username} ) بنجاح"
+msgstr "Hesabê bikarhêner ( {username} ) bi serkeftî hat tomarkirin"
 
-#: orgs/views.py:181
+#: orgs/views.py:216
 msgid "لقد تم حذف المحافظه بنجاح"
-msgstr ""
+msgstr "Parêzgeh bi serkeftî hat jêbirin"
 
-#: orgs/views.py:625
-msgid "لقد تم تعديل الملف الشخصي بنجاح"
-msgstr ""
-
-#: orgs/views.py:645
-msgid "لقد تم حذف الملف بنجاح"
-msgstr ""
-
-#: orgs/views.py:694
+#: orgs/views.py:282
 msgid "لا يوجد حاليا منظمات"
-msgstr ""
+msgstr "Niha ti rêxistin tunene"
 
-#: orgs/views.py:700
-msgid "لا يوجد حالي أخبار"
-msgstr ""
+#: orgs/views.py:288
+msgid "لا يوجد أخبار حالياً"
+msgstr "Niha nûçe tunene"
 
-#: orgs/views.py:712
+#: orgs/views.py:300
 msgid "لا يوجد حاليا فرص بناء"
-msgstr ""
+msgstr "Niha ti derfetên avakirinê tunene"
 
-#: orgs/views.py:722
+#: orgs/views.py:310
 msgid "لقد تم طلب الاشتراك بآخر اﻷخبار بنجاح"
-msgstr ""
+msgstr "Daxwaznameya bejdariyê ji bo dawîn nûçe bi serkefî hat encamdan"
 
-#: orgs/views.py:730
+#: orgs/views.py:318
 msgid "هذا البريد الالكتروني موجود مسبقاً يرجى التسجيل ببريد الكتروني أخر"
-msgstr ""
+msgstr " Ev Email berê heye, ji kerema xwe bi Emaileke din tomar bike"
 
-#: orgs/views.py:814
-msgid "لقد تم تغيير حالة الطلب للمنظمة بنجاح"
-msgstr ""
-
-#: orgs/views.py:923
-msgid "لقد تمت إضافة الخبر بنجاح و ستتم دراسته قريباً"
-msgstr ""
-
-#: orgs/views.py:967
-msgid "لقد تم تغيير حالة الخبر بنجاح"
-msgstr ""
-
-#: orgs/views.py:994
-msgid "لقد تم تعديل الخبر بنجاح"
-msgstr ""
-
-#: orgs/views.py:1016
-msgid "لقد تم حذف الخبر بنجاح"
-msgstr ""
-
-#: orgs/views.py:1042
-msgid "لقد تمت إضافة التقرير بنجاح و ستتم دراسته قريباً"
-msgstr ""
-
-#: orgs/views.py:1111
-msgid "لقد تم تعديل حالة التقرير بنجاح"
-msgstr ""
-
-#: orgs/views.py:1132
-msgid "لقد تم حذف التقرير بنجاح"
-msgstr ""
-
-#: orgs/views.py:1155
-msgid "لقد تمت تعديل التقرير بنجاح"
-msgstr ""
-
-#: orgs/views.py:1206
-msgid "لقد تمت إضافة البيان بنجاح و ستتم دراسته قريباً"
-msgstr ""
-
-#: orgs/views.py:1230
-msgid "لقد تم تعديل حالة البيان بنجاح"
-msgstr ""
-
-#: orgs/views.py:1278
-msgid "لقد تم تعديل البيان بنجاح"
-msgstr ""
-
-#: orgs/views.py:1297
-msgid "لقد تم حذف البيان بنجاح"
-msgstr ""
-
-#: orgs/views.py:1342
-msgid "لقد تمت إضافة المحتوى بنجاح و ستتم دراسته قريباً"
-msgstr ""
-
-#: orgs/views.py:1367
-msgid "لقد تم تعديل حالة المحتوى بنجاح"
-msgstr ""
-
-#: orgs/views.py:1415
-msgid "لقد تم تعديل المحتوى بنجاح"
-msgstr ""
-
-#: orgs/views.py:1435
-msgid "لقد تم حذف المحتوى بنجاح"
-msgstr ""
-
-#: orgs/views.py:1481
-msgid "لقد تمت إضافة البحث بنجاح و ستتم دراسته قريباً"
-msgstr ""
-
-#: orgs/views.py:1506
-msgid "لقد تم تعديل حالة البحث بنجاح"
-msgstr ""
-
-#: orgs/views.py:1555
-msgid "لقد تم تعديل البحث بنجاح"
-msgstr ""
-
-#: orgs/views.py:1575
-msgid "لقد تم حذف البحث بنجاح"
-msgstr ""
-
-#: orgs/views.py:1726
-msgid "لقد تمت إضافة فرصة العمل بنجاح و ستتم دراستها قريباً"
-msgstr ""
-
-#: orgs/views.py:1732
-msgid "يجب إدخال اسم منظمة لتتم معالجة و نشر فرصة العمل"
-msgstr ""
-
-#: orgs/views.py:1785
-msgid "لقد تم تغيير حالة فرصة العمل بنجاح"
-msgstr ""
-
-#: orgs/views.py:1820
-msgid "لقد تم تعديل فرصة العمل بنجاح"
-msgstr ""
-
-#: orgs/views.py:1843
-msgid "لقد تم حذف فرصة العمل بنجاح"
-msgstr ""
-
-#: orgs/views.py:1899
-msgid "لقد تم تسجيل طلب فرصة التمويل بنجاح و ستتم دراسته قريباً"
-msgstr ""
-
-#: orgs/views.py:1903
-msgid "رجاءً أدخل اسم المنظمة أو الجهة المانحة لتتم دراسة فرصة التمويل"
-msgstr ""
-
-#: orgs/views.py:1929
-msgid "لقد تم تغيير حالة فرصة التمويل بنجاح"
-msgstr ""
-
-#: orgs/views.py:1955 orgs/views.py:2128
-msgid "لقد تم تعديل فرصة التمويل بنجاح"
-msgstr ""
-
-#: orgs/views.py:1976 orgs/views.py:2149
-msgid "لقد تم حذف فرصة التمويل بنجاح"
-msgstr ""
-
-#: orgs/views.py:2052
-msgid "لقد تمت إضافة فرصة التمويل بنجاح و ستتم دراسته قريباً"
-msgstr ""
-
-#: orgs/views.py:2057
-msgid "يحب إدخال اسم منظمة أو اسم الجهة المانحة لنتمكن من دراسة فرصة التمويل"
-msgstr ""
-
-#: orgs/views.py:2101
-msgid "لقد تم تغيير حالة المنحة  بنجاح"
-msgstr ""
-
-#: orgs/views.py:2202
+#: orgs/views_capacity_dev.py:86
 msgid "لقد تمت إضافة فرصة بناء القدرات بنجاح و ستتم دراسته قريباً"
 msgstr ""
+"Derfeta avakirina karînan bi serkeftî hat serbarkirin û nêzîk dê were xwendin"
 
-#: orgs/views.py:2207
+#: orgs/views_capacity_dev.py:91
 msgid "يجب إدخال اسم الجهة المانحة لنتمكن من دراسة الفرصة"
 msgstr ""
+"Divê navê rêxistinê yan aliyê bexşende were nivîsandin da ku em bikarin "
+"derfetê bixwînin"
 
-#: orgs/views.py:2249
+#: orgs/views_capacity_dev.py:144
 msgid "لقد تم تغيير حالة فرصة بناء القدرات  بنجاح"
-msgstr ""
+msgstr "Rewşa derfeta avakirina karînan bi serkeftî hat guhertin"
 
-#: orgs/views.py:2276
+#: orgs/views_capacity_dev.py:172
 msgid "لقد تم تعديل فرصة بناء القدرات بنجاح"
-msgstr ""
+msgstr "Derfeta avakirina karînan bi serkeftî hat serastkirin"
 
-#: orgs/views.py:2300
+#: orgs/views_capacity_dev.py:196
 msgid "لقد تم حذف فرصة بناء القدرات بنجاح"
-msgstr ""
+msgstr "Derfeta avakirina karînan bi serkeftî hat jêbirin"
 
-#: orgs/views.py:2348
+#: orgs/views_capacity_dev.py:246
 msgid "لقد تمت إضافة دليل تطوير بنجاح و ستتم دراسته قريباً"
 msgstr ""
+"Rêbernameyeke pêşxistinê bi serkeftî hat serbarkirin û nêzîk dê were xwendin"
 
-#: orgs/views.py:2391
+#: orgs/views_capacity_dev.py:251 orgs/views_capacity_dev.py:341
+msgid "رجاءً أدخل اسم المنظمة او اسم الجهة المانحة"
+msgstr "Ji kerema xwe navê rêxistinê an navê bexşînê binivîse"
+
+#: orgs/views_capacity_dev.py:304
 msgid "لقد تم تغيير حالة دليل تطوير بنجاح"
-msgstr ""
+msgstr "Rewşa rêbernameyeke pêşxistinê bi serkeftî hat guhertin"
 
-#: orgs/views.py:2417
+#: orgs/views_capacity_dev.py:336
 msgid "لقد تم تعديل دليل التطوير بنجاح"
-msgstr ""
+msgstr "Rêbernameya pêşxistinê bi serkeftî hat serastkirin"
 
-#: orgs/views.py:2500
+#: orgs/views_capacity_dev.py:360
+msgid "لقد تم حذف دليل التطوير بنجاح"
+msgstr "Rêbernameya pêşveçûnê bi serfirazî hate jêbirin"
+
+#: orgs/views_data_media_research.py:92
+msgid "لقد تمت إضافة البيان بنجاح و ستتم دراسته قريباً"
+msgstr "Daxuyanî bi serkeftî hat serbarkirin û nêzîk dê were xwendin"
+
+#: orgs/views_data_media_research.py:119
+msgid "لقد تم تعديل حالة البيان بنجاح"
+msgstr "Rewşa daxuyaniyê bi serkeftî hat serastkirin"
+
+#: orgs/views_data_media_research.py:186
+msgid "لقد تم تعديل البيان بنجاح"
+msgstr "Daxuyanî bi serkeftî hat serastkirin"
+
+#: orgs/views_data_media_research.py:205
+msgid "لقد تم حذف البيان بنجاح"
+msgstr "Daxuyanî bi serkeftî hat jêbirin"
+
+#: orgs/views_data_media_research.py:264
+msgid "لقد تمت إضافة المحتوى بنجاح و ستتم دراسته قريباً"
+msgstr "Naverok bi serkeftî hat serbarkirin û nêzîk dê were xwendin"
+
+#: orgs/views_data_media_research.py:292
+msgid "لقد تم تعديل حالة المحتوى بنجاح"
+msgstr "Rewşa naverokê bi serkeftî hat serastkirin"
+
+#: orgs/views_data_media_research.py:359
+msgid "لقد تم تعديل المحتوى بنجاح"
+msgstr "Naverok bi serkeftî hat serastkirin"
+
+#: orgs/views_data_media_research.py:379
+msgid "لقد تم حذف المحتوى بنجاح"
+msgstr "Naverok bi serkeftî hat jêbirin"
+
+#: orgs/views_data_media_research.py:437
+msgid "لقد تمت إضافة البحث بنجاح و ستتم دراسته قريباً"
+msgstr "Lêkolîn bi serkeftî hat serbarkirin û nêzîk dê were xwendin"
+
+#: orgs/views_data_media_research.py:467
+msgid "لقد تم تعديل حالة البحث بنجاح"
+msgstr "Rewşa lêkolînê bi serkeftî hat serastkirin"
+
+#: orgs/views_data_media_research.py:528
+msgid "لقد تم تعديل البحث بنجاح"
+msgstr "Lêkolîn bi serkeftî hat serastkirin"
+
+#: orgs/views_data_media_research.py:548
+msgid "لقد تم حذف البحث بنجاح"
+msgstr "Lêkolîn bi serkeftî hat jêbirin"
+
+#: orgs/views_job_funding.py:101 orgs/views_job_funding.py:111
+#: orgs/views_job_funding.py:126 orgs/views_job_funding.py:139
+msgid "لقد تمت إضافة فرصة العمل بنجاح و ستتم دراستها قريباً"
+msgstr "Derfeta kar bi serkeftî hat serbarkirin û nêzîk dê were xwendin"
+
+#: orgs/views_job_funding.py:212
+msgid "لقد تم تغيير حالة فرصة العمل بنجاح"
+msgstr "Rewşa derfeta kar bi serkeftî hat guhertin"
+
+#: orgs/views_job_funding.py:260 orgs/views_job_funding.py:269
+#: orgs/views_job_funding.py:284 orgs/views_job_funding.py:296
+msgid "لقد تم تعديل فرصة العمل بنجاح"
+msgstr "Derfeta kar bi serkeftî hat serastkirin"
+
+#: orgs/views_job_funding.py:321
+msgid "لقد تم حذف فرصة العمل بنجاح"
+msgstr "Derfeta kar bi serkeftî hat jêbirin"
+
+#: orgs/views_job_funding.py:376
+msgid "لقد تم تسجيل طلب فرصة التمويل بنجاح و ستتم دراسته قريباً"
+msgstr ""
+"Daxwaznameya derfeta diravpêdanê bi serkeftî hat tomarkirin û nêzîk dê were "
+"xwendin"
+
+#: orgs/views_job_funding.py:380
+msgid "رجاءً أدخل اسم المنظمة أو الجهة المانحة لتتم دراسة فرصة التمويل"
+msgstr ""
+"Ji kerema xwe navê rêxistinê yan aliyê bexşende derbas bike da ku derfeta "
+"diravpêdanê were xwendin"
+
+#: orgs/views_job_funding.py:406
+msgid "لقد تم تغيير حالة فرصة التمويل بنجاح"
+msgstr "Rewşa derfeta diravpêdanê bi serkeftî hat guhertin"
+
+#: orgs/views_job_funding.py:433 orgs/views_job_funding.py:619
+msgid "لقد تم تعديل فرصة التمويل بنجاح"
+msgstr "Derfeta diravpêdanê bi serkeftî hat serastkirin"
+
+#: orgs/views_job_funding.py:454 orgs/views_job_funding.py:640
+msgid "لقد تم حذف فرصة التمويل بنجاح"
+msgstr "Derfeta diravpêdanê bi serkeftî hat jêbirin"
+
+#: orgs/views_job_funding.py:533
+msgid "لقد تمت إضافة فرصة التمويل بنجاح و ستتم دراسته قريباً"
+msgstr ""
+"Daxwaznameya derfeta diravpêdanê bi serkeftî hat serbarkirin û nêzîk dê were "
+"xwendin"
+
+#: orgs/views_job_funding.py:538
+msgid "يحب إدخال اسم منظمة أو اسم الجهة المانحة لنتمكن من دراسة فرصة التمويل"
+msgstr ""
+"Divê navê rêxistinê yan aliyê bexşende were nivîsandin da ku em bikarin "
+"derfeta diravpêdanê bixwînin"
+
+#: orgs/views_job_funding.py:591
+msgid "لقد تم تغيير حالة المنحة  بنجاح"
+msgstr "Rewşa bexşînê bi serkeftî hat guhertin"
+
+#: orgs/views_news_rapport.py:102
+msgid "لقد تمت إضافة الخبر بنجاح و ستتم دراسته قريباً"
+msgstr "Nûçe bi serkeftî hat serbarkirin û nêzîk dê were xwendin"
+
+#: orgs/views_news_rapport.py:197
+msgid "لقد تم تغيير حالة الخبر بنجاح"
+msgstr "Rewşa nûçeyê bi serkeftî hat guhertin"
+
+#: orgs/views_news_rapport.py:231
+msgid "لقد تم تعديل الخبر بنجاح"
+msgstr "Nûçe bi serkeftî hat serastkirin"
+
+#: orgs/views_news_rapport.py:253
+msgid "لقد تم حذف الخبر بنجاح"
+msgstr "Nûçe bi serkeftî hat jêbirin"
+
+#: orgs/views_news_rapport.py:285
+msgid "لقد تمت إضافة التقرير بنجاح و ستتم دراسته قريباً"
+msgstr "Raport bi serkeftî hat serbarkirin û nêzîk dê were xwendin"
+
+#: orgs/views_news_rapport.py:375
+msgid "لقد تم تعديل حالة التقرير بنجاح"
+msgstr "Rewşa raportê bi serkeftî hat serastkirin"
+
+#: orgs/views_news_rapport.py:410
+msgid "لقد تمت تعديل التقرير بنجاح"
+msgstr "Raport bi serkeftî hat serastkirin"
+
+#: orgs/views_news_rapport.py:432
+msgid "لقد تم حذف التقرير بنجاح"
+msgstr "Raport bi serkeftî hat jêbirin"
+
+#: orgs/views_news_rapport.py:475
 msgid "لقد تم ارسال الدعوة "
-msgstr ""
+msgstr "Vexwendin hat şandin"
 
-#: scm/settings.py:154
-msgid "عربي"
-msgstr ""
+#: orgs/views_prof_dash.py:166
+msgid "لقد تم تعديل الملف الشخصي بنجاح"
+msgstr "Dosiyaya kesayetî bi serkeftî hat serastkirin"
 
-#: scm/settings.py:155
-msgid "English"
-msgstr ""
+#: orgs/views_prof_dash.py:269
+msgid "لقد تم تغيير حالة الطلب للمنظمة بنجاح"
+msgstr "Rewşa daxwaznameya rêxistinê bi serkeftî hat guhertin"
 
-#: scm/settings.py:157
-msgid "Kurdî"
-msgstr ""
+#: orgs/views_prof_dash.py:331
+msgid "لقد تم حذف الملف بنجاح"
+msgstr "Dosiya bi serkeftî hat jêbirin"
 
-#: scm/urls.py:42
+#: orgs/views_prof_dash.py:433
+msgid "عدد الأخبار المنشورة باليوم"
+msgstr "Hejmara nûçeyên ku her roj têne weşandin"
+
+#: orgs/views_prof_dash.py:462
+msgid "عدد المنظمات المنشورة باليوم"
+msgstr "Hejmara rêxistinên ku her roj têne weşandin"
+
+#: orgs/views_prof_dash.py:500 orgs/views_prof_dash.py:538
+msgid "عدد التقارير المنشورة باليوم"
+msgstr "Hejmara raporên ku her roj têne weşandin"
+
+#: scm/urls.py:44
 msgid "admin"
-msgstr ""
+msgstr "admin"
 
 #: templates/city/add_city.html:4 templates/city/add_city.html:10
 msgid "إضافة محافظة"
-msgstr ""
+msgstr "Serbarkirina parêzgehekê"
 
 #: templates/city/add_city.html:27 templates/city/edite_city.html:27
-#: templates/orgs/data/add_data.html:19 templates/orgs/data/edit_data.html:18
-#: templates/profiles/org_profile_form.html:174
+#: templates/orgs/data/add_data.html:33 templates/orgs/data/edit_data.html:20
+#: templates/profiles/org_profile_form.html:230
+#: templates/profiles/org_profile_update.html:190
 msgid "احفظ"
-msgstr ""
+msgstr "Jiber bike"
 
 #: templates/city/delete_city.html:4 templates/city/delete_city.html:10
 msgid "حذف محافظة"
-msgstr ""
+msgstr "Jêbirina parêzgehekê"
 
 #: templates/city/delete_city.html:12
 msgid "هل أنت متأكد من رغبتك في حذف المحافظة "
-msgstr ""
+msgstr "Tu ji xwesteka xwe ji bo jêbirina parêzgehê piştrast î"
 
 #: templates/city/delete_city.html:18
 msgid "حذف المحافظة"
-msgstr ""
+msgstr "Jêbirina parêzgehê"
 
 #: templates/city/delete_city.html:21 templates/city/delete_city.html:22
-#: templates/combonents/sidebar_dashboard.html:228
-#: templates/orgs/capacity/org_capacity_delete.html:21
-#: templates/orgs/capacity/org_capacity_delete.html:22
-#: templates/orgs/data/delete_data.html:21
+#: templates/combonents/sidebar_dashboard.html:244
+#: templates/orgs/capacity/org_capacity_delete.html:23
+#: templates/orgs/capacity/org_capacity_delete.html:24
 #: templates/orgs/data/delete_data.html:22
-#: templates/orgs/devs/org_dev_delete.html:21
-#: templates/orgs/devs/org_dev_delete.html:22
-#: templates/orgs/funding_opport/orgs/org_funding_delete.html:21
-#: templates/orgs/funding_opport/orgs/org_funding_delete.html:22
-#: templates/orgs/funding_opport/pers/delete.html:28
-#: templates/orgs/funding_opport/pers/delete.html:29
-#: templates/orgs/media/delete_media.html:21
+#: templates/orgs/data/delete_data.html:23
+#: templates/orgs/devs/org_dev_delete.html:23
+#: templates/orgs/devs/org_dev_delete.html:24
+#: templates/orgs/funding_opport/orgs/org_funding_delete.html:23
+#: templates/orgs/funding_opport/orgs/org_funding_delete.html:24
+#: templates/orgs/funding_opport/pers/delete.html:26
+#: templates/orgs/funding_opport/pers/delete.html:27
 #: templates/orgs/media/delete_media.html:22
-#: templates/orgs/news/org_news_delete.html:21
+#: templates/orgs/media/delete_media.html:23
 #: templates/orgs/news/org_news_delete.html:22
-#: templates/orgs/rapport/delete_rapport.html:19
-#: templates/orgs/rapport/delete_rapport.html:20
-#: templates/orgs/research/delete_research.html:19
-#: templates/orgs/research/delete_research.html:20
-#: templates/orgs/resources/org_job_delete.html:21
-#: templates/orgs/resources/org_job_delete.html:22
-#: templates/profiles/org_profile_delete.html:21
-#: templates/profiles/org_profile_delete.html:22
+#: templates/orgs/news/org_news_delete.html:23
+#: templates/orgs/rapport/delete_rapport.html:21
+#: templates/orgs/rapport/delete_rapport.html:22
+#: templates/orgs/research/delete_research.html:21
+#: templates/orgs/research/delete_research.html:22
+#: templates/orgs/resources/org_job_delete.html:23
+#: templates/orgs/resources/org_job_delete.html:24
+#: templates/profiles/org_profile_delete.html:23
+#: templates/profiles/org_profile_delete.html:24
 msgid "عودة إلى الصفحة السابقة"
-msgstr ""
+msgstr "Veger bo Destpêk"
 
 #: templates/city/edite_city.html:4 templates/city/edite_city.html:10
 msgid "تعديل محافظة"
-msgstr ""
+msgstr "Serastkirina parêzgehekê"
 
 #: templates/city/view_city.html:4 templates/city/view_city.html:10
 msgid "محافظات دول الجوار لسوريا"
-msgstr ""
+msgstr "Parêzgehên welatên cîranê Sûriyê"
 
 #: templates/combonents/footer.html:17
 msgid "المركز السوري للإعلام و حرية التعبير"
-msgstr ""
+msgstr "Navenda Sûriyê ya Ragihandin û Azadiya Derbirînê"
 
-#: templates/combonents/footer.html:21 templates/combonents/main-navbar.html:25
-#: templates/orgs/home.html:2 templates/orgs/home.html:83
-#: templates/orgs/home.html:99
+#: templates/combonents/footer.html:28 templates/combonents/main-navbar.html:29
+#: templates/orgs/home.html:2 templates/orgs/home.html:52
 msgid "بوابة المجتمع المدني"
-msgstr ""
+msgstr "Derwazeya civaka sivîl"
 
-#: templates/combonents/footer.html:46
+#: templates/combonents/footer.html:50
+#: templates/combonents/main-navbar.html:204
 msgid "للتواصل معنا"
-msgstr ""
+msgstr "Ji bo peywendiyê bi me re"
 
-#: templates/combonents/footer.html:87
+#: templates/combonents/footer.html:94
 msgid "تابعونا على"
-msgstr ""
+msgstr "Me pişopînin li ser"
 
-#: templates/combonents/footer.html:116 templates/orgs/home.html:326
+#: templates/combonents/footer.html:128 templates/orgs/home.html:278
 msgid "للاشتراك بآخر الأخبار"
-msgstr ""
+msgstr "Ji bo bejdariyê bi dawîn nûçe"
 
-#: templates/combonents/footer.html:123
+#: templates/combonents/footer.html:136
 msgid "إملأ النموذج التالي"
-msgstr ""
+msgstr "Vê nimûneyê dagire"
 
-#: templates/combonents/main-navbar.html:33
-#: templates/orgs/guid/orgs_guide.html:3 templates/orgs/guid/orgs_guide.html:15
+#: templates/combonents/main-navbar.html:37
+#: templates/orgs/guid/orgs_guide.html:3 templates/orgs/guid/orgs_guide.html:12
 msgid "دليل المجتمع المدني"
-msgstr ""
+msgstr "Naveroka civaka sivîl"
 
-#: templates/combonents/main-navbar.html:43
-#: templates/combonents/main-navbar.html:73
-#: templates/combonents/main-navbar.html:78
+#: templates/combonents/main-navbar.html:47
+#: templates/combonents/main-navbar.html:77
+#: templates/combonents/main-navbar.html:82
 #: templates/orgs/news/orgs_news.html:5 templates/orgs/news/orgs_news.html:12
 msgid "أخبار المجتمع المدني"
-msgstr ""
-
-#: templates/combonents/main-navbar.html:49
-#: templates/combonents/main-navbar.html:94
-#: templates/orgs/news/orgs_news.html:60
-#: templates/orgs/news/orgs_news_news.html:4
-#: templates/orgs/news/orgs_news_news.html:10
-msgid "أخبار المنظمات"
-msgstr ""
+msgstr "Nûçeyên civaka sivîl"
 
 #: templates/combonents/main-navbar.html:53
 #: templates/combonents/main-navbar.html:98
-#: templates/orgs/news/orgs_news.html:65
-msgid "تقارير ودراسات"
-msgstr ""
+#: templates/orgs/news/orgs_news.html:128
+#: templates/orgs/news/orgs_news_news.html:6
+#: templates/orgs/news/orgs_news_news.html:13
+msgid "أخبار المنظمات"
+msgstr "Nûçeyên rêxistinan"
 
 #: templates/combonents/main-navbar.html:57
 #: templates/combonents/main-navbar.html:102
-#: templates/orgs/news/orgs_news.html:69
-msgid "بيانات"
-msgstr ""
+#: templates/orgs/news/orgs_news.html:133
+msgid "تقارير ودراسات"
+msgstr "Raport û lêkolîn"
 
 #: templates/combonents/main-navbar.html:61
 #: templates/combonents/main-navbar.html:106
-#: templates/orgs/news/orgs_news.html:73
-msgid "سمعي وبصري"
-msgstr ""
+#: templates/orgs/news/orgs_news.html:138
+msgid "بيانات"
+msgstr "Daxuyanî"
 
 #: templates/combonents/main-navbar.html:65
 #: templates/combonents/main-navbar.html:110
-#: templates/orgs/news/orgs_news.html:77
+#: templates/orgs/news/orgs_news.html:143
+msgid "سمعي وبصري"
+msgstr "Bihîstinî û dîtinî"
+
+#: templates/combonents/main-navbar.html:69
+#: templates/combonents/main-navbar.html:114
+#: templates/orgs/news/orgs_news.html:148
 msgid "أبحاث خارجية"
-msgstr ""
+msgstr "Lêkolînine derveyî"
 
-#: templates/combonents/main-navbar.html:85
-#: templates/orgs/news/orgs_news.html:53
+#: templates/combonents/main-navbar.html:89
+#: templates/orgs/news/orgs_news.html:121
 msgid "اﻷخبار"
-msgstr ""
+msgstr "Nûçe"
 
-#: templates/combonents/main-navbar.html:124
-#: templates/combonents/main-navbar.html:151
-#: templates/combonents/main-navbar.html:156
+#: templates/combonents/main-navbar.html:128
+#: templates/combonents/main-navbar.html:155
+#: templates/combonents/main-navbar.html:160
 msgid "موارد المجتمع المدني"
-msgstr ""
-
-#: templates/combonents/main-navbar.html:130
-#: templates/combonents/main-navbar.html:171
-#: templates/orgs/resources/org_jobs.html:4
-#: templates/orgs/resources/org_jobs.html:10
-#: templates/orgs/resources/org_recources.html:64
-msgid "فرص العمل"
-msgstr ""
+msgstr "Çavkaniyên civaka sivîl"
 
 #: templates/combonents/main-navbar.html:134
 #: templates/combonents/main-navbar.html:175
-#: templates/orgs/funding_opport/funding.html:4
-#: templates/orgs/funding_opport/funding.html:11
-#: templates/orgs/resources/org_recources.html:69
-msgid "فرص التمويل"
-msgstr ""
+#: templates/orgs/resources/org_jobs.html:4
+#: templates/orgs/resources/org_jobs.html:11
+#: templates/orgs/resources/org_recources.html:120
+msgid "فرص العمل"
+msgstr "Derfetên kar"
 
 #: templates/combonents/main-navbar.html:138
 #: templates/combonents/main-navbar.html:179
-#: templates/orgs/capacity/capacity_not_pub.html:10
-#: templates/orgs/capacity/org_capacity.html:4
-#: templates/orgs/capacity/org_capacity.html:10
-#: templates/orgs/resources/org_recources.html:76
-msgid "فرص بناء القدرات"
-msgstr ""
+#: templates/orgs/funding_opport/funding.html:4
+#: templates/orgs/funding_opport/funding.html:12
+#: templates/orgs/resources/org_recources.html:126
+#: templates/profiles/layout_profile.html:196
+msgid "فرص التمويل"
+msgstr "Derfetên diravpêdanê"
 
 #: templates/combonents/main-navbar.html:142
 #: templates/combonents/main-navbar.html:183
-#: templates/orgs/devs/dev_not_pub.html:4
-#: templates/orgs/devs/dev_not_pub.html:10 templates/orgs/devs/org_devs.html:4
-#: templates/orgs/devs/org_devs.html:10
-#: templates/orgs/resources/org_recources.html:80
+#: templates/orgs/capacity/org_capacity.html:4
+#: templates/orgs/capacity/org_capacity.html:11
+#: templates/orgs/resources/org_recources.html:133
+#: templates/profiles/layout_profile.html:206
+msgid "فرص بناء القدرات"
+msgstr "Derfetên avakirina karînan"
+
+#: templates/combonents/main-navbar.html:146
+#: templates/combonents/main-navbar.html:187
+#: templates/orgs/devs/org_devs.html:4 templates/orgs/devs/org_devs.html:11
+#: templates/orgs/resources/org_recources.html:138
 msgid "دليل التطوير"
-msgstr ""
+msgstr "Rêbernameya pêşxistinê"
 
-#: templates/combonents/main-navbar.html:163
+#: templates/combonents/main-navbar.html:167
 msgid "الموارد"
-msgstr ""
+msgstr "Çavkanî"
 
-#: templates/combonents/main-navbar.html:193
+#: templates/combonents/main-navbar.html:197
 msgid "أخبار البوابة"
-msgstr ""
-
-#: templates/combonents/main-navbar.html:208
-#: templates/combonents/main-navbar.html:240
-msgid "أهلاً"
-msgstr ""
-
-#: templates/combonents/main-navbar.html:215
-#: templates/combonents/sidebar_dashboard.html:27
-#: templates/profiles/layout_profile.html:3
-#: templates/profiles/layout_profile.html:20
-msgid "لوحة التحكم الخاصة باﻹدارة"
-msgstr ""
+msgstr "Nûçeyên derwazeyê"
 
 #: templates/combonents/main-navbar.html:219
-#: templates/combonents/main-navbar.html:246
-msgid "ملفي الشخصي"
-msgstr ""
+#: templates/combonents/main-navbar.html:255
+msgid "أهلاً"
+msgstr "Bi xêr be"
 
-#: templates/combonents/main-navbar.html:224
-#: templates/combonents/main-navbar.html:251
+#: templates/combonents/main-navbar.html:226
+#: templates/combonents/main-navbar.html:231
+#: templates/combonents/main-navbar.html:264
+#: templates/combonents/sidebar_dashboard.html:27
+#: templates/profiles/layout_profile.html:3
+#: templates/profiles/layout_profile.html:22
+msgid "لوحة التحكم الخاصة باﻹدارة"
+msgstr "Tabloya kontirolkirinê ya taybet bi rêveberiyê"
+
+#: templates/combonents/main-navbar.html:233
+#: templates/combonents/main-navbar.html:266
+msgid "ملفي الشخصي"
+msgstr "Dosiyaya min ya kesayetî"
+
+#: templates/combonents/main-navbar.html:239
+#: templates/combonents/main-navbar.html:272
 #: templates/combonents/sidebar_dashboard.html:35
 #: templates/combonents/sidebar_dashboard.html:40
-#: templates/profiles/profile.html:379 templates/profiles/profile.html:417
-#: templates/profiles/staff_profile.html:394
+#: templates/profiles/layout_profile.html:32
+#: templates/profiles/profile.html:444 templates/profiles/profile.html:474
+#: templates/profiles/staff_profile.html:24
 #: templates/register/password_change.html:5
 #: templates/register/password_change.html:10
 msgid "تغيير كلمة المرور"
-msgstr ""
+msgstr "Guhertina peyva nihênî"
 
-#: templates/combonents/main-navbar.html:228
-#: templates/combonents/main-navbar.html:255
+#: templates/combonents/main-navbar.html:243
+#: templates/combonents/main-navbar.html:276
 #: templates/register/logged_out.html:2
 msgid "تسجيل الخروج"
-msgstr ""
+msgstr "Tomarkirina derketinê"
 
-#: templates/combonents/main-navbar.html:287
-#: templates/register/password_change_done.html:23
-#: templates/register/signe-in.html:2 templates/register/signe-in.html:6
-#: templates/register/signe-in.html:11 templates/register/signe-in.html:17
+#: templates/combonents/main-navbar.html:308
+#: templates/register/password_change_done.html:24
+#: templates/register/signe-in.html:2 templates/register/signe-in.html:19
+#: templates/register/signe-in.html:39 templates/register/signe-in.html:46
 msgid "تسجيل الدخول"
-msgstr ""
+msgstr "Tomarkirina derbasbûnê"
 
 #: templates/combonents/sidebar_dashboard.html:48
 #: templates/combonents/sidebar_dashboard.html:52
 msgid "تقديم طلب اشتراك جديد لمنظمة"
-msgstr ""
+msgstr "Pêşkêşkirina daxwaznameyeke nû ya bejdariyê ji bo rêxistinekê"
 
 #: templates/combonents/sidebar_dashboard.html:60
 #: templates/combonents/sidebar_dashboard.html:65
 #: templates/profiles/orgs_orders_etude.html:4
-#: templates/profiles/orgs_orders_etude.html:15
-#: templates/profiles/orgs_orders_published.html:15
+#: templates/profiles/orgs_orders_etude.html:17
+#: templates/profiles/orgs_orders_published.html:16
 msgid "طلبات المنظمات قيد الدراسة"
-msgstr ""
+msgstr "Daxwaznameyên rêxistinan yên li jêr xwendinê"
 
 #: templates/combonents/sidebar_dashboard.html:73
 #: templates/profiles/orgs_orders_published.html:4
 msgid "طلبات المنظمات الموافق عليها"
-msgstr ""
+msgstr "Daxwaznameyên erêkirî yên rêxistinan "
 
 #: templates/combonents/sidebar_dashboard.html:81
 msgid "إضافة خبر لمنظمة"
-msgstr ""
+msgstr "Serbarkirina nûçeyekê ji bo rêxistinekê"
 
 #: templates/combonents/sidebar_dashboard.html:89
-#: templates/orgs/news/org_news_not_pub.html:4
-#: templates/orgs/news/org_news_not_pub.html:10
-#: templates/orgs/news/orgs_news_news.html:33
+#: templates/orgs/news/org_news_not_pub.html:3
+#: templates/orgs/news/org_news_not_pub.html:16
+#: templates/orgs/news/orgs_news_news.html:37
+#: templates/orgs/news/orgs_news_news.html:43
+#: templates/orgs/our_news/our_news_not_pub.html:3
+#: templates/orgs/our_news/our_news_not_pub.html:16
 msgid "أخبار المنظمات قيد الدراسة"
-msgstr ""
+msgstr "Nûçeyên rêxistinan yên li jêr xwendinê"
 
 #: templates/combonents/sidebar_dashboard.html:97
 msgid "إضافة تقرير أو دراسة لمنظمة"
-msgstr ""
+msgstr "Serbarkirina raport yan lêkolînekê ji bo rêxistinekê"
 
 #: templates/combonents/sidebar_dashboard.html:105
 #: templates/orgs/rapport/rapport.html:30
+#: templates/orgs/rapport/rapport.html:34
 #: templates/orgs/rapport/rapport_not_pub.html:4
-#: templates/orgs/rapport/rapport_not_pub.html:10
+#: templates/orgs/rapport/rapport_not_pub.html:13
 msgid "تقارير و دراسات المنظمات قيد الدراسة"
-msgstr ""
+msgstr "Raport û lêkolînên rêxistinan yên li jêr xwendinê"
 
 #: templates/combonents/sidebar_dashboard.html:113
 msgid "إضافة بيان لمنظمة"
-msgstr ""
+msgstr "Serbarkirina daxuyaniyekê ji bo rêxistinekê"
 
 #: templates/combonents/sidebar_dashboard.html:121
-#: templates/orgs/data/data.html:29
+#: templates/orgs/data/data.html:32 templates/orgs/data/data.html:36
 msgid "بيانات المنظمات قيد الدراسة"
-msgstr ""
+msgstr "Daxuyaniyên rêxistinan yên li jêr xwendinê"
 
 #: templates/combonents/sidebar_dashboard.html:129
 msgid "إضافة محتوى سمعي و بصري لمنظمة"
-msgstr ""
+msgstr "Serbarkirina naverokeke bihîstinî û dîtinî ji bo rêxistinekê"
 
 #: templates/combonents/sidebar_dashboard.html:137
-#: templates/orgs/media/media.html:30
+#: templates/orgs/media/media.html:32 templates/orgs/media/media.html:36
 msgid "المحتوى السمعي و البصري للمنظمات قيد الدراسة"
-msgstr ""
+msgstr "Naveroka bihîstinî û dîtinî ya rêxistinan ya li jêr xwendinê"
 
 #: templates/combonents/sidebar_dashboard.html:145
 msgid "إضافة بحث خارجي لمنظمة"
-msgstr ""
+msgstr "Serbarkirina lêkolîneke derveyî ji bo rêxistinekê"
 
 #: templates/combonents/sidebar_dashboard.html:153
-#: templates/orgs/research/research.html:30
+#: templates/orgs/research/research.html:28
+#: templates/orgs/research/research.html:31
 msgid "اﻷبحاث الخارجية للمنظمات قيد الدراسة"
-msgstr ""
+msgstr "Lêkolînên derveyî yên rêxistinan yên li jêr xwendinê"
 
 #: templates/combonents/sidebar_dashboard.html:161
+#: templates/orgs/resources/jobs_not_pub.html:25
 #: templates/orgs/resources/org_add_job.html:4
-#: templates/orgs/resources/org_add_job.html:10
+#: templates/orgs/resources/org_add_job.html:13
 #: templates/orgs/resources/org_jobs.html:20
 msgid "إضافة فرصة عمل"
-msgstr ""
+msgstr "Serbarkirina derfeteke kar"
 
 #: templates/combonents/sidebar_dashboard.html:169
 msgid "فرص العمل للمنظمات قيد الدراسة"
-msgstr ""
+msgstr "Derfetên kar yên rêxistinan yên li jêr xwendinê"
 
 #: templates/combonents/sidebar_dashboard.html:177
-#: templates/orgs/funding_opport/orgs/org_add_funding.html:4
-msgid "إضافة فرصة تمويل"
-msgstr ""
+msgid "إضافة فرصة تمويل لمنظمة"
+msgstr "lêzêdekirin derfetek fînansekirinê li rêxistinekê bikin"
 
 #: templates/combonents/sidebar_dashboard.html:185
-msgid "فرص التمويل للمنظمات قيد الدراسة"
-msgstr ""
+msgid "فرص تمويل المنظمات قيد الدراسة"
+msgstr "Derfetên fînansekirina rêxistinên di bin lêkolînê de"
 
 #: templates/combonents/sidebar_dashboard.html:193
-msgid "إضافة فرصة بناء القدرات"
-msgstr ""
+#: templates/orgs/funding_opport/pers/add.html:4
+#: templates/orgs/funding_opport/pers/add.html:12
+#: templates/orgs/funding_opport/pers/add.html:89
+msgid "إضافة فرصة تمويل للأفراد"
+msgstr "Serbarkirina derfeta diravpêdanê ji bo kesan"
 
 #: templates/combonents/sidebar_dashboard.html:201
-msgid "فرص بناء القدرات للمنظمات قيد الدراسة"
-msgstr ""
+msgid "فرص تمويل اﻷفراد قيد الدراسة"
+msgstr "Derfetên fînansekirina kesane di bin lêkolînê de"
 
 #: templates/combonents/sidebar_dashboard.html:209
-#: templates/orgs/devs/org_add_dev.html:4
-msgid "إضافة دليل تطوير"
-msgstr ""
+msgid "إضافة فرصة بناء القدرات"
+msgstr "Serbarkirina derfeteke avakirina karînan"
 
 #: templates/combonents/sidebar_dashboard.html:217
-msgid "دليل التطوير للمنظمات قيد الدراسة"
-msgstr ""
+msgid "فرص بناء القدرات للمنظمات قيد الدراسة"
+msgstr "Derfetên avakirina karînan yên rêxistinan yên li jêr xwendinê"
 
-#: templates/contact/contact.html:3 templates/contact/contact.html:6
+#: templates/combonents/sidebar_dashboard.html:225
+#: templates/orgs/devs/org_add_dev.html:4
+msgid "إضافة دليل تطوير"
+msgstr "Serbarkirina rêbernameyeke pêşxistinê"
+
+#: templates/combonents/sidebar_dashboard.html:233
+msgid "دليل التطوير للمنظمات قيد الدراسة"
+msgstr "Rêbernameya pêşxistinê ya rêxistinan yên li jêr xwendinê"
+
+#: templates/contact/contact.html:3 templates/contact/contact.html:9
 msgid "اتصل بنا"
-msgstr ""
+msgstr "Peywendiyê bi me re bike"
+
+#: templates/contact/contact.html:29
+msgid "أرسل"
+msgstr "Şandin"
 
 #: templates/errors/404.html:4
 msgid "خطأ 404 , صفحة غير متاحة"
-msgstr ""
+msgstr "Çewt 4040, rûpel nagehiştinî ye"
 
-#: templates/errors/404.html:10
+#: templates/errors/404.html:11
 msgid "صفحة غير متاحة"
-msgstr ""
+msgstr "Rûpel nagehiştinî ye"
 
-#: templates/errors/404.html:12
+#: templates/errors/404.html:13
 msgid "هذه الصفحة مفقودة أو غير متوفره أساساً"
-msgstr ""
+msgstr "Ev rûpel widayî ye yan bi xwe tuneye"
 
-#: templates/errors/404.html:15
+#: templates/errors/404.html:16 templates/orgs/politic.html:100
 msgid "العودة إلى الصفحة الرئيسية"
-msgstr ""
+msgstr "Veger bo Destpêk"
 
 #: templates/orgs/capacity/capacity_not_pub.html:4
+#: templates/orgs/capacity/capacity_not_pub.html:13
 msgid "فرص بناء القدرات  قيد الدراسة"
-msgstr ""
+msgstr "Derfetên avakirina karînan yên li jêr xwendinê"
 
-#: templates/orgs/capacity/capacity_not_pub.html:35
-#: templates/orgs/capacity/org_capacity.html:88
-#: templates/orgs/data/data.html:80 templates/orgs/data/data_not_pub.html:77
-#: templates/orgs/devs/dev_not_pub.html:24 templates/orgs/devs/org_devs.html:84
-#: templates/orgs/funding_opport/orgs/fundings_not_pub.html:32
-#: templates/orgs/funding_opport/orgs/org_funding.html:89
-#: templates/orgs/funding_opport/pers/not_pub.html:87
-#: templates/orgs/funding_opport/pers/pub.html:91
-#: templates/orgs/media/media.html:81
-#: templates/orgs/media/media_not_pub.html:76
-#: templates/orgs/news/org_news_not_pub.html:26
-#: templates/orgs/news/orgs_news_news.html:84
-#: templates/orgs/our_news/our_news.html:83
-#: templates/orgs/rapport/rapport.html:85
-#: templates/orgs/rapport/rapport_not_pub.html:34
-#: templates/orgs/research/research.html:87
-#: templates/orgs/research/research_not_pub.html:80
-#: templates/orgs/resources/jobs_not_pub.html:79
-#: templates/orgs/resources/org_jobs.html:135
-msgid "لقراءة المزيد"
-msgstr ""
-
-#: templates/orgs/capacity/capacity_not_pub.html:79
-msgid "لا يوجد حالياً فرص بناء قدرات للنشر"
-msgstr ""
-
+#: templates/orgs/capacity/capacity_not_pub.html:23
 #: templates/orgs/capacity/org_add_capacity.html:4
-#: templates/orgs/capacity/org_add_capacity.html:10
+#: templates/orgs/capacity/org_add_capacity.html:12
 #: templates/orgs/capacity/org_capacity.html:21
 msgid "اضافة فرصة بناء القدرات"
-msgstr ""
+msgstr "Serbarkirina derfeta avakirina karînan"
 
-#: templates/orgs/capacity/org_add_capacity.html:58
-msgid "انشر فرصة بناء قدرات"
-msgstr ""
-
-#: templates/orgs/capacity/org_capacity.html:27
-#: templates/orgs/data/data.html:23 templates/orgs/data/data_not_pub.html:25
-#: templates/orgs/devs/org_devs.html:26
-#: templates/orgs/funding_opport/orgs/org_funding.html:27
-#: templates/orgs/funding_opport/pers/not_pub.html:26
+#: templates/orgs/capacity/capacity_not_pub.html:28
+#: templates/orgs/capacity/org_capacity.html:26
+#: templates/orgs/data/data.html:25 templates/orgs/data/data_not_pub.html:29
+#: templates/orgs/devs/dev_not_pub.html:26 templates/orgs/devs/org_devs.html:24
+#: templates/orgs/funding_opport/orgs/fundings_not_pub.html:27
+#: templates/orgs/funding_opport/orgs/org_funding.html:25
+#: templates/orgs/funding_opport/pers/not_pub.html:27
 #: templates/orgs/funding_opport/pers/pub.html:25
-#: templates/orgs/guid/orgs_guide.html:71 templates/orgs/media/media.html:24
-#: templates/orgs/media/media_not_pub.html:24
-#: templates/orgs/news/orgs_news_news.html:21
-#: templates/orgs/our_news/our_news.html:26
-#: templates/orgs/rapport/rapport.html:24
-#: templates/orgs/research/research.html:24
-#: templates/orgs/research/research_not_pub.html:24
+#: templates/orgs/guid/orgs_guid_conf_pub.html:31
+#: templates/orgs/guid/orgs_guide.html:76 templates/orgs/media/media.html:26
+#: templates/orgs/media/media_not_pub.html:28
+#: templates/orgs/news/org_news_not_pub.html:33
+#: templates/orgs/news/orgs_news_news.html:30
+#: templates/orgs/our_news/our_news.html:27
+#: templates/orgs/our_news/our_news_not_pub.html:33
+#: templates/orgs/rapport/rapport.html:25
+#: templates/orgs/rapport/rapport_not_pub.html:28
+#: templates/orgs/research/research.html:23
+#: templates/orgs/research/research_not_pub.html:28
+#: templates/orgs/resources/jobs_not_pub.html:31
 #: templates/orgs/resources/org_jobs.html:26
-#: templates/profiles/layout_profile.html:38
-#: templates/profiles/layout_profile.html:66
 msgid "فرز"
-msgstr ""
+msgstr "Dabeşkirin"
 
-#: templates/orgs/capacity/org_capacity.html:33
-msgid "فرص بناء القدرات قيد الدراسة"
-msgstr ""
-
-#: templates/orgs/capacity/org_capacity.html:56
-#: templates/orgs/data/data.html:54 templates/orgs/data/data_not_pub.html:51
-#: templates/orgs/devs/org_devs.html:55
-#: templates/orgs/funding_opport/orgs/org_funding.html:58
-#: templates/orgs/funding_opport/pers/not_pub.html:55
-#: templates/orgs/funding_opport/pers/pub.html:59
-#: templates/orgs/guid/orgs_guide.html:118 templates/orgs/media/media.html:55
-#: templates/orgs/media/media_not_pub.html:50
-#: templates/orgs/news/orgs_news_news.html:61
-#: templates/orgs/our_news/our_news.html:60
-#: templates/orgs/rapport/rapport.html:58
-#: templates/orgs/research/research.html:58
-#: templates/orgs/research/research_not_pub.html:53
-#: templates/orgs/resources/org_jobs.html:57
-#: templates/profiles/layout_profile.html:58
-#: templates/profiles/layout_profile.html:83
+#: templates/orgs/capacity/capacity_not_pub.html:62
+#: templates/orgs/capacity/org_capacity.html:70
+#: templates/orgs/data/data.html:63 templates/orgs/data/data_not_pub.html:56
+#: templates/orgs/devs/dev_not_pub.html:55 templates/orgs/devs/org_devs.html:60
+#: templates/orgs/funding_opport/orgs/fundings_not_pub.html:58
+#: templates/orgs/funding_opport/orgs/org_funding.html:63
+#: templates/orgs/funding_opport/pers/not_pub.html:57
+#: templates/orgs/funding_opport/pers/pub.html:62
+#: templates/orgs/guid/orgs_guid_conf_pub.html:66
+#: templates/orgs/guid/orgs_guide.html:124 templates/orgs/media/media.html:63
+#: templates/orgs/media/media_not_pub.html:56
+#: templates/orgs/news/org_news_not_pub.html:64
+#: templates/orgs/news/orgs_news_news.html:74
+#: templates/orgs/our_news/our_news.html:67
+#: templates/orgs/our_news/our_news_not_pub.html:64
+#: templates/orgs/rapport/rapport.html:63
+#: templates/orgs/rapport/rapport_not_pub.html:56
+#: templates/orgs/research/research.html:61
+#: templates/orgs/research/research_not_pub.html:58
+#: templates/orgs/resources/jobs_not_pub.html:69
+#: templates/orgs/resources/org_jobs.html:65
+#: templates/profiles/layout_profile.html:76
+#: templates/profiles/layout_profile.html:96
 msgid "بحث"
-msgstr ""
+msgstr "Lêgerîn"
 
-#: templates/orgs/capacity/org_capacity.html:134
+#: templates/orgs/capacity/capacity_not_pub.html:100
+#: templates/orgs/capacity/org_capacity.html:108
+#: templates/orgs/data/data.html:93 templates/orgs/data/data_not_pub.html:86
+#: templates/orgs/devs/dev_not_pub.html:88 templates/orgs/devs/org_devs.html:93
+#: templates/orgs/funding_opport/orgs/fundings_not_pub.html:89
+#: templates/orgs/funding_opport/orgs/org_funding.html:94
+#: templates/orgs/funding_opport/pers/not_pub.html:88
+#: templates/orgs/funding_opport/pers/pub.html:93
+#: templates/orgs/media/media.html:92
+#: templates/orgs/media/media_not_pub.html:85
+#: templates/orgs/news/org_news_not_pub.html:91
+#: templates/orgs/news/orgs_news_news.html:101
+#: templates/orgs/our_news/our_news.html:94
+#: templates/orgs/our_news/our_news_not_pub.html:91
+#: templates/orgs/rapport/rapport.html:100
+#: templates/orgs/rapport/rapport_not_pub.html:87
+#: templates/orgs/research/research.html:94
+#: templates/orgs/research/research_not_pub.html:88
+#: templates/orgs/resources/jobs_not_pub.html:151
+#: templates/orgs/resources/org_jobs.html:146
+msgid "لقراءة المزيد"
+msgstr "Bihtir bixwîne"
+
+#: templates/orgs/capacity/capacity_not_pub.html:146
+msgid "لا يوجد حالياً فرص بناء قدرات للنشر"
+msgstr "Niha ti derfetên avakirina karînan bo belavkirinê tunene"
+
+#: templates/orgs/capacity/capacity_not_pub.html:156
+#: templates/orgs/capacity/org_add_capacity.html:74
+#: templates/orgs/data/add_data.html:42
+#: templates/orgs/data/data_not_pub.html:142
+#: templates/orgs/devs/dev_not_pub.html:144
+#: templates/orgs/devs/org_add_dev.html:67
+#: templates/orgs/funding_opport/orgs/fundings_not_pub.html:144
+#: templates/orgs/funding_opport/orgs/org_add_funding.html:84
+#: templates/orgs/funding_opport/pers/add.html:98
+#: templates/orgs/funding_opport/pers/not_pub.html:143
+#: templates/orgs/guid/orgs_guid_conf_pub.html:158
+#: templates/orgs/media/add_media.html:43
+#: templates/orgs/media/media_not_pub.html:141
+#: templates/orgs/news/org_add_news.html:61
+#: templates/orgs/news/org_news_not_pub.html:149
+#: templates/orgs/our_news/our_news_not_pub.html:149
+#: templates/orgs/rapport/add_rapport.html:43
+#: templates/orgs/rapport/rapport_not_pub.html:145
+#: templates/orgs/research/add_research.html:34
+#: templates/orgs/research/research_not_pub.html:145
+#: templates/orgs/resources/jobs_not_pub.html:206
+#: templates/orgs/resources/org_add_job.html:88
+#: templates/profiles/layout_profile.html:359
+msgid "ليس لديك الصلاحية لدخول هذه الصفحة"
+msgstr "Destûra we tune ku hûn vê rûpelê bibînin"
+
+#: templates/orgs/capacity/org_add_capacity.html:64
+msgid "انشر فرصة بناء قدرات"
+msgstr "Derfeta avakirina karînan belav bike"
+
+#: templates/orgs/capacity/org_capacity.html:32
+#: templates/orgs/capacity/org_capacity.html:36
+msgid "فرص بناء القدرات قيد الدراسة"
+msgstr "Derfetên avakirina karînan yên li jêr xwendinê"
+
+#: templates/orgs/capacity/org_capacity.html:154
 msgid " لا يوجد حالياً فرص بناء القدرات "
-msgstr ""
+msgstr "Niha ti derfetên avakirina karînan tunene"
 
 #: templates/orgs/capacity/org_capacity_delete.html:4
-#: templates/orgs/capacity/org_capacity_delete.html:10
-msgid "حذف فرصة بناء القدرات"
-msgstr ""
-
 #: templates/orgs/capacity/org_capacity_delete.html:12
+msgid "حذف فرصة بناء القدرات"
+msgstr "Jêbirina derfeta avakirina karînan"
+
+#: templates/orgs/capacity/org_capacity_delete.html:14
 msgid "هل أنت متأكد من رغبتك في حذف فرصة بناء القدرات بعنوان"
 msgstr ""
+"Tu ji xwesteka xwe ji bo jêbirina derfeta avakirina karînan ya bi vê "
+"navnîşanê, piştrast î?"
 
-#: templates/orgs/capacity/org_capacity_delete.html:18
-#: templates/orgs/devs/org_dev_details.html:89
-#: templates/orgs/funding_opport/orgs/org_funding_delete.html:18
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:129
-#: templates/orgs/funding_opport/pers/delete.html:25
-#: templates/orgs/funding_opport/pers/detail.html:174
-#: templates/orgs/resources/org_job_delete.html:18
-#: templates/orgs/resources/org_job_details.html:154
+#: templates/orgs/capacity/org_capacity_delete.html:20
+#: templates/orgs/devs/org_dev_details.html:51
+#: templates/orgs/funding_opport/orgs/org_funding_delete.html:20
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:51
+#: templates/orgs/funding_opport/pers/delete.html:23
+#: templates/orgs/funding_opport/pers/detail.html:53
+#: templates/orgs/research/detail_research.html:50
+#: templates/orgs/resources/org_job_delete.html:20
+#: templates/orgs/resources/org_job_details.html:55
 msgid "حذف"
-msgstr ""
+msgstr "jêbirin"
 
 #: templates/orgs/capacity/org_capacity_details.html:3
-#: templates/orgs/capacity/org_capacity_details.html:7
-msgid "تفاصيل فرصة بناء القدرات"
-msgstr ""
-
 #: templates/orgs/capacity/org_capacity_details.html:12
-msgid "اسم اللذي أضاف فرصة بناء القدرات"
-msgstr ""
+msgid "تفاصيل فرصة بناء القدرات"
+msgstr "Hurguliyên derfeta avakirina karînan"
 
-#: templates/orgs/capacity/org_capacity_details.html:20
-msgid "اسم الجهة المانحة"
-msgstr ""
+#: templates/orgs/capacity/org_capacity_details.html:35
+#: templates/orgs/devs/org_dev_details.html:34
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:33
+#: templates/orgs/funding_opport/pers/detail.html:35
+#: templates/orgs/research/detail_research.html:32
+#: templates/orgs/resources/org_job_details.html:37
+msgid "الموافقة على النشر"
+msgstr "Erêkirin li ser belavkirinê"
 
-#: templates/orgs/capacity/org_capacity_details.html:25
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:31
-#: templates/orgs/funding_opport/pers/detail.html:34
-#: templates/orgs/resources/org_job_details.html:56
-msgid "تاريخ الإضافة"
-msgstr ""
+#: templates/orgs/capacity/org_capacity_details.html:44
+#: templates/orgs/devs/org_dev_details.html:43
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:42
+#: templates/orgs/funding_opport/pers/detail.html:44
+msgid "إلغاء نشر الدليل"
+msgstr "Ji belavkirina rêbernameyê vegere"
 
-#: templates/orgs/capacity/org_capacity_details.html:29
-msgid "وصف فرصة التمويل"
-msgstr ""
+#: templates/orgs/capacity/org_capacity_details.html:50
+#: templates/orgs/capacity/org_capacity_details.html:60
+msgid "تعديل فرصة بناءالقدرات"
+msgstr "Serastkirina derfeta avakirina karînan"
 
-#: templates/orgs/capacity/org_capacity_details.html:39
 #: templates/orgs/capacity/org_capacity_details.html:53
-#: templates/orgs/devs/org_dev_details.html:26
-#: templates/orgs/devs/org_dev_details.html:38
-#: templates/orgs/devs/org_dev_details.html:48
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:52
-#: templates/orgs/funding_opport/pers/detail.html:50
-#: templates/orgs/funding_opport/pers/detail.html:58
-#: templates/orgs/funding_opport/pers/detail.html:68
-#: templates/orgs/funding_opport/pers/detail.html:76
-#: templates/orgs/funding_opport/pers/detail.html:84
-#: templates/orgs/funding_opport/pers/detail.html:94
-#: templates/orgs/resources/jobs_not_pub.html:72
-#: templates/orgs/resources/org_job_details.html:47
-#: templates/orgs/resources/org_job_details.html:78
-#: templates/orgs/resources/org_job_details.html:86
-#: templates/orgs/resources/org_job_details.html:95
-#: templates/orgs/resources/org_jobs.html:128
-#: templates/profiles/particip_detail.html:43
-#: templates/profiles/particip_detail.html:59
-#: templates/profiles/particip_detail.html:129
-#: templates/profiles/particip_detail.html:140
-#: templates/profiles/particip_detail.html:158
-#: templates/profiles/particip_detail.html:170
-#: templates/profiles/particip_detail.html:202
-#: templates/profiles/particip_detail.html:230
-#: templates/profiles/particip_detail.html:244
-#: templates/profiles/particip_detail.html:258
-#: templates/profiles/particip_detail.html:299
-#: templates/profiles/particip_detail.html:332
-#: templates/profiles/particip_detail.html:346
-#: templates/profiles/particip_detail.html:360
-#: templates/profiles/particip_detail.html:374
-#: templates/profiles/particip_detail.html:386
-#: templates/profiles/particip_detail.html:400
-#: templates/profiles/particip_detail.html:413
-#: templates/profiles/particip_detail.html:429
-#: templates/profiles/profile.html:58 templates/profiles/profile.html:78
-#: templates/profiles/profile.html:90 templates/profiles/profile.html:102
-#: templates/profiles/profile.html:114 templates/profiles/profile.html:128
-#: templates/profiles/profile.html:155 templates/profiles/profile.html:169
-#: templates/profiles/profile.html:183 templates/profiles/profile.html:197
-#: templates/profiles/profile.html:228 templates/profiles/profile.html:261
-#: templates/profiles/profile.html:275 templates/profiles/profile.html:289
-#: templates/profiles/profile.html:303 templates/profiles/profile.html:315
-#: templates/profiles/profile.html:327 templates/profiles/profile.html:340
-#: templates/profiles/profile.html:356 templates/profiles/staff_profile.html:51
-#: templates/profiles/staff_profile.html:71
-#: templates/profiles/staff_profile.html:83
-#: templates/profiles/staff_profile.html:95
-#: templates/profiles/staff_profile.html:107
-#: templates/profiles/staff_profile.html:121
-#: templates/profiles/staff_profile.html:148
-#: templates/profiles/staff_profile.html:162
-#: templates/profiles/staff_profile.html:176
-#: templates/profiles/staff_profile.html:190
-#: templates/profiles/staff_profile.html:221
-#: templates/profiles/staff_profile.html:254
-#: templates/profiles/staff_profile.html:268
-#: templates/profiles/staff_profile.html:282
-#: templates/profiles/staff_profile.html:296
-#: templates/profiles/staff_profile.html:308
-#: templates/profiles/staff_profile.html:320
-#: templates/profiles/staff_profile.html:333
-#: templates/profiles/staff_profile.html:349
-msgid "لم يذكر"
-msgstr ""
+#: templates/orgs/devs/org_dev_delete.html:20
+msgid "حذف "
+msgstr "Jêbirin"
+
+#: templates/orgs/capacity/org_capacity_details.html:65
+#: templates/orgs/data/detail_data.html:64
+#: templates/orgs/devs/org_dev_details.html:65
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:64
+#: templates/orgs/funding_opport/pers/detail.html:67
+#: templates/orgs/media/media_detail.html:64
+#: templates/orgs/news/orgs_news_detail.html:72
+#: templates/orgs/rapport/detail_rapport.html:66
+#: templates/orgs/research/detail_research.html:61
+#: templates/orgs/resources/org_job_details.html:66
+#: templates/profiles/particip_detail.html:60
+msgid "ليس لديك الصلاحية"
+msgstr "Destûra we tune"
 
 #: templates/orgs/capacity/org_capacity_details.html:71
-msgid "الموافقة على نشر "
-msgstr ""
-
-#: templates/orgs/capacity/org_capacity_details.html:78
-#: templates/orgs/news/orgs_news_detail.html:74
-msgid "إلغاء نشر الخبر"
-msgstr ""
-
-#: templates/orgs/capacity/org_capacity_details.html:89
-msgid "تعديل فرصة بناءالقدرات"
-msgstr ""
+#: templates/orgs/data/detail_data.html:70
+#: templates/orgs/devs/org_dev_details.html:71
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:70
+#: templates/orgs/funding_opport/pers/detail.html:73
+#: templates/orgs/media/media_detail.html:70
+#: templates/orgs/news/orgs_news_detail.html:78
+#: templates/orgs/rapport/detail_rapport.html:72
+#: templates/orgs/research/detail_research.html:67
+#: templates/orgs/resources/org_job_details.html:72
+#: templates/profiles/particip_detail.html:66
+msgid "لا يمكنك التعديل بعد الموافقة على النشر أو ليس لديك الصلاحية"
+msgstr "Piştî lihevkirina weşanê hûn nikarin sererast bikin an destûra we tune"
 
 #: templates/orgs/capacity/org_capacity_details.html:93
-#: templates/orgs/devs/org_dev_delete.html:18
-msgid "حذف "
-msgstr ""
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:93
+#: templates/orgs/funding_opport/pers/detail.html:95
+#: templates/orgs/resources/org_job_details.html:95
+msgid "تاريخ الإضافة"
+msgstr "Dîrok hate zêdekirin"
+
+#: templates/orgs/capacity/org_capacity_details.html:105
+msgid "اسم الجهة المانحة"
+msgstr "Navê aliyê bexşende"
+
+#: templates/orgs/capacity/org_capacity_details.html:122
+msgid "اسم الذي أضاف فرصة بناء القدرات"
+msgstr "Navê kesê derfeta avakirina karînan serbar kiriye"
+
+#: templates/orgs/capacity/org_capacity_details.html:151
+msgid "وصف فرصة التمويل"
+msgstr "Danasîna derfeta diravpêdanê"
+
+#: templates/orgs/capacity/org_capacity_details.html:172
+#: templates/orgs/resources/org_job_details.html:197
+msgid "المدينة"
+msgstr "Bajar"
+
+#: templates/orgs/capacity/org_capacity_details.html:178
+#: templates/orgs/capacity/org_capacity_details.html:226
+#: templates/orgs/data/detail_data.html:99
+#: templates/orgs/devs/org_dev_details.html:174
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:168
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:258
+#: templates/orgs/funding_opport/pers/detail.html:150
+#: templates/orgs/funding_opport/pers/detail.html:164
+#: templates/orgs/funding_opport/pers/detail.html:186
+#: templates/orgs/funding_opport/pers/detail.html:199
+#: templates/orgs/funding_opport/pers/detail.html:212
+#: templates/orgs/funding_opport/pers/detail.html:232
+#: templates/orgs/funding_opport/pers/detail.html:322
+#: templates/orgs/media/media_detail.html:97
+#: templates/orgs/media/media_detail.html:148
+#: templates/orgs/rapport/detail_rapport.html:133
+#: templates/orgs/research/detail_research.html:97
+#: templates/orgs/resources/jobs_not_pub.html:144
+#: templates/orgs/resources/org_job_details.html:138
+#: templates/orgs/resources/org_job_details.html:203
+#: templates/orgs/resources/org_job_details.html:215
+#: templates/orgs/resources/org_job_details.html:233
+#: templates/orgs/resources/org_jobs.html:139
+#: templates/profiles/particip_detail.html:113
+#: templates/profiles/particip_detail.html:129
+#: templates/profiles/particip_detail.html:204
+#: templates/profiles/particip_detail.html:221
+#: templates/profiles/particip_detail.html:244
+#: templates/profiles/particip_detail.html:256
+#: templates/profiles/particip_detail.html:288
+#: templates/profiles/particip_detail.html:316
+#: templates/profiles/particip_detail.html:330
+#: templates/profiles/particip_detail.html:344
+#: templates/profiles/particip_detail.html:372
+#: templates/profiles/particip_detail.html:387
+#: templates/profiles/particip_detail.html:419
+#: templates/profiles/particip_detail.html:440
+#: templates/profiles/particip_detail.html:454
+#: templates/profiles/particip_detail.html:468
+#: templates/profiles/particip_detail.html:482
+#: templates/profiles/particip_detail.html:494
+#: templates/profiles/particip_detail.html:508
+#: templates/profiles/particip_detail.html:521
+#: templates/profiles/particip_detail.html:537
+#: templates/profiles/profile.html:41 templates/profiles/profile.html:52
+#: templates/profiles/profile.html:107 templates/profiles/profile.html:121
+#: templates/profiles/profile.html:142 templates/profiles/profile.html:154
+#: templates/profiles/profile.html:166 templates/profiles/profile.html:178
+#: templates/profiles/profile.html:192 templates/profiles/profile.html:219
+#: templates/profiles/profile.html:233 templates/profiles/profile.html:247
+#: templates/profiles/profile.html:261 templates/profiles/profile.html:292
+#: templates/profiles/profile.html:325 templates/profiles/profile.html:339
+#: templates/profiles/profile.html:353 templates/profiles/profile.html:367
+#: templates/profiles/profile.html:379 templates/profiles/profile.html:391
+#: templates/profiles/profile.html:404 templates/profiles/profile.html:420
+msgid "لم يذكر"
+msgstr "Tuneye"
+
+#: templates/orgs/capacity/org_capacity_details.html:220
+msgid "الرابط"
+msgstr "Link"
+
+#: templates/orgs/capacity/org_capacity_details.html:237
+#: templates/orgs/data/detail_data.html:167
+#: templates/orgs/devs/org_dev_details.html:196
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:269
+#: templates/orgs/funding_opport/pers/detail.html:333
+#: templates/orgs/media/media_detail.html:158
+#: templates/orgs/news/orgs_news_detail.html:156
+#: templates/orgs/news/orgs_news_detail.html:175
+#: templates/orgs/rapport/detail_rapport.html:168
+#: templates/orgs/research/detail_research.html:175
+#: templates/orgs/resources/org_job_details.html:274
+msgid "مشاركة على فيسبوك"
+msgstr "Parvekirin li ser Facebookê"
+
+#: templates/orgs/capacity/org_capacity_details.html:240
+#: templates/orgs/data/detail_data.html:170
+#: templates/orgs/devs/org_dev_details.html:199
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:272
+#: templates/orgs/funding_opport/pers/detail.html:336
+#: templates/orgs/media/media_detail.html:161
+#: templates/orgs/news/orgs_news_detail.html:163
+#: templates/orgs/news/orgs_news_detail.html:178
+#: templates/orgs/rapport/detail_rapport.html:171
+#: templates/orgs/research/detail_research.html:178
+#: templates/orgs/resources/org_job_details.html:277
+msgid "مشاركة على تويتر"
+msgstr "Li Twitter-ê parve bikin"
+
+#: templates/orgs/capacity/org_capacity_details.html:243
+#: templates/orgs/data/detail_data.html:173
+#: templates/orgs/devs/org_dev_details.html:202
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:275
+#: templates/orgs/funding_opport/pers/detail.html:339
+#: templates/orgs/media/media_detail.html:164
+#: templates/orgs/news/orgs_news_detail.html:171
+#: templates/orgs/news/orgs_news_detail.html:181
+#: templates/orgs/rapport/detail_rapport.html:174
+#: templates/orgs/research/detail_research.html:181
+#: templates/orgs/resources/org_job_details.html:280
+msgid "مشاركة على لينكدين"
+msgstr "Li LinkedIn parve bikin"
+
+#: templates/orgs/capacity/org_capacity_details.html:246
+#: templates/orgs/data/detail_data.html:176
+#: templates/orgs/devs/org_dev_details.html:205
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:278
+#: templates/orgs/funding_opport/pers/detail.html:342
+#: templates/orgs/media/media_detail.html:167
+#: templates/orgs/news/orgs_news_detail.html:184
+#: templates/orgs/rapport/detail_rapport.html:177
+#: templates/orgs/research/detail_research.html:184
+#: templates/orgs/resources/org_job_details.html:283
+msgid "مشاركة على واتس اب"
+msgstr "Li Whatsappê parve bikin"
+
+#: templates/orgs/capacity/org_capacity_details.html:260
+msgid "أحدث ثلاثة فرص بناء القدرات"
+msgstr "Sê derfetên çêkirina kapasîteya herî dawî"
 
 #: templates/orgs/capacity/org_edit_capacity.html:4
 msgid " تعديل فرصة بناء القدرات"
-msgstr ""
+msgstr "Serastkirina derfeta avakirina karînan"
 
-#: templates/orgs/capacity/org_edit_capacity.html:10
+#: templates/orgs/capacity/org_edit_capacity.html:11
 msgid "تعديل فرصة بناء القدرات"
-msgstr ""
+msgstr "Serastkirina derfeta avakirina karînan"
 
-#: templates/orgs/capacity/org_edit_capacity.html:61
-#: templates/orgs/funding_opport/orgs/org_edit_funding.html:69
-#: templates/orgs/media/edit_media.html:19
-#: templates/orgs/rapport/edit_rapport.html:18
-#: templates/orgs/research/edit_research.html:20
-#: templates/profiles/org_profile_update.html:11
+#: templates/orgs/capacity/org_edit_capacity.html:66
+#: templates/orgs/funding_opport/orgs/org_edit_funding.html:76
+#: templates/orgs/media/edit_media.html:21
+#: templates/orgs/rapport/edit_rapport.html:21
+#: templates/orgs/research/edit_research.html:22
 msgid "تعديل"
-msgstr ""
+msgstr "Serastkirin"
 
-#: templates/orgs/centre_news.html:3 templates/orgs/centre_news.html:6
-msgid "أخبار المركز"
-msgstr ""
-
-#: templates/orgs/centre_news.html:14 templates/orgs/news/org_add_news.html:4
-#: templates/orgs/news/org_add_news.html:10
-#: templates/orgs/news/orgs_news_news.html:26
-#: templates/orgs/our_news/our_news.html:20
-msgid "إضافة خبر"
-msgstr ""
-
-#: templates/orgs/centre_news.html:20 templates/orgs/centre_news_detail.html:12
-msgid "نص الخبر"
-msgstr ""
-
-#: templates/orgs/centre_news.html:23
-msgid "أضف صورة الخبر"
-msgstr ""
-
-#: templates/orgs/centre_news.html:28
-msgid "أضف"
-msgstr ""
-
-#: templates/orgs/centre_news_detail.html:13
-msgid "تاريخ الخبر"
-msgstr ""
-
-#: templates/orgs/centre_news_detail.html:15
-msgid "مشاركة على فيسبوك"
-msgstr ""
-
-#: templates/orgs/centre_news_detail.html:17
-msgid "عودة إلى صفحة أخبار المركز"
-msgstr ""
-
-#: templates/orgs/data/add_data.html:3 templates/orgs/data/add_data.html:9
-#: templates/orgs/data/data.html:17 templates/orgs/data/data_not_pub.html:19
+#: templates/orgs/data/add_data.html:3 templates/orgs/data/add_data.html:22
+#: templates/orgs/data/data.html:18 templates/orgs/data/data_not_pub.html:23
 msgid "إضافة بيان"
-msgstr ""
+msgstr "Serbarkirina daxuyaniyê"
 
-#: templates/orgs/data/data.html:3 templates/orgs/data/data.html:8
+#: templates/orgs/data/data.html:3 templates/orgs/data/data.html:9
+#: templates/profiles/layout_profile.html:170
 msgid "البيانات"
-msgstr ""
+msgstr "Daxuyanî"
 
-#: templates/orgs/data/data.html:126
+#: templates/orgs/data/data.html:139
 msgid " لا يوجد حالياً بيانات منشورة للمنظمات"
-msgstr ""
+msgstr "Niha daxuyanîne belavkirî yên rêxistinan tunene"
 
 #: templates/orgs/data/data_not_pub.html:3
-#: templates/orgs/data/data_not_pub.html:10
+#: templates/orgs/data/data_not_pub.html:13
 msgid "بيانات قيد الدراسة"
-msgstr ""
+msgstr "Daxuyanîne li jêr xwendinê"
 
-#: templates/orgs/data/data_not_pub.html:123
+#: templates/orgs/data/data_not_pub.html:132
 msgid " لا يوجد حالياً بيانات قيد الدراسة منشورة للمنظمات"
-msgstr ""
+msgstr "Niha daxyuanîne belavkirî yên rêxistinan yên li jêr xwendinê tunene"
 
 #: templates/orgs/data/delete_data.html:3
-#: templates/orgs/data/delete_data.html:10
-#: templates/orgs/data/delete_data.html:18
-#: templates/orgs/data/detail_data.html:67
+#: templates/orgs/data/delete_data.html:11
+#: templates/orgs/data/delete_data.html:19
+#: templates/orgs/data/detail_data.html:52
 msgid "حذف البيان"
-msgstr ""
+msgstr "Jêbirina daxuyaniyê"
 
-#: templates/orgs/data/delete_data.html:12
+#: templates/orgs/data/delete_data.html:13
 msgid "هل أنت متأكد من رغبتك في حذف البيان بعنوان"
 msgstr ""
+"Tu ji xwesteka xwe ji bo jêbirina daxuyaniya bi vê navnîşanê, piştrast î?"
 
 #: templates/orgs/data/detail_data.html:3
-#: templates/orgs/data/detail_data.html:9
+#: templates/orgs/data/detail_data.html:12
 msgid "تفاصيل البيان"
-msgstr ""
+msgstr "Hurguliyên daxuyaniyê"
 
-#: templates/orgs/data/detail_data.html:16
-msgid "اسم اللذي أضاف البيان"
-msgstr ""
-
-#: templates/orgs/data/detail_data.html:20
-msgid "تاريخ إضافة البيان"
-msgstr ""
-
-#: templates/orgs/data/detail_data.html:23
-msgid "محتوى البيان"
-msgstr ""
-
-#: templates/orgs/data/detail_data.html:45
+#: templates/orgs/data/detail_data.html:34
 msgid "الموافقة على نشر البيان"
-msgstr ""
+msgstr "Erêkirin li ser belavkirina daxuyaniyê"
 
-#: templates/orgs/data/detail_data.html:52
+#: templates/orgs/data/detail_data.html:43
 msgid "إلغاء نشر البيان"
-msgstr ""
+msgstr "Ji belavkirina daxuyaniyê vegere"
 
-#: templates/orgs/data/detail_data.html:63 templates/orgs/data/edit_data.html:3
-#: templates/orgs/data/edit_data.html:8
+#: templates/orgs/data/detail_data.html:49
+#: templates/orgs/data/detail_data.html:60 templates/orgs/data/edit_data.html:3
+#: templates/orgs/data/edit_data.html:9
 msgid "تعديل البيان"
-msgstr ""
+msgstr "Serastkirina daxuyaniyê"
 
-#: templates/orgs/devs/dev_not_pub.html:67
-msgid "لا يوجد حالياً دليل تطوير"
-msgstr ""
+#: templates/orgs/data/detail_data.html:93
+msgid "تاريخ إضافة البيان"
+msgstr "Dîroka serbarkirina daxuyaniyê"
 
-#: templates/orgs/devs/org_add_dev.html:10
+#: templates/orgs/data/detail_data.html:118
+msgid "اسم الذي أضاف البيان"
+msgstr "Navê kesê ku daxuyanî serbar kiriye"
+
+#: templates/orgs/data/detail_data.html:132
+msgid "محتوى البيان"
+msgstr "Naveroka daxuyaniyê"
+
+#: templates/orgs/data/detail_data.html:142
+msgid "للاطلاع على البيان"
+msgstr "Ku daxuyaniyê bibînin"
+
+#: templates/orgs/data/detail_data.html:190
+msgid "أحدث ثلاثة بيانات"
+msgstr "Sê daxuyaniyê herî paşîn"
+
+#: templates/orgs/data/detail_data.html:201
+msgid "لعرض ملف المحتوى , ادخل على التفاصيل"
+msgstr "Ji bo dîtina pelê naverokê, hûrguliyan têkevinê"
+
+#: templates/orgs/devs/dev_not_pub.html:4
+#: templates/orgs/devs/dev_not_pub.html:13 templates/orgs/devs/org_devs.html:30
+#: templates/orgs/devs/org_devs.html:33
+msgid "دليل التطوير قيد الدراسة"
+msgstr "Rêbernameya pêşxistinê yên li jêr xwendinê"
+
+#: templates/orgs/devs/dev_not_pub.html:21 templates/orgs/devs/org_devs.html:19
+msgid "اضافة دليل التطوير"
+msgstr "Serbarkirina rêbernameya pêşxistinê"
+
+#: templates/orgs/devs/dev_not_pub.html:134
+msgid "لا يوجد حالياً دليل تطوير منشور من قبل المنظمات قيد الدراسة"
+msgstr ""
+"Vêga tu rêbernameyek pêşkeftinê ya ku ji hêla rêxistinên ku vekolîn ve hatî "
+"weşandin tune"
+
+#: templates/orgs/devs/org_add_dev.html:12
 msgid "اضافة دليل تطوير"
-msgstr ""
+msgstr "Serbarkirina rêbernameyeke pêşxistinê"
 
-#: templates/orgs/devs/org_add_dev.html:42
+#: templates/orgs/devs/org_add_dev.html:58
 msgid "انشر دليل التطوير"
-msgstr ""
+msgstr "Rêbernameya pêşxistinê belav bike"
 
 #: templates/orgs/devs/org_dev_delete.html:4
 msgid "حذف الدليل"
-msgstr ""
-
-#: templates/orgs/devs/org_dev_delete.html:10
-msgid "حذف دليل التطوير"
-msgstr ""
+msgstr "Jêbirina rêbernameyê"
 
 #: templates/orgs/devs/org_dev_delete.html:12
+msgid "حذف دليل التطوير"
+msgstr "Jêbirina rêbernameya pêşxistinê"
+
+#: templates/orgs/devs/org_dev_delete.html:14
 msgid "هل أنت متأكد من رغبتك في حذف دليل التطوير بعنوان"
 msgstr ""
+"Tu ji xwesteka xwe ji bo jêbirina rêbernameya pêşxistinê ya bi vê navnîşanê, "
+"piştrast î?"
 
 #: templates/orgs/devs/org_dev_details.html:3
-#: templates/orgs/devs/org_dev_details.html:7
-msgid "تفاصيل دليل التطوير"
-msgstr ""
-
 #: templates/orgs/devs/org_dev_details.html:12
-msgid "اسم اللذي أضاف  تفاصيل دليل التطوير"
-msgstr ""
+msgid "تفاصيل دليل التطوير"
+msgstr "Hurguliyên rêbernameya pêşxistinê"
 
-#: templates/orgs/devs/org_dev_details.html:22
-msgid "  تاريخ الإضافة "
-msgstr ""
-
-#: templates/orgs/devs/org_dev_details.html:30
-msgid "عنوان"
-msgstr ""
-
-#: templates/orgs/devs/org_dev_details.html:31
-msgid "وصف الدليل"
-msgstr ""
-
-#: templates/orgs/devs/org_dev_details.html:44
-msgid "المادة"
-msgstr ""
-
-#: templates/orgs/devs/org_dev_details.html:67
-msgid "الموافقة على النشر "
-msgstr ""
-
-#: templates/orgs/devs/org_dev_details.html:74
-msgid "إلغاء نشر الدليل"
-msgstr ""
+#: templates/orgs/devs/org_dev_details.html:49
+#: templates/orgs/devs/org_dev_details.html:60
+msgid "تعديل الدليل"
+msgstr "Serastkirina rêbernameyê"
 
 #: templates/orgs/devs/org_dev_details.html:85
-msgid "تعديل الدليل"
-msgstr ""
+msgid "عنوان"
+msgstr "Sernav"
 
-#: templates/orgs/devs/org_devs.html:20
-msgid "اضافة دليل التطوير"
-msgstr ""
+#: templates/orgs/devs/org_dev_details.html:93
+#: templates/orgs/research/detail_research.html:91
+msgid "  تاريخ الإضافة "
+msgstr "Dîroka serbarkirinê"
 
-#: templates/orgs/devs/org_devs.html:32
-msgid "دليل التطوير قيد الدراسة"
-msgstr ""
+#: templates/orgs/devs/org_dev_details.html:130
+msgid "اسم الذي أضاف دليل التطوير"
+msgstr "Navê kesê / a ku rêberê pêşveçûnê zêde kir"
 
-#: templates/orgs/devs/org_devs.html:130
+#: templates/orgs/devs/org_dev_details.html:168
+msgid "تاريخ الإعداد أو النشر أو التأليف"
+msgstr "Dîroka amadekirin, weşandin an nivîsandinê"
+
+#: templates/orgs/devs/org_dev_details.html:227
+msgid "أحدث ثلاثة دليل تطوير"
+msgstr "Sê rêberê pêşveçûna herî dawî"
+
+#: templates/orgs/devs/org_devs.html:139
 msgid "لا يوجد حالياً دليل تطوير منشور من قبل المنظمات"
-msgstr ""
+msgstr "Niha rêbernameyeke pêşxistinê belavkirî ji aliyê rêxistinan ve tunene"
 
 #: templates/orgs/devs/org_edit_dev.html:4
-#: templates/orgs/devs/org_edit_dev.html:10
-#: templates/orgs/devs/org_edit_dev.html:45
+#: templates/orgs/devs/org_edit_dev.html:11
+#: templates/orgs/devs/org_edit_dev.html:51
 msgid "تعديل دليل التطوير"
-msgstr ""
+msgstr "Serastkirina rêbernameya pêşxistinê"
 
-#: templates/orgs/funding_opport/funding.html:25
+#: templates/orgs/funding_opport/funding.html:27
 #: templates/orgs/funding_opport/orgs/org_funding.html:4
-#: templates/orgs/funding_opport/orgs/org_funding.html:10
+#: templates/orgs/funding_opport/orgs/org_funding.html:11
 msgid "فرص تمويل المنظمات"
-msgstr ""
+msgstr "Derfetên diravpêdana rêxistinan"
 
-#: templates/orgs/funding_opport/funding.html:30
+#: templates/orgs/funding_opport/funding.html:33
 msgid "فرص تمويل الأفراد"
-msgstr ""
+msgstr "Derfetên diravpêdana kesan"
 
 #: templates/orgs/funding_opport/orgs/fundings_not_pub.html:4
-#: templates/orgs/funding_opport/orgs/fundings_not_pub.html:10
-#: templates/orgs/funding_opport/orgs/org_funding.html:33
-#: templates/orgs/funding_opport/pers/pub.html:31
+#: templates/orgs/funding_opport/orgs/fundings_not_pub.html:13
+#: templates/orgs/funding_opport/orgs/org_funding.html:31
+#: templates/orgs/funding_opport/orgs/org_funding.html:34
+#: templates/orgs/funding_opport/pers/pub.html:30
+#: templates/orgs/funding_opport/pers/pub.html:33
 msgid "فرص التمويل قيد الدراسة"
-msgstr ""
+msgstr "Derfetên diravpêdanê yên li jêr xwendinê"
 
-#: templates/orgs/funding_opport/orgs/fundings_not_pub.html:76
-msgid "لا يوجد حالياً فرص فرص تمويل للموافقة على النشر"
-msgstr ""
-
-#: templates/orgs/funding_opport/orgs/org_add_funding.html:10
-#: templates/orgs/funding_opport/orgs/org_funding.html:21
-#: templates/orgs/funding_opport/pers/not_pub.html:20
-#: templates/orgs/funding_opport/pers/pub.html:19
+#: templates/orgs/funding_opport/orgs/fundings_not_pub.html:22
+#: templates/orgs/funding_opport/orgs/org_add_funding.html:12
+#: templates/orgs/funding_opport/orgs/org_funding.html:20
+#: templates/orgs/funding_opport/pers/not_pub.html:22
+#: templates/orgs/funding_opport/pers/pub.html:20
 msgid "اضافة فرصة تمويل"
-msgstr ""
+msgstr "Serbarkirina derfeteke diravpêdanê"
 
-#: templates/orgs/funding_opport/orgs/org_add_funding.html:67
+#: templates/orgs/funding_opport/orgs/fundings_not_pub.html:135
+msgid "لا يوجد حالياً فرص تمويل للموافقة على النشر"
+msgstr "Vêga ji bo erêkirina weşanê ti derfetên darayî tune"
+
+#: templates/orgs/funding_opport/orgs/org_add_funding.html:4
+msgid "إضافة فرصة تمويل"
+msgstr "Serbarkirina derfeteke diravpêdanê"
+
+#: templates/orgs/funding_opport/orgs/org_add_funding.html:75
 msgid "اضافة"
-msgstr ""
+msgstr "Serbarkirin"
 
 #: templates/orgs/funding_opport/orgs/org_edit_funding.html:4
-#: templates/orgs/funding_opport/orgs/org_edit_funding.html:10
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:124
-#: templates/orgs/funding_opport/pers/detail.html:170
+#: templates/orgs/funding_opport/orgs/org_edit_funding.html:11
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:48
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:59
+#: templates/orgs/funding_opport/pers/detail.html:50
+#: templates/orgs/funding_opport/pers/detail.html:62
 msgid "تعديل فرصة التمويل"
-msgstr ""
+msgstr "Serastkirina derfeta diravpêdanê"
 
-#: templates/orgs/funding_opport/orgs/org_funding.html:135
+#: templates/orgs/funding_opport/orgs/org_funding.html:140
 msgid "لا يوجد حالياً فرص تمويل منشورة من قبل المنظمات"
-msgstr ""
+msgstr "Niha derfetine diravpêdanê belavkirî ji aliyê rêxistinan ve tunene"
 
 #: templates/orgs/funding_opport/orgs/org_funding_delete.html:4
-#: templates/orgs/funding_opport/orgs/org_funding_delete.html:10
-msgid "حذف فرصة التمويل"
-msgstr ""
-
 #: templates/orgs/funding_opport/orgs/org_funding_delete.html:12
-#: templates/orgs/funding_opport/pers/delete.html:13
+msgid "حذف فرصة التمويل"
+msgstr "Jêbirina derfeta diravpêdanê"
+
+#: templates/orgs/funding_opport/orgs/org_funding_delete.html:14
 msgid "هل أنت متأكد من رغبتك في حذف فرصة التمويل بعنوان"
 msgstr ""
+"Tu ji xwesteka xwe ji bo jêbirina derfeta diravpêdanê ya bi vê navnîşanê, "
+"piştrast î?"
 
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:3
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:7
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:11
 msgid "تفاصيل فرصة التمويل"
-msgstr ""
+msgstr "Hurguliyên derfeta diravpêdanê"
 
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:40
-#: templates/orgs/funding_opport/pers/detail.html:43
-msgid "اسم اللذي أضاف فرصة التمويل"
-msgstr ""
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:132
+#: templates/orgs/funding_opport/pers/detail.html:133
+msgid "اسم الذي أضاف فرصة التمويل"
+msgstr "Navê kesê ku derfeta diravpêdanê serbar kiriye"
 
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:76
-#: templates/orgs/funding_opport/pers/detail.html:118
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:291
 msgid "أحدث فرص تمويل المنظمات"
-msgstr ""
-
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:104
-#: templates/orgs/funding_opport/pers/detail.html:149
-#: templates/orgs/resources/org_job_details.html:126
-#: templates/orgs/resources/org_job_details.html:127
-msgid "الموافقة على النشر"
-msgstr ""
-
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:113
-#: templates/orgs/funding_opport/pers/detail.html:157
-msgid "إلغاء نشر فرصة التمويل"
-msgstr ""
-
-#: templates/orgs/funding_opport/pers/add.html:4
-#: templates/orgs/funding_opport/pers/add.html:10
-#: templates/orgs/funding_opport/pers/add.html:83
-msgid "إضافة فرصة تمويل للأفراد"
-msgstr ""
+msgstr "Nûtirîn derfetên diravpêdana rêxistinan"
 
 #: templates/orgs/funding_opport/pers/delete.html:4
-#: templates/orgs/funding_opport/pers/delete.html:11
+#: templates/orgs/funding_opport/pers/delete.html:13
 msgid "حذف فرصة تمويل للأفراد"
-msgstr ""
+msgstr "Jêbirina derfeta diravpêdanê ji bo kesan"
+
+#: templates/orgs/funding_opport/pers/delete.html:15
+msgid "هل أنت متأكد من رغبتك في حذف فرصة التمويل"
+msgstr "Ma hûn pê ewle ne ku hûn dixwazin fersenda darayî jê bikin?"
 
 #: templates/orgs/funding_opport/pers/detail.html:4
-#: templates/orgs/funding_opport/pers/detail.html:10
+#: templates/orgs/funding_opport/pers/detail.html:13
 msgid "تفاصيل فرصة تمويل للأفراد"
-msgstr ""
+msgstr "Hurguliyên derfeta diravpêdanê ji bo kesan"
+
+#: templates/orgs/funding_opport/pers/detail.html:355
+msgid "أحدث ثلاثة فرص تمويل للأفراد"
+msgstr "Sê derfetên fînansê yên herî paşîn ji bo kesan"
 
 #: templates/orgs/funding_opport/pers/edit.html:4
-#: templates/orgs/funding_opport/pers/edit.html:10
-#: templates/orgs/funding_opport/pers/edit.html:80
+#: templates/orgs/funding_opport/pers/edit.html:11
+#: templates/orgs/funding_opport/pers/edit.html:85
 msgid "تعديل فرصة تمويل للأفراد"
-msgstr ""
+msgstr "Serastkirina derfeta diravpêdanê ji bo kesan"
 
 #: templates/orgs/funding_opport/pers/not_pub.html:4
-#: templates/orgs/funding_opport/pers/not_pub.html:10
+#: templates/orgs/funding_opport/pers/not_pub.html:13
 msgid "فرص التمويل للأفراد للموافقة على النشر"
-msgstr ""
+msgstr "Derfeta diravpêdanê ji bo kesan ji bo erêkirin li ser belavkirinê"
 
-#: templates/orgs/funding_opport/pers/not_pub.html:133
-#: templates/orgs/funding_opport/pers/pub.html:137
+#: templates/orgs/funding_opport/pers/not_pub.html:134
+#: templates/orgs/funding_opport/pers/pub.html:139
 msgid "لا يوجد حالياً فرص للأفراد تمويل منشورة من قبل المنظمات"
 msgstr ""
+"Niha derfetine diravpêdanê ji bo kesan belavkirî ji aliyê rêxistinan ve "
+"tunene"
 
 #: templates/orgs/funding_opport/pers/pub.html:4
-#: templates/orgs/funding_opport/pers/pub.html:10
+#: templates/orgs/funding_opport/pers/pub.html:11
 msgid "فرص التمويل للأفراد"
-msgstr ""
+msgstr "Derfetên diravpêdanê ji bo kesan"
 
 #: templates/orgs/guid/orgs_guid_conf_pub.html:3
-#: templates/orgs/guid/orgs_guid_conf_pub.html:10
+#: templates/orgs/guid/orgs_guid_conf_pub.html:16
 msgid "قائمة دليل المجتمع المدني للموافقة على النشر"
-msgstr ""
+msgstr "Lîsta naveroka civaka sivîl ji bo erêkirin li ser belavkirinê"
 
-#: templates/orgs/guid/orgs_guid_conf_pub.html:33
-#: templates/orgs/guid/orgs_guide.html:140 templates/orgs/home.html:197
-#: templates/profiles/orgs_orders_etude.html:32
-#: templates/profiles/orgs_orders_published.html:32
-msgid "للمزيد عن المنظمة"
-msgstr ""
-
-#: templates/orgs/guid/orgs_guid_conf_pub.html:79
-msgid "حالياً لا يوجد طلبات للمنظمات للموافقة عليها"
-msgstr ""
-
-#: templates/orgs/guid/orgs_guid_conf_pub.html:80
-msgid "عودة إلى صفحة دليل المنظمات"
-msgstr ""
-
-#: templates/orgs/guid/orgs_guide.html:58 templates/orgs/news/orgs_news.html:45
-#: templates/orgs/resources/org_recources.html:51
-msgid "إقراء المزيد"
-msgstr ""
-
-#: templates/orgs/guid/orgs_guide.html:67
+#: templates/orgs/guid/orgs_guid_conf_pub.html:19
+#: templates/orgs/guid/orgs_guide.html:62
 msgid "قائمة منظمات المجتمع المدني"
-msgstr ""
+msgstr "Lîsta rêxistinên civaka sivîl"
 
-#: templates/orgs/guid/orgs_guide.html:84
-msgid "طلبات اشتراك المنظمات قيد الدراسة"
-msgstr ""
+#: templates/orgs/guid/orgs_guid_conf_pub.html:26
+#: templates/orgs/guid/orgs_guide.html:70
+#: templates/profiles/org_profile_form.html:25
+msgid "تقديم طلب اشتراك"
+msgstr "Pêşkêşkirina daxwaznameya bejdariyê"
 
-#: templates/orgs/guid/orgs_guide.html:171
+#: templates/orgs/guid/orgs_guid_conf_pub.html:93
+#: templates/orgs/guid/orgs_guide.html:153 templates/orgs/home.html:147
+#: templates/profiles/orgs_orders_etude.html:34
+#: templates/profiles/orgs_orders_published.html:33
+msgid "للمزيد عن المنظمة"
+msgstr "Bihtir derbarê rêxistinê"
+
+#: templates/orgs/guid/orgs_guid_conf_pub.html:125
+#: templates/orgs/guid/orgs_guide.html:185
 msgid "إجمالي عدد المنظمات"
-msgstr ""
+msgstr "Tevahiya hejmara rêxistinan"
 
-#: templates/orgs/guid/orgs_guide.html:188
-#: templates/profiles/orgs_orders_published.html:79
+#: templates/orgs/guid/orgs_guid_conf_pub.html:142
+msgid "حالياً لا يوجد طلبات للمنظمات للموافقة عليها"
+msgstr "Niha daxwaznamene rêxistinan ji bo erêkirin li ser belavkirinê tunene"
+
+#: templates/orgs/guid/orgs_guide.html:54
+#: templates/orgs/news/orgs_news.html:113
+#: templates/orgs/resources/org_recources.html:106
+msgid "إقراء المزيد"
+msgstr "Bihtir bixwîne"
+
+#: templates/orgs/guid/orgs_guide.html:83
+#: templates/orgs/guid/orgs_guide.html:88
+msgid "طلبات اشتراك المنظمات قيد الدراسة"
+msgstr "Daxwaznameyên bejdariyê yên rêxistinan yên li jêr xwendinê"
+
+#: templates/orgs/guid/orgs_guide.html:125
+msgid "كافة المنظمات"
+msgstr "Hemî rêxistin"
+
+#: templates/orgs/guid/orgs_guide.html:202
+#: templates/profiles/orgs_orders_published.html:81
 msgid "حالياً لا يوجد منظمات مسجله او موافق عليها"
-msgstr ""
+msgstr "Niha rêxistinine tomarkirî yan erêkirî tunene"
 
 #: templates/orgs/guid/orgs_guide_filter.html:2
 msgid "دليل المجتمع المدني بحسب مجال العمل"
-msgstr ""
+msgstr "Naveroka civaka sivîl li gorî warê kar"
 
-#: templates/orgs/home.html:180
+#: templates/orgs/home.html:130
 msgid "المنظمات المضافة حديثاً"
-msgstr ""
+msgstr "Rêxistinên nû hatine serbarkirin"
 
-#: templates/orgs/home.html:219
+#: templates/orgs/home.html:171
 msgid "أحدث اﻷخبار"
-msgstr ""
+msgstr "Dawîn nûçe"
 
-#: templates/orgs/home.html:234
+#: templates/orgs/home.html:186
 msgid "للمزيد عن الخبر"
-msgstr ""
+msgstr "Bihtir li ser nûçeyê"
+
+#: templates/orgs/home.html:208
+msgid "أحدث فرص العمل"
+msgstr "Nûtirîn derfetên kar"
+
+#: templates/orgs/home.html:221
+msgid "للمزيد عن فرصة العمل"
+msgstr "Bihtir derbarê derfeta kar"
+
+#: templates/orgs/home.html:243
+msgid "أحدث فرص بناء القدرات"
+msgstr "Nûtirîn derfetên avakirina karînan"
 
 #: templates/orgs/home.html:256
-msgid "أحدث فرص العمل"
-msgstr ""
-
-#: templates/orgs/home.html:269
-msgid "للمزيد عن فرصة العمل"
-msgstr ""
-
-#: templates/orgs/home.html:291
-msgid "أحدث فرص بناء القدرات"
-msgstr ""
-
-#: templates/orgs/home.html:304
 msgid "للمزيد عن فرصة بناء القدرات"
-msgstr ""
+msgstr "Bihtir derbarê derfeta avakirina karînan"
 
-#: templates/orgs/home.html:345 templates/register/signe-up.html:104
+#: templates/orgs/home.html:297 templates/register/signe-up.html:34
 msgid "اشترك"
-msgstr ""
+msgstr "Bejdar bibe"
 
-#: templates/orgs/media/add_media.html:3 templates/orgs/media/add_media.html:9
-#: templates/orgs/media/media.html:18
-#: templates/orgs/media/media_not_pub.html:18
+#: templates/orgs/media/add_media.html:3 templates/orgs/media/add_media.html:22
+#: templates/orgs/media/media.html:19
+#: templates/orgs/media/media_not_pub.html:21
 msgid "إضافة محتوى سمعي و بصري"
-msgstr ""
+msgstr "Serbarkirina naverokeke bihîstinî û dîtinî"
 
-#: templates/orgs/media/add_media.html:20
-#: templates/orgs/rapport/add_rapport.html:18
-#: templates/orgs/research/add_research.html:20
+#: templates/orgs/media/add_media.html:34
+#: templates/orgs/rapport/add_rapport.html:34
+#: templates/orgs/research/add_research.html:25
 msgid "إضافة"
-msgstr ""
+msgstr "Serbarkirin"
 
 #: templates/orgs/media/delete_media.html:3
-#: templates/orgs/media/delete_media.html:10
+#: templates/orgs/media/delete_media.html:11
 msgid "حذف المحتوى السمعي و البصري"
-msgstr ""
+msgstr "Jêbirina naveroka bihîstinî û dîtinî "
 
-#: templates/orgs/media/delete_media.html:12
+#: templates/orgs/media/delete_media.html:13
 msgid "هل أنت متأكد من رغبتك في حذف المحتوى بعنوان"
 msgstr ""
+"Tu ji xwesteka xwe ji bo jêbirina naveroka bi vê navnîşanê, piştrast î?"
 
-#: templates/orgs/media/delete_media.html:18
-#: templates/orgs/media/media_detail.html:68
+#: templates/orgs/media/delete_media.html:19
+#: templates/orgs/media/media_detail.html:52
 msgid "حذف المحتوى"
-msgstr ""
+msgstr "Jêbirina naverokê"
 
 #: templates/orgs/media/edit_media.html:3
-#: templates/orgs/media/edit_media.html:8
+#: templates/orgs/media/edit_media.html:9
 msgid "تعديل المحتوى السمعي و البصري"
-msgstr ""
+msgstr "Serastkirina naveroka bihîstinî û dîtinî "
 
-#: templates/orgs/media/media.html:3 templates/orgs/media/media.html:9
+#: templates/orgs/media/media.html:3 templates/orgs/media/media.html:10
 msgid "المحتوى السمعي و البصري"
-msgstr ""
+msgstr "Naveroka bihîstinî û dîtinî"
 
-#: templates/orgs/media/media.html:127
+#: templates/orgs/media/media.html:139
 msgid " لا يوجد حالياً محتوى سمعي و بصري منشور من قبل المنظمات"
 msgstr ""
+"Niha naverokeke bihîstinî û dîtinî  belavkirî ji aliyê rêxistinan ve tunene"
 
 #: templates/orgs/media/media_detail.html:3
-#: templates/orgs/media/media_detail.html:9
+#: templates/orgs/media/media_detail.html:12
 msgid "تفاصيل المحتوى السمعي والبصري"
-msgstr ""
+msgstr "Hurguliyên naveroka bihîstinî û dîtinî"
 
-#: templates/orgs/media/media_detail.html:16
-msgid "اسم اللذي أضاف المحتوى"
-msgstr ""
-
-#: templates/orgs/media/media_detail.html:20
-msgid "تاريخ إضافة المحتوى"
-msgstr ""
-
-#: templates/orgs/media/media_detail.html:24
-msgid "مضمون المحتوى السمعي و البصري"
-msgstr ""
-
-#: templates/orgs/media/media_detail.html:46
+#: templates/orgs/media/media_detail.html:34
 msgid "الموافقة على نشر المحتوى"
-msgstr ""
+msgstr "Erêkirin li ser belavkirina naverokê"
 
-#: templates/orgs/media/media_detail.html:53
+#: templates/orgs/media/media_detail.html:43
 msgid "إلغاء نشر المحتوى"
-msgstr ""
+msgstr "Ji belavkirina naverokê vegere"
 
-#: templates/orgs/media/media_detail.html:64
+#: templates/orgs/media/media_detail.html:49
+#: templates/orgs/media/media_detail.html:60
 msgid "تعديل المحتوى"
-msgstr ""
+msgstr "Serastkirina naverokê"
+
+#: templates/orgs/media/media_detail.html:91
+msgid "تاريخ إضافة المحتوى"
+msgstr "Dîroka serbarkirina naverokê"
+
+#: templates/orgs/media/media_detail.html:116
+msgid "اسم الذي أضاف المحتوى"
+msgstr "Navê kesê ku naverok serbar kiriye"
+
+#: templates/orgs/media/media_detail.html:124
+msgid "مضمون المحتوى السمعي و البصري"
+msgstr "Hurguliyên naveroka bihîstinî û dîtinî"
+
+#: templates/orgs/media/media_detail.html:179
+msgid "أحدث ثلاثة محتوى سمعي و بصري"
+msgstr "Sê paşiya naveroka bihîst-dîtbarî"
 
 #: templates/orgs/media/media_not_pub.html:3
-#: templates/orgs/media/media_not_pub.html:9
+#: templates/orgs/media/media_not_pub.html:12
 msgid "المحتوى السمعي و البصري قيد الدراسة"
-msgstr ""
+msgstr "Naveroka bihîstinî û dîtinî ya li jêr xwendinê"
 
-#: templates/orgs/media/media_not_pub.html:122
+#: templates/orgs/media/media_not_pub.html:132
 msgid ""
 "لا يوجد حالياً محتوى سمعي و بصري منشور من قبل المنظمات للموافقة على النشر"
 msgstr ""
+"Niha naverokeke bihîstinî û dîtinî  belavkirî ji aliyê rêxistinan ve ji bo "
+"erêkirin li ser belavkirinê tunene"
 
-#: templates/orgs/news/org_add_news.html:32
+#: templates/orgs/news/org_add_news.html:4
+#: templates/orgs/news/org_add_news.html:23
+#: templates/orgs/news/org_news_not_pub.html:26
+#: templates/orgs/news/orgs_news_news.html:23
+#: templates/orgs/our_news/our_news.html:21
+#: templates/orgs/our_news/our_news_not_pub.html:26
+msgid "إضافة خبر"
+msgstr "Serbarkirina nûçeyekê"
+
+#: templates/orgs/news/org_add_news.html:50
 msgid "انشر الخبر"
-msgstr ""
+msgstr "Nûçeyê belav bike"
 
 #: templates/orgs/news/org_edit_news.html:4
-#: templates/orgs/news/org_edit_news.html:10
+#: templates/orgs/news/org_edit_news.html:11
 msgid "تعديل خبر"
-msgstr ""
+msgstr "Serastkirina nûçeyekê"
 
-#: templates/orgs/news/org_edit_news.html:34
-#: templates/orgs/news/orgs_news_detail.html:85
+#: templates/orgs/news/org_edit_news.html:40
+#: templates/orgs/news/orgs_news_detail.html:56
+#: templates/orgs/news/orgs_news_detail.html:68
 msgid "تعديل الخبر"
-msgstr ""
+msgstr "Serastkirina nûçeyê"
 
 #: templates/orgs/news/org_news_delete.html:4
 #: templates/orgs/news/org_news_delete.html:10
 msgid "حذف خبر"
-msgstr ""
+msgstr "Jêbirina nûçeyekê"
 
-#: templates/orgs/news/org_news_delete.html:12
+#: templates/orgs/news/org_news_delete.html:13
 msgid "هل أنت متأكد من رغبتك في حذف الخبر بعنوان "
-msgstr ""
+msgstr "Tu ji xwesteka xwe ji bo jêbirina nûçeya bi vê navnîşanê, piştrast î?"
 
-#: templates/orgs/news/org_news_delete.html:18
-#: templates/orgs/news/orgs_news_detail.html:89
+#: templates/orgs/news/org_news_delete.html:19
+#: templates/orgs/news/orgs_news_detail.html:60
 msgid "حذف الخبر"
-msgstr ""
+msgstr "Jêbirina nûçeyê"
 
-#: templates/orgs/news/org_news_not_pub.html:70
+#: templates/orgs/news/org_news_not_pub.html:137
+#: templates/orgs/our_news/our_news_not_pub.html:137
 msgid "لا يوجد حالياً أخبار للموافقة على النشر"
-msgstr ""
-
-#: templates/orgs/news/orgs_news_detail.html:19
-msgid "تاريخ إضافة الخبر"
-msgstr ""
-
-#: templates/orgs/news/orgs_news_detail.html:26
-msgid "اسم اللذي أضاف الخبر"
-msgstr ""
+msgstr "Niha nûçe ji bo erêkirin li ser belavkirinê tunene"
 
 #: templates/orgs/news/orgs_news_detail.html:41
-msgid "أحدث ثلاثة أخبار"
-msgstr ""
-
-#: templates/orgs/news/orgs_news_detail.html:67
 msgid "الموافقة على نشر الخبر"
-msgstr ""
+msgstr "Erêkirin li ser belavkirina nûçeyê"
 
-#: templates/orgs/news/orgs_news_news.html:130
-#: templates/orgs/rapport/rapport.html:131
+#: templates/orgs/news/orgs_news_detail.html:50
+msgid "إلغاء نشر الخبر"
+msgstr "Ji belavkirina nûçeyê vegere"
+
+#: templates/orgs/news/orgs_news_detail.html:99
+msgid "تاريخ إضافة الخبر"
+msgstr "Dîroka serbarkirina nûçeyê"
+
+#: templates/orgs/news/orgs_news_detail.html:123
+msgid "اسم الذي أضاف الخبر"
+msgstr "Navê kesê ku nûçe serbar kiriye"
+
+#: templates/orgs/news/orgs_news_detail.html:205
+msgid "أحدث ثلاثة أخبار"
+msgstr "Nûtirîn sê nûçe"
+
+#: templates/orgs/news/orgs_news_news.html:146
+#: templates/orgs/rapport/rapport.html:147
 msgid "لا يوجد حالياً أخبار منشورة للمنظمات"
-msgstr ""
+msgstr "Niha nûçene belavkirî ji aliyê rêxistinan ve tunene"
+
+#: templates/orgs/our_news/friend_invite.html:6
+#: templates/orgs/our_news/friend_invite.html:11
+msgid "دعوة صديق"
+msgstr "Hevalek vexwendin"
+
+#: templates/orgs/our_news/friend_invite.html:30
+msgid "إرسال دعوة"
+msgstr "vexwendinê bişînin"
 
 #: templates/orgs/our_news/our_news.html:4
+#: templates/orgs/our_news/our_news.html:11
 msgid "اخبار البوابة"
-msgstr ""
-
-#: templates/orgs/our_news/our_news.html:10
-msgid "اخبار البوابة "
-msgstr ""
+msgstr "Nûçeyên derwazeyê"
 
 #: templates/orgs/our_news/our_news.html:32
+#: templates/orgs/our_news/our_news.html:36
 msgid "أخبار البوابةقيد الدراسة"
-msgstr ""
+msgstr "Nûçeyên derwazeyê yên li jêr xwendinê"
 
-#: templates/orgs/our_news/our_news.html:129
+#: templates/orgs/our_news/our_news.html:140
 msgid "لا يوجد حالياً أخبار جديدة عن البوابة"
-msgstr ""
-
-#: templates/orgs/politic.html:86
-msgid "عودة إلى الصفحة الرئيسية"
-msgstr ""
+msgstr "Niha nûçene nû derbarê derwazeyê tunene"
 
 #: templates/orgs/rapport/add_rapport.html:3
-#: templates/orgs/rapport/add_rapport.html:8
+#: templates/orgs/rapport/add_rapport.html:22
 msgid "إضافة تقرير"
-msgstr ""
+msgstr "Serbarkirina raportekê"
 
 #: templates/orgs/rapport/delete_rapport.html:3
-#: templates/orgs/rapport/delete_rapport.html:8
-#: templates/orgs/rapport/delete_rapport.html:16
-#: templates/orgs/rapport/detail_rapport.html:71
-msgid "حذف التقرير"
-msgstr ""
-
 #: templates/orgs/rapport/delete_rapport.html:10
+#: templates/orgs/rapport/delete_rapport.html:18
+#: templates/orgs/rapport/detail_rapport.html:52
+msgid "حذف التقرير"
+msgstr "Jêbirina raportekê"
+
+#: templates/orgs/rapport/delete_rapport.html:12
 msgid "هل أنت متأكد من رغبتك في حذف التقرير بعنوان"
-msgstr ""
+msgstr "Tu ji xwesteka xwe ji bo jêbirina raporta bi vê navnîşanê, piştrast î?"
 
 #: templates/orgs/rapport/detail_rapport.html:3
-#: templates/orgs/rapport/detail_rapport.html:9
+#: templates/orgs/rapport/detail_rapport.html:12
 msgid "تفاصيل التقرير أو الدراسة"
-msgstr ""
+msgstr "Hurguliyên raport yan lêkolînê"
 
-#: templates/orgs/rapport/detail_rapport.html:16
-msgid "اسم اللذي أضاف التقرير"
-msgstr ""
+#: templates/orgs/rapport/detail_rapport.html:34
+msgid "الموافقة على نشر التقرير"
+msgstr "Erêkirin li ser belavkirina raportê"
 
-#: templates/orgs/rapport/detail_rapport.html:20
-msgid "تاريخ إضافة التقرير"
-msgstr ""
-
-#: templates/orgs/rapport/detail_rapport.html:26
-msgid "محتوى التقرير"
-msgstr ""
+#: templates/orgs/rapport/detail_rapport.html:43
+msgid "إلغاء نشر التقرير"
+msgstr "Ji belavkirina raportê vegere"
 
 #: templates/orgs/rapport/detail_rapport.html:49
-msgid "الموافقة على نشر التقرير"
-msgstr ""
-
-#: templates/orgs/rapport/detail_rapport.html:56
-msgid "إلغاء نشر التقرير"
-msgstr ""
-
-#: templates/orgs/rapport/detail_rapport.html:67
+#: templates/orgs/rapport/detail_rapport.html:59
+#: templates/orgs/rapport/detail_rapport.html:60
 #: templates/orgs/rapport/edit_rapport.html:3
-#: templates/orgs/rapport/edit_rapport.html:8
+#: templates/orgs/rapport/edit_rapport.html:9
 msgid "تعديل التقرير"
-msgstr ""
+msgstr "Serastkirina raportê"
 
-#: templates/orgs/rapport/rapport.html:3 templates/orgs/rapport/rapport.html:8
+#: templates/orgs/rapport/detail_rapport.html:95
+msgid "تاريخ إضافة التقرير"
+msgstr "Dîroka serbarkirina raportê"
+
+#: templates/orgs/rapport/detail_rapport.html:116
+msgid "اسم الذي أضاف التقرير"
+msgstr "Navê kesê ku raport serbar kiriye"
+
+#: templates/orgs/rapport/detail_rapport.html:141
+msgid "محتوى التقرير"
+msgstr "Naveroka raportê"
+
+#: templates/orgs/rapport/detail_rapport.html:189
+msgid "أحدث ثلاثة تقارير أو دراسات"
+msgstr "Sê rapor an lêkolînên herî dawî"
+
+#: templates/orgs/rapport/detail_rapport.html:200
+msgid "لعرض ملف التقرير , ادخل على التفاصيل"
+msgstr "Ji bo dîtina pelê raporê, hûrguliyan têkevinê"
+
+#: templates/orgs/rapport/rapport.html:3 templates/orgs/rapport/rapport.html:9
 msgid "التقارير و الدراسات"
-msgstr ""
+msgstr "Raport û lêkolîn"
 
-#: templates/orgs/rapport/rapport.html:18
+#: templates/orgs/rapport/rapport.html:19
+#: templates/orgs/rapport/rapport_not_pub.html:22
 msgid "إضافة تقرير أو دراسة"
-msgstr ""
+msgstr "Serbarkirina raport yan lêkolînekê"
 
-#: templates/orgs/rapport/rapport_not_pub.html:20
-msgid "لقراءة ملف الدراسة يجب الدخول إلى التفاصيل"
-msgstr ""
+#: templates/orgs/rapport/rapport.html:88
+msgid "لعرض ملف التقرير , يرجى النقر على إقراء المزيد"
+msgstr "Ji bo dîtina pelê raporê, ji kerema xwe li Read more bitikînin"
 
-#: templates/orgs/rapport/rapport_not_pub.html:78
+#: templates/orgs/rapport/rapport_not_pub.html:134
 msgid "لا يوجد حالياً تقارير و دراسات للموافقة على النشر"
-msgstr ""
+msgstr "Niha raport yan lêkolîn ji bo erêkirin li ser belavkirinê tunene"
 
 #: templates/orgs/research/add_research.html:3
-#: templates/orgs/research/add_research.html:8
+#: templates/orgs/research/add_research.html:12
 msgid "إضافة بحث"
-msgstr ""
+msgstr "Serbarkirina lêkolînekê"
 
 #: templates/orgs/research/delete_research.html:3
-#: templates/orgs/research/delete_research.html:8
-msgid "حذف البحث الخارجي"
-msgstr ""
-
 #: templates/orgs/research/delete_research.html:10
+msgid "حذف البحث الخارجي"
+msgstr "Jêbirina lêkolîna derveyî"
+
+#: templates/orgs/research/delete_research.html:12
 msgid "هل أنت متأكد من رغبتك في حذف البحث بعنوان"
 msgstr ""
+"Tu ji xwesteka xwe ji bo jêbirina lêkolîna bi vê navnîşanê, piştrast î?"
 
-#: templates/orgs/research/delete_research.html:16
-#: templates/orgs/research/detail_research.html:72
+#: templates/orgs/research/delete_research.html:18
 msgid "حذف البحث"
-msgstr ""
+msgstr "Jêbirina lêkolînê"
 
 #: templates/orgs/research/detail_research.html:3
-#: templates/orgs/research/detail_research.html:9
+#: templates/orgs/research/detail_research.html:10
 msgid "تفاصيل البحث الخارجي"
-msgstr ""
+msgstr "Agahdariyên lêgerîna derveyî"
 
-#: templates/orgs/research/detail_research.html:15
-msgid "اسم اللذي أضاف البحث"
-msgstr ""
+#: templates/orgs/research/detail_research.html:41
+msgid "إلغاء نشر البحث الخارجي"
+msgstr "Hurguliyên lêkolîna derveyî"
 
-#: templates/orgs/research/detail_research.html:19
-msgid "تاريخ إضافة البحث"
-msgstr ""
-
-#: templates/orgs/research/detail_research.html:27
-msgid "محتوى البحث"
-msgstr ""
-
-#: templates/orgs/research/detail_research.html:50
-msgid "الموافقة على نشر البحث"
-msgstr ""
-
+#: templates/orgs/research/detail_research.html:47
 #: templates/orgs/research/detail_research.html:57
-msgid "إلغاء نشر البحث"
-msgstr ""
-
-#: templates/orgs/research/detail_research.html:68
 #: templates/orgs/research/edit_research.html:3
-#: templates/orgs/research/edit_research.html:8
+#: templates/orgs/research/edit_research.html:9
 msgid "تعديل البحث"
-msgstr ""
+msgstr "Serastkirina lêkolînê"
+
+#: templates/orgs/research/detail_research.html:115
+msgid "اسم الذي أضاف البحث"
+msgstr "Navê kesê ku lêkolîn serbar kiriye"
+
+#: templates/orgs/research/detail_research.html:151
+msgid "محتوى البحث"
+msgstr "Naveroka lêkolînê"
+
+#: templates/orgs/research/detail_research.html:197
+msgid "أحدث ثلاثة أبحاث خارجية"
+msgstr "Sê lêkolînên derveyî yên herî paşîn"
 
 #: templates/orgs/research/research.html:3
-#: templates/orgs/research/research.html:8
+#: templates/orgs/research/research.html:9
 msgid "اﻷبحاث الخارجية"
-msgstr ""
+msgstr "Lêkolînên derveyî"
 
 #: templates/orgs/research/research.html:18
-#: templates/orgs/research/research_not_pub.html:18
+#: templates/orgs/research/research_not_pub.html:22
 msgid "إضافة بحث خارجي"
-msgstr ""
+msgstr "Serbarkirina lêkolîneke derveyî"
 
-#: templates/orgs/research/research.html:133
+#: templates/orgs/research/research.html:140
 msgid "لا يوجد حالياً أبحاث خارجية منشورة للمنظمات"
-msgstr ""
+msgstr "Niha lêkolînine derveyî belavkirî ji aliyê rêxistinan ve tunene"
 
 #: templates/orgs/research/research_not_pub.html:3
-#: templates/orgs/research/research_not_pub.html:8
+#: templates/orgs/research/research_not_pub.html:12
 msgid "اﻷبحاث الخارجية قيد الدراسة"
-msgstr ""
+msgstr " Lêkolînên derveyî yên li jêr xwendinê"
 
-#: templates/orgs/research/research_not_pub.html:126
+#: templates/orgs/research/research_not_pub.html:134
 msgid "لا يوجد حالياً أبحاث خارجية قيد الدراسة"
-msgstr ""
+msgstr " Lêkolînine derveyî yên li jêr xwendinê tunene"
 
 #: templates/orgs/resources/jobs_not_pub.html:4
-#: templates/orgs/resources/jobs_not_pub.html:10
+#: templates/orgs/resources/jobs_not_pub.html:15
 #: templates/orgs/resources/org_jobs.html:31
+#: templates/orgs/resources/org_jobs.html:34
 msgid "فرص العمل قيد الدراسة"
-msgstr ""
+msgstr "Derfetên kar yên li jêr xwendinê"
 
-#: templates/orgs/resources/jobs_not_pub.html:61
-#: templates/orgs/resources/org_jobs.html:117
+#: templates/orgs/resources/jobs_not_pub.html:129
+#: templates/orgs/resources/org_jobs.html:124
 msgid "اسم العمل"
-msgstr ""
+msgstr "Navê kar"
 
-#: templates/orgs/resources/jobs_not_pub.html:67
-#: templates/orgs/resources/org_job_details.html:91
-#: templates/orgs/resources/org_jobs.html:123
+#: templates/orgs/resources/jobs_not_pub.html:135
+#: templates/orgs/resources/org_job_details.html:222
+#: templates/orgs/resources/org_jobs.html:130
 msgid "مدة العمل"
-msgstr ""
+msgstr "Dema kar"
 
-#: templates/orgs/resources/jobs_not_pub.html:70
-#: templates/orgs/resources/org_jobs.html:126
+#: templates/orgs/resources/jobs_not_pub.html:139
+#: templates/orgs/resources/org_job_details.html:228
+#: templates/orgs/resources/org_jobs.html:134
+msgid "شهر"
+msgstr "Meh"
+
+#: templates/orgs/resources/jobs_not_pub.html:141
+#: templates/orgs/resources/org_job_details.html:230
+#: templates/orgs/resources/org_jobs.html:136
 msgid "أشهر"
-msgstr ""
+msgstr "meh"
 
-#: templates/orgs/resources/jobs_not_pub.html:123
+#: templates/orgs/resources/jobs_not_pub.html:196
 msgid "لا يوجد حالياً فرص عمل للموافقة على النشر"
-msgstr ""
+msgstr "Niha derfetine kar ji bo erêkirin li ser belavkirinê tunene"
 
-#: templates/orgs/resources/org_add_job.html:69
+#: templates/orgs/resources/org_add_job.html:78
 msgid "انشر فرصة العمل"
-msgstr ""
+msgstr "Derfeta kar belav bike"
 
 #: templates/orgs/resources/org_edit_job.html:4
-#: templates/orgs/resources/org_edit_job.html:10
-#: templates/orgs/resources/org_edit_job.html:72
-#: templates/orgs/resources/org_job_details.html:150
+#: templates/orgs/resources/org_edit_job.html:11
+#: templates/orgs/resources/org_edit_job.html:79
+#: templates/orgs/resources/org_job_details.html:52
+#: templates/orgs/resources/org_job_details.html:62
 msgid "تعديل فرصة عمل"
-msgstr ""
+msgstr "Serastkirina derfeta kar"
 
 #: templates/orgs/resources/org_job_delete.html:4
-#: templates/orgs/resources/org_job_delete.html:10
-msgid "حذف فرصة عمل"
-msgstr ""
-
 #: templates/orgs/resources/org_job_delete.html:12
+msgid "حذف فرصة عمل"
+msgstr "Jêbirina derfeta kar"
+
+#: templates/orgs/resources/org_job_delete.html:14
 msgid "هل أنت متأكد من رغبتك في حذف فرصة العمل بعنوان "
 msgstr ""
+"Tu ji xwesteka xwe ji bo jêbirina derfeta kar ya bi vê navnîşanê, piştrast î?"
 
 #: templates/orgs/resources/org_job_details.html:3
 msgid "تفاصيل العمل"
-msgstr ""
+msgstr "Hurguliyên kar"
 
-#: templates/orgs/resources/org_job_details.html:7
+#: templates/orgs/resources/org_job_details.html:13
 msgid " تفاصيل العمل"
-msgstr ""
+msgstr "Hurguliyên kar"
 
-#: templates/orgs/resources/org_job_details.html:10
-msgid "اسم فرصة العمل"
-msgstr ""
-
-#: templates/orgs/resources/org_job_details.html:53
-msgid "اسم اللذي أضاف فرصة العمل"
-msgstr ""
-
-#: templates/orgs/resources/org_job_details.html:68
-msgid "وصف فرصة العمل"
-msgstr ""
-
-#: templates/orgs/resources/org_job_details.html:74
-msgid "المدينة"
-msgstr ""
-
-#: templates/orgs/resources/org_job_details.html:100
-msgid "الخبرة المطلوبة"
-msgstr ""
-
-#: templates/orgs/resources/org_job_details.html:105
-msgid "تاريخ إغلاق التقدم للوظيفة"
-msgstr ""
-
-#: templates/orgs/resources/org_job_details.html:136
-#: templates/orgs/resources/org_job_details.html:138
+#: templates/orgs/resources/org_job_details.html:46
 msgid "إلغاء نشر فرصة العمل"
-msgstr ""
+msgstr "Ji belavkirina derfeta kar vegere"
 
-#: templates/orgs/resources/org_jobs.html:181
+#: templates/orgs/resources/org_job_details.html:87
+msgid "اسم فرصة العمل"
+msgstr "Navê derfeta kar"
+
+#: templates/orgs/resources/org_job_details.html:149
+msgid "اسم الذي أضاف فرصة العمل"
+msgstr "Navê kesê derfeta kar serbar kiriye"
+
+#: templates/orgs/resources/org_job_details.html:178
+msgid "وصف فرصة العمل"
+msgstr "Danasîna derfeta kar"
+
+#: templates/orgs/resources/org_job_details.html:240
+msgid "الخبرة المطلوبة"
+msgstr "Şarezahî pêwist e"
+
+#: templates/orgs/resources/org_job_details.html:249
+msgid "تاريخ إغلاق التقدم للوظيفة"
+msgstr "Dîroka daxistina pêşkêşkirinê li ser fermanberiyê"
+
+#: templates/orgs/resources/org_job_details.html:295
+msgid "أحدث ثلاثة فرص عمل"
+msgstr "Sê derfetên kar ên herî dawî"
+
+#: templates/orgs/resources/org_jobs.html:191
 msgid "لا يوجد حالياً فرص عمل"
-msgstr ""
+msgstr "Niha derfetên kar tunene"
 
 #: templates/orgs/resources/org_recources.html:5
 #: templates/orgs/resources/org_recources.html:12
 msgid "مصادر المجتمع المدني"
-msgstr ""
+msgstr "Jêderên civaka sivîl"
 
-#: templates/orgs/resources/org_recources.html:59
+#: templates/orgs/resources/org_recources.html:114
 msgid "المصادر"
-msgstr ""
+msgstr "Jêder"
 
-#: templates/profiles/layout_profile.html:27
+#: templates/profiles/layout_profile.html:29
 msgid "تعديل ملفي الشخصي"
-msgstr ""
+msgstr "Serastkirina dosiyaya kesayetî"
 
-#: templates/profiles/layout_profile.html:63
-msgid "عدد الاخبار المنشورة"
-msgstr ""
+#: templates/profiles/layout_profile.html:35
+msgid "دعوة منظمة للاشتراك"
+msgstr "Banga rêxistinî ji bo beşdarbûnê"
 
-#: templates/profiles/layout_profile.html:87
-msgid "عدد المنظمات"
-msgstr ""
+#: templates/profiles/layout_profile.html:49
+msgid "فرز حسب التاريخ و اسم المنظمة"
+msgstr "Li gorî tarîx û navê rêxistinê rêz bikin"
 
-#: templates/profiles/layout_profile.html:88
-msgid "عدد الاخبار"
-msgstr ""
+#: templates/profiles/layout_profile.html:53
+msgid "فرز حسب التاريخ"
+msgstr "Li gorî tarîxê rêz bikin"
 
-#: templates/profiles/layout_profile.html:89
-msgid " عدد التقارير"
-msgstr ""
+#: templates/profiles/layout_profile.html:55
+msgid "إضافة مستخدم جديد"
+msgstr "Bikarhênerek nû lê zêde bike"
 
-#: templates/profiles/layout_profile.html:90
-msgid " عدد البيانات"
-msgstr ""
-
-#: templates/profiles/layout_profile.html:91
-msgid " عدد سمعي بصري"
-msgstr ""
-
-#: templates/profiles/layout_profile.html:92
-msgid " عدد الابحاث"
-msgstr ""
-
-#: templates/profiles/layout_profile.html:93
-msgid " عدد فرص العمل"
-msgstr ""
-
-#: templates/profiles/layout_profile.html:94
-msgid " عدد فرص التمويل"
-msgstr ""
-
-#: templates/profiles/layout_profile.html:95
-msgid " عدد فرص بناء القدرات"
-msgstr ""
-
-#: templates/profiles/layout_profile.html:96
-msgid " عدد فرص دليل التطوير"
-msgstr ""
-
-#: templates/profiles/layout_profile.html:97
+#: templates/profiles/layout_profile.html:78
 #: templates/profiles/layout_profile.html:98
-msgid " عدد الاخبار المنشورة من البوابة"
-msgstr ""
+msgid "كافة النتائج"
+msgstr "Hemî encam"
 
-#: templates/profiles/layout_profile.html:157
-msgid "invite org"
-msgstr ""
+#: templates/profiles/layout_profile.html:113
+msgid "البوابة باﻷرقام"
+msgstr "De portal li hejmara "
+
+#: templates/profiles/layout_profile.html:126
+msgid "المنظمات"
+msgstr "Rêxistin"
+
+#: templates/profiles/layout_profile.html:135
+msgid "الاخبار"
+msgstr "Nûçe"
+
+#: templates/profiles/layout_profile.html:144
+msgid " فرص العمل"
+msgstr "Chancesansên kar"
+
+#: templates/profiles/layout_profile.html:161
+msgid "التقارير"
+msgstr "Rapor"
+
+#: templates/profiles/layout_profile.html:179
+msgid " اﻷبحاث"
+msgstr "vekolîn"
+
+#: templates/profiles/layout_profile.html:216
+msgid "فرص دليل التطوير"
+msgstr "Derfetên rêberê geşedanê"
+
+#: templates/profiles/layout_profile.html:233
+msgid "الاخبار المنشورة من البوابة"
+msgstr "Nûçeyên ji portalê hatine weşandin"
+
+#: templates/profiles/layout_profile.html:277
+msgid "عدد الاخبار المنشورة"
+msgstr "Hejmara nûçeyên belavbûyî"
+
+#: templates/profiles/layout_profile.html:288
+msgid " عدد سمعي بصري"
+msgstr "Hejmara bihîstinî û dîtinî"
+
+#: templates/profiles/layout_profile.html:294
+#: templates/profiles/layout_profile.html:297
+msgid " عدد الاخبار المنشورة من البوابة"
+msgstr "Hejmara nûçeyên ji derwazeyê hatine belavkirin"
 
 #: templates/profiles/org_profile_delete.html:4
-#: templates/profiles/org_profile_delete.html:10
-#: templates/profiles/org_profile_delete.html:18
-msgid "حذف الملف"
-msgstr ""
-
 #: templates/profiles/org_profile_delete.html:12
-msgid "هل أنت متأكد من رغبتك في حذف الملف الشخصي"
-msgstr ""
+#: templates/profiles/org_profile_delete.html:20
+msgid "حذف الملف"
+msgstr "Jêbirina dosiya"
 
-#: templates/profiles/org_profile_delete.html:31
+#: templates/profiles/org_profile_delete.html:14
+msgid "هل أنت متأكد من رغبتك في حذف الملف الشخصي"
+msgstr "Tu piştrastî ku tu dixwazî dosiyaya kesayetî jê bibî?"
+
+#: templates/profiles/org_profile_delete.html:34
 msgid "لا يوجد لديك الصلاحية للدخول إلى هذه الصفحة"
-msgstr ""
+msgstr "Te desthilat ji bo derbasbûna vê rûpelê tuneye"
 
 #: templates/profiles/org_profile_form.html:4
 msgid "اتمام الملف الشخصي للمنظمة"
-msgstr ""
+msgstr "Timamkirina dosiyaya kesayetî ya rêxistinê"
 
-#: templates/profiles/org_profile_form.html:8
-msgid "تقديم طلب اشتراك"
-msgstr ""
-
-#: templates/profiles/org_profile_form.html:24
-#: templates/profiles/org_profile_form.html:30
-#: templates/profiles/org_profile_form.html:36
-#: templates/profiles/org_profile_form.html:65
+#: templates/profiles/org_profile_form.html:41
+#: templates/profiles/org_profile_form.html:47
+#: templates/profiles/org_profile_form.html:53
+#: templates/profiles/org_profile_form.html:83
+#: templates/profiles/org_profile_update.html:34
+#: templates/profiles/org_profile_update.html:40
+#: templates/profiles/org_profile_update.html:46
+#: templates/profiles/org_profile_update.html:81
 msgid "هذا الحقل لا يقبل أقل من 3 حروف و لا يقبل اﻷحرف الخاصه و الرموز"
-msgstr ""
+msgstr "Ev valahî kêmtir ji sê tîpan û tîpên taybet û nîşanan napejirîne"
+
+#: templates/profiles/org_profile_form.html:194
+#: templates/profiles/org_profile_form.html:214
+msgid "إضافة مكان العمل"
+msgstr "Cihê kar lê zêde bikin"
 
 #: templates/profiles/org_profile_update.html:2
-#: templates/profiles/org_profile_update.html:5
+#: templates/profiles/org_profile_update.html:18
 msgid "تعديل الملف الشخصي للمنظمة"
-msgstr ""
+msgstr "Serastkirina dosiyaya kesayetî ya rêxistinê"
 
-#: templates/profiles/orgs_orders_etude.html:79
+#: templates/profiles/orgs_orders_etude.html:82
 msgid "حالياً لا يوجد منظمات مسجله او للموافقة عليها"
-msgstr ""
+msgstr "Niha rêxistinên tomarkirî tunene yan li benda erêkirinê"
 
 #: templates/profiles/particip_detail.html:2
-#: templates/profiles/particip_detail.html:5
+#: templates/profiles/particip_detail.html:8
 msgid "تفاصيل المنظمة"
-msgstr ""
+msgstr "Hûrguliyên rêxistinê"
 
-#: templates/profiles/particip_detail.html:80
-msgid "عن المنظمة"
-msgstr ""
-
-#: templates/profiles/particip_detail.html:84
-msgid "معلومات الاتصال بالمنظمة"
-msgstr ""
-
-#: templates/profiles/particip_detail.html:88
-msgid "جديد المنظمة"
-msgstr ""
-
-#: templates/profiles/particip_detail.html:100
-#: templates/profiles/profile.html:55 templates/profiles/staff_profile.html:48
-msgid "معلومات عن المنظمة"
-msgstr ""
-
-#: templates/profiles/particip_detail.html:214
-#: templates/profiles/profile.html:139
-#: templates/profiles/staff_profile.html:132
-msgid "نعم مسجلة"
-msgstr ""
-
-#: templates/profiles/particip_detail.html:216
-#: templates/profiles/profile.html:141
-#: templates/profiles/staff_profile.html:134
-msgid "غير مسجلة"
-msgstr ""
-
-#: templates/profiles/particip_detail.html:284
-#: templates/profiles/profile.html:213
-#: templates/profiles/staff_profile.html:206
-msgid "ليست عضو"
-msgstr ""
-
-#: templates/profiles/particip_detail.html:292
-#: templates/profiles/profile.html:221
-#: templates/profiles/staff_profile.html:214
-msgid "اسم الشبكة أو التحالف"
-msgstr ""
-
-#: templates/profiles/particip_detail.html:307
-msgid "هل تم التحقق من قبل اﻹدارة على أنها منظمة؟"
-msgstr ""
-
-#: templates/profiles/particip_detail.html:312
-msgid "تم التحقق و الموافقة"
-msgstr ""
-
-#: templates/profiles/particip_detail.html:315
-msgid "لم يتم التحقق بعد"
-msgstr ""
-
-#: templates/profiles/particip_detail.html:452
-msgid "أخبار المنظمة"
-msgstr ""
-
-#: templates/profiles/particip_detail.html:459
-msgid "التقارير و الدراسات للمنظمة"
-msgstr ""
-
-#: templates/profiles/particip_detail.html:466
-#: templates/profiles/particip_detail.html:482
-msgid "البيانات للمنظمة"
-msgstr ""
-
-#: templates/profiles/particip_detail.html:474
-msgid "المحتوى السمعي و البصري للمنظمة"
-msgstr ""
-
-#: templates/profiles/particip_detail.html:501
+#: templates/profiles/particip_detail.html:28
 msgid "قبول الطلب"
-msgstr ""
+msgstr "Pejirandina daxwaznameyê"
 
-#: templates/profiles/particip_detail.html:509
+#: templates/profiles/particip_detail.html:37
 msgid "رفض الطلب"
-msgstr ""
+msgstr "Redkirina daxwaznameyê"
 
-#: templates/profiles/particip_detail.html:518
-msgid "حذف الطلب"
-msgstr ""
-
-#: templates/profiles/particip_detail.html:526
-#: templates/profiles/particip_detail.html:539
+#: templates/profiles/particip_detail.html:43
+#: templates/profiles/particip_detail.html:55
 msgid "تعديل الملف الشخصي"
-msgstr ""
+msgstr "Serastkirina dosiyaya kesayetî"
 
-#: templates/profiles/particip_detail.html:534
+#: templates/profiles/particip_detail.html:46
 msgid "حذف الملف الشخصي"
-msgstr ""
+msgstr "Jêbirina dosiyaya kesayetî"
 
-#: templates/profiles/particip_detail.html:550
-#: templates/profiles/profile.html:383 templates/profiles/profile.html:423
-#: templates/profiles/staff_profile.html:400
-msgid "عودة إلى صفحة دليل المجتمع المدني"
-msgstr ""
+#: templates/profiles/particip_detail.html:147
+msgid "اسم الذي أضاف الطلب"
+msgstr "Navê kî daxwazê ​​zêde kir"
+
+#: templates/profiles/particip_detail.html:163
+#: templates/profiles/profile.html:62
+msgid "عن المنظمة"
+msgstr "Derbarê rêxistinê"
+
+#: templates/profiles/particip_detail.html:167
+#: templates/profiles/profile.html:67
+msgid "معلومات الاتصال بالمنظمة"
+msgstr "Zaniyariyên peywendiyê bi rêxistinê"
+
+#: templates/profiles/particip_detail.html:171
+msgid "جديد المنظمة"
+msgstr "Nû li cem rêxistinê"
+
+#: templates/profiles/particip_detail.html:183
+#: templates/profiles/profile.html:79
+msgid "معلومات عن المنظمة"
+msgstr "Zaniyarî li ser rêxistinê"
+
+#: templates/profiles/particip_detail.html:300
+#: templates/profiles/profile.html:203
+msgid "نعم مسجلة"
+msgstr "Belê tomarkirî ye"
+
+#: templates/profiles/particip_detail.html:302
+#: templates/profiles/profile.html:205
+msgid "غير مسجلة"
+msgstr "Ne tomarkirî ye"
+
+#: templates/profiles/particip_detail.html:370
+#: templates/profiles/profile.html:277
+msgid "ليست عضو"
+msgstr "Ne endam e"
+
+#: templates/profiles/particip_detail.html:380
+#: templates/profiles/profile.html:285
+msgid "اسم الشبكة أو التحالف"
+msgstr "Navê tor yan hevpeymaniyê"
+
+#: templates/profiles/particip_detail.html:395
+msgid "هل تم التحقق من قبل اﻹدارة على أنها منظمة؟"
+msgstr "Rêveberiyê piştrast kir ku rêxistin e?"
+
+#: templates/profiles/particip_detail.html:400
+msgid "تم التحقق و الموافقة"
+msgstr "Hat piştrastkirin û erêkirin"
+
+#: templates/profiles/particip_detail.html:403
+msgid "لم يتم التحقق بعد"
+msgstr "Hîn nehatiyê piştrastkirin"
+
+#: templates/profiles/particip_detail.html:560
+msgid "أخبار المنظمة"
+msgstr "Nûçeyên rêxistinê"
+
+#: templates/profiles/particip_detail.html:567
+msgid "التقارير و الدراسات للمنظمة"
+msgstr "Raport û lêkolînên rêxistinê"
+
+#: templates/profiles/particip_detail.html:574
+msgid "البيانات للمنظمة"
+msgstr "Daxuyaniyên rêxistinê"
+
+#: templates/profiles/particip_detail.html:582
+msgid "المحتوى السمعي و البصري للمنظمة"
+msgstr "Naveroka bihîstinî û dîtinî ya rêxistinê"
+
+#: templates/profiles/particip_detail.html:590
+msgid "فرص العمل للمنظمة"
+msgstr "Derfetên kar ji bo rêxistinê"
 
 #: templates/profiles/profile.html:3 templates/profiles/staff_profile.html:3
 msgid "الملف الشخصي"
-msgstr ""
+msgstr "Dosiyaya kesayetî"
 
-#: templates/profiles/profile.html:34 templates/profiles/staff_profile.html:27
+#: templates/profiles/profile.html:47
 msgid "اسم المنظمة المختصر"
-msgstr ""
+msgstr "Navê kurtkirî yê rêxistinê"
 
-#: templates/profiles/profile.html:236
-#: templates/profiles/staff_profile.html:229
+#: templates/profiles/profile.html:300
 msgid "التأكيد من اﻹدارة على أنها منظمة"
-msgstr ""
+msgstr "Piştrastkirin ji rêveberiyê ku ew rêxistin e"
 
-#: templates/profiles/profile.html:241
-#: templates/profiles/staff_profile.html:234
+#: templates/profiles/profile.html:305
 msgid "تمت الموافقة عليها"
-msgstr ""
+msgstr "Erê li ser hat kirin"
 
-#: templates/profiles/profile.html:244
-#: templates/profiles/staff_profile.html:237
+#: templates/profiles/profile.html:308
 msgid "لم يتم التأكيد بعد"
-msgstr ""
+msgstr "Hîn nehatiye piştrastkirin"
 
-#: templates/profiles/profile.html:375
-#: templates/profiles/staff_profile.html:372
+#: templates/profiles/profile.html:440
 msgid "تعديل الطلب"
-msgstr ""
+msgstr "Serastkirina daxwaznameyê"
 
-#: templates/profiles/profile.html:401
+#: templates/profiles/profile.html:450 templates/profiles/profile.html:481
+#: templates/profiles/staff_profile.html:30
+msgid "عودة إلى صفحة دليل المجتمع المدني"
+msgstr "Veger bo rûpela naveroka civaka sivîl"
+
+#: templates/profiles/profile.html:464
 msgid ""
 "رجاءً أتمم ملف المنظمة الشخصي لنتمكن من التحقق من معلوماتكم و تتمكنون من "
 "استخدام الموقع"
 msgstr ""
+"Tikaye, dosiyaya rêxistinê ya kesayetî timam bike da ku em zaniyariyên we "
+"piştrast bikin û hûn bikarin malperê bikar bînin"
 
-#: templates/profiles/profile.html:408
+#: templates/profiles/profile.html:468
 msgid "ملف المنظمة الشخصي"
-msgstr ""
+msgstr "Dosyaya rêxistinê ya kesayetî"
 
-#: templates/profiles/staff_profile.html:385
+#: templates/profiles/staff_profile.html:15
 msgid "تقديم طلب اشتراك لمنظمة"
-msgstr ""
+msgstr "Pêşkêşkirina daxwaznameya bejdariyê ji bo rêxistinekê"
 
 #: templates/register/active.html:5 templates/register/active.html:11
 msgid "تنشيط الحساب"
-msgstr ""
-
-#: templates/register/logged_out.html:5
-msgid "لقد تم تسجيل الخروج بنجاح"
-msgstr ""
-
-#: templates/register/logged_out.html:6
-msgid "يمكنك اﻵن"
-msgstr ""
+msgstr "Çalakkirina hisap"
 
 #: templates/register/logged_out.html:7
-msgid "إعادة تسجيل الدخول"
-msgstr ""
+msgid "لقد تم تسجيل الخروج بنجاح"
+msgstr "Jêderketin bi serkeftî hat tomarkirin"
 
 #: templates/register/logged_out.html:8
-#: templates/register/password_reset.html:18
-#: templates/register/password_reset_complete.html:36
-msgid "الذهاب للصفحة الرئيسية"
-msgstr ""
+msgid "يمكنك اﻵن"
+msgstr "Niha tu dikarî"
 
-#: templates/register/password_change.html:22
+#: templates/register/logged_out.html:9
+msgid "إعادة تسجيل الدخول"
+msgstr "Dubare derbasbûn"
+
+#: templates/register/logged_out.html:10
+#: templates/register/password_reset.html:18
+#: templates/register/password_reset_complete.html:37
+#: templates/register/signe-in.html:13
+msgid "الذهاب للصفحة الرئيسية"
+msgstr "Çûn bo Destpêk"
+
+#: templates/register/password_change.html:23
 msgid "تغيير"
-msgstr ""
+msgstr "Guhertin"
 
 #: templates/register/password_change_done.html:5
-#: templates/register/password_change_done.html:12
+#: templates/register/password_change_done.html:13
 msgid "لقد تم تغيير كلمة المرور بنجاح"
-msgstr ""
+msgstr "Peyva nihênî bi serkeftî hat guhertin"
 
-#: templates/register/password_change_done.html:19
+#: templates/register/password_change_done.html:20
 msgid "يمكنك اﻵن تسجيل الدخول باستخدام كلمة المرور الجديدة"
-msgstr ""
+msgstr "Niha tu dikarî bi peyva nihênî ya nû derbas bibî"
 
 #: templates/register/password_reset.html:6
-#: templates/register/password_reset.html:34
-#: templates/register/password_reset_confirm.html:25
-#: templates/register/signe-in.html:23
+#: templates/register/password_reset.html:35
+#: templates/register/password_reset_confirm.html:26
+#: templates/register/signe-in.html:52
 msgid "إعادة تعيين كلمة المرور"
-msgstr ""
+msgstr "Dubare guhertina peyva nihênî"
 
 #: templates/register/password_reset.html:12
 msgid "لا يمكنك إعادة تعيين كلمة المرور بحال تسجيل الدخول"
-msgstr ""
+msgstr "Eger derbas bibî, tu nikarî peyva nihênî dubare biguherî"
 
 #: templates/register/password_reset.html:23
 msgid "تغيير كلمة السر"
-msgstr ""
+msgstr "Guhertina peyva nihênî"
 
-#: templates/register/password_reset.html:46
+#: templates/register/password_reset.html:47
 msgid "إعادة تعيين"
-msgstr ""
+msgstr "Dubareguhertin"
 
 #: templates/register/password_reset_complete.html:5
-#: templates/register/password_reset_complete.html:13
+#: templates/register/password_reset_complete.html:14
 msgid "لقد تم إعادة تعيين كلمة المرور بنجاح"
-msgstr ""
+msgstr "Peyva nihênî dubare bi serkfetin hat guhertin"
 
-#: templates/register/password_reset_complete.html:25
+#: templates/register/password_reset_complete.html:26
 msgid "يمكنك ﻵن"
-msgstr ""
+msgstr "Niha tu dikarî"
 
-#: templates/register/password_reset_complete.html:27
+#: templates/register/password_reset_complete.html:28
 msgid "تسحيل الدخول"
-msgstr ""
+msgstr "Derbasbûn"
 
-#: templates/register/password_reset_complete.html:31
+#: templates/register/password_reset_complete.html:32
 msgid "أو"
-msgstr ""
+msgstr "Yan"
 
-#: templates/register/password_reset_complete.html:37
+#: templates/register/password_reset_complete.html:38
 #: templates/register/password_reset_done.html:26
 msgid "الصفحة الرئيسية"
-msgstr ""
+msgstr "Destpêk"
 
 #: templates/register/password_reset_confirm.html:6
-#: templates/register/password_reset_confirm.html:13
+#: templates/register/password_reset_confirm.html:14
 msgid "تأكيد إعادة تعيين كلمة المرور"
-msgstr ""
+msgstr "Dubareguhertina peyva nihênî hat piştrastkirin"
 
 #: templates/register/password_reset_done.html:5
 msgid "يتم إعادة تعيين كلمة المرور"
-msgstr ""
+msgstr "Peyva nihênî dubare tê guhertin"
 
 #: templates/register/password_reset_done.html:14
 msgid "لقد تم إرسال بريد الكتروني يتضمن رابط ﻹعادة تعيين كلمة المرور"
 msgstr ""
+"Emailêk hate şandin ku tê de lînkek ji bo dubareguhertina peyva nihînî heye"
 
 #: templates/register/password_reset_done.html:21
 msgid "يمكنك الذهاب إلى"
-msgstr ""
+msgstr "Tu dikarî biçî bo"
 
-#: templates/register/signe-in.html:22
+#: templates/register/signe-in.html:11
+msgid "لقد قمت بتسجيل الدخول مسبقاً , يمكنك الذهاب للصفحة الرئيسية"
+msgstr "Hûn berê xwetêketin, hûn dikarin herin rûpelê malê"
+
+#: templates/register/signe-in.html:51
 msgid "هل نسيت كلمة المرور"
-msgstr ""
+msgstr "Te peyva nihênî ji bîr kiriye?"
 
-#: templates/register/signe-in.html:26
+#: templates/register/signe-in.html:55
 msgid "إذا لم يكن لديك حساب ! يمكنك"
-msgstr ""
+msgstr "Eger hisabê te tuneye ! Tu dikarî"
 
-#: templates/register/signe-in.html:27
+#: templates/register/signe-in.html:56
 msgid "إنشاء حساب"
-msgstr ""
+msgstr "Hisabekî çêke"
 
 #: templates/register/signe-up.html:5
 msgid "أنشاء حساب"
-msgstr ""
+msgstr "Hisabekî çêke"
 
-#: templates/register/signe-up.html:16
+#: templates/register/signe-up.html:17
 msgid "تقديم طلب اشترك"
-msgstr ""
+msgstr "Daxwaznameya bejdariyê"
 
-#: templates/register/signe-up.html:18
+#: templates/register/signe-up.html:20
 msgid "إذا كان لديك حساب يمكنك تسجيل الدخول من هنا"
-msgstr ""
+msgstr "Eger hisabê te heye, tu dikarî li vir derbas bibî"

@@ -21,7 +21,7 @@ class OrgsFilter(django_filters.FilterSet):
         ('Development', _('تنمية و بناء قدرات و ثقافة')),
         ('Law, suport, policy', _('المواطنة و الحوكمة و الديموقراطية و السلام و السياسة')),
         ('Donors and support volunteering', _('اﻷسرة و الجندرة و قضايا المرأة')),
-        ('Religious org', _('المأوى و البنة التحتية')),
+        ('Religious org', _('المأوى و البنى التحتية')),
         ('Prof association and assembles', _('تنسيق و تجمعات المجتمع المدني')),
         ('Health', _('صحة')),
         ('Studies and research', _('دراسات وأبحاث')),
