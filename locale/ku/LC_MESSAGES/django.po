@@ -2717,7 +2717,7 @@ msgid "تاريخ الإعداد أو النشر أو التأليف"
 msgstr "Dîroka amadekirin, weşandin an nivîsandinê"
 
 #: templates/orgs/devs/org_dev_details.html:227
-msgid "أحدث ثلاثة دليل تطوير"
+msgid "أحدث ثلاثة مدخلات"
 msgstr "Sê rêberê pêşveçûna herî dawî"
 
 #: templates/orgs/devs/org_devs.html:139

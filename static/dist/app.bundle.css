@@ -12150,6 +12150,10 @@ body {
   body #about .row:nth-child(odd),
   body #contact .row:nth-child(odd) {
     background-color: #fff; }
+  body .ol_exterior li::marker {
+    font-size: 2rem !important; }
+  body .ol_intern li::marker {
+    font-size: 1rem !important; }
 
 nav {
   background-color: rgba(23, 103, 140, 0.4); }
@@ -12375,7 +12379,7 @@ footer {
     footer .logo img {
       padding: 0.50em;
       position: absolute;
-      top: -114px;
+      top: -149px;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
       width: 120px;

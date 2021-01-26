@@ -1075,5 +1075,17 @@ body {
     }
   }
 
+  .ol_exterior {
+    li::marker {
+      font-size: 2rem !important;
+    }
+  }
+
+  .ol_intern {
+    li::marker {
+      font-size: 1rem !important;
+    }
+  }
+
   
 }

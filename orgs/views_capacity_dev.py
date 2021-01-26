@@ -334,7 +334,7 @@ def dev_edit(request, devs_id):
 
                 messages.success(request, _(
                     'لقد تم تعديل دليل التطوير بنجاح'))
-                return redirect(dev)
+                return redirect(devs)
 
             else:
                 messages.error(request, _(

@@ -138,7 +138,7 @@
     <!-- CONTENT المادة -->
 
     <!-- IF PDF -->
-    {% if dev.get_extension == ".pdf" %}
+    {% if ".pdf" in dev.content.url %}
     <object data="{{ dev.content.url }}" type="application/pdf" title="{{dev.title_dev}}" width="100%" height="885">
       <embed src="{{ dev.content.url  }}">
     </object>
@@ -224,13 +224,14 @@
   {% if devs.count > 0 %}
   <div class="col-lg-3 d-none d-lg-block last3" data-aos="fade-left">
     <h2 class="text-center mb-4 {% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}">
-      {% trans 'أحدث ثلاثة دليل تطوير' %} </h2>
+      {% trans 'أحدث ثلاثة مدخلات' %} </h2>
     {% for dev in devs|slice:3 %}
     <a href="{% url 'devs_detail' dev.id %}" class='bg-light nav-link border-bottom pb-3 mb-2'>
       <div class="news-card">
         <p class="text-dark"> {{ dev.title_dev }} </p>
 
-        {% if not dev.get_extension == ".pdf" %}
+        {% if ".pdf" in dev.content.url %}
+        {% else %}
         <figure>
           <img src="{{ dev.content.url }}" class="w-100" name="{{ dev.title_dev }}" title="{{ dev.title_dev }}"
             alt="{{ dev.title_dev }}">

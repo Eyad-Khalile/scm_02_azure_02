@@ -6,93 +6,239 @@
 {% block content %}
 {% get_current_language as LANGUAGE_CODE %}
 
-<div class="mt-5">
+<div class="mt-5 mb-5 politic_container">
 
     <h1 class="{% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}">{% trans 'سياسة الخصوصية' %}</h1>
 
     {% if LANGUAGE_CODE == 'ar' %}
+    <br>
+    <ol class="ol_exterior">
+        <li>
+            <h2>حقوق الملكية:</h2>
+            <ol class="ol_intern">
+                <li>
+                    كل الحقوق محفوظة لبوابة المجتمع المدني و لا يسمح لادارة البوابة بإعادة الاستخدام أو النشر خارج
+                    البوابة دون
+                    ذكر المصدر
+                </li>
+                <li>
+                    ما لم يذكر خلاف ذلك، إن جميع المواد والمحتوى (بما في ذلك البيانات والأخبار والإحصائيات والدراسات
+                    وفرص العمل
+                    والتمويل والمراجع والأخبار والصور ومن دون حصر محفوظة لإدارة البوابة -إضافة للمنظمة صاحبة المحتوى-
+                    ولا يجوز
+                    استخدامها أو إعادة نشرها دون ذكر المصدر.
+                </li>
+                <li>
+                    وعليه يمنع منعا باتا نسخ أو تعديل أو الاحتفاظ في أنظمة استرجاع أو إعادة إرسال، بأي شكل أو بأي وسيلة
+                    إلكترونية أو ميكانيكية أو غير ذلك، دون ذكر المصدر.
+                </li>
+                <li>
+                    ستتم المحاسبة قانونيا" لكل من يقوم بأي استنساخ أو انتحال المحتوى المنشور على الموقع دون دون ذكر
+                    المصدر و
+                    يعتبر هذا العمل انتهاكا لاتفاقية برن لحماية المصنفات الأدبية والفنية (1886) والمعدلة في باريس لعام
+                    1979.حيث
+                    يحق لإدارة البوابة أو للمنظمة صاحبة المحتوى المتنازع حوله اتخاذ ما يلزم من ملاحقات قانونية بحق الجهة
+                    مرتكبة
+                    الانتهاك
+                </li>
+                <li>
+                    يحق لادارة البوابة نشر أي محتوى يظهر على معرفات المنظمات المسجلة بعد ما لا يقل عن ساعة من النشر
+                    العام.
+                </li>
+            </ol>
+        </li>
 
-    <!-- <p class="text-al-just">ما هو لوريم ايبسوم Lorem ipsum
-        لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت
-        تصاميم
-        مطبوعه ... بروشور او فلاير على سبيل المثال ... او نماذج مواقع انترنت ...
+        <br>
+        <li>
+            <h2>حقوق المنظمات المسجلة:</h2>
+            <ol class="ol_intern">
+                <li>
+                    سيكون لكل منظمة مضافة حسابها الخاص (المحدد من قبلها) الذي يخوّلها نشر معلوماتها ونشاطاتها والتحكّم
+                    بالمعلومات التي تُنشَر على المنصّة.
+                </li>
+                <li>
+                    امكانيّة تحديث ملف المنظمة في بيانات المجتمع المدني.
+                </li>
+                <li>
+                    نشر الوظائف والدعوات والمشاريع، الموارد، البيانات الصحفية، والنشاطات والأخبار
+                </li>
+                <li>
+                    المشاركة في نقاشات والتواصل مع جهات فاعلة أخرى في المجتمع المدني من خلال مجموعات دليل مدني. كما تتاح
+                    لها فرصة الانضمام إلى نقاشات مغلقة وإطلاق حملات ودعوات للتحرك(سيتم تفعليها لاحقاً فور إضافة مساحة
+                    للنقاش).
+                </li>
+            </ol>
+        </li>
 
-        وعند موافقه العميل المبدئيه على التصميم يتم ازالة هذا النص من التصميم ويتم وضع النصوص النهائية المطلوبة للتصميم
-        ويقول البعض ان وضع النصوص التجريبية بالتصميم قد تشغل المشاهد عن وضع الكثير من الملاحظات او الانتقادات للتصميم
-        الاساسي.
+        <br>
+        <li>
+            <h2>القيود والمسؤوليات:</h2>
+            <ol class="ol_intern">
+                <li>
+                    لا تعتبر إدارة البوابة مسؤولاً عن المحتوى المنشور من قِبل أي عضو مسجل على البوابة، وبالتالي فهو غير
+                    مسؤول عن أي محتوى يعتبر غير دقيق، مهين أو غير مناسب أو غير موثوق.
+                </li>
+                <li>
+                    تخلي إدارة البوابة مسؤوليتها عن أي معلومات غير دقيقة أو غير موثوقية أو غير صحيحة مقدمة من قبل
+                    الأعضاء المسجلين.
+                </li>
+                <li>
+                    لا تعتبر إدارة البوابة مسؤولاً عن أي ضرر ناتج عن محتوى المستخدمين أو سلوكهم وبخاصة السلوك غير
+                    القانوني أو غير الأخلاقي.
+                </li>
+                <li>
+                    إدارة البوابة غير مسؤولة عن الوظائف المدرجة في البوابة، وليس لها أي علاقة بعملية التوظيف. يتم التحكم
+                    بهذه العمليات من قبل المنظمات المسجلة بشكل مباشر وتخلي إدارة البوابة مسؤوليتها عن أي خطأ أو ضرر ناجم
+                    عن سوء إدارة عملية التوظيف لأي فرصة منشورة على البوابة.
+                </li>
+                <li>
+                    يحق لإدارة البوابة حذف أي بيانات موجودة في حال وجود مبرر(خطاب كراهية أو عنف أو خطاب تحريض مبني على
+                    أساس جندري أو عرقي أو ديني أو قومي أوطائفي)، ويحق للمتضررين من ذلك الاعتراض بايميل رسمي ويتوجب على
+                    إدارة البوابة بيان سبب الحذف.
+                </li>
+                <li>
+                    كل ما ينشر على البوابة يمثل وجهة نظر المنظمة صاحبة المعلومة ولا يمثل بالضرورة وجهة نظر باقي المنظمات
+                    المسجلة أو الآخرين.
+                </li>
+            </ol>
+        </li>
 
-        وخلافاَ للاعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني الكلاسيكي منذ العام
-        45
-        قبل الميلاد. من كتاب "حول أقاصي الخير والشر"
+        <br>
+        <li>
+            <h2>حقوق الزائرين:</h2>
+            <p>
+                يحق للأفراد الزائرين الإطلاع على كافة البيانات المتاحة بما في ذلك بيانات المنظمات والأخبار والنشاطات
+                والفرص والمراجع لكن لا يحق لهم النشر على البوابة كما يعتبر حق الإطلاع مقيداً بحقوق الملكية وفق ما ذكر
+                أعلاه.
+                <br>
+            </p>
+            <p class="text-center h3">
+                <strong>إن استخدامكم للمنصة يعتبر موافقة ضمنية على مدونة السلوك</strong>
+            </p>
+        </li>
+    </ol>
 
 
-
-        نموذج لوريم ايبسوم عربي - فرانكوا اراب
-
-
-        "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور
-
-        أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا . يوت انيم أد مينيم فينايم,كيواس نوستريد
-
-        أكسير سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس أيا كوممودو كونسيكيوات . ديواس
-
-        أيوتي أريري دولار إن ريبريهينديرأيت فوليوبتاتي فيلايت أيسسي كايلليوم دولار أيو فيجايت
-
-        نيولا باراياتيور. أيكسسيبتيور ساينت أوككايكات كيوبايداتات نون بروايدينت ,سيونت ان كيولبا
-
-        كيو أوفيسيا ديسيريونتموليت انيم أيدي ايست لابوريوم."
-
-        "سيت يتبيرسبايكياتيس يوندي أومنيس أستي ناتيس أيررور سيت فوليبتاتيم أكيسأنتييوم
-
-        دولاريمكيو لايودانتيوم,توتام ريم أبيرأم,أيكيو أبسا كيواي أب أللو أنفينتوري فيرأتاتيس ايت
-
-        كياسي أرشيتيكتو بيتاي فيتاي ديكاتا سيونت أكسبليكابو. نيمو أنيم أبسام فوليوباتاتيم كيواي
-
-        فوليوبتاس سايت أسبيرناتشر أيوت أودايت أيوت فيوجايت, سيد كيواي كونسيكيونتشر ماجناي
-
-        دولارس أيوس كيواي راتاشن فوليوبتاتيم سيكيواي نيسكايونت. نيكيو بوررو كيوايسكيوم
-
-        ايست,كيواي دولوريم ايبسيوم كيوا دولار سايت أميت, كونسيكتيتيور,أديبايسكاي فيلايت, سيد
-
-        كيواي نون نيومكيوام ايايوس موداي تيمبورا انكايديونت يوت لابوري أيت دولار ماجنام
-
-        ألايكيوام كيوايرات فوليوبتاتيم. يوت اينايم أد مينيما فينيام, كيواس نوستريوم أكسيركايتاشيم
-
-        يلامكوربوريس سيوسكايبيت لابورايوسام, نايساي يوت ألايكيوايد أكس أيا كوموداي
-
-        كونسيكيواتشر؟ كيوايس أيوتيم فيل أيوم أيوري ريبريهينديرايت كيواي ان إيا فوليوبتاتي
-
-        فيلايت ايسسي كيوم نايهايل موليستايا كونسيكيواتيو,فيلايليوم كيواي دولوريم أيوم فيوجايات كيو
-
-        فوليوبتاس نيولا باراياتيور؟"
-
-        " أت فيرو ايوس ايت أكيوساميوس ايت أيوستو أودايو دايجنايسسايموس ديوكايميوس كيواي
-
-        بلاندايتاييس برايسينتايوم فوليوبتاتيوم ديلينايتاي أتكيوي كورريوبتاي كيوأوس دولوريس أيت
-
-        سيما يليكيوسيونت ان كيولبا كيواي أوفايكيا ديسيريونت موللايتايا انايماي, أيدي ايست لابوريوم
-
-        دايستا ينستايو. نام لايبيرو تيمبور, كيوم سوليوتا نوبايس ايست ايلاجينداي أوبتايو كيومكيوي
-
-        نايهايل ايمبيدايت كيو ماينيوس ايدي كيوود ماكسهيمي بلاسايت فاسيري بوسسايميوس,أومنايس
-
-        فوليوبتاس ايت ايوت أسسيو ميندايست, أومنيوس دولار ريبيللينديوس. تيمبورايبيوس أيوتيم
-
-        كيواس موليستاياس أكسكيبتيوراي ساينت أوككايكاتاي كيبايدايتات نون بروفايدنت
-
-        أيت دولوريوم فيوجا.ايت هاريوم كيوايديم ريريوم فاكايلايسايست ايت أكسبيدايتا
-
-        كيوايبيوسدام ايت أوت
-
-        أوففايكايس ديبايتايس أيوت ريريوم نيسيسسايتاتايبيوس سايبي ايفينايت يوت ايت فوليبتاتيس
-
-        ريبيودايايانداي ساينت ايت موليسفاياي نون ريكيوسانداي.اتاكيوي ايريوم ريريوم هايس تينيتور
-
-        أ ساباينتي ديليكتيوس, يوت أيوت رياسايندايس فوليوبتاتايبص مايوريس ألايس
-
-        كونسيكيواتور أيوت بيرفيريندايس دولورايبيوس أسبيرايوريس ريبيللات .</p> -->
 
     {% elif LANGUAGE_CODE == 'en' %}
+    <br>
+    <ol class="ol_exterior">
+        <li>
+            <h2>Property Rights:</h2>
+            <ol class="ol_intern">
+                <li>
+                    All rights reserved to the Civil Society gateway. The gateway administration is not allowed to
+                    re-use or publish outside
+                    the gateway without mentioning the source.
+                </li>
+                <li>
+                    Unless otherwise indicated, all materials and content (including data, news, statistics, studies,
+                    job opportunities, financing, references, news and photos, without limitation are reserved to the
+                    gateway administration - in addition to the organization that owns the content - and it does not
+                    allow to be used or re-published without mentioning the source.
+                </li>
+                <li>
+                    According to what mentioned above, it is strictly forbidden to copy, modify or maintain systems of
+                    retrieval or re-transmission, in any form or by any electronic, mechanical or other means, without
+                    mentioning the source.
+                </li>
+                <li>
+                    Any person who performs any reproduction or impersonation of the content published on the gateway
+                    without mentioning the source will be held legally accountable. This work is considered a violation
+                    of the Berne Convention for the Protection of Literary and Artistic Works (1886), as amended in
+                    Paris in 1979, where the administration of the gateway or the organization that owns the disputed
+                    content is entitled to Concerning him to take the necessary legal prosecutions against the party
+                    that committed the violation
+                </li>
+                <li>
+                    The gateway administration has the right to publish any content that show on the identifiers of
+                    registered organizations at least an hour after public publication.
+                </li>
+            </ol>
+        </li>
+
+        <br>
+        <li>
+            <h2>Rights of registered organizations:</h2>
+            <ol class="ol_intern">
+                <li>
+                    Each registered organization will have its own account (that defined by it) that authorizes it to
+                    publish its information and activities and to control the information that is published on the
+                    platform
+                </li>
+                <li>
+                    The possibility of updating the organization's file in the civil society index on the gateway
+                </li>
+                <li>
+                    Publish jobs, invitations, projects, resources, press statements, activities and news
+                </li>
+                <li>
+                    Participate in discussions and communicate with other actors in civil society through civil
+                    directory groups. It also has the opportunity to join closed discussions and launch campaigns and
+                    calls for action (they will be activated later when a space for discussion will be added).
+                </li>
+            </ol>
+        </li>
+
+        <br>
+        <li>
+            <h2>Limitations and Responsibilities:</h2>
+            <ol class="ol_intern">
+                <li>
+                    The gateway administration is not considered responsible for the content posted by any registered
+                    member on the gateway, and therefore it is not responsible for any content deemed inaccurate,
+                    insulting, inappropriate or unreliable
+                </li>
+                <li>
+                    The gateway administration disclaims its responsibility for any inaccurate, unreliable or incorrect
+                    information provided by the registered members
+                </li>
+                <li>
+                    The gateway administration is not considered responsible for any damage resulting from users
+                    ’content or behavior, especially illegal or unethical behavior.
+                </li>
+                <li>
+                    The gateway administration is not responsible for the jobs listed on the portal, and has no
+                    relationship to the recruitment process. These operations are controlled by those registered
+                    organizations the directly, and the gateway administration disclaims its responsibility for any
+                    error or damage resulting from mismanagement of the recruitment process for any opportunity
+                    published on the gateway.
+                </li>
+                <li>
+                    The gateway administration has the right to delete any existing data in the event of a justification
+                    (hate speech, violence, or incitement speech based on gender, ethnic, religious, national, or
+                    sectarian grounds). Those affected by that have the right to object by an official email, and the
+                    gateway administration must explain the reason for the deletion.
+                </li>
+                <li>
+                    All of what published on the gateway represents the viewpoint of the information-possessing
+                    organization and does not necessarily represent the view of the rest of the registered organizations
+                    or others.
+                </li>
+            </ol>
+        </li>
+
+        <br>
+        <li>
+            <h2>Rights of the Visitors:</h2>
+            <p>
+                The visitors have the right to view all available data, including organizations' data, news, activities,
+                opportunities, and references, but they are not entitled to publish on the gateway, and the right of
+                access is restricted to property rights according to what was mentioned above.
+                <br>
+            </p>
+            <p class="text-center h3">
+                <strong>Your use of the gateway constitutes an implied acceptance of the Code of Conduct</strong>
+            </p>
+        </li>
+    </ol>
+
+
+
+
+
+
+    {% elif LANGUAGE_CODE == 'ku' %}
     <h2>Comming soon :)</h2>
 
     {% endif %}

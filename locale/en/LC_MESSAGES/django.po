@@ -2712,7 +2712,7 @@ msgid "تاريخ الإعداد أو النشر أو التأليف"
 msgstr "Date created, published, or authored"
 
 #: templates/orgs/devs/org_dev_details.html:227
-msgid "أحدث ثلاثة دليل تطوير"
+msgid "أحدث ثلاثة مدخلات"
 msgstr "The latest three development guides"
 
 #: templates/orgs/devs/org_devs.html:139
@@ -3503,7 +3503,7 @@ msgstr "About The Organisation"
 #: templates/profiles/particip_detail.html:167
 #: templates/profiles/profile.html:67
 msgid "معلومات الاتصال بالمنظمة"
-msgstr "Contact Information With The Organisation "
+msgstr "Contact Information"
 
 #: templates/profiles/particip_detail.html:171
 msgid "جديد المنظمة"
