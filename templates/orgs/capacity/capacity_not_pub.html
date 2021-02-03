@@ -82,7 +82,18 @@
 
                 <h3 class="mt-4">
                     {% if capacity.org_name %}
-                    {{ capacity.org_name }}
+                    <img src="{{ capacity.org_name.logo.url }}" name="{{ capacity.org_name }}"
+                        title="{{ capacity.org_name }}" alt="{{ capacity.org_name }}" width="140" height="140"
+                        class="img-circle">
+                        {% if LANGUAGE_CODE != 'ar' %}
+                        {% if capacity.org_name.name_en_ku %}
+                        <h3 class="">{{ capacity.org_name.name_en_ku }}</h3>
+                        {% else %}
+                        <h3 class="">{{ capacity.org_name }}</h3>
+                        {% endif %}
+                        {% elif LANGUAGE_CODE == 'ar' %}
+                        <h3 class="">{{ capacity.org_name }}</h3>
+                        {% endif %}
                     {% else %}
                     {{ capacity.name_capacity }}
                     {% endif %}

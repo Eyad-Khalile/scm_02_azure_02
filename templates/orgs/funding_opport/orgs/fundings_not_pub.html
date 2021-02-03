@@ -78,7 +78,20 @@
                         alt="{% if funding.org_name %} {{ funding.org_name }} {% else %} {{ funding.name_funding }} {% endif %}"
                         width="140" height="140" class="img-circle"></a>
 
-                <h3 class="mt-4">{% if funding.org_name %} {{ funding.org_name }} {% else %}
+                <h3 class="mt-4">
+                    {% if funding.org_name %} 
+                    
+                    {% if LANGUAGE_CODE != 'ar' %}
+                    {% if funding.org_name.name_en_ku %}
+                    {{ funding.org_name.name_en_ku }}
+                    {% else %}
+                    {{ funding.org_name }}
+                    {% endif %}
+                    {% elif LANGUAGE_CODE == 'ar' %}
+                    {{ funding.org_name }}
+                    {% endif %}
+
+                    {% else %}
                     {{ funding.name_funding }}
                     {% endif %}</h3>
 

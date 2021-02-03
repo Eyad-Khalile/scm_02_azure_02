@@ -18,6 +18,11 @@ $('form#fill_form').find('#id_message').blur(function () {
         $('#message_alert').removeClass('d-none');
     }
 });
+$('form#fill_form').find('#id_message_en').blur(function () {
+    if ($(this).val().length < 3) {
+        $('#message_en_alert').removeClass('d-none');
+    }
+});
 
 // var forms = document.getElementsByClassName('form');
 // // Loop over them and prevent submission

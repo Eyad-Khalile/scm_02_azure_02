@@ -71,7 +71,7 @@
             {% endfor %}
         </div>
 
-        
+
 
         <hr class="d-none d-xl-block">
 
@@ -81,15 +81,24 @@
                 {% trans 'هذا الحقل لا يقبل أقل من 3 حروف و لا يقبل اﻷحرف الخاصه و الرموز' %}
             </div>
         </div>
+        <div>
+            {{ form.message_en|as_crispy_field | safe }}
+            <div class="alert alert-warning d-none" id="message_en_alert" role="alert">
+                {% trans 'هذا الحقل لا يقبل أقل من 3 حروف و لا يقبل اﻷحرف الخاصه و الرموز' %}
+            </div>
+        </div>
 
 
 
         <div class="row">
-            <div class="form-group col-xl-6">
+            <div class="form-group col-xl-4">
                 {{ form.name_managing_director|as_crispy_field }}
             </div>
-            <div class="form-group col-xl-6">
+            <div class="form-group col-xl-4">
                 {{ form.name_ceo|as_crispy_field }}
+            </div>
+            <div class="form-group col-xl-4">
+                {{ form.name_ceo_en|as_crispy_field }}
             </div>
         </div>
 
@@ -177,12 +186,15 @@
 
         <hr class="d-none d-xl-block">
 
+        <div class="form-group">
+            {{ form.org_member_with|as_crispy_field }}
+        </div>
         <div class="row">
             <div class="form-group col-xl-6">
-                {{ form.org_member_with|as_crispy_field }}
+                {{ form.coalition_name|as_crispy_field }}
             </div>
             <div class="form-group col-xl-6">
-                {{ form.coalition_name|as_crispy_field }}
+                {{ form.coalition_name_en|as_crispy_field }}
             </div>
         </div>
 

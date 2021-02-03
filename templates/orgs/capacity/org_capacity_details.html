@@ -107,8 +107,17 @@
             </span>
             <span class="col-9">
                 {% if capacity.org_name %}
-                <a href="{% url 'particip_detail' capacity.org_name.id %}" class="nav-link text-dark pl-0 pr-0">:
-                    {{ capacity.org_name }}</a>
+                <a href="{% url 'particip_detail' capacity.org_name.id %}" class="nav-link text-dark pl-0 pr-0">
+                        {% if LANGUAGE_CODE != 'ar' %}
+                        {% if capacity.org_name.name_en_ku %}
+                        <h3 class="">{{ capacity.org_name.name_en_ku }}</h3>
+                        {% else %}
+                        <h3 class="">{{ capacity.org_name }}</h3>
+                        {% endif %}
+                        {% elif LANGUAGE_CODE == 'ar' %}
+                        <h3 class="">{{ capacity.org_name }}</h3>
+                        {% endif %}
+                </a>
                 {% else %}
                 : {{ capacity.name_capacity }}
                 {% endif %}

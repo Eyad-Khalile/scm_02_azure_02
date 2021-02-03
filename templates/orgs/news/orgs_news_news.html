@@ -92,8 +92,17 @@
             <center class="mt-3">
                 <a href="{% url 'news_detail' new.id %}">
                     <img src="{{ new.image.url }}" name="{{ new.title }}" title="{{ new.title }}" alt="{{ new.title }}"
-                        width="140" height="140" class="img-circle"></a>
+                        width="140" height="140" class="img-circle">
+                </a>
+                {% if LANGUAGE_CODE != 'ar' %}
+                    {% if new.org_name.name_en_ku %}
+                    <h3 class="mt-4">{{ new.org_name.name_en_ku }}</h3>
+                    {% else %}
+                    <h3 class="mt-4">{{ new.org_name }}</h3>
+                    {% endif %}
+                {% elif LANGUAGE_CODE == 'ar' %}
                 <h3 class="mt-4">{{ new.org_name }}</h3>
+                {% endif %}
                 <p class="font-weight-bold">{{ new.title }}</p>
                 <!-- <p>{{ new.content|safe|truncatechars:80 }}</p> -->
                 <p>

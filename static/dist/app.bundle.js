@@ -26745,6 +26745,11 @@ $('form#fill_form').find('#id_message').blur(function () {
   if ($(this).val().length < 3) {
     $('#message_alert').removeClass('d-none');
   }
+});
+$('form#fill_form').find('#id_message_en').blur(function () {
+  if ($(this).val().length < 3) {
+    $('#message_en_alert').removeClass('d-none');
+  }
 }); // var forms = document.getElementsByClassName('form');
 // // Loop over them and prevent submission
 // var validation = Array.prototype.filter.call(forms, function (form) {
@@ -27234,6 +27239,8 @@ $('#add_more_vio').click(function () {
   //         }
   //     });
   // });
+  // ORG PROFILE WORK PLACE LABEL
+  // $('label[for=id_position__position_work]').html('{% trans "مكان العمل" %}');
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 

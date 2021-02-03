@@ -180,8 +180,10 @@ class OrgProfileForm(forms.ModelForm):
             # 'city_work',
             'logo',
             'message',
+            'message_en',
             'name_managing_director',
             'name_ceo',
+            'name_ceo_en',
             'site_web',
             'facebook',
             'twitter',
@@ -200,6 +202,7 @@ class OrgProfileForm(forms.ModelForm):
             'w_polic_regulations',
             'org_member_with',
             'coalition_name',
+            'coalition_name_en',
         ]
 
     # FUNCTION FOR SORT THE USERS WHO DONT HAVE AN ORGPROFILE
@@ -582,7 +585,6 @@ class CapacityForm(forms.ModelForm):
             'capacity_reqs',
             'capacity_guid',
             'capacity_url',
-            'publish',
         ]
 
         def __init__(self, *args, **kwargs):

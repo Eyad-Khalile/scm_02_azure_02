@@ -107,7 +107,15 @@
       </span>
       <span class="col-9">
         <a href="{% url 'particip_detail' data.org_name.id %}" class="nav-link text-dark p-0">
+          {% if LANGUAGE_CODE != 'ar' %}
+          {% if data.org_name.name_en_ku %}
+          : {{ data.org_name.name_en_ku }}
+          {% else %}
           : {{ data.org_name }}
+          {% endif %}
+          {% elif LANGUAGE_CODE == 'ar' %}
+          : {{ data.org_name }}
+          {% endif %}
         </a>
       </span>
     </h3>

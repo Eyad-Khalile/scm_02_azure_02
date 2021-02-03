@@ -78,7 +78,17 @@
                     <img src="{{ media.media.url }}" name="{{ media.title }}" title="{{ media.title }}"
                         alt="{{ media.title }}" width="140" height="140" class="img-circle"></a>
                 {% endif  %}
-                <h3 class="mt-4">{{ media.org_name }}</h3>
+                <h3 class="mt-4">
+                    {% if LANGUAGE_CODE != 'ar' %}
+                    {% if media.org_name.name_en_ku %}
+                    {{ media.org_name.name_en_ku }}
+                    {% else %}
+                    {{ media.org_name }}
+                    {% endif %}
+                    {% elif LANGUAGE_CODE == 'ar' %}
+                    {{ media.org_name }}
+                    {% endif %}
+                </h3>
                 <p>{{ media.title }}</p>
                 <p>
                     <a href="{% url 'media_detail' media.id %}" class="btn btn-block"

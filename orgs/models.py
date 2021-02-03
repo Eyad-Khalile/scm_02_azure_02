@@ -373,7 +373,7 @@ class OrgProfile(models.Model):
     staff = models.CharField(max_length=100, null=True, blank=True)
 
     name = models.CharField(max_length=255, null=False,
-                            verbose_name=_("اسم المنظمة"))
+                            verbose_name=_("اسم المنظمة"))  
     name_en_ku = models.CharField(max_length=255, null=True, blank=True,
                                   verbose_name=_("اسم المنظمة باللغة الانكليزية أو الكردية"))
     short_cut = models.CharField(
@@ -396,11 +396,15 @@ class OrgProfile(models.Model):
                              null=True, blank=True, default='org_logos/default_logo.jpg', verbose_name=_("شعار المنظمة"))
     message = RichTextField(
         max_length=5000, null=False, verbose_name=_("الرؤية و الرسالة"))
+    message_en = RichTextField(
+        max_length=5000, null=True, blank=True, verbose_name=_("الرؤية و الرسالة باللغة الانكليزية"))
 
     name_managing_director = models.CharField(
         max_length=255, null=True, blank=True, verbose_name=_("اسم رئيس مجلس اﻹدارة"))
     name_ceo = models.CharField(
         max_length=255, null=True, blank=True, verbose_name=_('اسم المدير التنفيذي'))
+    name_ceo_en = models.CharField(
+        max_length=255, null=True, blank=True, verbose_name=_('اسم المدير التنفيذي باللغة الانجليزية'))
 
     # CONTACT INFO
     site_web = models.URLField(
@@ -442,6 +446,8 @@ class OrgProfile(models.Model):
         'ھل المؤسسة عضو في اي شبكة او تحالف او جسم تنسیقي؟'))
     coalition_name = models.CharField(
         max_length=255, null=True, blank=True, verbose_name=_('اسم الشبكة / التحالف'))
+    coalition_name_en = models.CharField(
+        max_length=255, null=True, blank=True, verbose_name=_('اسم الشبكة / التحالف باللغة الانجليزية'))
 
     publish = models.BooleanField(default=False)
 

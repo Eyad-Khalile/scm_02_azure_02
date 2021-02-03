@@ -28,10 +28,12 @@
 
         {% if request.user.is_authenticated and request.user.is_superuser %}
         <a href="{% url 'org_funding_not_pub' %}" class="btn btn-block mt-4 mx-2"
-            title="{% trans 'فرص التمويل قيد الدراسة' %}" data-aos="fade-left"><i class="fas fa-chalkboard-teacher"></i></a>
+            title="{% trans 'فرص التمويل قيد الدراسة' %}" data-aos="fade-left"><i
+                class="fas fa-chalkboard-teacher"></i></a>
         {% elif request.user.is_authenticated and request.user.is_staff %}
         <a href="{% url 'org_funding_not_pub' %}?user={{ request.user.id }}" class="btn btn-block mt-4 mx-2"
-            title="{% trans 'فرص التمويل قيد الدراسة' %}" data-aos="fade-left"><i class="fas fa-chalkboard-teacher"></i></a>
+            title="{% trans 'فرص التمويل قيد الدراسة' %}" data-aos="fade-left"><i
+                class="fas fa-chalkboard-teacher"></i></a>
         {% endif %}
 
     </div>
@@ -83,9 +85,23 @@
                         alt="{% if funding.org_name %} {{ funding.org_name }} {% else %} {{ funding.name_funding }} {% endif %}"
                         width="140" height="140" class="img-circle"></a>
 
-                <h3 class="mt-4">{% if funding.org_name %} {{ funding.org_name }} {% else %}
+                <h3 class="mt-4">
+                    {% if funding.org_name %}
+
+                    {% if LANGUAGE_CODE != 'ar' %}
+                    {% if funding.org_name.name_en_ku %}
+                    {{ funding.org_name.name_en_ku }}
+                    {% else %}
+                    {{ funding.org_name }}
+                    {% endif %}
+                    {% elif LANGUAGE_CODE == 'ar' %}
+                    {{ funding.org_name }}
+                    {% endif %}
+                    
+                    {% else %}
                     {{ funding.name_funding }}
-                    {% endif %}</h3>
+                    {% endif %}
+                </h3>
 
                 <!-- <p>{{ funding.funding_org_description|safe|truncatechars:80 }}</p>
                 <p>{{ funding.funding_description|safe|truncatechars:80 }}</p> -->

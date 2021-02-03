@@ -166,6 +166,8 @@ def capacity_edit(request, capacity_id):
         if form.is_valid():
             at = form.save(commit=False)
             at.updated_at = datetime.utcnow()
+            # if capacity.publish == True:
+            #     at.publish = True
             at.save()
 
             messages.success(request, _(

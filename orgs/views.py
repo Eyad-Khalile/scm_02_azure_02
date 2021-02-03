@@ -337,8 +337,9 @@ def home(request):
 # L'AFFICHAGE DES ORGS PUBLISHED
 def guide(request):
     orgs = OrgProfile.objects.filter(publish=True).order_by('-published_at')
-
-    myFilter = OrgsFilter(request.GET, queryset=orgs)
+    # org_position = OrgProfile.objects.filter(position__position_work='SY')
+    
+    myFilter = OrgsFilter(request.GET, queryset=orgs.distinct())
     orgs = myFilter.qs
 
     # PAGINATEUR

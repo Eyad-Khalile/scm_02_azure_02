@@ -35,14 +35,17 @@
 
         <form action="" method="get"
             class="row register justify-content-center align-items-center flex-wrap form my-2 my-lg-0">
-            <div class="col-sm-12 col-md-4  mt-3">
+            <div class="col-sm-12 col-md-3  mt-3">
                 {{ myFilter.form.category|as_crispy_field }}
             </div>
-            <div class="col-sm-12 col-md-4 mt-3">
+            <div class="col-sm-12 col-md-3 mt-3">
                 {{ myFilter.form.fund_type|as_crispy_field }}
             </div>
-            <div class="col-sm-12 col-md-4 mt-3">
+            <div class="col-sm-12 col-md-3 mt-3">
                 {{ myFilter.form.domain|as_crispy_field }}
+            </div>
+            <div class="col-sm-12 col-md-3 mt-3">
+                {{ myFilter.form.position_work|as_crispy_field }}
             </div>
             <div class="row">
                 <div class="col-xs-6 col-sm-6 col-md-4 mt-3">
@@ -77,9 +80,23 @@
                         alt="{% if funding.org_name %} {{ funding.org_name }} {% else %} {{ funding.name_funding }} {% endif %}"
                         width="140" height="140" class="img-circle"></a>
 
-                <h3 class="mt-4">{% if funding.org_name %} {{ funding.org_name }} {% else %}
+                <h3 class="mt-4">
+                    {% if funding.org_name %} 
+                    
+                    {% if LANGUAGE_CODE != 'ar' %}
+                    {% if funding.org_name.name_en_ku %}
+                    {{ funding.org_name.name_en_ku }}
+                    {% else %}
+                    {{ funding.org_name }}
+                    {% endif %}
+                    {% elif LANGUAGE_CODE == 'ar' %}
+                    {{ funding.org_name }}
+                    {% endif %}
+
+                    {% else %}
                     {{ funding.name_funding }}
-                    {% endif %}</h3>
+                    {% endif %}
+                </h3>
 
                 <!-- <p>{{ funding.fund_org_description|safe|truncatechars:80 }}</p> -->
                 <!-- <p>{{ funding.funding_dead_date|date:"Y-m-d" }}</p> -->

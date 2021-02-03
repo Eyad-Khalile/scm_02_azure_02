@@ -5,7 +5,7 @@
 
 <div class="container emp-profile mt-4 position-relative border-bottom">
   <h1 class="mt-4 mb-4 {% if LANGUAGE_CODE == 'ar' %} br_right {% else %} br_left {% endif %}">
-    {% trans 'تفاصيل المنظمة' %} </h1>
+    {% trans 'تفاصيل المنظمة' %}</h1>
 
   <!-- MINI MANU -->
   {% if request.user.is_authenticated %}
@@ -88,7 +88,7 @@
                     </div> -->
         </div>
       </div>
-      <div class="col-md-6" data-aos="fade-right">
+      <div class="col-md-6 pl-0 pr-0" data-aos="fade-right">
         <div class="profile-head ">
           <!-- اسم المنظمة -->
           <h5 class="row">
@@ -171,6 +171,7 @@
                 aria-selected="false">{% trans 'جديد المنظمة'%}</a>
             </li>
           </ul>
+          <hr class="mb-0 pb-0">
         </div>
       </div>
       <div class="col-md-2" data-aos="fade-left">
@@ -252,8 +253,14 @@
               </div>
               <div class="col-md-6">
                 <p>
-                  {% if org.name_ceo %} {{ org.name_ceo }} {% else %}
+                  {% if LANGUAGE_CODE != "ar" and org.name_ceo_en %}
+                  {{ org.name_ceo_en }} 
+                  {% else %}
+                  {% if org.name_ceo %} 
+                  {{ org.name_ceo }} 
+                  {% else %}
                   <span class="text-muted"> {% trans 'لم يذكر' %} </span>
+                  {% endif %}
                   {% endif %}
                 </p>
               </div>
@@ -381,10 +388,14 @@
               </div>
               <div class="col-md-6">
                 <p>
-                  {% if org.coalition_name %}
-                  {{ org.coalition_name }}
+                  {% if LANGUAGE_CODE != "ar" and org.coalition_name_en %}
+                    {{ org.coalition_name_en }}
                   {% else %}
-                  <span class="text-muted"> {% trans 'لم يذكر' %} </span>
+                    {% if org.coalition_name %}
+                      {{ org.coalition_name }}
+                    {% else %}
+                      <span class="text-muted"> {% trans 'لم يذكر' %} </span>
+                    {% endif %}
                   {% endif %}
                 </p>
               </div>
@@ -412,13 +423,16 @@
             <div class="row bg-white p-3">
               <p class="font-weight-bold">{% trans 'الرؤية و الرسالة' %}</p>
               <p class="text-al-just">
-                {% if org.message %}
-                {{ org.message|safe }}
+                {% if LANGUAGE_CODE != "ar"  %}
+                  {% if org.message_en %}
+                    {{ org.message_en|safe }}
+                  {% else %}
+                    {{ org.message|safe }}
+                  {% endif %}
                 {% else %}
-                <span class="text-muted">
-                  {% trans "لم يذكر" %}
-                </span>
+                  {{ org.message|safe }}
                 {% endif %}
+
               </p>
             </div>
 

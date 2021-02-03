@@ -72,7 +72,21 @@
 
                     <h3 class="mt-4">
                         {% if dev.org_name %}
-                        {{dev.org_name}}
+                        
+                        {% if dev.org_name %}
+                        {% if LANGUAGE_CODE != 'ar' %}
+                        {% if dev.org_name.name_en_ku %}
+                        {{ dev.org_name.name_en_ku }}
+                        {% else %}
+                        {{ dev.org_name }}
+                        {% endif %}
+                        {% elif LANGUAGE_CODE == 'ar' %}
+                        {{ dev.org_name }}
+                        {% endif %}
+                        {% else %}
+                        {{ dev.name_devv }}
+                        {% endif %}
+
                         {% else %}
                         {{ dev.name_devv }}
                         {% endif %}

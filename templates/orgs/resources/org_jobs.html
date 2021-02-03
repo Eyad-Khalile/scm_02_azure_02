@@ -108,7 +108,17 @@
                 <h4 class="mt-4">
                     {% trans 'اسم المنظمة' %} :
                     {% if job.org_name %}
+                    
+                    {% if LANGUAGE_CODE != 'ar' %}
+                    {% if job.org_name.name_en_ku %}
+                    {{ job.org_name.name_en_ku }}
+                    {% else %}
                     {{ job.org_name }}
+                    {% endif %}
+                    {% elif LANGUAGE_CODE == 'ar' %}
+                    {{ job.org_name }}
+                    {% endif %}
+
                     {% elif job.other_org_name %}
                     {{ job.other_org_name }}
                     {% else %}

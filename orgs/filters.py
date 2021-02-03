@@ -1,8 +1,8 @@
 import django_filters
 from django_filters import DateFilter, CharFilter
-from .models import OrgProfile, OrgNews, OrgRapport, OrgData, OrgResearch, OrgJob, OrgFundingOpp, OrgCapacityOpp, DevOrgOpp, PersFundingOpp
+from .models import OrgProfile, OrgNews, OrgRapport, OrgData, OrgResearch, OrgJob, OrgFundingOpp, OrgCapacityOpp, DevOrgOpp, PersFundingOpp, Position
 from django.utils.translation import gettext_lazy as _
-
+from django_countries.fields import CountryField
 
 from multiselectfield import MultiSelectField
 
@@ -67,15 +67,18 @@ class OrgsFilter(django_filters.FilterSet):
         model = OrgProfile
         fields = [
             'user',
+            'position__position_work',
+            'position__city_work',
             'staff',
             'name',
-            # 'position_work',
             'work_domain',
             'target_cat',
             'published_at',
             'start_date',
             'end_date',
         ]
+        
+        
 
         # def filter_work_domain(self, queryset, name, work_domain):
         #     return queryset.filter(work_domain__contains=work_domain.split(','))
@@ -229,9 +232,9 @@ class OrgsJobsFilter(django_filters.FilterSet):
             'start_date_pub',
             'end_date_pub',
         ]
+
+        
 # org funding filters
-
-
 class OrgsFundingFilter(django_filters.FilterSet):
 
     name_funding = CharFilter(field_name="name_funding",
@@ -268,9 +271,9 @@ class OrgsFundingFilter(django_filters.FilterSet):
             'published_at',
             'updated_at'
         ]
+
+
 # org capacity filters
-
-
 class OrgsCapacityFilter(django_filters.FilterSet):
 
     title_capacity = CharFilter(field_name="title_capacity",
@@ -340,7 +343,25 @@ class PersoFundFilter(django_filters.FilterSet):
             'user',
             'category',
             'fund_type',
+            'position_work',
             'domain',
             'start_date_pub',
             'end_date_pub',
+        ]
+
+
+class PositionFilter(django_filters.FilterSet):
+    start_date_pub = DateFilter(field_name="created_at",
+                                lookup_expr='gte', label=_('تاريخ نشر المنحة  / من :'))
+    end_date_pub = DateFilter(field_name="created_at",
+                              lookup_expr='lte', label=_('إلى :'))
+    class Meta:
+        model = Position
+        fields = [
+            'org_profile__name',
+            'org_profile__work_domain',
+            'org_profile__target_cat',
+            'city_work',
+            'start_date_pub',
+            'start_date_pub',
         ]

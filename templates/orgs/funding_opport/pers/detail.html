@@ -116,7 +116,17 @@
                 <h2 class="">
                     {% if perso.org_name %}
                     <a href="{% url 'particip_detail' perso.org_name.id %}" class="nav-link text-dark pl-0 pr-0">
-                        {% trans "اسم المنظمة" %} : {{ perso.org_name }}</a>
+                        {% trans "اسم المنظمة" %} : 
+                        {% if LANGUAGE_CODE != 'ar' %}
+                        {% if perso.org_name.name_en_ku %}
+                        {{ perso.org_name.name_en_ku }}
+                        {% else %}
+                        {{ perso.org_name }}
+                        {% endif %}
+                        {% elif LANGUAGE_CODE == 'ar' %}
+                        {{ perso.org_name }}
+                        {% endif %}
+                    </a>
                     {% else %}
                     {% trans 'الجهة المانحة' %} :
                     {{ perso.name_funding }}
@@ -316,7 +326,7 @@
                 {% trans "الرابط الأصلي" %}
             </span>
             <span class="col-9">
-                {% if perso.funding %}
+                {% if perso.funding_url %}
                 <a href="{{ perso.funding_url }}" class="text-dark" target="_blank">: {{ perso.funding_url }}</a>
                 {% else %}
                 : {% trans 'لم يذكر' %}

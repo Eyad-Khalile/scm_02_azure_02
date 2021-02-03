@@ -123,13 +123,23 @@
 
                 {% endif %}
             </div>
+            
             <div class="col-md-6 col-sm-12 d-flex justify-content-start align-items-start">
                 <!-- ORG NAME -->
                 <h3 class="">
                     {% trans 'اسم المنظمة' %}
                     {% if job.org_name %}
                     <a href="{% url 'particip_detail' job.org_name.id %}" class="nav-link text-dark pl-0 pr-0">
-                        {{ job.org_name }}</a>
+                        {% if LANGUAGE_CODE != 'ar' %}
+                        {% if job.org_name.name_en_ku %}
+                        {{ job.org_name.name_en_ku }}
+                        {% else %}
+                        {{ job.org_name }}
+                        {% endif %}
+                        {% elif LANGUAGE_CODE == 'ar' %}
+                        {{ job.org_name }}
+                        {% endif %}
+                    </a>
                     {% elif job.other_org_name %}
                     {{ job.other_org_name }}
                     {% elif other.job|floatformat:"2" == job.id|floatformat:"2" %}

@@ -113,7 +113,17 @@
         <h2 class="">
           {% if funding.org_name %}
           <a href="{% url 'particip_detail' funding.org_name.id %}" class="nav-link text-dark pl-0 pr-0">
-            {% trans "اسم المنظمة" %} : {{ funding.org_name }}</a>
+            {% trans "اسم المنظمة" %} : 
+            {% if LANGUAGE_CODE != 'ar' %}
+            {% if funding.org_name.name_en_ku %}
+            {{ funding.org_name.name_en_ku }}
+            {% else %}
+            {{ funding.org_name }}
+            {% endif %}
+            {% elif LANGUAGE_CODE == 'ar' %}
+            {{ funding.org_name }}
+            {% endif %}
+          </a>
           {% else %}
           {% trans 'الجهة المانحة' %} :
           {{ funding.name_funding }}
