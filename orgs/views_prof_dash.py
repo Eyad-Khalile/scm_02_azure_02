@@ -116,7 +116,9 @@ def org_profile(request):
 # update
 @login_required(login_url='signe_in')
 def org_profile_edit(request, pk):
-    org_prof = OrgProfile.objects.get(id=pk)
+    # org_prof = OrgProfile.objects.get(id=pk)
+    org_prof = get_object_or_404(OrgProfile, id=pk)
+
 
     # ADD MULTI COUNTRY
     PositionFormset = modelformset_factory(

@@ -1959,7 +1959,7 @@ msgstr "Reports And Researches"
 #: templates/combonents/main-navbar.html:106
 #: templates/orgs/news/orgs_news.html:138
 msgid "بيانات"
-msgstr "Data"
+msgstr "Statements"
 
 #: templates/combonents/main-navbar.html:65
 #: templates/combonents/main-navbar.html:110
@@ -2593,7 +2593,7 @@ msgstr "Add A Statement  "
 #: templates/orgs/data/data.html:3 templates/orgs/data/data.html:9
 #: templates/profiles/layout_profile.html:170
 msgid "البيانات"
-msgstr "Statements "
+msgstr "Statements"
 
 #: templates/orgs/data/data.html:149
 msgid " لا يوجد حالياً بيانات منشورة للمنظمات"
@@ -2936,7 +2936,7 @@ msgstr "For More About The Job Opportunity"
 
 #: templates/orgs/home.html:243
 msgid "أحدث فرص بناء القدرات"
-msgstr "For More About The Job Opportunity"
+msgstr "Latest Capacity Building Opportunity"
 
 #: templates/orgs/home.html:256
 msgid "للمزيد عن فرصة بناء القدرات"

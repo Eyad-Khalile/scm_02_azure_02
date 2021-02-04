@@ -252,11 +252,15 @@ msgstr "Navê kurtkirî"
 msgid "اسم رئيس مجلس اﻹدارة"
 msgstr "Navê serokê Encûmena Rêvebir"
 
-#: orgs/forms.py:118 orgs/models.py:403
+#: orgs/forms.py:118 orgs/models.py:405
 #: templates/profiles/particip_detail.html:251
 #: templates/profiles/profile.html:149
 msgid "اسم المدير التنفيذي"
 msgstr "Navê Rêvebirê Cîbicîkar"
+
+#: orgs/models.py:405
+msgid "اسم المدير التنفيذي باللغة الانجليزية"
+msgstr "Navê CEO bi Englishngilîzî ye"
 
 #: orgs/forms.py:123 orgs/models.py:407
 #: templates/profiles/particip_detail.html:447
@@ -300,9 +304,13 @@ msgstr "Emaila berpirsê peywendiyê"
 msgid "عنوان المقر الرئيسي"
 msgstr "Navnîşana baregeha sereke"
 
-#: orgs/forms.py:146 orgs/models.py:444
+#: orgs/forms.py:146 orgs/models.py:448
 msgid "اسم الشبكة / التحالف"
 msgstr "Navê torê / Hevpeymaniyê"
+
+#: orgs/forms.py:146 orgs/models.py:450
+msgid "اسم الشبكة / التحالف باللغة الانجليزية"
+msgstr "Navê torgilok / tifaqê bi Englishngilîzî"
 
 #: orgs/forms.py:154
 msgid "لتحديد أكثر من مجال يرجى الاختيار مع استمرار الضغط على زر ال CTRL"
@@ -1273,10 +1281,14 @@ msgstr "Corê rêxistinê"
 msgid "شعار المنظمة"
 msgstr "Silogana rêxistinê"
 
-#: orgs/models.py:398 templates/profiles/particip_detail.html:413
+#: orgs/models.py:398 templates/profiles/particip_detail.html:424
 #: templates/profiles/profile.html:115
 msgid "الرؤية و الرسالة"
 msgstr "Dîtin û name"
+
+#: orgs/models.py:400
+msgid "الرؤية و الرسالة باللغة الانكليزية"
+msgstr "Dîtin û mîsyona bi ngilîzî"
 
 #: orgs/models.py:415 templates/profiles/particip_detail.html:501
 #: templates/profiles/profile.html:386

@@ -137,7 +137,12 @@
               <a href="{% url 'particip_detail' org.id %}">
                 <img src="{{ org.logo.url }}" name="{{ org.name_en_ku }}" title="{{ org.name_en_ku }}" width="140"
                   height="140" class="img-circle" /></a>
+
+              {% if LANGUAGE_CODE != 'ar' and org.name_en_ku %}
+              <h3 class="mt-4">{{ org.name_en_ku }}</h3>
+              {% else %}
               <h3 class="mt-4">{{ org.name }}</h3>
+              {% endif %}
               <p>{{ org.short_cut }}</p>
               <!-- <p class="text-muted">{{ org.created_at|timesince }}</p>
               <p class="text-muted">{{ org.published_at|timesince }}</p> -->
@@ -178,7 +183,11 @@
               <a href="{% url 'news_detail' new.id %}">
                 <img src="{{ new.image.url }}" name="{{ new.title }}" title="{{ new.title }}" width="140" height="140"
                   class="img-circle" /></a>
-              <h3 class="mt-4">{{ new.org_name }}</h3>
+                  {% if LANGUAGE_CODE != 'ar' and new.org_name.name_en_ku %}
+                  <h3 class="mt-4">{{ new.org_name.name_en_ku }}</h3>
+                  {% else %}
+                  <h3 class="mt-4">{{ new.org_name }}</h3>
+                  {% endif %}
               <h3 class="mt-4">{{ new.title }}</h3>
               <!-- <p>{{ new.content|safe|truncatechars:80 }}</p> -->
               <p>
@@ -212,7 +221,11 @@
         <div class="carousel-item {% if job.id == first_job %} slide-item-1 active {% endif %}">
           <div class=" well" id="job_{{job.id}}">
             <center>
+              {% if LANGUAGE_CODE != 'ar' and job.org_name.name_en_ku %}
+              <h3 class="mt-4">{{ job.org_name.name_en_ku }}</h3>
+              {% else %}
               <h3 class="mt-4">{{ job.org_name }}</h3>
+              {% endif %}
               <h3 class="mt-4">{{ job.job_title }}</h3>
               <h3 class="mt-4">{{ job.get_job_type_display }}</h3>
               <!-- <p>{{ job.job_description|safe|truncatechars:80 }}</p> -->
@@ -247,8 +260,15 @@
         <div class="carousel-item {% if capacity.id == first_capacity %} slide-item-1 active {% endif %}">
           <div class=" well" id="capacity_{{capacity.id}}">
             <center>
-              <h3 class="mt-4">{{ capacity.org_name }}</h3>
-              <h3 class="mt-4">{{ capacity.name_capacity }}</h3>
+              {% if LANGUAGE_CODE != 'ar' and capacity.org_name.name_en_ku %}
+                <h3 class="mt-4">{{ capacity.org_name.name_en_ku }}</h3>
+              {% else %}
+                {% if capacity.org_name %}
+                <h3 class="mt-4">{{ capacity.org_name }}</h3>
+                {% else %}
+                <h3 class="mt-4">{{ capacity.name_capacity }}</h3>
+                {% endif %}
+              {% endif %}
               <h3 class="mt-4">{{ capacity.title_capacity }}</h3>
               <!-- <p>{{ capacity.capacity_description|safe|truncatechars:80 }}</p> -->
               <p>
