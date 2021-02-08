@@ -171,7 +171,7 @@
                 aria-selected="false">{% trans 'جديد المنظمة'%}</a>
             </li>
           </ul>
-          <hr class="mb-0 pb-0">
+          <!-- <hr class="mb-0 pb-0"> -->
         </div>
       </div>
       <div class="col-md-2" data-aos="fade-left">
@@ -517,7 +517,9 @@
               <div class="col-md-6" dir="ltr">
                 <p class="{% if LANGUAGE_CODE == 'ar' %} float-right {% endif %}">
                   {% if org.phone %}
-                  {{ org.phone|phonenumber:"FR" }}
+                  {{ org.phone|phonenumber_e164:"FR" }}
+                  
+                  <!-- {{ org.phone|phonenumber:"FR" }} -->
                   {% else %}
                   <span class="text-muted"> {% trans 'لم يذكر' %} </span>
                   {% endif %}

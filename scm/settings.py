@@ -310,6 +310,8 @@ CKEDITOR_CONFIGS = {
 }
 
 
+
+
 CKEDITOR_BASEPATH = "https://scgmedia.blob.core.windows.net/static/ckeditor/ckeditor/"
 # CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'
 
