@@ -321,6 +321,8 @@ class MyChoices(models.Model):
     )
 
 # PROFILE / AUTO CREATE
+
+
 class Profile(models.Model):
     user = models.OneToOneField(
         User, on_delete=models.CASCADE)
@@ -373,7 +375,7 @@ class OrgProfile(models.Model):
     staff = models.CharField(max_length=100, null=True, blank=True)
 
     name = models.CharField(max_length=255, null=False,
-                            verbose_name=_("اسم المنظمة"))  
+                            verbose_name=_("اسم المنظمة"))
     name_en_ku = models.CharField(max_length=255, null=True, blank=True,
                                   verbose_name=_("اسم المنظمة باللغة الانكليزية أو الكردية"))
     short_cut = models.CharField(
@@ -509,7 +511,8 @@ class Position(models.Model):
 
 # :::::::::::::: ORGS NEWS ::::::::::::::::
 class OrgNews(models.Model):
-    lang = models.CharField(max_length=100, choices=MyChoices.lang_CHOICES, null=False, blank=False, default='ar', verbose_name=_('اللغة'))
+    lang = models.CharField(max_length=100, choices=MyChoices.lang_CHOICES,
+                            null=False, blank=False, default='ar', verbose_name=_('اللغة'))
     user = models.ForeignKey(
         User, on_delete=models.CASCADE)
     staff = models.CharField(max_length=100, null=True, blank=True)
@@ -1116,10 +1119,10 @@ class Invitation(models.Model):
     def __unicode__(self):
         return u'%s, %s' % (self.sender.username, self.email)
 
-    def send(self):
-        subject = u'Invitation to join Django Bookmarks'
-        template = get_template('orgs/our_news/invitation_email.html')
-        context = Context(
-            {'name': self.name, 'sender': self.sender.username, })
-        message = template.render(context)
-        send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [self.email])
+    # def send(self):
+    #     subject = u'Invitation to join Django Bookmarks'
+    #     template = get_template('orgs/our_news/invitation_email.html')
+    #     context = Context(
+    #         {'name': self.name, 'sender': self.sender.username, })
+    #     message = template.render(context)
+    #     send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [self.email])

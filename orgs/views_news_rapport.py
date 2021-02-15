@@ -42,7 +42,6 @@ def news(request):
     return render(request, 'orgs/news/orgs_news.html')
 
 
-
 # ORGS NEWS / NEWS PUBLISHED أخبار المنظمات
 def orgs_news(request):
     # print("current Lang from Views ======= :", request.LANGUAGE_CODE)
@@ -467,13 +466,32 @@ def friend_invite(request):
     if request.method == 'POST':
         form = FriendInviteForm(request.POST or None, files=request.FILES)
         if form.is_valid():
-            user = form.save(commit=False)
-            user.sender = request.user
-            user.save()
+            instance = form.save(commit=False)
+            instance.sender = request.user
+            instance.save()
 
-            messages.success(request, _(
-                'لقد تم ارسال الدعوة '))
-            return redirect('profile_supper')
+            name = form.cleaned_data.get('name')
+
+            current_site = get_current_site(request)
+            subject = f'Invitation from : {current_site}'
+            message = render_to_string('orgs/our_news/invitation_email.html', {
+                'sender': request.user,
+                'name': name,
+                'domain': current_site.domain,
+            })
+            to_email = form.cleaned_data.get('email')
+            email = EmailMessage(
+                subject, message, to=[to_email]
+            )
+
+            # print('================= : ', message)
+            try:
+                email.send()
+                messages.success(request, _(
+                    'لقد تم ارسال الدعوة '))
+                return redirect('profile_supper')
+            except:
+                messages.error(request, _('لم يتم إرسال الدعوة'))
 
     else:
         form = FriendInviteForm()

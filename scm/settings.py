@@ -310,8 +310,6 @@ CKEDITOR_CONFIGS = {
 }
 
 
-
-
 CKEDITOR_BASEPATH = "https://scgmedia.blob.core.windows.net/static/ckeditor/ckeditor/"
 # CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'
 
@@ -321,7 +319,8 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'Civil.Society.Portal@csgateway.ngo'
-EMAIL_HOST_PASSWORD = 'tqhbfR8cFptECbU'
+EMAIL_HOST_PASSWORD = 'tiiivrixqfaquwbc'
+# EMAIL_HOST_PASSWORD = 'tqhbfR8cFptECbU'
 
 # SENDGRID
 # EMAIL_HOST = 'smtp.sendgrid.net'
@@ -334,10 +333,8 @@ EMAIL_HOST_PASSWORD = 'tqhbfR8cFptECbU'
 # DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 
 
-
 # RECAPTCHA
 # GOOGLE_RECAPTCHA_SECRET_KEY = '6LdN0iEaAAAAADqR4f40Muhh-z6kKQz8wrfbvg3v'
-
 
 
 # KEROKU
