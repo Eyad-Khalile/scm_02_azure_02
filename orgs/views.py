@@ -1,4 +1,5 @@
 # import phonenumbers
+from django.forms.models import model_to_dict
 from urllib.parse import quote_plus
 from django.http import HttpResponse, JsonResponse, HttpResponseRedirect, Http404
 from django.shortcuts import render, redirect, get_object_or_404
@@ -240,6 +241,8 @@ def load_cities(request):
     # return JsonResponse(list(cities.values('id', 'name')), safe=False)
 
 # =========== Page 404 ==================
+
+
 def page_not_found_view(request, exception):
     return render(request, 'errors/404.html')
 
@@ -270,10 +273,12 @@ def page_not_found_view(request, exception):
 # HOME PAGE
 def home(request):
     orgs = OrgProfile.objects.filter(publish=True).order_by('-published_at')
-    news = OrgNews.objects.filter(Q(publish=True) & Q(lang=request.LANGUAGE_CODE)).order_by('-published_at')
-    jobs=OrgJob.objects.filter(Q(publish=True) & Q(lang=request.LANGUAGE_CODE)).order_by('-published_at')
+    news = OrgNews.objects.filter(Q(publish=True) & Q(
+        lang=request.LANGUAGE_CODE)).order_by('-published_at')
+    jobs = OrgJob.objects.filter(Q(publish=True) & Q(
+        lang=request.LANGUAGE_CODE)).order_by('-published_at')
     capacites = OrgCapacityOpp.objects.filter(
-                                              Q(publish = True) & Q(lang = request.LANGUAGE_CODE)).order_by('-published_at')
+        Q(publish=True) & Q(lang=request.LANGUAGE_CODE)).order_by('-published_at')
 
     # the Last orgs
     if orgs.first():
@@ -336,9 +341,10 @@ def home(request):
 
 # L'AFFICHAGE DES ORGS PUBLISHED
 def guide(request):
-    orgs = OrgProfile.objects.filter(publish=True).order_by('-published_at')
+    orgs = OrgProfile.objects.filter(
+        publish=True).order_by('-published_at')
     # org_position = OrgProfile.objects.filter(position__position_work='SY')
-    
+
     myFilter = OrgsFilter(request.GET, queryset=orgs.distinct())
     orgs = myFilter.qs
 
@@ -353,9 +359,20 @@ def guide(request):
     context = {
         'orgs': orgs,
         'myFilter': myFilter,
+        'qs_json': json.dumps(list(OrgProfile.objects.values('name', 'name_en_ku')), default=str)
     }
     return render(request, 'orgs//guid/orgs_guide.html', context)
 
+
+# NEW FILTRE
+def new_filtre(request):
+    orgs = OrgProfile.objects.filter(
+        publish=True).order_by('-published_at')
+
+    context = {
+        'orgs': orgs,
+    }
+    return render(request, 'orgs//guid/new_filtre.html', context)
 
 # @register.filter(name='phonenumber')
 # def phonenumber(value, country=None):
@@ -396,8 +413,6 @@ def guide_filter(request, work_id):
         'list_work': list_work
     }
     return render(request, 'orgs/guid/orgs_guide_filter.html', context)
-
-
 
 
 # CENTRE NEWS

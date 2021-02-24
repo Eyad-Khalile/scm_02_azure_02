@@ -492,7 +492,7 @@ class Position(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, null=True, blank=True, verbose_name=_("اسم المستخدم"))
     org_profile = models.ForeignKey(
-        OrgProfile, on_delete=models.CASCADE, null=True, blank=True, verbose_name=_("اسم المنظمة"))
+        OrgProfile, related_name="profile_position", on_delete=models.CASCADE, null=True, blank=True, verbose_name=_("اسم المنظمة"))
 
     # org_id = models.IntegerField(
     #     max_length=100, null=True, blank=True, default=None)

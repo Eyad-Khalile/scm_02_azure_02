@@ -67,8 +67,8 @@ class OrgsFilter(django_filters.FilterSet):
         model = OrgProfile
         fields = [
             'user',
-            'position__position_work',
-            'position__city_work',
+            'profile_position__position_work',
+            'profile_position__city_work',
             'staff',
             'name',
             'work_domain',
@@ -77,8 +77,6 @@ class OrgsFilter(django_filters.FilterSet):
             'start_date',
             'end_date',
         ]
-        
-        
 
         # def filter_work_domain(self, queryset, name, work_domain):
         #     return queryset.filter(work_domain__contains=work_domain.split(','))
@@ -233,7 +231,7 @@ class OrgsJobsFilter(django_filters.FilterSet):
             'end_date_pub',
         ]
 
-        
+
 # org funding filters
 class OrgsFundingFilter(django_filters.FilterSet):
 
@@ -355,6 +353,7 @@ class PositionFilter(django_filters.FilterSet):
                                 lookup_expr='gte', label=_('تاريخ نشر المنحة  / من :'))
     end_date_pub = DateFilter(field_name="created_at",
                               lookup_expr='lte', label=_('إلى :'))
+
     class Meta:
         model = Position
         fields = [

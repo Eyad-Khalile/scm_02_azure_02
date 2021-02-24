@@ -514,5 +514,10 @@ $('#add_more_vio').click(function () {
 
     // ORG PROFILE WORK PLACE LABEL
     // $('label[for=id_position__position_work]').html('{% trans "مكان العمل" %}');
+
+
+
+
+
 });
 

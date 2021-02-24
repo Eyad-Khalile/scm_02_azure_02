@@ -23,6 +23,7 @@ urlpatterns = [
 
     # ORGS GUIDE
     path('guide/', views.guide, name="guide"),
+    path('new_filtre/', views.new_filtre, name="new_filtre"),
     path('guide_conf/', views_prof_dash.guide_not_pub, name="guide_conf"),
     path('guide_filter/<str:work_id>', views.guide_filter, name="guide_filter"),
 
@@ -37,8 +38,8 @@ urlpatterns = [
          views_news_rapport.news_delete, name="news_delete"),
     path('org_news_not_pub/', views_news_rapport.org_news_not_pub,
          name="org_news_not_pub"),
-    
-     # OUR NEWS
+
+    # OUR NEWS
     path('our_news_not_pub/', views_news_rapport.our_news_not_pub,
          name="our_news_not_pub"),
 
@@ -68,10 +69,14 @@ urlpatterns = [
     # ORGS MEDIA
     path('media/', views_data_media_research.media, name="media"),
     path('add_media/', views_data_media_research.add_media, name="add_media"),
-    path('media_detail/<str:media_id>', views_data_media_research.media_detail, name="media_detail"),
-    path('edit_media/<str:media_id>', views_data_media_research.edit_media, name="edit_media"),
-    path('delete_media/<str:media_id>', views_data_media_research.delete_media, name="delete_media"),
-    path('media_not_pub/', views_data_media_research.media_not_pub, name="media_not_pub"),
+    path('media_detail/<str:media_id>',
+         views_data_media_research.media_detail, name="media_detail"),
+    path('edit_media/<str:media_id>',
+         views_data_media_research.edit_media, name="edit_media"),
+    path('delete_media/<str:media_id>',
+         views_data_media_research.delete_media, name="delete_media"),
+    path('media_not_pub/', views_data_media_research.media_not_pub,
+         name="media_not_pub"),
 
     # ORGS RESEARCH
     path('research/', views_data_media_research.research, name="research"),
@@ -82,21 +87,26 @@ urlpatterns = [
          views_data_media_research.edit_research, name="edit_research"),
     path('delete_research/<str:research_id>',
          views_data_media_research.delete_research, name="delete_research"),
-    path('research_not_pub/', views_data_media_research.research_not_pub, name="research_not_pub"),
+    path('research_not_pub/', views_data_media_research.research_not_pub,
+         name="research_not_pub"),
 
     # RECOURCE
     path('resources/', views.resources, name="resources"),
     # jobs
     path('orgs_jobs/', views_job_funding.orgs_jobs, name="orgs_jobs"),
     path('orgs_add_job/', views_job_funding.orgs_add_job, name="orgs_add_job"),
-    path('org_jobs_not_pub/', views_job_funding.org_jobs_not_pub, name="org_jobs_not_pub"),
-    path('jobs_detail/<str:job_id>', views_job_funding.jobs_detail, name="jobs_detail"),
+    path('org_jobs_not_pub/', views_job_funding.org_jobs_not_pub,
+         name="org_jobs_not_pub"),
+    path('jobs_detail/<str:job_id>',
+         views_job_funding.jobs_detail, name="jobs_detail"),
     path('jobs_edit/<str:job_id>', views_job_funding.jobs_edit, name="jobs_edit"),
-    path('jobs_delete/<str:job_id>', views_job_funding.jobs_delete, name="jobs_delete"),
+    path('jobs_delete/<str:job_id>',
+         views_job_funding.jobs_delete, name="jobs_delete"),
     # funding orgs opportutiite
     path('funding', views_job_funding.funding, name="funding"),
     path('orgs_funding/', views_job_funding.orgs_funding, name="orgs_funding"),
-    path('orgs_add_funding/', views_job_funding.orgs_add_funding, name="orgs_add_funding"),
+    path('orgs_add_funding/', views_job_funding.orgs_add_funding,
+         name="orgs_add_funding"),
     path('org_funding_not_pub/', views_job_funding.org_funding_not_pub,
          name="org_funding_not_pub"),
     path('funding_detail/<str:funding_id>',
@@ -164,8 +174,8 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='register/signe-in.html'), name='signe_in'),
     path('signe_up/', views.signe_up, name="signe_up"),
 
-#     path('activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
-#          views.activate, name='activate'),
+    #     path('activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
+    #          views.activate, name='activate'),
     path('activate/<uidb64>/<token>/', views.activate, name='activate'),
 
     #     re_path(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
