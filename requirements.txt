@@ -46,7 +46,6 @@ pyparsing==2.4.7
 pypi==2.1
 python-dateutil==2.8.1
 python-decouple==3.3
-Python-dev==2.0.0.dev0
 python-http-client==3.3.1
 pytz==2020.1
 PyYAML==5.3.1

@@ -67,6 +67,8 @@ class OrgsFilter(django_filters.FilterSet):
         model = OrgProfile
         fields = [
             'user',
+            # 'position__position_work',
+            # 'position__city_work',
             'profile_position__position_work',
             'profile_position__city_work',
             'staff',
