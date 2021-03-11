@@ -269,6 +269,14 @@ def page_not_found_view(request, exception):
 
 #     return render(request, 'combonents/footer.html', context)
 
+# START PAGE
+def start_page(request):
+
+    context = {
+
+    }
+    return render(request, 'orgs/start_page.html', context)
+
 
 # HOME PAGE
 def home(request):

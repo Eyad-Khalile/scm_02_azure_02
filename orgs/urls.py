@@ -8,7 +8,8 @@ from django.views.static import serve
 
 urlpatterns = [
     # HOME AND LEGALE
-    path('', views.home, name="home"),
+    path('', views.start_page, name="start_page"),
+    path('home-page/', views.home, name="home"),
     path('site_politic/', views.site_politic, name="site_politic"),
 
     # CITYES

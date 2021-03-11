@@ -24,10 +24,18 @@
                 <img src="{% static 'media/main_logo/Logo_New.png' %}" alt="CIVIL SOCIETY GATEWAY" width="200">
             </a>
 
-
             <h5 class="font-weight-bold text-uppercase mt-3 mb-4">
                 <a href="{% url 'home' %}" class="text-white"> {% trans "بوابة المجتمع المدني" %} </a>
             </h5>
+
+            <h1 class="h5">
+                {% if LANGUAGE_CODE == 'ar' %}
+                هذا الموقع تم تطويره ضمن مشروع مموّل بدعم من وزارة أوروبا و الشؤون الخارجية في فرنسا
+                {% else %}
+                This website is developed under a project supported by the ministry of Europe and Foreign Affairs in
+                FRANCE
+                {% endif %}
+            </h1>
 
 
             <!-- BTN SCROLL UP -->

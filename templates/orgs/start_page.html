@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% load static i18n crispy_forms_tags %}
+{% block title %} {% trans 'بوابة المجتمع المدني' %} {% endblock %}
+
+{% block content %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+<div class="bg-warning p-3 rounded">
+    {% if LANGUAGE_CODE == 'ar' %}
+    <h1 class="text-center mt-5 text-dark">تنويه :</h1>
+    <h1 class="text-center mt-5 bg-primary text-white p-5 rounded">الموقع لا يزال في مرحلة إطلاق تجريبية، والمحتوى لا
+        يزال قيد
+        التطوير
+    </h1>
+    <div class="d-flex justify-content-center mt-4">
+        <a href="{% url 'home' %}" class="btn btn-primary">موافق , الانتقال إلى الصفحة الرئيسية</a>
+    </div>
+    {% else %}
+    <h1 class="text-center mt-5 text-dark">Notification :</h1>
+    <h1 class="text-center mt-5 bg-primary text-white p-5 rounded">
+        This website is still in soft launch phase, and the content is still under development
+    </h1>
+    <div class="d-flex justify-content-center mt-4">
+        <a href="{% url 'home' %}" class="btn btn-primary">I Agree, Go to Homepage</a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

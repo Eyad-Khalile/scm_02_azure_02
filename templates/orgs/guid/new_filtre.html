@@ -49,7 +49,7 @@
     $(function () {
         $("#myTable").tablesorter({
             widthFixed: true,
-            widgets: ["zebra", "filter"],
+            widgets: ["zebra", 'columns', "filter"],
             widgetOptions: {
                 filter_cssFilter: '',
                 filter_childRows: false,
@@ -59,9 +59,13 @@
                 filter_saveFilters: true,
                 filter_searchDelay: 300,
                 filter_startsWith: false,
+                countChildRows: false,
             },
         });
         $('.btn-petit').addClass('btn-font');
+        // $('#table_rows').html($('#myTable tr:not("filtered")').length);
+        const mu_tr = $("#myTable tr").not($('tr.filtered'));
+        console.log(mu_tr.length);
     });
 </script>
 
@@ -101,6 +105,7 @@
 
         </tbody>
     </table>
+
 
 
 </div>
