@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#: orgs/forms.py:99 orgs/forms.py:654 orgs/forms.py:659 orgs/forms.py:665
-#: orgs/forms.py:671
+#: orgs/forms.py:99 orgs/forms.py:653 orgs/forms.py:658 orgs/forms.py:664
+#: orgs/forms.py:670
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-16 13:18+0000\n"
+"POT-Creation-Date: 2021-02-03 11:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -73,16 +73,16 @@ msgid "دراسات وأبحاث"
 msgstr "Studies And Researches"
 
 #: orgs/filters.py:28 orgs/models.py:207 orgs/models.py:224 orgs/models.py:244
-#: orgs/models.py:263 orgs/models.py:272 orgs/models.py:280 orgs/models.py:1039
+#: orgs/models.py:263 orgs/models.py:272 orgs/models.py:280 orgs/models.py:1034
 msgid "أخرى"
 msgstr "Other"
 
-#: orgs/filters.py:46 orgs/filters.py:215 orgs/forms.py:156 orgs/models.py:431
-#: orgs/models.py:794 templates/orgs/resources/org_job_details.html:178
+#: orgs/filters.py:46 orgs/filters.py:215 orgs/forms.py:156 orgs/models.py:429
+#: orgs/models.py:789 templates/orgs/resources/org_job_details.html:178
 #: templates/profiles/particip_detail.html:270
 #: templates/profiles/profile.html:161
 msgid "مجال العمل"
-msgstr "Sector of Intervention"
+msgstr "Area Of Work"
 
 #: orgs/filters.py:49
 msgid "تاريخ التأسيس / من :"
@@ -95,11 +95,11 @@ msgstr "Date Of Establishment/ From : "
 msgid "إلى :"
 msgstr "To :"
 
-#: orgs/filters.py:53 orgs/forms.py:97 orgs/forms.py:667 orgs/models.py:378
-#: orgs/models.py:495 orgs/models.py:520 orgs/models.py:559 orgs/models.py:616
-#: orgs/models.py:655 orgs/models.py:771 orgs/models.py:830 orgs/models.py:898
-#: orgs/models.py:984 orgs/models.py:1048 orgs/models.py:1101
-#: orgs/models.py:1115 templates/orgs/capacity/org_capacity_details.html:104
+#: orgs/filters.py:53 orgs/forms.py:97 orgs/forms.py:666 orgs/models.py:376
+#: orgs/models.py:491 orgs/models.py:515 orgs/models.py:554 orgs/models.py:611
+#: orgs/models.py:650 orgs/models.py:766 orgs/models.py:825 orgs/models.py:893
+#: orgs/models.py:979 orgs/models.py:1043 orgs/models.py:1096
+#: orgs/models.py:1110 templates/orgs/capacity/org_capacity_details.html:103
 #: templates/orgs/data/detail_data.html:106
 #: templates/orgs/devs/org_dev_details.html:112
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:116
@@ -167,20 +167,20 @@ msgstr "Publication Date Of The Research/From:"
 msgid "كلمات من فرصة العمل  "
 msgstr "Words From The Job Opening"
 
-#: orgs/filters.py:207 orgs/models.py:782
+#: orgs/filters.py:207 orgs/models.py:777
 #: templates/orgs/resources/org_job_details.html:170
 msgid "نوع الوظيفة"
 msgstr "Kind Of Job"
 
-#: orgs/filters.py:209 orgs/models.py:784
+#: orgs/filters.py:209 orgs/models.py:779
 msgid "الخبرة"
 msgstr "The Experience"
 
-#: orgs/filters.py:213 orgs/models.py:503 orgs/models.py:788 orgs/models.py:844
-#: orgs/models.py:920 orgs/models.py:1003
+#: orgs/filters.py:213 orgs/models.py:499 orgs/models.py:783 orgs/models.py:839
+#: orgs/models.py:915 orgs/models.py:998
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:172
 #: templates/orgs/funding_opport/pers/detail.html:236
-#: templates/orgs/guid/orgs_guide.html:233
+#: templates/orgs/guid/orgs_guide.html:232
 #: templates/profiles/particip_detail.html:214
 #: templates/profiles/profile.html:101
 msgid "المحافظة"
@@ -190,7 +190,7 @@ msgstr "Province"
 msgid "تاريخ نشر فرصة العمل / من :"
 msgstr "Publication Date Of The Job Opening/From: "
 
-#: orgs/filters.py:241 orgs/models.py:833 orgs/models.py:901
+#: orgs/filters.py:241 orgs/models.py:828 orgs/models.py:896
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:128
 #: templates/orgs/funding_opport/pers/detail.html:131
 msgid "الجهة المانحة"
@@ -198,7 +198,7 @@ msgstr "The Donor"
 
 #: orgs/filters.py:249
 msgid "حسب المبلغ المالي"
-msgstr "According To The Amount"
+msgstr "According To The Amount Of Money"
 
 #: orgs/filters.py:251 orgs/filters.py:282 orgs/filters.py:314
 #: orgs/filters.py:336 orgs/filters.py:355
@@ -209,11 +209,11 @@ msgstr "Publication Date Of The Grant"
 msgid "عنوان الفرصة "
 msgstr "Opportunity Title"
 
-#: orgs/filters.py:309 orgs/models.py:1053
+#: orgs/filters.py:309 orgs/models.py:1048
 msgid "عنوان المادة"
 msgstr "Title Of The Article"
 
-#: orgs/filters.py:311 orgs/models.py:1057
+#: orgs/filters.py:311 orgs/models.py:1052
 #: templates/orgs/devs/org_dev_details.html:170
 msgid "لمحة عن الجهة"
 msgstr "A Glance About The Entity"
@@ -228,7 +228,7 @@ msgstr ""
 msgid "عنوان بريد إلكتروني"
 msgstr "Email Address"
 
-#: orgs/forms.py:38 orgs/forms.py:689
+#: orgs/forms.py:38 orgs/forms.py:688
 msgid "هذا البريد الالكتروني موجود مسبقاً"
 msgstr "This Email Address  Already Exists"
 
@@ -237,74 +237,78 @@ msgstr "This Email Address  Already Exists"
 msgid "هذا الحقل لا يقبل الحروف الخاصه و الرموز"
 msgstr "This Field Does Not Accept Special Characters And Symbols"
 
-#: orgs/forms.py:103 orgs/models.py:380
+#: orgs/forms.py:103 orgs/models.py:378
 #: templates/profiles/particip_detail.html:106
 #: templates/profiles/profile.html:36
 msgid "اسم المنظمة باللغة الانكليزية أو الكردية"
 msgstr "The Organisation Name In English Or Kurdish"
 
-#: orgs/forms.py:107 orgs/models.py:382
+#: orgs/forms.py:107 orgs/models.py:380
 #: templates/profiles/particip_detail.html:122
 msgid "الاسم المختصر"
 msgstr "The Acronym"
 
-#: orgs/forms.py:114 orgs/models.py:405
+#: orgs/forms.py:114 orgs/models.py:403
 #: templates/profiles/particip_detail.html:238
 #: templates/profiles/profile.html:135
 msgid "اسم رئيس مجلس اﻹدارة"
 msgstr "The Name Of The Chairman Of The Board Of Directors"
 
-#: orgs/forms.py:118 orgs/models.py:407
+#: orgs/forms.py:118 orgs/models.py:405
 #: templates/profiles/particip_detail.html:252
 #: templates/profiles/profile.html:149
 msgid "اسم المدير التنفيذي"
 msgstr "The Name Of The Executive Director"
 
-#: orgs/forms.py:123 orgs/models.py:413
-#: templates/profiles/particip_detail.html:461
+#: orgs/forms.py:123 orgs/models.py:411
+#: templates/profiles/particip_detail.html:457
 #: templates/profiles/profile.html:332
 msgid "الموقع الالكتروني"
 msgstr "The Website"
 
-#: orgs/forms.py:126 orgs/models.py:415
-#: templates/profiles/particip_detail.html:475
+#: orgs/forms.py:126 orgs/models.py:413
+#: templates/profiles/particip_detail.html:471
 #: templates/profiles/profile.html:346
 msgid "صفحة فيسبوك"
 msgstr "Facebook Page"
 
-#: orgs/forms.py:129 orgs/models.py:417
-#: templates/profiles/particip_detail.html:489
+#: orgs/forms.py:129 orgs/models.py:415
+#: templates/profiles/particip_detail.html:485
 #: templates/profiles/profile.html:360
 msgid "صفحة تويتر"
 msgstr "Twitter Page"
 
-#: orgs/forms.py:132 orgs/forms.py:673 orgs/models.py:419 orgs/models.py:1103
-#: orgs/models.py:1117 templates/profiles/particip_detail.html:503
+#: orgs/forms.py:132 orgs/forms.py:672 orgs/models.py:417 orgs/models.py:1098
+#: orgs/models.py:1112 templates/profiles/particip_detail.html:499
 #: templates/profiles/profile.html:374
 msgid "البريد الاكتروني"
 msgstr "Email Address"
 
-#: orgs/forms.py:134 orgs/models.py:423
-#: templates/profiles/particip_detail.html:531
+#: orgs/forms.py:134 orgs/models.py:421
+#: templates/profiles/particip_detail.html:525
 #: templates/profiles/profile.html:398
 msgid "اسم الشخص المسؤول عن التواصل"
 msgstr "The Name Of The Person In Charge Of Communicating"
 
-#: orgs/forms.py:140 orgs/models.py:425
-#: templates/profiles/particip_detail.html:545
+#: orgs/forms.py:140 orgs/models.py:423
+#: templates/profiles/particip_detail.html:539
 #: templates/profiles/profile.html:412
 msgid "البريد الاكتروني للشخص المسؤول عن التواصل"
 msgstr "The Email Address Of The Person In Charge Of Communicating"
 
-#: orgs/forms.py:142 orgs/models.py:427
-#: templates/profiles/particip_detail.html:447
+#: orgs/forms.py:142 orgs/models.py:425
+#: templates/profiles/particip_detail.html:443
 #: templates/profiles/profile.html:318
 msgid "عنوان المقر الرئيسي"
 msgstr "The Address Of The Core Headquarters"
 
-#: orgs/forms.py:146 orgs/models.py:450
+#: orgs/forms.py:146 orgs/models.py:448
 msgid "اسم الشبكة / التحالف"
 msgstr "The Name Of The Network/Alliance "
+
+#: orgs/forms.py:146 orgs/models.py:450
+msgid "اسم الشبكة / التحالف باللغة الانجليزية"
+msgstr "The Name Of The Network/Alliance in Engish "
 
 #: orgs/forms.py:154
 msgid "لتحديد أكثر من مجال يرجى الاختيار مع استمرار الضغط على زر ال CTRL"
@@ -314,7 +318,7 @@ msgstr "For select many choices please, holde the CTRL key"
 msgid "لتحديد أكثر من هدف يرجى الاختيار مع استمرار الضغط على زر ال CTRL"
 msgstr "For select many choices please, holde the CTRL key"
 
-#: orgs/forms.py:162 orgs/models.py:433
+#: orgs/forms.py:162 orgs/models.py:431
 #: templates/profiles/particip_detail.html:280
 #: templates/profiles/profile.html:173
 msgid "الفئات المستهدفة"
@@ -324,37 +328,37 @@ msgstr "Target Groups"
 msgid "لتحديد أكثر من سياسة يرجى الاختيار مع استمرار الضغط على زر ال CTRL"
 msgstr "For select many choices please, holde the CTRL key"
 
-#: orgs/forms.py:169 orgs/models.py:446
+#: orgs/forms.py:169 orgs/models.py:444
 #: templates/profiles/particip_detail.html:358
 #: templates/profiles/profile.html:254
 msgid "السياسات واللوائح المكتوبة"
 msgstr "Policies And Written Rules"
 
-#: orgs/forms.py:637
+#: orgs/forms.py:636
 msgid "رابط يوتيوب فقط"
 msgstr "Link of Youtube"
 
-#: orgs/forms.py:638
+#: orgs/forms.py:637
 msgid "فقط ملف PDF أو صورة"
 msgstr "Only a PDF file or an image"
 
-#: orgs/forms.py:656 orgs/forms.py:713 orgs/models.py:1097
+#: orgs/forms.py:655 orgs/forms.py:712 orgs/models.py:1092
 msgid "الاسم و الكنية"
 msgstr "Name And Surname"
 
-#: orgs/forms.py:661 orgs/models.py:1099
+#: orgs/forms.py:660 orgs/models.py:1094
 msgid "العمل"
 msgstr "Job"
 
-#: orgs/forms.py:715
+#: orgs/forms.py:714
 msgid "البريد الالكتروني"
 msgstr "Email Address"
 
-#: orgs/forms.py:717
+#: orgs/forms.py:716
 msgid "العنوان"
 msgstr "Title"
 
-#: orgs/forms.py:719
+#: orgs/forms.py:718
 msgid "الرسالة"
 msgstr "send an invitation"
 
@@ -392,11 +396,11 @@ msgstr "Initiative / Team"
 
 #: orgs/models.py:38
 msgid "اتحاد / تحالف / تجمع"
-msgstr "Union /Coalition / Assembly"
+msgstr "Union / Alliance / Assembly"
 
 #: orgs/models.py:39
 msgid "لجنة / تنسيقية / مجموعة"
-msgstr "Committee / Coordination / Group"
+msgstr "Committee / Coordinators Union  / Group"
 
 #: orgs/models.py:43
 msgid "حلب"
@@ -960,7 +964,7 @@ msgstr "Children 0-18"
 
 #: orgs/models.py:216
 msgid "مجموعات دینیة"
-msgstr "Faith-based groups"
+msgstr "Religious Groups"
 
 #: orgs/models.py:217
 msgid "مجموعة عرقیة"
@@ -968,7 +972,7 @@ msgstr "Ethnic Group"
 
 #: orgs/models.py:218
 msgid "فاقدي المعیل"
-msgstr "persons who lack the breadwinner"
+msgstr "Who Lost Their Provider"
 
 #: orgs/models.py:219
 msgid "ذوي الاحتیاجات الخاصة"
@@ -999,7 +1003,7 @@ msgstr "No"
 msgid "نعم"
 msgstr "Yes"
 
-#: orgs/models.py:233 orgs/views.py:307
+#: orgs/models.py:233 orgs/views.py:294
 msgid "لا يوجد"
 msgstr "None"
 
@@ -1039,7 +1043,7 @@ msgstr "Financial Policy"
 msgid "سياسة استخدام المعدات"
 msgstr "Using Equipment Policy"
 
-#: orgs/models.py:243 templates/combonents/footer.html:151
+#: orgs/models.py:243 templates/combonents/footer.html:143
 #: templates/orgs/politic.html:4 templates/orgs/politic.html:11
 msgid "سياسة الخصوصية"
 msgstr "Privacy Policy"
@@ -1056,7 +1060,7 @@ msgstr "Part Time"
 msgid "استشاري"
 msgstr "Advisor"
 
-#: orgs/models.py:252 orgs/models.py:974
+#: orgs/models.py:252 orgs/models.py:969
 msgid "تدريب"
 msgstr "Training"
 
@@ -1064,7 +1068,7 @@ msgstr "Training"
 msgid "تطوع"
 msgstr "Volunteering"
 
-#: orgs/models.py:254 orgs/models.py:975
+#: orgs/models.py:254 orgs/models.py:970
 msgid "زمالة"
 msgstr "Fellowship"
 
@@ -1122,7 +1126,7 @@ msgstr "Between 50000 And 100000 Dollars"
 
 #: orgs/models.py:285
 msgid "كلية"
-msgstr "Full"
+msgstr "Total"
 
 #: orgs/models.py:286
 msgid "جزئية"
@@ -1134,7 +1138,7 @@ msgstr "Academic"
 
 #: orgs/models.py:290
 msgid "انتاجية"
-msgstr "Capital Grant"
+msgstr "Productivity"
 
 #: orgs/models.py:291
 msgid "دراسات و أبحاث"
@@ -1142,7 +1146,7 @@ msgstr "Studies And Researches"
 
 #: orgs/models.py:294
 msgid "إجازة جامعية"
-msgstr "bachelor's"
+msgstr "College Degree"
 
 #: orgs/models.py:295
 msgid "دبلوم"
@@ -1150,7 +1154,7 @@ msgstr "Diploma"
 
 #: orgs/models.py:296
 msgid "ماجيستير"
-msgstr "Master's"
+msgstr "Master"
 
 #: orgs/models.py:297
 msgid "دكتوراه"
@@ -1170,11 +1174,11 @@ msgstr "Economy And Accounting"
 
 #: orgs/models.py:303
 msgid "تعليم/ تربية/ رياض أطفال"
-msgstr "Education /Kinder Garden"
+msgstr "Education / Raising / Kinder Garden"
 
 #: orgs/models.py:304
 msgid "حاسوب وتكنولوجيا المعلومات"
-msgstr "Computer And Information Technology"
+msgstr "Computer And Informational Technology"
 
 #: orgs/models.py:305
 msgid "دراسات إسلامية"
@@ -1182,7 +1186,7 @@ msgstr "Islamic Studies"
 
 #: orgs/models.py:306
 msgid "دراسات إنسانية/ لغات"
-msgstr "Human Studies / Languages"
+msgstr "Humanity Studies / Languages"
 
 #: orgs/models.py:307
 msgid "زراعة وعلوم بيئية"
@@ -1190,7 +1194,7 @@ msgstr "Agriculture And Environmental Science"
 
 #: orgs/models.py:308
 msgid "سياحة وعلوم فندقية"
-msgstr "Tourism Sciences"
+msgstr "Tourism And Hotel Science"
 
 #: orgs/models.py:309
 msgid "علوم إنسانية"
@@ -1235,95 +1239,91 @@ msgstr "English"
 msgid "Kurdî"
 msgstr "Kurdi"
 
-#: orgs/models.py:353
+#: orgs/models.py:351
 msgid "الدولة"
 msgstr "Country"
 
-#: orgs/models.py:355
+#: orgs/models.py:353
 msgid "اسم المحافظة"
 msgstr "Province Name"
 
-#: orgs/models.py:357
+#: orgs/models.py:355
 msgid "اسم المدينة بالانكليزية"
 msgstr "The Name Of The City in English"
 
-#: orgs/models.py:359
+#: orgs/models.py:357
 msgid "اسم المدينة بالكردية"
 msgstr "The Name Of The City in Kurdish"
 
-#: orgs/models.py:373 orgs/models.py:493
+#: orgs/models.py:371 orgs/models.py:489
 #: templates/profiles/particip_detail.html:138
 msgid "اسم المستخدم"
 msgstr "User Name"
 
-#: orgs/models.py:373
+#: orgs/models.py:371
 msgid "المستخدمون الذين ليس لديهم طلبات بروفايل فقط"
 msgstr "Only, Users who do not have orders"
 
-#: orgs/models.py:384 templates/profiles/particip_detail.html:188
+#: orgs/models.py:382 templates/profiles/particip_detail.html:188
 #: templates/profiles/profile.html:83
 msgid "نوع المنظمة"
 msgstr "The Type Of The Organisation"
 
-#: orgs/models.py:398 orgs/models.py:746
+#: orgs/models.py:396 orgs/models.py:741
 msgid "شعار المنظمة"
-msgstr "The Logo Of The Organisation"
+msgstr "The Organisation Motto"
 
-#: orgs/models.py:400 templates/profiles/particip_detail.html:424
+#: orgs/models.py:398 templates/profiles/particip_detail.html:420
 #: templates/profiles/profile.html:115
 msgid "الرؤية و الرسالة"
 msgstr "Vision And Mission"
 
-#: orgs/models.py:402
+#: orgs/models.py:400
 msgid "الرؤية و الرسالة باللغة الانكليزية"
 msgstr "Vision And Mission In English"
 
-#: orgs/models.py:409
+#: orgs/models.py:407
 msgid "اسم المدير التنفيذي باللغة الانجليزية"
 msgstr "The Name Of The Executive Director in English"
 
-#: orgs/models.py:421 templates/profiles/particip_detail.html:515
+#: orgs/models.py:419 templates/profiles/particip_detail.html:511
 #: templates/profiles/profile.html:386
 msgid "رقم الهاتف"
 msgstr "Phone Number"
 
-#: orgs/models.py:435 templates/profiles/particip_detail.html:288
+#: orgs/models.py:433 templates/profiles/particip_detail.html:288
 #: templates/profiles/profile.html:185
 msgid "تاريخ سنة التأسيس"
 msgstr "Year Of Incorporation"
 
-#: orgs/models.py:437 templates/profiles/particip_detail.html:302
+#: orgs/models.py:435 templates/profiles/particip_detail.html:302
 #: templates/profiles/profile.html:199
 msgid "هل المنظمة مسجلة ؟"
 msgstr "Is It A Registered Organisation? "
 
-#: orgs/models.py:439 templates/profiles/particip_detail.html:316
+#: orgs/models.py:437 templates/profiles/particip_detail.html:316
 #: templates/profiles/profile.html:212
 msgid "بلد التسجيل"
 msgstr "Country Of Registration"
 
-#: orgs/models.py:442 templates/profiles/particip_detail.html:330
+#: orgs/models.py:440 templates/profiles/particip_detail.html:330
 #: templates/profiles/profile.html:226
 msgid "عدد اﻷعضاء"
-msgstr "Number Of Members"
+msgstr "Membership"
 
-#: orgs/models.py:444 templates/profiles/particip_detail.html:344
+#: orgs/models.py:442 templates/profiles/particip_detail.html:344
 #: templates/profiles/profile.html:240
 msgid "عدد النساء من اﻷعضاء"
 msgstr "Number Of The Female Members"
 
-#: orgs/models.py:448 templates/profiles/particip_detail.html:369
+#: orgs/models.py:446 templates/profiles/particip_detail.html:369
 #: templates/profiles/profile.html:269
 msgid "ھل المؤسسة عضو في اي شبكة او تحالف او جسم تنسیقي؟"
 msgstr ""
-"Is The Constitution Member In Any Network Or Coalition Or Coordinating Body"
+"Is The Constitution Member In Any Network Or Alliance Or Coordinating Body"
 
-#: orgs/models.py:452
-msgid "اسم الشبكة / التحالف باللغة الانجليزية"
-msgstr "The Name Of The Network/Coalition"
-
-#: orgs/models.py:501 orgs/models.py:786
-#: templates/orgs/guid/orgs_guide.html:232
+#: orgs/models.py:497 orgs/models.py:781
+#: templates/orgs/guid/orgs_guide.html:231
 #: templates/orgs/resources/jobs_not_pub.html:140
 #: templates/orgs/resources/org_job_details.html:199
 #: templates/orgs/resources/org_jobs.html:135
@@ -1332,267 +1332,267 @@ msgstr "The Name Of The Network/Coalition"
 msgid "مكان العمل"
 msgstr "Workplace"
 
-#: orgs/models.py:515 orgs/models.py:554 orgs/models.py:611 orgs/models.py:650
-#: orgs/models.py:692 orgs/models.py:766 orgs/models.py:825 orgs/models.py:893
-#: orgs/models.py:979 orgs/models.py:1043
+#: orgs/models.py:510 orgs/models.py:549 orgs/models.py:606 orgs/models.py:645
+#: orgs/models.py:687 orgs/models.py:761 orgs/models.py:820 orgs/models.py:888
+#: orgs/models.py:974 orgs/models.py:1038
 msgid "اللغة"
 msgstr "the language"
 
-#: orgs/models.py:523
+#: orgs/models.py:518
 msgid "عنوان الخبر"
-msgstr "Title"
+msgstr "The Story Headline"
 
-#: orgs/models.py:525 templates/orgs/news/orgs_news_detail.html:3
+#: orgs/models.py:520 templates/orgs/news/orgs_news_detail.html:3
 #: templates/orgs/news/orgs_news_detail.html:17
 msgid "تفاصيل الخبر"
-msgstr "Details"
+msgstr "Details Of The Story"
 
-#: orgs/models.py:527
+#: orgs/models.py:522
 msgid "صورة الخبر"
 msgstr "The Photo Of The Story"
 
-#: orgs/models.py:562
+#: orgs/models.py:557
 msgid "عنوان التقرير"
-msgstr "The Report Title"
+msgstr "The Report Headline"
 
-#: orgs/models.py:564 templates/orgs/rapport/detail_rapport.html:127
+#: orgs/models.py:559 templates/orgs/rapport/detail_rapport.html:127
 #: templates/orgs/rapport/rapport.html:104
 msgid "مجال التقرير"
 msgstr "Scope Of The Report"
 
-#: orgs/models.py:566
+#: orgs/models.py:561
 msgid "صورة او ملف التقرير"
-msgstr "A Photo Or A Document"
+msgstr "A Copy Or A File Of The Report"
 
-#: orgs/models.py:619
+#: orgs/models.py:614
 msgid "عنوان البيان"
-msgstr "Statement Title"
+msgstr "Statement Headline"
 
-#: orgs/models.py:621
+#: orgs/models.py:616
 msgid "صورة او ملف البيان"
-msgstr "A Photo Or A Document"
+msgstr "A Copy Or A File Of The Statement"
 
-#: orgs/models.py:658
+#: orgs/models.py:653
 msgid "عنوان المحتوى"
-msgstr "The Content Title"
+msgstr "The Content Headline"
 
-#: orgs/models.py:660
+#: orgs/models.py:655
 msgid "صورة او ملف المحتوى"
-msgstr "A Photo Or A Document"
+msgstr "A Copy Or A File Of The Content"
 
-#: orgs/models.py:662 templates/orgs/media/media_detail.html:151
+#: orgs/models.py:657 templates/orgs/media/media_detail.html:151
 msgid "رابط المحتوى"
 msgstr "The Content Link"
 
-#: orgs/models.py:700 templates/orgs/devs/org_dev_details.html:114
+#: orgs/models.py:695 templates/orgs/devs/org_dev_details.html:114
 #: templates/orgs/research/detail_research.html:104
 msgid "اسم الجهة"
 msgstr "Name Of The Entity"
 
-#: orgs/models.py:703
+#: orgs/models.py:698
 msgid "عنوان البحث"
-msgstr "The Research Title"
+msgstr "The Research Headline"
 
-#: orgs/models.py:705 templates/orgs/research/detail_research.html:128
+#: orgs/models.py:700 templates/orgs/research/detail_research.html:128
 msgid "مجال البحث"
 msgstr "Scope Of The Research"
 
-#: orgs/models.py:707
+#: orgs/models.py:702
 msgid "ملف أو صورة البحث"
 msgstr "Research File or image"
 
-#: orgs/models.py:709 templates/orgs/research/detail_research.html:138
+#: orgs/models.py:704 templates/orgs/research/detail_research.html:138
 msgid "رابط البحث"
 msgstr "Research Link"
 
-#: orgs/models.py:744
+#: orgs/models.py:739
 msgid "اضف اسم المنظمة اﻷخرى"
 msgstr "Add The Name Of The Other Organisation"
 
-#: orgs/models.py:773
+#: orgs/models.py:768
 msgid "اسم المنظمة اﻷخرى"
 msgstr "The Name Of The Other Organisation"
 
-#: orgs/models.py:776
+#: orgs/models.py:771
 msgid "عنوان الوظيفة"
 msgstr "Job Title"
 
-#: orgs/models.py:778
+#: orgs/models.py:773
 msgid "مدة العقد بالأشهر"
 msgstr "Duration Of The Contract In Months"
 
-#: orgs/models.py:780
+#: orgs/models.py:775
 msgid "وصف الوظيفة"
 msgstr "Job Description"
 
-#: orgs/models.py:792 templates/orgs/resources/org_job_details.html:219
+#: orgs/models.py:787 templates/orgs/resources/org_job_details.html:219
 msgid "المنطقة"
 msgstr "The Region"
 
-#: orgs/models.py:796
+#: orgs/models.py:791
 msgid "تاريخ إغلاق الوظيفة"
-msgstr "The Job Ad Closing Date"
+msgstr "Closing Date Of The Job"
 
-#: orgs/models.py:798 templates/orgs/resources/org_job_details.html:271
+#: orgs/models.py:793 templates/orgs/resources/org_job_details.html:271
 msgid "طريقة التقدم للوظيفة"
-msgstr "How To Apply To The Job Opportunity"
+msgstr "How To Apply To The Job"
 
-#: orgs/models.py:835 orgs/models.py:903
+#: orgs/models.py:830 orgs/models.py:898
 msgid "لوغو الجهة المانحة"
 msgstr "The Logo Of The Donor"
 
-#: orgs/models.py:838 orgs/models.py:923
+#: orgs/models.py:833 orgs/models.py:918
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:153
 #: templates/orgs/funding_opport/pers/detail.html:154
 msgid "لمحة عن الجهة المانحة"
 msgstr "An Overview About The Donor"
 
-#: orgs/models.py:840 orgs/models.py:915
+#: orgs/models.py:835 orgs/models.py:910
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:84
 #: templates/orgs/funding_opport/pers/detail.html:216
 msgid "قطاع المنحة"
 msgstr "The Scholarship Sector"
 
-#: orgs/models.py:842 orgs/models.py:918
+#: orgs/models.py:837 orgs/models.py:913
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:164
 #: templates/orgs/funding_opport/pers/detail.html:229
 msgid "دول المنحة"
 msgstr "Scholarship Countries"
 
-#: orgs/models.py:846 orgs/models.py:926 orgs/models.py:1008
-#: templates/orgs/capacity/org_capacity_details.html:196
+#: orgs/models.py:841 orgs/models.py:921 orgs/models.py:1003
+#: templates/orgs/capacity/org_capacity_details.html:195
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:185
 #: templates/orgs/funding_opport/pers/detail.html:249
 msgid "تاريخ إغلاق المنحة"
 msgstr "Scholarship End Date"
 
-#: orgs/models.py:848 orgs/models.py:928
+#: orgs/models.py:843 orgs/models.py:923
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:194
 #: templates/orgs/funding_opport/pers/detail.html:258
 msgid "مدة المنحة"
 msgstr "Duration Of The Scholarship"
 
-#: orgs/models.py:850 orgs/models.py:930
+#: orgs/models.py:845 orgs/models.py:925
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:203
 #: templates/orgs/funding_opport/pers/detail.html:267
 msgid "حجم المنحة"
 msgstr "Scholarship Scale"
 
-#: orgs/models.py:854 orgs/models.py:934
+#: orgs/models.py:849 orgs/models.py:929
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:213
 #: templates/orgs/funding_opport/pers/detail.html:277
 msgid "وصف المنحة"
 msgstr "Scholarship Description"
 
-#: orgs/models.py:856 orgs/models.py:936
+#: orgs/models.py:851 orgs/models.py:931
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:226
 #: templates/orgs/funding_opport/pers/detail.html:290
 msgid "شروط المنحة"
 msgstr "Scholarship Requirements"
 
-#: orgs/models.py:858 orgs/models.py:938 orgs/models.py:1011
-#: templates/orgs/capacity/org_capacity_details.html:207
+#: orgs/models.py:853 orgs/models.py:933 orgs/models.py:1006
+#: templates/orgs/capacity/org_capacity_details.html:206
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:239
 #: templates/orgs/funding_opport/pers/detail.html:303
 msgid "متطلبات التقديم"
-msgstr "Application Requirements"
+msgstr "Filing Requirements"
 
-#: orgs/models.py:860 orgs/models.py:940
+#: orgs/models.py:855 orgs/models.py:935
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:252
 #: templates/orgs/funding_opport/pers/detail.html:316
 msgid "كيفية التقديم"
 msgstr "How To Apply"
 
-#: orgs/models.py:863 orgs/models.py:943 orgs/models.py:1016
+#: orgs/models.py:858 orgs/models.py:938 orgs/models.py:1011
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:262
 #: templates/orgs/funding_opport/pers/detail.html:326
 msgid "الرابط الأصلي"
 msgstr "The Original Link"
 
-#: orgs/models.py:906 templates/orgs/funding_opport/pers/detail.html:168
+#: orgs/models.py:901 templates/orgs/funding_opport/pers/detail.html:168
 msgid "فئة المنحة"
 msgstr "Scholarship Category"
 
-#: orgs/models.py:908 templates/orgs/funding_opport/pers/detail.html:86
+#: orgs/models.py:903 templates/orgs/funding_opport/pers/detail.html:86
 #: templates/orgs/funding_opport/pers/detail.html:181
 msgid "نوع المنحة"
 msgstr "Scholarship Type"
 
-#: orgs/models.py:911 templates/orgs/funding_opport/pers/detail.html:190
+#: orgs/models.py:906 templates/orgs/funding_opport/pers/detail.html:190
 msgid "المستوى التعليمي"
 msgstr "Educational Level"
 
-#: orgs/models.py:913 templates/orgs/funding_opport/pers/detail.html:203
+#: orgs/models.py:908 templates/orgs/funding_opport/pers/detail.html:203
 msgid "الاختصاص التعليمي"
-msgstr "Educational Specialization"
+msgstr "Educational Disciplines"
 
-#: orgs/models.py:987
+#: orgs/models.py:982
 msgid "اسم الجهة الممولة"
-msgstr "The Funder"
+msgstr "Financing Entity"
 
-#: orgs/models.py:989 templates/orgs/capacity/org_capacity_details.html:86
+#: orgs/models.py:984 templates/orgs/capacity/org_capacity_details.html:85
 msgid "عنوان الفرصة"
 msgstr "Opportunity Title"
 
-#: orgs/models.py:991
+#: orgs/models.py:986
 msgid "وصف الفرصة"
 msgstr "Opportunity Description"
 
-#: orgs/models.py:993 templates/orgs/capacity/org_capacity_details.html:142
-#: templates/orgs/capacity/org_capacity_details.html:280
+#: orgs/models.py:988 templates/orgs/capacity/org_capacity_details.html:141
+#: templates/orgs/capacity/org_capacity_details.html:279
 msgid "نوع الفرصة"
 msgstr "Opportunity Type"
 
-#: orgs/models.py:1001 templates/orgs/capacity/org_capacity_details.html:173
+#: orgs/models.py:996 templates/orgs/capacity/org_capacity_details.html:172
 msgid "مكان الفرصة"
 msgstr "Opportunity Location"
 
-#: orgs/models.py:1006 templates/orgs/capacity/org_capacity_details.html:151
-#: templates/orgs/capacity/org_capacity_details.html:282
+#: orgs/models.py:1001 templates/orgs/capacity/org_capacity_details.html:150
+#: templates/orgs/capacity/org_capacity_details.html:281
 msgid "قطاع الفرصة"
 msgstr "Opportunity Sector"
 
-#: orgs/models.py:1013 templates/orgs/capacity/org_capacity_details.html:220
+#: orgs/models.py:1008 templates/orgs/capacity/org_capacity_details.html:219
 msgid "طريقة التقديم"
 msgstr "How To Apply"
 
-#: orgs/models.py:1035
+#: orgs/models.py:1030
 msgid "تطوير وإدارة المشاريع"
 msgstr "Project Development And Management"
 
-#: orgs/models.py:1036
+#: orgs/models.py:1031
 msgid "الحوكمة التنظيمية"
 msgstr "Organizational Governance"
 
-#: orgs/models.py:1037
+#: orgs/models.py:1032
 msgid "المناصرة والحملات"
 msgstr "Advocacy And Campaigns"
 
-#: orgs/models.py:1038
+#: orgs/models.py:1033
 msgid "مكتبة المجتمع المدني"
 msgstr "Civil Society Library"
 
-#: orgs/models.py:1050
+#: orgs/models.py:1045
 msgid "اسم الجهة "
 msgstr "Entity Name"
 
-#: orgs/models.py:1055
+#: orgs/models.py:1050
 msgid "تاريخ الإعداد/النشر/التأليف"
 msgstr "Date Of Preparation / Publishing / Authoring"
 
-#: orgs/models.py:1060 templates/orgs/devs/org_dev_details.html:102
+#: orgs/models.py:1055 templates/orgs/devs/org_dev_details.html:102
 msgid "موضوع المادة"
 msgstr "Subject Of The Article"
 
-#: orgs/models.py:1062
+#: orgs/models.py:1057
 msgid "المادة "
 msgstr "The Article"
 
-#: orgs/models.py:1064
+#: orgs/models.py:1059
 msgid "رابط فيديو"
 msgstr "video link"
 
-#: orgs/views.py:110
+#: orgs/views.py:109
 #, python-brace-format
 msgid ""
 "تم إنشاء حسابك بنجاح باسم المستخدم ( {username} ) !, يرجى تأكيد عنوان بريدك "
@@ -1601,32 +1601,32 @@ msgstr ""
 "Your Account Was Successfully Created With The User Name ( {username} ), "
 "Please Confirm Your Email Address To To Complete Registration"
 
-#: orgs/views.py:118
+#: orgs/views.py:117
 #, python-brace-format
 msgid "لقد تم تسجيل حساب المستخدم ( {username} ) بنجاح"
 msgstr "The User ( {username} ) account has been successfully registered"
 
-#: orgs/views.py:217
+#: orgs/views.py:216
 msgid "لقد تم حذف المحافظه بنجاح"
 msgstr "The Province Was Deleted Successfully"
 
-#: orgs/views.py:295
+#: orgs/views.py:282
 msgid "لا يوجد حاليا منظمات"
 msgstr "There Are No Organisations Currently"
 
-#: orgs/views.py:301
+#: orgs/views.py:288
 msgid "لا يوجد أخبار حالياً"
 msgstr "There Is No News Currently"
 
-#: orgs/views.py:313
+#: orgs/views.py:300
 msgid "لا يوجد حاليا فرص بناء"
-msgstr "There Are No Opportunities Currently"
+msgstr "There Are No Building Opportunities Currently"
 
-#: orgs/views.py:323
+#: orgs/views.py:310
 msgid "لقد تم طلب الاشتراك بآخر اﻷخبار بنجاح"
 msgstr "The News Feed Subscription Was Successfully Requested"
 
-#: orgs/views.py:331
+#: orgs/views.py:318
 msgid "هذا البريد الالكتروني موجود مسبقاً يرجى التسجيل ببريد الكتروني أخر"
 msgstr ""
 "This Email Address Is Already Existing, Please Sign Up Using Another Email "
@@ -1781,71 +1781,65 @@ msgstr ""
 msgid "لقد تم تغيير حالة المنحة  بنجاح"
 msgstr "The Grant Statue Was Changed Successfully"
 
-#: orgs/views_news_rapport.py:101
+#: orgs/views_news_rapport.py:102
 msgid "لقد تمت إضافة الخبر بنجاح و ستتم دراسته قريباً"
 msgstr "The Story Was Successfully Added, And It Will Be Reviewed Soon"
 
-#: orgs/views_news_rapport.py:196
+#: orgs/views_news_rapport.py:197
 msgid "لقد تم تغيير حالة الخبر بنجاح"
+msgstr "The Story Statue Was Successfully Changed "
+
+#: orgs/views_news_rapport.py:231
+msgid "لقد تم تعديل الخبر بنجاح"
 msgstr "The Story Statue Was Successfully Changed"
 
-#: orgs/views_news_rapport.py:230
-msgid "لقد تم تعديل الخبر بنجاح"
-msgstr "The Story Was Edited Successfully"
-
-#: orgs/views_news_rapport.py:252
+#: orgs/views_news_rapport.py:253
 msgid "لقد تم حذف الخبر بنجاح"
 msgstr "The Story Was Deleted Successfully"
 
-#: orgs/views_news_rapport.py:284
+#: orgs/views_news_rapport.py:285
 msgid "لقد تمت إضافة التقرير بنجاح و ستتم دراسته قريباً"
 msgstr "The Report Was Successfully Added, And It Will Be Reviewed Soon"
 
-#: orgs/views_news_rapport.py:374
+#: orgs/views_news_rapport.py:375
 msgid "لقد تم تعديل حالة التقرير بنجاح"
 msgstr "The Report Statue Was Edited Successfully"
 
-#: orgs/views_news_rapport.py:409
+#: orgs/views_news_rapport.py:410
 msgid "لقد تمت تعديل التقرير بنجاح"
 msgstr "The Report Was Edited Successfully"
 
-#: orgs/views_news_rapport.py:431
+#: orgs/views_news_rapport.py:432
 msgid "لقد تم حذف التقرير بنجاح"
 msgstr "The Report Was Deleted Successfully"
 
-#: orgs/views_news_rapport.py:491
+#: orgs/views_news_rapport.py:475
 msgid "لقد تم ارسال الدعوة "
 msgstr "The Invitation Was Sent"
 
-#: orgs/views_news_rapport.py:494
-#, fuzzy
-#| msgid "لقد تم ارسال الدعوة "
-msgid "لم يتم إرسال الدعوة"
-msgstr "The Invitation Was Sent"
-
-#: orgs/views_prof_dash.py:168
+#: orgs/views_prof_dash.py:166
 msgid "لقد تم تعديل الملف الشخصي بنجاح"
 msgstr "The Personal Profile Was Edited Successfully"
 
-#: orgs/views_prof_dash.py:271
+#: orgs/views_prof_dash.py:269
 msgid "لقد تم تغيير حالة الطلب للمنظمة بنجاح"
-msgstr "The Application Status Was Changed Successfully"
+msgstr "The Application Status For The Organization Was Changed Successfully"
 
-#: orgs/views_prof_dash.py:333
+#: orgs/views_prof_dash.py:331
 msgid "لقد تم حذف الملف بنجاح"
 msgstr "The File Was Deleted Successfully"
 
-#: orgs/views_prof_dash.py:435
+#: orgs/views_prof_dash.py:433
 msgid "عدد الأخبار المنشورة باليوم"
-msgstr "The Number of Published News per day"
+msgstr "The Published News Number per day"
 
-#: orgs/views_prof_dash.py:464
+#: orgs/views_prof_dash.py:462
 msgid "عدد المنظمات المنشورة باليوم"
-msgstr "The Number Of Published Organisations per day"
+msgstr "The Published Orgs Number per day"
 
-#: orgs/views_prof_dash.py:502 orgs/views_prof_dash.py:540
+#: orgs/views_prof_dash.py:500 orgs/views_prof_dash.py:538
 msgid "عدد التقارير المنشورة باليوم"
-msgstr "The Number of Published Repports per day"
+msgstr "The Published Repports Number per day"
 
 #: scm/urls.py:44
 msgid "admin"
@@ -1857,8 +1851,8 @@ msgstr "Add Province"
 
 #: templates/city/add_city.html:27 templates/city/edite_city.html:27
 #: templates/orgs/data/add_data.html:33 templates/orgs/data/edit_data.html:20
-#: templates/profiles/org_profile_form.html:242
-#: templates/profiles/org_profile_update.html:202
+#: templates/profiles/org_profile_form.html:239
+#: templates/profiles/org_profile_update.html:199
 msgid "احفظ"
 msgstr "Save"
 
@@ -1913,26 +1907,25 @@ msgstr "Provinces Of The Neighboring Countries Of Syria"
 msgid "المركز السوري للإعلام و حرية التعبير"
 msgstr "Syrian Center For Media And Freedom Of Expression"
 
-#: templates/combonents/footer.html:28 templates/combonents/main-navbar.html:29
+#: templates/combonents/footer.html:29 templates/combonents/main-navbar.html:29
 #: templates/orgs/home.html:2 templates/orgs/home.html:52
-#: templates/orgs/start_page.html:2
 msgid "بوابة المجتمع المدني"
-msgstr "Civil Society Gateway"
+msgstr "Civil Society Portal"
 
-#: templates/combonents/footer.html:59
+#: templates/combonents/footer.html:51
 #: templates/combonents/main-navbar.html:204
 msgid "للتواصل معنا"
 msgstr "Contact Us"
 
-#: templates/combonents/footer.html:103
+#: templates/combonents/footer.html:95
 msgid "تابعونا على"
 msgstr "Follow Us On"
 
-#: templates/combonents/footer.html:137 templates/orgs/home.html:298
+#: templates/combonents/footer.html:129 templates/orgs/home.html:278
 msgid "للاشتراك بآخر الأخبار"
 msgstr "To Subscribe The Latest News"
 
-#: templates/combonents/footer.html:145
+#: templates/combonents/footer.html:137
 msgid "إملأ النموذج التالي"
 msgstr "Fill Out The Form"
 
@@ -2092,7 +2085,7 @@ msgstr "Organisations Requests Are Under Consideration"
 #: templates/combonents/sidebar_dashboard.html:73
 #: templates/profiles/orgs_orders_published.html:4
 msgid "طلبات المنظمات الموافق عليها"
-msgstr "Approved  Requests"
+msgstr "Approved Organisations Requests"
 
 #: templates/combonents/sidebar_dashboard.html:81
 msgid "إضافة خبر لمنظمة"
@@ -2131,22 +2124,22 @@ msgstr "Organisations Statements Under Consideration"
 
 #: templates/combonents/sidebar_dashboard.html:129
 msgid "إضافة محتوى سمعي و بصري لمنظمة"
-msgstr "Add Audio-Visual Content"
+msgstr "Add Audio-Visual Content To An Organisation"
 
 #: templates/combonents/sidebar_dashboard.html:137
 #: templates/orgs/media/media.html:32 templates/orgs/media/media.html:36
 msgid "المحتوى السمعي و البصري للمنظمات قيد الدراسة"
-msgstr "The Audio-Visual Content Under Consideration"
+msgstr "The Audio-Visual Content To The Organisations Are Under Consideration"
 
 #: templates/combonents/sidebar_dashboard.html:145
 msgid "إضافة بحث خارجي لمنظمة"
-msgstr "Add An External Research"
+msgstr "Add An External Research To An Organisation"
 
 #: templates/combonents/sidebar_dashboard.html:153
 #: templates/orgs/research/research.html:28
 #: templates/orgs/research/research.html:31
 msgid "اﻷبحاث الخارجية للمنظمات قيد الدراسة"
-msgstr "The External Researches Are Under Consideration"
+msgstr "The External Researches For The Organisations Are Under Consideration"
 
 #: templates/combonents/sidebar_dashboard.html:161
 #: templates/orgs/resources/jobs_not_pub.html:25
@@ -2181,14 +2174,13 @@ msgstr "Funding opportunities for individuals under consideration"
 
 #: templates/combonents/sidebar_dashboard.html:209
 msgid "إضافة فرصة بناء القدرات"
-msgstr "Add Capacity Building Opportunity"
+msgstr "Add Building Capacities Opportunity"
 
 #: templates/combonents/sidebar_dashboard.html:217
 msgid "فرص بناء القدرات للمنظمات قيد الدراسة"
 msgstr ""
-"Capacity Building Opportunities For The Organisations Are Under "
-"ConsiderationBuilding Capacities Opportunities For The Organisations Are "
-"Under Consideration"
+"Building Capacities Opportunities For The Organisations Are Under "
+"Consideration"
 
 #: templates/combonents/sidebar_dashboard.html:225
 #: templates/orgs/devs/org_add_dev.html:4
@@ -2226,14 +2218,14 @@ msgstr "Back To The Main Page"
 #: templates/orgs/capacity/capacity_not_pub.html:4
 #: templates/orgs/capacity/capacity_not_pub.html:13
 msgid "فرص بناء القدرات  قيد الدراسة"
-msgstr "Capacity Building Opportunity Is Under Consideration"
+msgstr "Building Capacities Opportunity Is Under Consideration"
 
 #: templates/orgs/capacity/capacity_not_pub.html:23
 #: templates/orgs/capacity/org_add_capacity.html:4
 #: templates/orgs/capacity/org_add_capacity.html:12
 #: templates/orgs/capacity/org_capacity.html:21
 msgid "اضافة فرصة بناء القدرات"
-msgstr "Add Capacity Building Opportunity"
+msgstr "Add Building Capacities Opportunity"
 
 #: templates/orgs/capacity/capacity_not_pub.html:28
 #: templates/orgs/capacity/org_capacity.html:26
@@ -2268,8 +2260,7 @@ msgstr "Sort"
 #: templates/orgs/funding_opport/pers/not_pub.html:60
 #: templates/orgs/funding_opport/pers/pub.html:65
 #: templates/orgs/guid/orgs_guid_conf_pub.html:66
-#: templates/orgs/guid/orgs_guide.html:134
-#: templates/orgs/guid/orgs_guide.html:135 templates/orgs/media/media.html:63
+#: templates/orgs/guid/orgs_guide.html:134 templates/orgs/media/media.html:63
 #: templates/orgs/media/media_not_pub.html:56
 #: templates/orgs/news/org_news_not_pub.html:64
 #: templates/orgs/news/orgs_news_news.html:74
@@ -2312,7 +2303,7 @@ msgstr "Read more"
 
 #: templates/orgs/capacity/capacity_not_pub.html:157
 msgid "لا يوجد حالياً فرص بناء قدرات للنشر"
-msgstr "There Are No Capacity Building Opportunities Currently To Publish"
+msgstr "There Are No Building Capacities Opportunities Currently To Publish"
 
 #: templates/orgs/capacity/capacity_not_pub.html:167
 #: templates/orgs/capacity/org_add_capacity.html:74
@@ -2342,12 +2333,12 @@ msgstr "You do not have the permition to access this page"
 
 #: templates/orgs/capacity/org_add_capacity.html:64
 msgid "انشر فرصة بناء قدرات"
-msgstr "Publish Capacity Building Opportunity"
+msgstr "Publish Building Capacities Opportunity"
 
 #: templates/orgs/capacity/org_capacity.html:32
 #: templates/orgs/capacity/org_capacity.html:36
 msgid "فرص بناء القدرات قيد الدراسة"
-msgstr "Capacity Building Opportunities Are Under Consideration"
+msgstr "Building Capacities Opportunity Is Under Consideration"
 
 #: templates/orgs/capacity/org_capacity.html:169
 msgid " لا يوجد حالياً فرص بناء القدرات "
@@ -2356,11 +2347,11 @@ msgstr "There Are No Building Capacities Opportunities Currently To Publish"
 #: templates/orgs/capacity/org_capacity_delete.html:4
 #: templates/orgs/capacity/org_capacity_delete.html:12
 msgid "حذف فرصة بناء القدرات"
-msgstr "Delete Capacity Building Opportunity"
+msgstr "Delete Building Capacities Opportunity"
 
 #: templates/orgs/capacity/org_capacity_delete.html:14
 msgid "هل أنت متأكد من رغبتك في حذف فرصة بناء القدرات بعنوان"
-msgstr "Are You Sure You Want To Delete The Capacity Building Opportunity?"
+msgstr "Are You Sure You Want To Delete The Building Capacities Opportunity?"
 
 #: templates/orgs/capacity/org_capacity_delete.html:20
 #: templates/orgs/devs/org_dev_details.html:51
@@ -2377,7 +2368,7 @@ msgstr "Delete"
 #: templates/orgs/capacity/org_capacity_details.html:3
 #: templates/orgs/capacity/org_capacity_details.html:12
 msgid "تفاصيل فرصة بناء القدرات"
-msgstr "Details Of Capacity Building Opportunity"
+msgstr "Details of the Building Capacities Opportunity"
 
 #: templates/orgs/capacity/org_capacity_details.html:35
 #: templates/orgs/devs/org_dev_details.html:34
@@ -2389,22 +2380,23 @@ msgid "الموافقة على النشر"
 msgstr "Accepting To Publish"
 
 #: templates/orgs/capacity/org_capacity_details.html:44
-#, fuzzy
-#| msgid "إضافة فرصة بناء القدرات"
-msgid "إلغاء نشر فرصة بناءالقدرات"
-msgstr "Add Capacity Building Opportunity"
+#: templates/orgs/devs/org_dev_details.html:43
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:42
+#: templates/orgs/funding_opport/pers/detail.html:44
+msgid "إلغاء نشر الدليل"
+msgstr "Cancelling To Publish The Index"
 
-#: templates/orgs/capacity/org_capacity_details.html:51
-#: templates/orgs/capacity/org_capacity_details.html:61
+#: templates/orgs/capacity/org_capacity_details.html:50
+#: templates/orgs/capacity/org_capacity_details.html:60
 msgid "تعديل فرصة بناءالقدرات"
-msgstr "Editing Capacity Building Opportunity"
+msgstr "Editing Building Capacities Opportunity"
 
-#: templates/orgs/capacity/org_capacity_details.html:54
+#: templates/orgs/capacity/org_capacity_details.html:53
 #: templates/orgs/devs/org_dev_delete.html:20
 msgid "حذف "
 msgstr "Delete"
 
-#: templates/orgs/capacity/org_capacity_details.html:66
+#: templates/orgs/capacity/org_capacity_details.html:65
 #: templates/orgs/data/detail_data.html:64
 #: templates/orgs/devs/org_dev_details.html:65
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:64
@@ -2418,7 +2410,7 @@ msgstr "Delete"
 msgid "ليس لديك الصلاحية"
 msgstr "You do not have the permition"
 
-#: templates/orgs/capacity/org_capacity_details.html:72
+#: templates/orgs/capacity/org_capacity_details.html:71
 #: templates/orgs/data/detail_data.html:70
 #: templates/orgs/devs/org_dev_details.html:71
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:70
@@ -2433,32 +2425,32 @@ msgid "لا يمكنك التعديل بعد الموافقة على النشر 
 msgstr ""
 "You cannot edit after the confirmation, or you do not have the authority"
 
-#: templates/orgs/capacity/org_capacity_details.html:94
+#: templates/orgs/capacity/org_capacity_details.html:93
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:93
 #: templates/orgs/funding_opport/pers/detail.html:95
 #: templates/orgs/resources/org_job_details.html:95
 msgid "تاريخ الإضافة"
 msgstr "Adding Date"
 
-#: templates/orgs/capacity/org_capacity_details.html:106
+#: templates/orgs/capacity/org_capacity_details.html:105
 msgid "اسم الجهة المانحة"
 msgstr "The Name Of The Donor"
 
-#: templates/orgs/capacity/org_capacity_details.html:132
+#: templates/orgs/capacity/org_capacity_details.html:131
 msgid "اسم الذي أضاف فرصة بناء القدرات"
 msgstr "The Name Of The Person Who Added The Building Capacities Opportunity"
 
-#: templates/orgs/capacity/org_capacity_details.html:161
+#: templates/orgs/capacity/org_capacity_details.html:160
 msgid "وصف فرصة التمويل"
 msgstr "Description Of The Funding Opportunity"
 
-#: templates/orgs/capacity/org_capacity_details.html:182
+#: templates/orgs/capacity/org_capacity_details.html:181
 #: templates/orgs/resources/org_job_details.html:207
 msgid "المدينة"
 msgstr "The City"
 
-#: templates/orgs/capacity/org_capacity_details.html:188
-#: templates/orgs/capacity/org_capacity_details.html:236
+#: templates/orgs/capacity/org_capacity_details.html:187
+#: templates/orgs/capacity/org_capacity_details.html:235
 #: templates/orgs/data/detail_data.html:99
 #: templates/orgs/devs/org_dev_details.html:187
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:178
@@ -2491,15 +2483,15 @@ msgstr "The City"
 #: templates/profiles/particip_detail.html:337
 #: templates/profiles/particip_detail.html:351
 #: templates/profiles/particip_detail.html:379
-#: templates/profiles/particip_detail.html:397
-#: templates/profiles/particip_detail.html:454
-#: templates/profiles/particip_detail.html:468
-#: templates/profiles/particip_detail.html:482
-#: templates/profiles/particip_detail.html:496
-#: templates/profiles/particip_detail.html:508
-#: templates/profiles/particip_detail.html:524
-#: templates/profiles/particip_detail.html:537
-#: templates/profiles/particip_detail.html:553
+#: templates/profiles/particip_detail.html:394
+#: templates/profiles/particip_detail.html:450
+#: templates/profiles/particip_detail.html:464
+#: templates/profiles/particip_detail.html:478
+#: templates/profiles/particip_detail.html:492
+#: templates/profiles/particip_detail.html:504
+#: templates/profiles/particip_detail.html:518
+#: templates/profiles/particip_detail.html:531
+#: templates/profiles/particip_detail.html:547
 #: templates/profiles/profile.html:41 templates/profiles/profile.html:52
 #: templates/profiles/profile.html:107 templates/profiles/profile.html:121
 #: templates/profiles/profile.html:142 templates/profiles/profile.html:154
@@ -2514,11 +2506,11 @@ msgstr "The City"
 msgid "لم يذكر"
 msgstr "Not Mentioned"
 
-#: templates/orgs/capacity/org_capacity_details.html:230
+#: templates/orgs/capacity/org_capacity_details.html:229
 msgid "الرابط"
 msgstr "Link"
 
-#: templates/orgs/capacity/org_capacity_details.html:247
+#: templates/orgs/capacity/org_capacity_details.html:246
 #: templates/orgs/data/detail_data.html:175
 #: templates/orgs/devs/org_dev_details.html:209
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:279
@@ -2532,7 +2524,7 @@ msgstr "Link"
 msgid "مشاركة على فيسبوك"
 msgstr "Share On Facebook"
 
-#: templates/orgs/capacity/org_capacity_details.html:250
+#: templates/orgs/capacity/org_capacity_details.html:249
 #: templates/orgs/data/detail_data.html:178
 #: templates/orgs/devs/org_dev_details.html:212
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:282
@@ -2546,7 +2538,7 @@ msgstr "Share On Facebook"
 msgid "مشاركة على تويتر"
 msgstr "Share on Twitter"
 
-#: templates/orgs/capacity/org_capacity_details.html:253
+#: templates/orgs/capacity/org_capacity_details.html:252
 #: templates/orgs/data/detail_data.html:181
 #: templates/orgs/devs/org_dev_details.html:215
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:285
@@ -2560,7 +2552,7 @@ msgstr "Share on Twitter"
 msgid "مشاركة على لينكدين"
 msgstr "Share on LinkedIn"
 
-#: templates/orgs/capacity/org_capacity_details.html:256
+#: templates/orgs/capacity/org_capacity_details.html:255
 #: templates/orgs/data/detail_data.html:184
 #: templates/orgs/devs/org_dev_details.html:218
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:288
@@ -2573,13 +2565,13 @@ msgstr "Share on LinkedIn"
 msgid "مشاركة على واتس اب"
 msgstr "Share on Whatsapp"
 
-#: templates/orgs/capacity/org_capacity_details.html:270
+#: templates/orgs/capacity/org_capacity_details.html:269
 msgid "أحدث ثلاثة فرص بناء القدرات"
 msgstr "The latest three opportunities for capacity-building"
 
 #: templates/orgs/capacity/org_edit_capacity.html:4
 msgid " تعديل فرصة بناء القدرات"
-msgstr "Editing Capacity Building Opportunity"
+msgstr "The Capacity Building Opportunity Was Edited Successfully"
 
 #: templates/orgs/capacity/org_edit_capacity.html:11
 msgid "تعديل فرصة بناء القدرات"
@@ -2711,10 +2703,6 @@ msgstr "Are You Sure You Want To Delete The Development Index?"
 msgid "تفاصيل دليل التطوير"
 msgstr "Development Index Details"
 
-#: templates/orgs/devs/org_dev_details.html:43
-msgid "إلغاء نشر الدليل"
-msgstr "Cancelling To Publish The Index"
-
 #: templates/orgs/devs/org_dev_details.html:49
 #: templates/orgs/devs/org_dev_details.html:60
 msgid "تعديل الدليل"
@@ -2819,13 +2807,6 @@ msgstr "Are You Sure You Want To Delete The Funding Opportunity?"
 msgid "تفاصيل فرصة التمويل"
 msgstr "Funding Opportunity Details"
 
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:42
-#: templates/orgs/funding_opport/pers/detail.html:44
-#, fuzzy
-#| msgid "إلغاء نشر فرصة العمل"
-msgid "إلغاء نشر فرصة التمويل"
-msgstr "Cancelling To Publish The Job Opportunity"
-
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:142
 #: templates/orgs/funding_opport/pers/detail.html:143
 msgid "اسم الذي أضاف فرصة التمويل"
@@ -2862,7 +2843,7 @@ msgstr "Editing Funding Opportunity For The Individuals"
 #: templates/orgs/funding_opport/pers/not_pub.html:4
 #: templates/orgs/funding_opport/pers/not_pub.html:13
 msgid "فرص التمويل للأفراد للموافقة على النشر"
-msgstr "Funding Opportunities For The Individuals To Approve Publishing"
+msgstr "Funding Opportunities For The Individuals To Accept Publishing "
 
 #: templates/orgs/funding_opport/pers/not_pub.html:151
 #: templates/orgs/funding_opport/pers/pub.html:156
@@ -2875,10 +2856,6 @@ msgstr ""
 #: templates/orgs/funding_opport/pers/pub.html:11
 msgid "فرص التمويل للأفراد"
 msgstr "Funding Opportunities For The Individuals  "
-
-#: templates/orgs/guid/new_filtre.html:3
-msgid "New Filtre"
-msgstr ""
 
 #: templates/orgs/guid/orgs_guid_conf_pub.html:3
 #: templates/orgs/guid/orgs_guid_conf_pub.html:16
@@ -2897,14 +2874,14 @@ msgid "تقديم طلب اشتراك"
 msgstr "Submitting The Subscribe Request"
 
 #: templates/orgs/guid/orgs_guid_conf_pub.html:93
-#: templates/orgs/guid/orgs_guide.html:164 templates/orgs/home.html:152
+#: templates/orgs/guid/orgs_guide.html:163 templates/orgs/home.html:147
 #: templates/profiles/orgs_orders_etude.html:34
 #: templates/profiles/orgs_orders_published.html:33
 msgid "للمزيد عن المنظمة"
 msgstr "For More Information About The Organisation"
 
 #: templates/orgs/guid/orgs_guid_conf_pub.html:125
-#: templates/orgs/guid/orgs_guide.html:196
+#: templates/orgs/guid/orgs_guide.html:195
 msgid "إجمالي عدد المنظمات"
 msgstr "Total Number Of The Organisations"
 
@@ -2921,13 +2898,14 @@ msgstr "Read More"
 #: templates/orgs/guid/orgs_guide.html:83
 #: templates/orgs/guid/orgs_guide.html:88
 msgid "طلبات اشتراك المنظمات قيد الدراسة"
-msgstr "Applications Of Participation Are Under Consideration"
+msgstr ""
+"The Applies For Participation To The Organisations Are Under Consideration"
 
-#: templates/orgs/guid/orgs_guide.html:136
+#: templates/orgs/guid/orgs_guide.html:135
 msgid "كافة المنظمات"
 msgstr "All the organizations"
 
-#: templates/orgs/guid/orgs_guide.html:213
+#: templates/orgs/guid/orgs_guide.html:212
 #: templates/profiles/orgs_orders_published.html:81
 msgid "حالياً لا يوجد منظمات مسجله او موافق عليها"
 msgstr "Currently, There Are No Registered Or Approved Organisations"
@@ -2940,31 +2918,31 @@ msgstr "Civil Society Index According To The Area Of Work"
 msgid "المنظمات المضافة حديثاً"
 msgstr "Organisations Added Recently"
 
-#: templates/orgs/home.html:176
+#: templates/orgs/home.html:171
 msgid "أحدث اﻷخبار"
 msgstr "Latest News"
 
-#: templates/orgs/home.html:195
+#: templates/orgs/home.html:186
 msgid "للمزيد عن الخبر"
 msgstr "For More About The News Item"
 
-#: templates/orgs/home.html:217
+#: templates/orgs/home.html:208
 msgid "أحدث فرص العمل"
 msgstr "Latest Job Opportunities"
 
-#: templates/orgs/home.html:234
+#: templates/orgs/home.html:221
 msgid "للمزيد عن فرصة العمل"
 msgstr "For More About The Job Opportunity"
 
-#: templates/orgs/home.html:256
+#: templates/orgs/home.html:243
 msgid "أحدث فرص بناء القدرات"
 msgstr "Latest Capacity Building Opportunity"
 
-#: templates/orgs/home.html:276
+#: templates/orgs/home.html:256
 msgid "للمزيد عن فرصة بناء القدرات"
 msgstr "For More About The Capacity Building Opportunity"
 
-#: templates/orgs/home.html:317 templates/register/signe-up.html:34
+#: templates/orgs/home.html:297 templates/register/signe-up.html:34
 msgid "اشترك"
 msgstr "Subscribe"
 
@@ -3105,7 +3083,7 @@ msgstr "Cancel Publishing The News Item"
 
 #: templates/orgs/news/orgs_news_detail.html:99
 msgid "تاريخ إضافة الخبر"
-msgstr "Date Of Adding The News"
+msgstr "Adding The News Date"
 
 #: templates/orgs/news/orgs_news_detail.html:131
 msgid "اسم الذي أضاف الخبر"
@@ -3296,13 +3274,13 @@ msgstr "Job Opportunities Are Under Consideration "
 #: templates/orgs/resources/jobs_not_pub.html:139
 #: templates/orgs/resources/org_jobs.html:134
 msgid "اسم العمل"
-msgstr "The Job Title"
+msgstr "The Job Name"
 
 #: templates/orgs/resources/jobs_not_pub.html:145
 #: templates/orgs/resources/org_job_details.html:232
 #: templates/orgs/resources/org_jobs.html:140
 msgid "مدة العمل"
-msgstr "The Duration"
+msgstr "The Job Duration"
 
 #: templates/orgs/resources/jobs_not_pub.html:149
 #: templates/orgs/resources/org_job_details.html:238
@@ -3371,7 +3349,7 @@ msgstr "The Required Expertise"
 
 #: templates/orgs/resources/org_job_details.html:259
 msgid "تاريخ إغلاق التقدم للوظيفة"
-msgstr "Job application closing date"
+msgstr "Ending To Apply The Job Date"
 
 #: templates/orgs/resources/org_job_details.html:305
 msgid "أحدث ثلاثة فرص عمل"
@@ -3417,7 +3395,7 @@ msgstr "All results"
 
 #: templates/profiles/layout_profile.html:113
 msgid "البوابة باﻷرقام"
-msgstr "The gate in numbers"
+msgstr "The gate is in numbers"
 
 #: templates/profiles/layout_profile.html:126
 msgid "المنظمات"
@@ -3449,16 +3427,16 @@ msgstr "The Published News' Form The Portal"
 
 #: templates/profiles/layout_profile.html:277
 msgid "عدد الاخبار المنشورة"
-msgstr "The Number Of Published News"
+msgstr "The Published News Number"
 
 #: templates/profiles/layout_profile.html:288
 msgid " عدد سمعي بصري"
-msgstr "The Number Of  Audio-Visual Items"
+msgstr "The Audio-Visual Number"
 
 #: templates/profiles/layout_profile.html:294
 #: templates/profiles/layout_profile.html:297
 msgid " عدد الاخبار المنشورة من البوابة"
-msgstr "The Number Of Portal's Published News"
+msgstr "The Published News' Form The Portal Number"
 
 #: templates/profiles/org_profile_delete.html:4
 #: templates/profiles/org_profile_delete.html:12
@@ -3493,8 +3471,8 @@ msgstr ""
 "This Field Does Not Accept Less Than Three Letters, Or Special Characters "
 "And Symbols"
 
-#: templates/profiles/org_profile_form.html:206
-#: templates/profiles/org_profile_form.html:226
+#: templates/profiles/org_profile_form.html:203
+#: templates/profiles/org_profile_form.html:223
 msgid "إضافة مكان العمل"
 msgstr "Add Workplace"
 
@@ -3570,37 +3548,37 @@ msgstr "Not A Member"
 #: templates/profiles/particip_detail.html:387
 #: templates/profiles/profile.html:285
 msgid "اسم الشبكة أو التحالف"
-msgstr "The Coalition Or Network Name"
+msgstr "The Alliance Or Network Name"
 
-#: templates/profiles/particip_detail.html:406
+#: templates/profiles/particip_detail.html:402
 msgid "هل تم التحقق من قبل اﻹدارة على أنها منظمة؟"
 msgstr "Did The Administration Verify That It Is An Organisation? "
 
-#: templates/profiles/particip_detail.html:411
+#: templates/profiles/particip_detail.html:407
 msgid "تم التحقق و الموافقة"
 msgstr "Has Been Checked And Accepted"
 
-#: templates/profiles/particip_detail.html:414
+#: templates/profiles/particip_detail.html:410
 msgid "لم يتم التحقق بعد"
 msgstr "Not Checked Yet"
 
-#: templates/profiles/particip_detail.html:576
+#: templates/profiles/particip_detail.html:570
 msgid "أخبار المنظمة"
 msgstr "The Organisation News"
 
-#: templates/profiles/particip_detail.html:583
+#: templates/profiles/particip_detail.html:577
 msgid "التقارير و الدراسات للمنظمة"
-msgstr "The Reports And Studies Of The Organisation"
+msgstr "The Reports And Studies For The Organisation"
 
-#: templates/profiles/particip_detail.html:590
+#: templates/profiles/particip_detail.html:584
 msgid "البيانات للمنظمة"
 msgstr "The Organisation Statement"
 
-#: templates/profiles/particip_detail.html:598
+#: templates/profiles/particip_detail.html:592
 msgid "المحتوى السمعي و البصري للمنظمة"
 msgstr "The Audio-Visual Content Of The Organisation"
 
-#: templates/profiles/particip_detail.html:606
+#: templates/profiles/particip_detail.html:600
 msgid "فرص العمل للمنظمة"
 msgstr "Job Opportunity For The Organisations"
 
@@ -3614,7 +3592,7 @@ msgstr "The Acronym Of The Organisation"
 
 #: templates/profiles/profile.html:300
 msgid "التأكيد من اﻹدارة على أنها منظمة"
-msgstr "Confirmation from The Portal Admins that it is an organization"
+msgstr "Verify The Administration As An Organisation"
 
 #: templates/profiles/profile.html:305
 msgid "تمت الموافقة عليها"
@@ -3639,7 +3617,7 @@ msgid ""
 "استخدام الموقع"
 msgstr ""
 "Please, Complete The Organisation Personal Profile, To Verify Your "
-"Information, And to Be Able To Use The Website"
+"Information, And Be Able To Use The Website"
 
 #: templates/profiles/profile.html:468
 msgid "ملف المنظمة الشخصي"
@@ -3805,7 +3783,7 @@ msgstr "If You Have An Account You Can Log In From Here"
 #~ msgstr "Reset"
 
 #~ msgid "أخبار المركز"
-#~ msgstr "The  News"
+#~ msgstr "The Center News"
 
 #~ msgid "نص الخبر"
 #~ msgstr "The News Item Text"

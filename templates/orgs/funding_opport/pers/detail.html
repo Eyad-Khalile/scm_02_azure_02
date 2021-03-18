@@ -41,7 +41,7 @@
                     {% csrf_token %} {{ form.publish }}
                     <div class="form-group">
                         <button type="submit" id="org_deconfirm_btn" class="dropdown-item"
-                            title="{% trans 'إلغاء نشر الدليل' %}">{% trans 'إلغاء نشر الدليل' %} <i class="fa fa-ban {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+                            title="{% trans 'إلغاء نشر فرصة التمويل' %}">{% trans 'إلغاء نشر فرصة التمويل' %} <i class="fa fa-ban {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
     {% endif %}" aria-hidden="true"></i></button>
                     </div>
                 </form>
@@ -116,7 +116,7 @@
                 <h2 class="">
                     {% if perso.org_name %}
                     <a href="{% url 'particip_detail' perso.org_name.id %}" class="nav-link text-dark pl-0 pr-0">
-                        {% trans "اسم المنظمة" %} : 
+                        {% trans "اسم المنظمة" %} :
                         {% if LANGUAGE_CODE != 'ar' %}
                         {% if perso.org_name.name_en_ku %}
                         {{ perso.org_name.name_en_ku }}

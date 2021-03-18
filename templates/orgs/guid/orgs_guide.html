@@ -153,11 +153,19 @@
             <center class="mt-3">
                 <a href="{% url 'particip_detail' org.id %}">
                     <img src="{{ org.logo.url }}" name="{{ org.name_en_ku }}" title="{{ org.name_en_ku }}" width="140"
-                        height="140" class="img-circle"></a>
+                        height="140" class="img-circle">
+                </a>
+
+                {% if LANGUAGE_CODE != 'ar' and org.name_en_ku %}
+                <h3 class="mt-4">{{ org.name_en_ku }}</h3>
+                {% else %}
                 <h3 class="mt-4">{{ org.name }}</h3>
+                {% endif %}
+
                 {% if org.short_cut %}
                 <p>{{ org.short_cut }}</p>
                 {% endif %}
+
                 <!-- <p>{{ org.message|safe|truncatechars:80 }}</p> -->
                 <p>
                     <a href="{% url 'particip_detail' org.id %}" class="btn btn-block"

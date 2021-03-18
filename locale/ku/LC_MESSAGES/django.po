@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#: orgs/forms.py:99 orgs/forms.py:652 orgs/forms.py:657 orgs/forms.py:663
-#: orgs/forms.py:669
+#: orgs/forms.py:99 orgs/forms.py:654 orgs/forms.py:659 orgs/forms.py:665
+#: orgs/forms.py:671
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-21 21:20+0000\n"
+"POT-Creation-Date: 2021-03-16 13:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,13 +72,13 @@ msgid "دراسات وأبحاث"
 msgstr "Xwendin û lêkolîn"
 
 #: orgs/filters.py:28 orgs/models.py:207 orgs/models.py:224 orgs/models.py:244
-#: orgs/models.py:263 orgs/models.py:272 orgs/models.py:280 orgs/models.py:1030
+#: orgs/models.py:263 orgs/models.py:272 orgs/models.py:280 orgs/models.py:1039
 msgid "أخرى"
 msgstr "Dîtir"
 
-#: orgs/filters.py:46 orgs/filters.py:212 orgs/forms.py:156 orgs/models.py:425
-#: orgs/models.py:785 templates/orgs/resources/org_job_details.html:168
-#: templates/profiles/particip_detail.html:263
+#: orgs/filters.py:46 orgs/filters.py:215 orgs/forms.py:156 orgs/models.py:431
+#: orgs/models.py:794 templates/orgs/resources/org_job_details.html:178
+#: templates/profiles/particip_detail.html:270
 #: templates/profiles/profile.html:161
 msgid "مجال العمل"
 msgstr "Warê kar"
@@ -87,18 +87,18 @@ msgstr "Warê kar"
 msgid "تاريخ التأسيس / من :"
 msgstr "Dîroka damezrandinê / Ji:"
 
-#: orgs/filters.py:51 orgs/filters.py:57 orgs/filters.py:96 orgs/filters.py:118
-#: orgs/filters.py:140 orgs/filters.py:161 orgs/filters.py:183
-#: orgs/filters.py:216 orgs/filters.py:250 orgs/filters.py:281
-#: orgs/filters.py:313 orgs/filters.py:335
+#: orgs/filters.py:51 orgs/filters.py:57 orgs/filters.py:99 orgs/filters.py:121
+#: orgs/filters.py:143 orgs/filters.py:164 orgs/filters.py:186
+#: orgs/filters.py:219 orgs/filters.py:253 orgs/filters.py:284
+#: orgs/filters.py:316 orgs/filters.py:338 orgs/filters.py:357
 msgid "إلى :"
 msgstr "Bo :"
 
-#: orgs/filters.py:53 orgs/forms.py:97 orgs/forms.py:665 orgs/models.py:376
-#: orgs/models.py:487 orgs/models.py:511 orgs/models.py:550 orgs/models.py:607
-#: orgs/models.py:646 orgs/models.py:762 orgs/models.py:821 orgs/models.py:889
-#: orgs/models.py:975 orgs/models.py:1039 orgs/models.py:1092
-#: orgs/models.py:1106 templates/orgs/capacity/org_capacity_details.html:103
+#: orgs/filters.py:53 orgs/forms.py:97 orgs/forms.py:667 orgs/models.py:378
+#: orgs/models.py:495 orgs/models.py:520 orgs/models.py:559 orgs/models.py:616
+#: orgs/models.py:655 orgs/models.py:771 orgs/models.py:830 orgs/models.py:898
+#: orgs/models.py:984 orgs/models.py:1048 orgs/models.py:1101
+#: orgs/models.py:1115 templates/orgs/capacity/org_capacity_details.html:104
 #: templates/orgs/data/detail_data.html:106
 #: templates/orgs/devs/org_dev_details.html:112
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:116
@@ -107,112 +107,113 @@ msgstr "Bo :"
 #: templates/orgs/news/orgs_news_detail.html:109
 #: templates/orgs/rapport/detail_rapport.html:104
 #: templates/orgs/resources/jobs_not_pub.html:114
-#: templates/orgs/resources/org_job_details.html:129
+#: templates/orgs/resources/org_job_details.html:130
 #: templates/orgs/resources/org_jobs.html:109
 #: templates/profiles/particip_detail.html:96
 #: templates/profiles/profile.html:31
 msgid "اسم المنظمة"
 msgstr "Navê rêxistinê"
 
-#: orgs/filters.py:55 orgs/filters.py:94
+#: orgs/filters.py:55 orgs/filters.py:97
 msgid "تاريخ نشر الخبر / من :"
 msgstr "Dîroka belavkirina nûçeyê / Ji :"
 
-#: orgs/filters.py:89
+#: orgs/filters.py:92
 msgid "كلمات من عنوان الخبر"
 msgstr "Peyvin ji navnîşana nûçeyê"
 
-#: orgs/filters.py:91
+#: orgs/filters.py:94
 msgid "كلمات من تفاصيل الخبر"
 msgstr "Peyvin ji hurguliyên nûçeyê"
 
-#: orgs/filters.py:113
+#: orgs/filters.py:116
 msgid "كلمات من عنوان التقرير"
 msgstr "Peyvin ji navnîşana raportê"
 
-#: orgs/filters.py:116
+#: orgs/filters.py:119
 msgid "تاريخ نشر التقرير / من :"
 msgstr "Dîroka belavkirina raportê / Ji :"
 
-#: orgs/filters.py:135
+#: orgs/filters.py:138
 msgid "كلمات من عنوان البيان"
 msgstr "Peyvin ji navnîşana daxuyaniyê"
 
-#: orgs/filters.py:138
+#: orgs/filters.py:141
 msgid "تاريخ نشر البيان / من :"
 msgstr "Dîroka belavkirina daxuyaniyê / Ji :"
 
-#: orgs/filters.py:156
+#: orgs/filters.py:159
 msgid "كلمات من عنوان المحتوى"
 msgstr "peyvin ji navnîşana naverokê"
 
-#: orgs/filters.py:159
+#: orgs/filters.py:162
 msgid "تاريخ نشر المحتوى / من :"
 msgstr "Dîroka belavkirina naverokê / Ji :"
 
-#: orgs/filters.py:176
+#: orgs/filters.py:179
 msgid "كلمات من اسم الجهة"
 msgstr "Peyvin ji navê layen"
 
-#: orgs/filters.py:178
+#: orgs/filters.py:181
 msgid "كلمات من عنوان البحث"
 msgstr "Peyvin ji navnîşana lêkolînê"
 
-#: orgs/filters.py:181
+#: orgs/filters.py:184
 msgid "تاريخ نشر البحث / من :"
 msgstr "Dîroka belavkirina lêkolînê / Ji :"
 
-#: orgs/filters.py:202
+#: orgs/filters.py:205
 msgid "كلمات من فرصة العمل  "
 msgstr "Peyvin ji derfeta kar"
 
-#: orgs/filters.py:204 orgs/models.py:773
-#: templates/orgs/resources/org_job_details.html:160
+#: orgs/filters.py:207 orgs/models.py:782
+#: templates/orgs/resources/org_job_details.html:170
 msgid "نوع الوظيفة"
 msgstr "Corê kar"
 
-#: orgs/filters.py:206 orgs/models.py:775
+#: orgs/filters.py:209 orgs/models.py:784
 msgid "الخبرة"
 msgstr "Şarezahî"
 
-#: orgs/filters.py:210 orgs/models.py:495 orgs/models.py:779 orgs/models.py:835
-#: orgs/models.py:911 orgs/models.py:994
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:162
-#: templates/orgs/funding_opport/pers/detail.html:226
-#: templates/profiles/particip_detail.html:213
+#: orgs/filters.py:213 orgs/models.py:503 orgs/models.py:788 orgs/models.py:844
+#: orgs/models.py:920 orgs/models.py:1003
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:172
+#: templates/orgs/funding_opport/pers/detail.html:236
+#: templates/orgs/guid/orgs_guide.html:233
+#: templates/profiles/particip_detail.html:214
 #: templates/profiles/profile.html:101
 msgid "المحافظة"
 msgstr "Parêzgeh"
 
-#: orgs/filters.py:214
+#: orgs/filters.py:217
 msgid "تاريخ نشر فرصة العمل / من :"
 msgstr "Dîroka belavkirina derfeta kar / Ji :"
 
-#: orgs/filters.py:238 orgs/models.py:824 orgs/models.py:892
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:118
-#: templates/orgs/funding_opport/pers/detail.html:121
+#: orgs/filters.py:241 orgs/models.py:833 orgs/models.py:901
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:128
+#: templates/orgs/funding_opport/pers/detail.html:131
 msgid "الجهة المانحة"
 msgstr "Aliyê bexşende"
 
-#: orgs/filters.py:246
+#: orgs/filters.py:249
 msgid "حسب المبلغ المالي"
 msgstr "Li gorî gujmê diravî"
 
-#: orgs/filters.py:248 orgs/filters.py:279 orgs/filters.py:311
-#: orgs/filters.py:333
+#: orgs/filters.py:251 orgs/filters.py:282 orgs/filters.py:314
+#: orgs/filters.py:336 orgs/filters.py:355
 msgid "تاريخ نشر المنحة  / من :"
 msgstr "Dîroka belavkirina bexşînê / Ji :"
 
-#: orgs/filters.py:277
+#: orgs/filters.py:280
 msgid "عنوان الفرصة "
 msgstr "Sernavê derfetê"
 
-#: orgs/filters.py:306 orgs/models.py:1044
+#: orgs/filters.py:309 orgs/models.py:1053
 msgid "عنوان المادة"
 msgstr "Navnîşana madeyê"
 
-#: orgs/filters.py:308 orgs/models.py:1048
-#: templates/orgs/devs/org_dev_details.html:157
+#: orgs/filters.py:311 orgs/models.py:1057
+#: templates/orgs/devs/org_dev_details.html:170
 msgid "لمحة عن الجهة"
 msgstr "Kurteyek li ser layen"
 
@@ -226,7 +227,7 @@ msgstr ""
 msgid "عنوان بريد إلكتروني"
 msgstr "Navnşîana Emailekê"
 
-#: orgs/forms.py:38 orgs/forms.py:687
+#: orgs/forms.py:38 orgs/forms.py:689
 msgid "هذا البريد الالكتروني موجود مسبقاً"
 msgstr "Ev email berê heye"
 
@@ -235,82 +236,74 @@ msgstr "Ev email berê heye"
 msgid "هذا الحقل لا يقبل الحروف الخاصه و الرموز"
 msgstr "Ev valahî, tîpên taybet û nîşanan napejirîne"
 
-#: orgs/forms.py:103 orgs/models.py:378
+#: orgs/forms.py:103 orgs/models.py:380
 #: templates/profiles/particip_detail.html:106
 #: templates/profiles/profile.html:36
 msgid "اسم المنظمة باللغة الانكليزية أو الكردية"
 msgstr "Navê rêxistinê bi zimanê Ingilîzî yan Kurdî"
 
-#: orgs/forms.py:107 orgs/models.py:380
+#: orgs/forms.py:107 orgs/models.py:382
 #: templates/profiles/particip_detail.html:122
 msgid "الاسم المختصر"
 msgstr "Navê kurtkirî"
 
-#: orgs/forms.py:114 orgs/models.py:401
-#: templates/profiles/particip_detail.html:237
+#: orgs/forms.py:114 orgs/models.py:405
+#: templates/profiles/particip_detail.html:238
 #: templates/profiles/profile.html:135
 msgid "اسم رئيس مجلس اﻹدارة"
 msgstr "Navê serokê Encûmena Rêvebir"
 
-#: orgs/forms.py:118 orgs/models.py:405
-#: templates/profiles/particip_detail.html:251
+#: orgs/forms.py:118 orgs/models.py:407
+#: templates/profiles/particip_detail.html:252
 #: templates/profiles/profile.html:149
 msgid "اسم المدير التنفيذي"
 msgstr "Navê Rêvebirê Cîbicîkar"
 
-#: orgs/models.py:405
-msgid "اسم المدير التنفيذي باللغة الانجليزية"
-msgstr "Navê CEO bi Englishngilîzî ye"
-
-#: orgs/forms.py:123 orgs/models.py:407
-#: templates/profiles/particip_detail.html:447
+#: orgs/forms.py:123 orgs/models.py:413
+#: templates/profiles/particip_detail.html:461
 #: templates/profiles/profile.html:332
 msgid "الموقع الالكتروني"
 msgstr "Malpera elektironî"
 
-#: orgs/forms.py:126 orgs/models.py:409
-#: templates/profiles/particip_detail.html:461
+#: orgs/forms.py:126 orgs/models.py:415
+#: templates/profiles/particip_detail.html:475
 #: templates/profiles/profile.html:346
 msgid "صفحة فيسبوك"
 msgstr "Rûpela Facebookê"
 
-#: orgs/forms.py:129 orgs/models.py:411
-#: templates/profiles/particip_detail.html:475
+#: orgs/forms.py:129 orgs/models.py:417
+#: templates/profiles/particip_detail.html:489
 #: templates/profiles/profile.html:360
 msgid "صفحة تويتر"
 msgstr "Rûpela twitterê"
 
-#: orgs/forms.py:132 orgs/forms.py:671 orgs/models.py:413 orgs/models.py:1094
-#: orgs/models.py:1108 templates/profiles/particip_detail.html:489
+#: orgs/forms.py:132 orgs/forms.py:673 orgs/models.py:419 orgs/models.py:1103
+#: orgs/models.py:1117 templates/profiles/particip_detail.html:503
 #: templates/profiles/profile.html:374
 msgid "البريد الاكتروني"
 msgstr "Email"
 
-#: orgs/forms.py:134 orgs/models.py:417
-#: templates/profiles/particip_detail.html:515
+#: orgs/forms.py:134 orgs/models.py:423
+#: templates/profiles/particip_detail.html:531
 #: templates/profiles/profile.html:398
 msgid "اسم الشخص المسؤول عن التواصل"
 msgstr "Navê berpirsê peywendiyê"
 
-#: orgs/forms.py:140 orgs/models.py:419
-#: templates/profiles/particip_detail.html:529
+#: orgs/forms.py:140 orgs/models.py:425
+#: templates/profiles/particip_detail.html:545
 #: templates/profiles/profile.html:412
 msgid "البريد الاكتروني للشخص المسؤول عن التواصل"
 msgstr "Emaila berpirsê peywendiyê"
 
-#: orgs/forms.py:142 orgs/models.py:421
-#: templates/profiles/particip_detail.html:433
+#: orgs/forms.py:142 orgs/models.py:427
+#: templates/profiles/particip_detail.html:447
 #: templates/profiles/profile.html:318
 msgid "عنوان المقر الرئيسي"
 msgstr "Navnîşana baregeha sereke"
 
-#: orgs/forms.py:146 orgs/models.py:448
+#: orgs/forms.py:146 orgs/models.py:450
 msgid "اسم الشبكة / التحالف"
 msgstr "Navê torê / Hevpeymaniyê"
-
-#: orgs/forms.py:146 orgs/models.py:450
-msgid "اسم الشبكة / التحالف باللغة الانجليزية"
-msgstr "Navê torgilok / tifaqê bi Englishngilîzî"
 
 #: orgs/forms.py:154
 msgid "لتحديد أكثر من مجال يرجى الاختيار مع استمرار الضغط على زر ال CTRL"
@@ -324,8 +317,8 @@ msgstr ""
 "Ji bo ku ji yekê zêdetir hedef diyar bike, ji kerema xwe bişkoja CTRL "
 "hilbijêrin û bigirin"
 
-#: orgs/forms.py:162 orgs/models.py:427
-#: templates/profiles/particip_detail.html:273
+#: orgs/forms.py:162 orgs/models.py:433
+#: templates/profiles/particip_detail.html:280
 #: templates/profiles/profile.html:173
 msgid "الفئات المستهدفة"
 msgstr "Beşên armanckirî"
@@ -336,37 +329,37 @@ msgstr ""
 "Ji bo zêdetirî yek polîtîkayê diyar bike, ji kerema xwe bişkoja CTRL "
 "hilbijêrin û bigirin"
 
-#: orgs/forms.py:169 orgs/models.py:440
-#: templates/profiles/particip_detail.html:351
+#: orgs/forms.py:169 orgs/models.py:446
+#: templates/profiles/particip_detail.html:358
 #: templates/profiles/profile.html:254
 msgid "السياسات واللوائح المكتوبة"
 msgstr "Siyaset û tabloyên nivîsandî"
 
-#: orgs/forms.py:635
+#: orgs/forms.py:637
 msgid "رابط يوتيوب فقط"
 msgstr "Tenê Youtube Link"
 
-#: orgs/forms.py:636
+#: orgs/forms.py:638
 msgid "فقط ملف PDF أو صورة"
 msgstr "Tenê pelê PDF an wêneyek"
 
-#: orgs/forms.py:654 orgs/forms.py:711 orgs/models.py:1088
+#: orgs/forms.py:656 orgs/forms.py:713 orgs/models.py:1097
 msgid "الاسم و الكنية"
 msgstr "Nav û paşnav"
 
-#: orgs/forms.py:659 orgs/models.py:1090
+#: orgs/forms.py:661 orgs/models.py:1099
 msgid "العمل"
 msgstr "Kar"
 
-#: orgs/forms.py:713
+#: orgs/forms.py:715
 msgid "البريد الالكتروني"
 msgstr "E-name"
 
-#: orgs/forms.py:715
+#: orgs/forms.py:717
 msgid "العنوان"
 msgstr "Navnîşan"
 
-#: orgs/forms.py:717
+#: orgs/forms.py:719
 msgid "الرسالة"
 msgstr "peyam"
 
@@ -1006,12 +999,12 @@ msgstr "Rêxistinine din yên civaka sivîl"
 msgid "لا"
 msgstr "Na"
 
-#: orgs/models.py:229 templates/profiles/particip_detail.html:368
+#: orgs/models.py:229 templates/profiles/particip_detail.html:375
 #: templates/profiles/profile.html:275
 msgid "نعم"
 msgstr "Belê"
 
-#: orgs/models.py:233 orgs/views.py:294
+#: orgs/models.py:233 orgs/views.py:307
 msgid "لا يوجد"
 msgstr "Tuneye"
 
@@ -1051,7 +1044,7 @@ msgstr "Siyaseta darayî"
 msgid "سياسة استخدام المعدات"
 msgstr "Siyaseta bikaranîna amêran"
 
-#: orgs/models.py:243 templates/combonents/footer.html:142
+#: orgs/models.py:243 templates/combonents/footer.html:151
 #: templates/orgs/politic.html:4 templates/orgs/politic.html:11
 msgid "سياسة الخصوصية"
 msgstr "Siyaseta taybetmendiyê"
@@ -1068,7 +1061,7 @@ msgstr "Parçedewam"
 msgid "استشاري"
 msgstr "Rawêjkar"
 
-#: orgs/models.py:252 orgs/models.py:965
+#: orgs/models.py:252 orgs/models.py:974
 msgid "تدريب"
 msgstr "Rahênan"
 
@@ -1076,7 +1069,7 @@ msgstr "Rahênan"
 msgid "تطوع"
 msgstr "Xwebexşî"
 
-#: orgs/models.py:254 orgs/models.py:966
+#: orgs/models.py:254 orgs/models.py:975
 msgid "زمالة"
 msgstr "Hevpîşeyî"
 
@@ -1247,354 +1240,363 @@ msgstr "English"
 msgid "Kurdî"
 msgstr "Kurdî"
 
-#: orgs/models.py:351
+#: orgs/models.py:353
 msgid "الدولة"
 msgstr "Welat"
 
-#: orgs/models.py:353
+#: orgs/models.py:355
 msgid "اسم المحافظة"
 msgstr "Navê parêzgehê"
 
-#: orgs/models.py:355
+#: orgs/models.py:357
 msgid "اسم المدينة بالانكليزية"
 msgstr "Navê bajêr bi Englishngilîzî"
 
-#: orgs/models.py:357
+#: orgs/models.py:359
 msgid "اسم المدينة بالكردية"
 msgstr "Navê bajêr bi Kurdî ye"
 
-#: orgs/models.py:371 orgs/models.py:485
+#: orgs/models.py:373 orgs/models.py:493
 #: templates/profiles/particip_detail.html:138
 msgid "اسم المستخدم"
 msgstr "Navê bikarhêner"
 
-#: orgs/models.py:371
+#: orgs/models.py:373
 msgid "المستخدمون الذين ليس لديهم طلبات بروفايل فقط"
 msgstr "Tenê bikarhênerên ku profîlek wan tune"
 
-#: orgs/models.py:382 templates/profiles/particip_detail.html:187
+#: orgs/models.py:384 templates/profiles/particip_detail.html:188
 #: templates/profiles/profile.html:83
 msgid "نوع المنظمة"
 msgstr "Corê rêxistinê"
 
-#: orgs/models.py:396 orgs/models.py:737
+#: orgs/models.py:398 orgs/models.py:746
 msgid "شعار المنظمة"
 msgstr "Silogana rêxistinê"
 
-#: orgs/models.py:398 templates/profiles/particip_detail.html:424
+#: orgs/models.py:400 templates/profiles/particip_detail.html:424
 #: templates/profiles/profile.html:115
 msgid "الرؤية و الرسالة"
 msgstr "Dîtin û name"
 
-#: orgs/models.py:400
+#: orgs/models.py:402
 msgid "الرؤية و الرسالة باللغة الانكليزية"
 msgstr "Dîtin û mîsyona bi ngilîzî"
 
-#: orgs/models.py:415 templates/profiles/particip_detail.html:501
+#: orgs/models.py:409
+msgid "اسم المدير التنفيذي باللغة الانجليزية"
+msgstr "Navê CEO bi Englishngilîzî ye"
+
+#: orgs/models.py:421 templates/profiles/particip_detail.html:515
 #: templates/profiles/profile.html:386
 msgid "رقم الهاتف"
 msgstr "Hejmara telefonê"
 
-#: orgs/models.py:429 templates/profiles/particip_detail.html:281
+#: orgs/models.py:435 templates/profiles/particip_detail.html:288
 #: templates/profiles/profile.html:185
 msgid "تاريخ سنة التأسيس"
 msgstr "Sala damezrandinê"
 
-#: orgs/models.py:431 templates/profiles/particip_detail.html:295
+#: orgs/models.py:437 templates/profiles/particip_detail.html:302
 #: templates/profiles/profile.html:199
 msgid "هل المنظمة مسجلة ؟"
 msgstr "Rêxistin tomarkirî ye?"
 
-#: orgs/models.py:433 templates/profiles/particip_detail.html:309
+#: orgs/models.py:439 templates/profiles/particip_detail.html:316
 #: templates/profiles/profile.html:212
 msgid "بلد التسجيل"
 msgstr "Welatê lê tomarkirî"
 
-#: orgs/models.py:436 templates/profiles/particip_detail.html:323
+#: orgs/models.py:442 templates/profiles/particip_detail.html:330
 #: templates/profiles/profile.html:226
 msgid "عدد اﻷعضاء"
 msgstr "Hejmara endaman"
 
-#: orgs/models.py:438 templates/profiles/particip_detail.html:337
+#: orgs/models.py:444 templates/profiles/particip_detail.html:344
 #: templates/profiles/profile.html:240
 msgid "عدد النساء من اﻷعضاء"
 msgstr "Hejmara endamên jin"
 
-#: orgs/models.py:442 templates/profiles/particip_detail.html:362
+#: orgs/models.py:448 templates/profiles/particip_detail.html:369
 #: templates/profiles/profile.html:269
 msgid "ھل المؤسسة عضو في اي شبكة او تحالف او جسم تنسیقي؟"
 msgstr "Rêxistin di ti tor yan hevpeyman yan laşekî hevrêzkarî de endam e?"
 
-#: orgs/models.py:493 orgs/models.py:777
-#: templates/orgs/resources/jobs_not_pub.html:130
-#: templates/orgs/resources/org_job_details.html:189
-#: templates/orgs/resources/org_jobs.html:125
-#: templates/profiles/particip_detail.html:196
+#: orgs/models.py:452
+msgid "اسم الشبكة / التحالف باللغة الانجليزية"
+msgstr "Navê torgilok / tifaqê bi Englishngilîzî"
+
+#: orgs/models.py:501 orgs/models.py:786
+#: templates/orgs/guid/orgs_guide.html:232
+#: templates/orgs/resources/jobs_not_pub.html:140
+#: templates/orgs/resources/org_job_details.html:199
+#: templates/orgs/resources/org_jobs.html:135
+#: templates/profiles/particip_detail.html:197
 #: templates/profiles/profile.html:92
 msgid "مكان العمل"
 msgstr "Cihê kar"
 
-#: orgs/models.py:506 orgs/models.py:545 orgs/models.py:602 orgs/models.py:641
-#: orgs/models.py:683 orgs/models.py:757 orgs/models.py:816 orgs/models.py:884
-#: orgs/models.py:970 orgs/models.py:1034
+#: orgs/models.py:515 orgs/models.py:554 orgs/models.py:611 orgs/models.py:650
+#: orgs/models.py:692 orgs/models.py:766 orgs/models.py:825 orgs/models.py:893
+#: orgs/models.py:979 orgs/models.py:1043
 msgid "اللغة"
 msgstr "Ziman"
 
-#: orgs/models.py:514
+#: orgs/models.py:523
 msgid "عنوان الخبر"
 msgstr "Navnîşana nûçeyê"
 
-#: orgs/models.py:516 templates/orgs/news/orgs_news_detail.html:3
+#: orgs/models.py:525 templates/orgs/news/orgs_news_detail.html:3
 #: templates/orgs/news/orgs_news_detail.html:17
 msgid "تفاصيل الخبر"
 msgstr "Hurguliyên nûçeyê"
 
-#: orgs/models.py:518
+#: orgs/models.py:527
 msgid "صورة الخبر"
 msgstr "Wêneya nûçeyê"
 
-#: orgs/models.py:553
+#: orgs/models.py:562
 msgid "عنوان التقرير"
 msgstr "Navnîşana raportê"
 
-#: orgs/models.py:555 templates/orgs/rapport/detail_rapport.html:127
-#: templates/orgs/rapport/rapport.html:94
+#: orgs/models.py:564 templates/orgs/rapport/detail_rapport.html:127
+#: templates/orgs/rapport/rapport.html:104
 msgid "مجال التقرير"
 msgstr "Warê raportê"
 
-#: orgs/models.py:557
+#: orgs/models.py:566
 msgid "صورة او ملف التقرير"
 msgstr "Wêne yan dosiyaya raportê"
 
-#: orgs/models.py:610
+#: orgs/models.py:619
 msgid "عنوان البيان"
 msgstr "Navnîşana daxuyaniyê"
 
-#: orgs/models.py:612
+#: orgs/models.py:621
 msgid "صورة او ملف البيان"
 msgstr "Wêne yan dosiyaya daxuyaniyê"
 
-#: orgs/models.py:649
+#: orgs/models.py:658
 msgid "عنوان المحتوى"
 msgstr "Navnîşana naverokê"
 
-#: orgs/models.py:651
+#: orgs/models.py:660
 msgid "صورة او ملف المحتوى"
 msgstr "Wêne yan dosiyaya naverokê"
 
-#: orgs/models.py:653 templates/orgs/media/media_detail.html:142
+#: orgs/models.py:662 templates/orgs/media/media_detail.html:151
 msgid "رابط المحتوى"
 msgstr "Lînka naverokê"
 
-#: orgs/models.py:691 templates/orgs/devs/org_dev_details.html:114
+#: orgs/models.py:700 templates/orgs/devs/org_dev_details.html:114
 #: templates/orgs/research/detail_research.html:104
 msgid "اسم الجهة"
 msgstr "Navê layen"
 
-#: orgs/models.py:694
+#: orgs/models.py:703
 msgid "عنوان البحث"
 msgstr "Navnîşana lêkolînê"
 
-#: orgs/models.py:696 templates/orgs/research/detail_research.html:128
+#: orgs/models.py:705 templates/orgs/research/detail_research.html:128
 msgid "مجال البحث"
 msgstr "Warê lêkolînê"
 
-#: orgs/models.py:698
+#: orgs/models.py:707
 msgid "ملف أو صورة البحث"
 msgstr "pel an wêneyê lêgerînê"
 
-#: orgs/models.py:700 templates/orgs/research/detail_research.html:138
+#: orgs/models.py:709 templates/orgs/research/detail_research.html:138
 msgid "رابط البحث"
 msgstr "Lînka lêkolînê"
 
-#: orgs/models.py:735
+#: orgs/models.py:744
 msgid "اضف اسم المنظمة اﻷخرى"
 msgstr "Navê rêxistina din serbar bike"
 
-#: orgs/models.py:764
+#: orgs/models.py:773
 msgid "اسم المنظمة اﻷخرى"
 msgstr "Navê rêxistina din"
 
-#: orgs/models.py:767
+#: orgs/models.py:776
 msgid "عنوان الوظيفة"
 msgstr "Navnîşana femanberiyê"
 
-#: orgs/models.py:769
+#: orgs/models.py:778
 msgid "مدة العقد بالأشهر"
 msgstr "Dema girêbestê bi mehan"
 
-#: orgs/models.py:771
+#: orgs/models.py:780
 msgid "وصف الوظيفة"
 msgstr "Danasîna fermanberiyê"
 
-#: orgs/models.py:783 templates/orgs/resources/org_job_details.html:209
+#: orgs/models.py:792 templates/orgs/resources/org_job_details.html:219
 msgid "المنطقة"
 msgstr "Navçe"
 
-#: orgs/models.py:787
+#: orgs/models.py:796
 msgid "تاريخ إغلاق الوظيفة"
 msgstr "Dîroka daxistina fermanberiyê"
 
-#: orgs/models.py:789 templates/orgs/resources/org_job_details.html:261
+#: orgs/models.py:798 templates/orgs/resources/org_job_details.html:271
 msgid "طريقة التقدم للوظيفة"
 msgstr "Awayê pêşkêşkirinê li ser fermanberiyê"
 
-#: orgs/models.py:826 orgs/models.py:894
+#: orgs/models.py:835 orgs/models.py:903
 msgid "لوغو الجهة المانحة"
 msgstr "Silogana aliyê bexşende"
 
-#: orgs/models.py:829 orgs/models.py:914
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:143
-#: templates/orgs/funding_opport/pers/detail.html:144
+#: orgs/models.py:838 orgs/models.py:923
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:153
+#: templates/orgs/funding_opport/pers/detail.html:154
 msgid "لمحة عن الجهة المانحة"
 msgstr "Kurteyek li ser aliyê bexşende"
 
-#: orgs/models.py:831 orgs/models.py:906
+#: orgs/models.py:840 orgs/models.py:915
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:84
-#: templates/orgs/funding_opport/pers/detail.html:206
+#: templates/orgs/funding_opport/pers/detail.html:216
 msgid "قطاع المنحة"
 msgstr "Warê bexşînê"
 
-#: orgs/models.py:833 orgs/models.py:909
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:154
-#: templates/orgs/funding_opport/pers/detail.html:219
+#: orgs/models.py:842 orgs/models.py:918
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:164
+#: templates/orgs/funding_opport/pers/detail.html:229
 msgid "دول المنحة"
 msgstr "Welatê bexşînê"
 
-#: orgs/models.py:837 orgs/models.py:917 orgs/models.py:999
-#: templates/orgs/capacity/org_capacity_details.html:186
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:175
-#: templates/orgs/funding_opport/pers/detail.html:239
+#: orgs/models.py:846 orgs/models.py:926 orgs/models.py:1008
+#: templates/orgs/capacity/org_capacity_details.html:196
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:185
+#: templates/orgs/funding_opport/pers/detail.html:249
 msgid "تاريخ إغلاق المنحة"
 msgstr "Dîroka daxistina bexşînê"
 
-#: orgs/models.py:839 orgs/models.py:919
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:184
-#: templates/orgs/funding_opport/pers/detail.html:248
+#: orgs/models.py:848 orgs/models.py:928
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:194
+#: templates/orgs/funding_opport/pers/detail.html:258
 msgid "مدة المنحة"
 msgstr "Dema bexşînê"
 
-#: orgs/models.py:841 orgs/models.py:921
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:193
-#: templates/orgs/funding_opport/pers/detail.html:257
+#: orgs/models.py:850 orgs/models.py:930
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:203
+#: templates/orgs/funding_opport/pers/detail.html:267
 msgid "حجم المنحة"
 msgstr "Qebareya bexşînê"
 
-#: orgs/models.py:845 orgs/models.py:925
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:203
-#: templates/orgs/funding_opport/pers/detail.html:267
+#: orgs/models.py:854 orgs/models.py:934
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:213
+#: templates/orgs/funding_opport/pers/detail.html:277
 msgid "وصف المنحة"
 msgstr "Danasîna bexşînê"
 
-#: orgs/models.py:847 orgs/models.py:927
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:216
-#: templates/orgs/funding_opport/pers/detail.html:280
+#: orgs/models.py:856 orgs/models.py:936
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:226
+#: templates/orgs/funding_opport/pers/detail.html:290
 msgid "شروط المنحة"
 msgstr "Mercên bexşînê"
 
-#: orgs/models.py:849 orgs/models.py:929 orgs/models.py:1002
-#: templates/orgs/capacity/org_capacity_details.html:197
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:229
-#: templates/orgs/funding_opport/pers/detail.html:293
+#: orgs/models.py:858 orgs/models.py:938 orgs/models.py:1011
+#: templates/orgs/capacity/org_capacity_details.html:207
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:239
+#: templates/orgs/funding_opport/pers/detail.html:303
 msgid "متطلبات التقديم"
 msgstr "Xwestekên pêşkêşkirinê"
 
-#: orgs/models.py:851 orgs/models.py:931
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:242
-#: templates/orgs/funding_opport/pers/detail.html:306
+#: orgs/models.py:860 orgs/models.py:940
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:252
+#: templates/orgs/funding_opport/pers/detail.html:316
 msgid "كيفية التقديم"
 msgstr "Çawaniya pêşkêşkirinê"
 
-#: orgs/models.py:854 orgs/models.py:934 orgs/models.py:1007
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:252
-#: templates/orgs/funding_opport/pers/detail.html:316
+#: orgs/models.py:863 orgs/models.py:943 orgs/models.py:1016
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:262
+#: templates/orgs/funding_opport/pers/detail.html:326
 msgid "الرابط الأصلي"
 msgstr "Lînka resen"
 
-#: orgs/models.py:897 templates/orgs/funding_opport/pers/detail.html:158
+#: orgs/models.py:906 templates/orgs/funding_opport/pers/detail.html:168
 msgid "فئة المنحة"
 msgstr "Beşê bexşînê"
 
-#: orgs/models.py:899 templates/orgs/funding_opport/pers/detail.html:86
-#: templates/orgs/funding_opport/pers/detail.html:171
+#: orgs/models.py:908 templates/orgs/funding_opport/pers/detail.html:86
+#: templates/orgs/funding_opport/pers/detail.html:181
 msgid "نوع المنحة"
 msgstr "Corê bexşînê"
 
-#: orgs/models.py:902 templates/orgs/funding_opport/pers/detail.html:180
+#: orgs/models.py:911 templates/orgs/funding_opport/pers/detail.html:190
 msgid "المستوى التعليمي"
 msgstr "Asta xwendinê"
 
-#: orgs/models.py:904 templates/orgs/funding_opport/pers/detail.html:193
+#: orgs/models.py:913 templates/orgs/funding_opport/pers/detail.html:203
 msgid "الاختصاص التعليمي"
 msgstr "Pisporiya xwendinê"
 
-#: orgs/models.py:978
+#: orgs/models.py:987
 msgid "اسم الجهة الممولة"
 msgstr "Navê aliyê diravpêder"
 
-#: orgs/models.py:980 templates/orgs/capacity/org_capacity_details.html:85
+#: orgs/models.py:989 templates/orgs/capacity/org_capacity_details.html:86
 msgid "عنوان الفرصة"
 msgstr "Navnîşana derfetê"
 
-#: orgs/models.py:982
+#: orgs/models.py:991
 msgid "وصف الفرصة"
 msgstr "Danasîna derfetê"
 
-#: orgs/models.py:984 templates/orgs/capacity/org_capacity_details.html:132
-#: templates/orgs/capacity/org_capacity_details.html:270
+#: orgs/models.py:993 templates/orgs/capacity/org_capacity_details.html:142
+#: templates/orgs/capacity/org_capacity_details.html:280
 msgid "نوع الفرصة"
 msgstr "Corê derfetê"
 
-#: orgs/models.py:992 templates/orgs/capacity/org_capacity_details.html:163
+#: orgs/models.py:1001 templates/orgs/capacity/org_capacity_details.html:173
 msgid "مكان الفرصة"
 msgstr "Cihê derfetê"
 
-#: orgs/models.py:997 templates/orgs/capacity/org_capacity_details.html:141
-#: templates/orgs/capacity/org_capacity_details.html:272
+#: orgs/models.py:1006 templates/orgs/capacity/org_capacity_details.html:151
+#: templates/orgs/capacity/org_capacity_details.html:282
 msgid "قطاع الفرصة"
 msgstr "Warê derfetê"
 
-#: orgs/models.py:1004 templates/orgs/capacity/org_capacity_details.html:210
+#: orgs/models.py:1013 templates/orgs/capacity/org_capacity_details.html:220
 msgid "طريقة التقديم"
 msgstr "Awayê pêşkêşkirinê"
 
-#: orgs/models.py:1026
+#: orgs/models.py:1035
 msgid "تطوير وإدارة المشاريع"
 msgstr "Pêşxistin û rêvebirina pirojeyan"
 
-#: orgs/models.py:1027
+#: orgs/models.py:1036
 msgid "الحوكمة التنظيمية"
 msgstr "Desthilatgeriya rêxistinî"
 
-#: orgs/models.py:1028
+#: orgs/models.py:1037
 msgid "المناصرة والحملات"
 msgstr "Palpiştî û hilmet"
 
-#: orgs/models.py:1029
+#: orgs/models.py:1038
 msgid "مكتبة المجتمع المدني"
 msgstr "Pirtûkxaneya civaka sivîl"
 
-#: orgs/models.py:1041
+#: orgs/models.py:1050
 msgid "اسم الجهة "
 msgstr "Navê layen"
 
-#: orgs/models.py:1046
+#: orgs/models.py:1055
 msgid "تاريخ الإعداد/النشر/التأليف"
 msgstr "Dîroka berhevkirinê / belavkirin / nivîsîn"
 
-#: orgs/models.py:1051 templates/orgs/devs/org_dev_details.html:102
+#: orgs/models.py:1060 templates/orgs/devs/org_dev_details.html:102
 msgid "موضوع المادة"
 msgstr "Babeta madeyê"
 
-#: orgs/models.py:1053
+#: orgs/models.py:1062
 msgid "المادة "
 msgstr "Made"
 
-#: orgs/models.py:1055
+#: orgs/models.py:1064
 msgid "رابط فيديو"
 msgstr "Link vîdyoyê"
 
-#: orgs/views.py:109
+#: orgs/views.py:110
 #, python-brace-format
 msgid ""
 "تم إنشاء حسابك بنجاح باسم المستخدم ( {username} ) !, يرجى تأكيد عنوان بريدك "
@@ -1603,32 +1605,32 @@ msgstr ""
 "Hisabê te bi navê bikarhêner ( {username} ) !  bi serkeftî çêbû, ji kerema "
 "xwe ji bo timamkirina tomarkirinê Emailê piştrast bike"
 
-#: orgs/views.py:117
+#: orgs/views.py:118
 #, python-brace-format
 msgid "لقد تم تسجيل حساب المستخدم ( {username} ) بنجاح"
 msgstr "Hesabê bikarhêner ( {username} ) bi serkeftî hat tomarkirin"
 
-#: orgs/views.py:216
+#: orgs/views.py:217
 msgid "لقد تم حذف المحافظه بنجاح"
 msgstr "Parêzgeh bi serkeftî hat jêbirin"
 
-#: orgs/views.py:282
+#: orgs/views.py:295
 msgid "لا يوجد حاليا منظمات"
 msgstr "Niha ti rêxistin tunene"
 
-#: orgs/views.py:288
+#: orgs/views.py:301
 msgid "لا يوجد أخبار حالياً"
 msgstr "Niha nûçe tunene"
 
-#: orgs/views.py:300
+#: orgs/views.py:313
 msgid "لا يوجد حاليا فرص بناء"
 msgstr "Niha ti derfetên avakirinê tunene"
 
-#: orgs/views.py:310
+#: orgs/views.py:323
 msgid "لقد تم طلب الاشتراك بآخر اﻷخبار بنجاح"
 msgstr "Daxwaznameya bejdariyê ji bo dawîn nûçe bi serkefî hat encamdan"
 
-#: orgs/views.py:318
+#: orgs/views.py:331
 msgid "هذا البريد الالكتروني موجود مسبقاً يرجى التسجيل ببريد الكتروني أخر"
 msgstr " Ev Email berê heye, ji kerema xwe bi Emaileke din tomar bike"
 
@@ -1647,32 +1649,32 @@ msgstr ""
 msgid "لقد تم تغيير حالة فرصة بناء القدرات  بنجاح"
 msgstr "Rewşa derfeta avakirina karînan bi serkeftî hat guhertin"
 
-#: orgs/views_capacity_dev.py:172
+#: orgs/views_capacity_dev.py:174
 msgid "لقد تم تعديل فرصة بناء القدرات بنجاح"
 msgstr "Derfeta avakirina karînan bi serkeftî hat serastkirin"
 
-#: orgs/views_capacity_dev.py:196
+#: orgs/views_capacity_dev.py:198
 msgid "لقد تم حذف فرصة بناء القدرات بنجاح"
 msgstr "Derfeta avakirina karînan bi serkeftî hat jêbirin"
 
-#: orgs/views_capacity_dev.py:246
+#: orgs/views_capacity_dev.py:248
 msgid "لقد تمت إضافة دليل تطوير بنجاح و ستتم دراسته قريباً"
 msgstr ""
 "Rêbernameyeke pêşxistinê bi serkeftî hat serbarkirin û nêzîk dê were xwendin"
 
-#: orgs/views_capacity_dev.py:251 orgs/views_capacity_dev.py:341
+#: orgs/views_capacity_dev.py:253 orgs/views_capacity_dev.py:343
 msgid "رجاءً أدخل اسم المنظمة او اسم الجهة المانحة"
 msgstr "Ji kerema xwe navê rêxistinê an navê bexşînê binivîse"
 
-#: orgs/views_capacity_dev.py:304
+#: orgs/views_capacity_dev.py:306
 msgid "لقد تم تغيير حالة دليل تطوير بنجاح"
 msgstr "Rewşa rêbernameyeke pêşxistinê bi serkeftî hat guhertin"
 
-#: orgs/views_capacity_dev.py:336
+#: orgs/views_capacity_dev.py:338
 msgid "لقد تم تعديل دليل التطوير بنجاح"
 msgstr "Rêbernameya pêşxistinê bi serkeftî hat serastkirin"
 
-#: orgs/views_capacity_dev.py:360
+#: orgs/views_capacity_dev.py:362
 msgid "لقد تم حذف دليل التطوير بنجاح"
 msgstr "Rêbernameya pêşveçûnê bi serfirazî hate jêbirin"
 
@@ -1782,63 +1784,69 @@ msgstr ""
 msgid "لقد تم تغيير حالة المنحة  بنجاح"
 msgstr "Rewşa bexşînê bi serkeftî hat guhertin"
 
-#: orgs/views_news_rapport.py:102
+#: orgs/views_news_rapport.py:101
 msgid "لقد تمت إضافة الخبر بنجاح و ستتم دراسته قريباً"
 msgstr "Nûçe bi serkeftî hat serbarkirin û nêzîk dê were xwendin"
 
-#: orgs/views_news_rapport.py:197
+#: orgs/views_news_rapport.py:196
 msgid "لقد تم تغيير حالة الخبر بنجاح"
 msgstr "Rewşa nûçeyê bi serkeftî hat guhertin"
 
-#: orgs/views_news_rapport.py:231
+#: orgs/views_news_rapport.py:230
 msgid "لقد تم تعديل الخبر بنجاح"
 msgstr "Nûçe bi serkeftî hat serastkirin"
 
-#: orgs/views_news_rapport.py:253
+#: orgs/views_news_rapport.py:252
 msgid "لقد تم حذف الخبر بنجاح"
 msgstr "Nûçe bi serkeftî hat jêbirin"
 
-#: orgs/views_news_rapport.py:285
+#: orgs/views_news_rapport.py:284
 msgid "لقد تمت إضافة التقرير بنجاح و ستتم دراسته قريباً"
 msgstr "Raport bi serkeftî hat serbarkirin û nêzîk dê were xwendin"
 
-#: orgs/views_news_rapport.py:375
+#: orgs/views_news_rapport.py:374
 msgid "لقد تم تعديل حالة التقرير بنجاح"
 msgstr "Rewşa raportê bi serkeftî hat serastkirin"
 
-#: orgs/views_news_rapport.py:410
+#: orgs/views_news_rapport.py:409
 msgid "لقد تمت تعديل التقرير بنجاح"
 msgstr "Raport bi serkeftî hat serastkirin"
 
-#: orgs/views_news_rapport.py:432
+#: orgs/views_news_rapport.py:431
 msgid "لقد تم حذف التقرير بنجاح"
 msgstr "Raport bi serkeftî hat jêbirin"
 
-#: orgs/views_news_rapport.py:475
+#: orgs/views_news_rapport.py:491
 msgid "لقد تم ارسال الدعوة "
 msgstr "Vexwendin hat şandin"
 
-#: orgs/views_prof_dash.py:166
+#: orgs/views_news_rapport.py:494
+#, fuzzy
+#| msgid "لقد تم ارسال الدعوة "
+msgid "لم يتم إرسال الدعوة"
+msgstr "Vexwendin hat şandin"
+
+#: orgs/views_prof_dash.py:168
 msgid "لقد تم تعديل الملف الشخصي بنجاح"
 msgstr "Dosiyaya kesayetî bi serkeftî hat serastkirin"
 
-#: orgs/views_prof_dash.py:269
+#: orgs/views_prof_dash.py:271
 msgid "لقد تم تغيير حالة الطلب للمنظمة بنجاح"
 msgstr "Rewşa daxwaznameya rêxistinê bi serkeftî hat guhertin"
 
-#: orgs/views_prof_dash.py:331
+#: orgs/views_prof_dash.py:333
 msgid "لقد تم حذف الملف بنجاح"
 msgstr "Dosiya bi serkeftî hat jêbirin"
 
-#: orgs/views_prof_dash.py:433
+#: orgs/views_prof_dash.py:435
 msgid "عدد الأخبار المنشورة باليوم"
 msgstr "Hejmara nûçeyên ku her roj têne weşandin"
 
-#: orgs/views_prof_dash.py:462
+#: orgs/views_prof_dash.py:464
 msgid "عدد المنظمات المنشورة باليوم"
 msgstr "Hejmara rêxistinên ku her roj têne weşandin"
 
-#: orgs/views_prof_dash.py:500 orgs/views_prof_dash.py:538
+#: orgs/views_prof_dash.py:502 orgs/views_prof_dash.py:540
 msgid "عدد التقارير المنشورة باليوم"
 msgstr "Hejmara raporên ku her roj têne weşandin"
 
@@ -1852,8 +1860,8 @@ msgstr "Serbarkirina parêzgehekê"
 
 #: templates/city/add_city.html:27 templates/city/edite_city.html:27
 #: templates/orgs/data/add_data.html:33 templates/orgs/data/edit_data.html:20
-#: templates/profiles/org_profile_form.html:230
-#: templates/profiles/org_profile_update.html:190
+#: templates/profiles/org_profile_form.html:242
+#: templates/profiles/org_profile_update.html:202
 msgid "احفظ"
 msgstr "Jiber bike"
 
@@ -1910,23 +1918,24 @@ msgstr "Navenda Sûriyê ya Ragihandin û Azadiya Derbirînê"
 
 #: templates/combonents/footer.html:28 templates/combonents/main-navbar.html:29
 #: templates/orgs/home.html:2 templates/orgs/home.html:52
+#: templates/orgs/start_page.html:2
 msgid "بوابة المجتمع المدني"
 msgstr "Derwazeya civaka sivîl"
 
-#: templates/combonents/footer.html:50
+#: templates/combonents/footer.html:59
 #: templates/combonents/main-navbar.html:204
 msgid "للتواصل معنا"
 msgstr "Ji bo peywendiyê bi me re"
 
-#: templates/combonents/footer.html:94
+#: templates/combonents/footer.html:103
 msgid "تابعونا على"
 msgstr "Me pişopînin li ser"
 
-#: templates/combonents/footer.html:128 templates/orgs/home.html:278
+#: templates/combonents/footer.html:137 templates/orgs/home.html:298
 msgid "للاشتراك بآخر الأخبار"
 msgstr "Ji bo bejdariyê bi dawîn nûçe"
 
-#: templates/combonents/footer.html:136
+#: templates/combonents/footer.html:145
 msgid "إملأ النموذج التالي"
 msgstr "Vê nimûneyê dagire"
 
@@ -2210,7 +2219,7 @@ msgstr "Rûpel nagehiştinî ye"
 msgid "هذه الصفحة مفقودة أو غير متوفره أساساً"
 msgstr "Ev rûpel widayî ye yan bi xwe tuneye"
 
-#: templates/errors/404.html:16 templates/orgs/politic.html:100
+#: templates/errors/404.html:16 templates/orgs/politic.html:246
 msgid "العودة إلى الصفحة الرئيسية"
 msgstr "Veger bo Destpêk"
 
@@ -2255,11 +2264,12 @@ msgstr "Dabeşkirin"
 #: templates/orgs/data/data.html:63 templates/orgs/data/data_not_pub.html:56
 #: templates/orgs/devs/dev_not_pub.html:55 templates/orgs/devs/org_devs.html:60
 #: templates/orgs/funding_opport/orgs/fundings_not_pub.html:58
-#: templates/orgs/funding_opport/orgs/org_funding.html:63
-#: templates/orgs/funding_opport/pers/not_pub.html:57
-#: templates/orgs/funding_opport/pers/pub.html:62
+#: templates/orgs/funding_opport/orgs/org_funding.html:65
+#: templates/orgs/funding_opport/pers/not_pub.html:60
+#: templates/orgs/funding_opport/pers/pub.html:65
 #: templates/orgs/guid/orgs_guid_conf_pub.html:66
-#: templates/orgs/guid/orgs_guide.html:124 templates/orgs/media/media.html:63
+#: templates/orgs/guid/orgs_guide.html:134
+#: templates/orgs/guid/orgs_guide.html:135 templates/orgs/media/media.html:63
 #: templates/orgs/media/media_not_pub.html:56
 #: templates/orgs/news/org_news_not_pub.html:64
 #: templates/orgs/news/orgs_news_news.html:74
@@ -2276,54 +2286,55 @@ msgstr "Dabeşkirin"
 msgid "بحث"
 msgstr "Lêgerîn"
 
-#: templates/orgs/capacity/capacity_not_pub.html:100
-#: templates/orgs/capacity/org_capacity.html:108
-#: templates/orgs/data/data.html:93 templates/orgs/data/data_not_pub.html:86
-#: templates/orgs/devs/dev_not_pub.html:88 templates/orgs/devs/org_devs.html:93
-#: templates/orgs/funding_opport/orgs/fundings_not_pub.html:89
-#: templates/orgs/funding_opport/orgs/org_funding.html:94
-#: templates/orgs/funding_opport/pers/not_pub.html:88
-#: templates/orgs/funding_opport/pers/pub.html:93
-#: templates/orgs/media/media.html:92
-#: templates/orgs/media/media_not_pub.html:85
-#: templates/orgs/news/org_news_not_pub.html:91
-#: templates/orgs/news/orgs_news_news.html:101
-#: templates/orgs/our_news/our_news.html:94
-#: templates/orgs/our_news/our_news_not_pub.html:91
-#: templates/orgs/rapport/rapport.html:100
+#: templates/orgs/capacity/capacity_not_pub.html:111
+#: templates/orgs/capacity/org_capacity.html:123
+#: templates/orgs/data/data.html:103 templates/orgs/data/data_not_pub.html:96
+#: templates/orgs/devs/dev_not_pub.html:102
+#: templates/orgs/devs/org_devs.html:101
+#: templates/orgs/funding_opport/orgs/fundings_not_pub.html:102
+#: templates/orgs/funding_opport/orgs/org_funding.html:110
+#: templates/orgs/funding_opport/pers/not_pub.html:105
+#: templates/orgs/funding_opport/pers/pub.html:110
+#: templates/orgs/media/media.html:102
+#: templates/orgs/media/media_not_pub.html:95
+#: templates/orgs/news/org_news_not_pub.html:99
+#: templates/orgs/news/orgs_news_news.html:110
+#: templates/orgs/our_news/our_news.html:104
+#: templates/orgs/our_news/our_news_not_pub.html:101
+#: templates/orgs/rapport/rapport.html:110
 #: templates/orgs/rapport/rapport_not_pub.html:87
 #: templates/orgs/research/research.html:94
 #: templates/orgs/research/research_not_pub.html:88
-#: templates/orgs/resources/jobs_not_pub.html:151
-#: templates/orgs/resources/org_jobs.html:146
+#: templates/orgs/resources/jobs_not_pub.html:161
+#: templates/orgs/resources/org_jobs.html:156
 msgid "لقراءة المزيد"
 msgstr "Bihtir bixwîne"
 
-#: templates/orgs/capacity/capacity_not_pub.html:146
+#: templates/orgs/capacity/capacity_not_pub.html:157
 msgid "لا يوجد حالياً فرص بناء قدرات للنشر"
 msgstr "Niha ti derfetên avakirina karînan bo belavkirinê tunene"
 
-#: templates/orgs/capacity/capacity_not_pub.html:156
+#: templates/orgs/capacity/capacity_not_pub.html:167
 #: templates/orgs/capacity/org_add_capacity.html:74
 #: templates/orgs/data/add_data.html:42
-#: templates/orgs/data/data_not_pub.html:142
-#: templates/orgs/devs/dev_not_pub.html:144
+#: templates/orgs/data/data_not_pub.html:152
+#: templates/orgs/devs/dev_not_pub.html:158
 #: templates/orgs/devs/org_add_dev.html:67
-#: templates/orgs/funding_opport/orgs/fundings_not_pub.html:144
+#: templates/orgs/funding_opport/orgs/fundings_not_pub.html:157
 #: templates/orgs/funding_opport/orgs/org_add_funding.html:84
 #: templates/orgs/funding_opport/pers/add.html:98
-#: templates/orgs/funding_opport/pers/not_pub.html:143
+#: templates/orgs/funding_opport/pers/not_pub.html:160
 #: templates/orgs/guid/orgs_guid_conf_pub.html:158
 #: templates/orgs/media/add_media.html:43
-#: templates/orgs/media/media_not_pub.html:141
+#: templates/orgs/media/media_not_pub.html:151
 #: templates/orgs/news/org_add_news.html:61
-#: templates/orgs/news/org_news_not_pub.html:149
-#: templates/orgs/our_news/our_news_not_pub.html:149
+#: templates/orgs/news/org_news_not_pub.html:157
+#: templates/orgs/our_news/our_news_not_pub.html:159
 #: templates/orgs/rapport/add_rapport.html:43
 #: templates/orgs/rapport/rapport_not_pub.html:145
 #: templates/orgs/research/add_research.html:34
 #: templates/orgs/research/research_not_pub.html:145
-#: templates/orgs/resources/jobs_not_pub.html:206
+#: templates/orgs/resources/jobs_not_pub.html:216
 #: templates/orgs/resources/org_add_job.html:88
 #: templates/profiles/layout_profile.html:359
 msgid "ليس لديك الصلاحية لدخول هذه الصفحة"
@@ -2338,7 +2349,7 @@ msgstr "Derfeta avakirina karînan belav bike"
 msgid "فرص بناء القدرات قيد الدراسة"
 msgstr "Derfetên avakirina karînan yên li jêr xwendinê"
 
-#: templates/orgs/capacity/org_capacity.html:154
+#: templates/orgs/capacity/org_capacity.html:169
 msgid " لا يوجد حالياً فرص بناء القدرات "
 msgstr "Niha ti derfetên avakirina karînan tunene"
 
@@ -2380,23 +2391,22 @@ msgid "الموافقة على النشر"
 msgstr "Erêkirin li ser belavkirinê"
 
 #: templates/orgs/capacity/org_capacity_details.html:44
-#: templates/orgs/devs/org_dev_details.html:43
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:42
-#: templates/orgs/funding_opport/pers/detail.html:44
-msgid "إلغاء نشر الدليل"
-msgstr "Ji belavkirina rêbernameyê vegere"
+#, fuzzy
+#| msgid "إضافة فرصة بناء القدرات"
+msgid "إلغاء نشر فرصة بناءالقدرات"
+msgstr "Serbarkirina derfeteke avakirina karînan"
 
-#: templates/orgs/capacity/org_capacity_details.html:50
-#: templates/orgs/capacity/org_capacity_details.html:60
+#: templates/orgs/capacity/org_capacity_details.html:51
+#: templates/orgs/capacity/org_capacity_details.html:61
 msgid "تعديل فرصة بناءالقدرات"
 msgstr "Serastkirina derfeta avakirina karînan"
 
-#: templates/orgs/capacity/org_capacity_details.html:53
+#: templates/orgs/capacity/org_capacity_details.html:54
 #: templates/orgs/devs/org_dev_delete.html:20
 msgid "حذف "
 msgstr "Jêbirin"
 
-#: templates/orgs/capacity/org_capacity_details.html:65
+#: templates/orgs/capacity/org_capacity_details.html:66
 #: templates/orgs/data/detail_data.html:64
 #: templates/orgs/devs/org_dev_details.html:65
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:64
@@ -2410,7 +2420,7 @@ msgstr "Jêbirin"
 msgid "ليس لديك الصلاحية"
 msgstr "Destûra we tune"
 
-#: templates/orgs/capacity/org_capacity_details.html:71
+#: templates/orgs/capacity/org_capacity_details.html:72
 #: templates/orgs/data/detail_data.html:70
 #: templates/orgs/devs/org_dev_details.html:71
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:70
@@ -2424,74 +2434,73 @@ msgstr "Destûra we tune"
 msgid "لا يمكنك التعديل بعد الموافقة على النشر أو ليس لديك الصلاحية"
 msgstr "Piştî lihevkirina weşanê hûn nikarin sererast bikin an destûra we tune"
 
-#: templates/orgs/capacity/org_capacity_details.html:93
+#: templates/orgs/capacity/org_capacity_details.html:94
 #: templates/orgs/funding_opport/orgs/org_funding_details.html:93
 #: templates/orgs/funding_opport/pers/detail.html:95
 #: templates/orgs/resources/org_job_details.html:95
 msgid "تاريخ الإضافة"
 msgstr "Dîrok hate zêdekirin"
 
-#: templates/orgs/capacity/org_capacity_details.html:105
+#: templates/orgs/capacity/org_capacity_details.html:106
 msgid "اسم الجهة المانحة"
 msgstr "Navê aliyê bexşende"
 
-#: templates/orgs/capacity/org_capacity_details.html:122
+#: templates/orgs/capacity/org_capacity_details.html:132
 msgid "اسم الذي أضاف فرصة بناء القدرات"
 msgstr "Navê kesê derfeta avakirina karînan serbar kiriye"
 
-#: templates/orgs/capacity/org_capacity_details.html:151
+#: templates/orgs/capacity/org_capacity_details.html:161
 msgid "وصف فرصة التمويل"
 msgstr "Danasîna derfeta diravpêdanê"
 
-#: templates/orgs/capacity/org_capacity_details.html:172
-#: templates/orgs/resources/org_job_details.html:197
+#: templates/orgs/capacity/org_capacity_details.html:182
+#: templates/orgs/resources/org_job_details.html:207
 msgid "المدينة"
 msgstr "Bajar"
 
-#: templates/orgs/capacity/org_capacity_details.html:178
-#: templates/orgs/capacity/org_capacity_details.html:226
+#: templates/orgs/capacity/org_capacity_details.html:188
+#: templates/orgs/capacity/org_capacity_details.html:236
 #: templates/orgs/data/detail_data.html:99
-#: templates/orgs/devs/org_dev_details.html:174
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:168
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:258
-#: templates/orgs/funding_opport/pers/detail.html:150
-#: templates/orgs/funding_opport/pers/detail.html:164
-#: templates/orgs/funding_opport/pers/detail.html:186
-#: templates/orgs/funding_opport/pers/detail.html:199
-#: templates/orgs/funding_opport/pers/detail.html:212
-#: templates/orgs/funding_opport/pers/detail.html:232
-#: templates/orgs/funding_opport/pers/detail.html:322
+#: templates/orgs/devs/org_dev_details.html:187
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:178
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:268
+#: templates/orgs/funding_opport/pers/detail.html:160
+#: templates/orgs/funding_opport/pers/detail.html:174
+#: templates/orgs/funding_opport/pers/detail.html:196
+#: templates/orgs/funding_opport/pers/detail.html:209
+#: templates/orgs/funding_opport/pers/detail.html:222
+#: templates/orgs/funding_opport/pers/detail.html:242
+#: templates/orgs/funding_opport/pers/detail.html:332
 #: templates/orgs/media/media_detail.html:97
-#: templates/orgs/media/media_detail.html:148
+#: templates/orgs/media/media_detail.html:157
 #: templates/orgs/rapport/detail_rapport.html:133
 #: templates/orgs/research/detail_research.html:97
-#: templates/orgs/resources/jobs_not_pub.html:144
-#: templates/orgs/resources/org_job_details.html:138
-#: templates/orgs/resources/org_job_details.html:203
-#: templates/orgs/resources/org_job_details.html:215
-#: templates/orgs/resources/org_job_details.html:233
-#: templates/orgs/resources/org_jobs.html:139
+#: templates/orgs/resources/jobs_not_pub.html:154
+#: templates/orgs/resources/org_job_details.html:148
+#: templates/orgs/resources/org_job_details.html:213
+#: templates/orgs/resources/org_job_details.html:225
+#: templates/orgs/resources/org_job_details.html:243
+#: templates/orgs/resources/org_jobs.html:149
 #: templates/profiles/particip_detail.html:113
 #: templates/profiles/particip_detail.html:129
-#: templates/profiles/particip_detail.html:204
-#: templates/profiles/particip_detail.html:221
-#: templates/profiles/particip_detail.html:244
-#: templates/profiles/particip_detail.html:256
-#: templates/profiles/particip_detail.html:288
-#: templates/profiles/particip_detail.html:316
-#: templates/profiles/particip_detail.html:330
-#: templates/profiles/particip_detail.html:344
-#: templates/profiles/particip_detail.html:372
-#: templates/profiles/particip_detail.html:387
-#: templates/profiles/particip_detail.html:419
-#: templates/profiles/particip_detail.html:440
+#: templates/profiles/particip_detail.html:205
+#: templates/profiles/particip_detail.html:222
+#: templates/profiles/particip_detail.html:245
+#: templates/profiles/particip_detail.html:262
+#: templates/profiles/particip_detail.html:295
+#: templates/profiles/particip_detail.html:323
+#: templates/profiles/particip_detail.html:337
+#: templates/profiles/particip_detail.html:351
+#: templates/profiles/particip_detail.html:379
+#: templates/profiles/particip_detail.html:397
 #: templates/profiles/particip_detail.html:454
 #: templates/profiles/particip_detail.html:468
 #: templates/profiles/particip_detail.html:482
-#: templates/profiles/particip_detail.html:494
+#: templates/profiles/particip_detail.html:496
 #: templates/profiles/particip_detail.html:508
-#: templates/profiles/particip_detail.html:521
+#: templates/profiles/particip_detail.html:524
 #: templates/profiles/particip_detail.html:537
+#: templates/profiles/particip_detail.html:553
 #: templates/profiles/profile.html:41 templates/profiles/profile.html:52
 #: templates/profiles/profile.html:107 templates/profiles/profile.html:121
 #: templates/profiles/profile.html:142 templates/profiles/profile.html:154
@@ -2506,66 +2515,66 @@ msgstr "Bajar"
 msgid "لم يذكر"
 msgstr "Tuneye"
 
-#: templates/orgs/capacity/org_capacity_details.html:220
+#: templates/orgs/capacity/org_capacity_details.html:230
 msgid "الرابط"
 msgstr "Link"
 
-#: templates/orgs/capacity/org_capacity_details.html:237
-#: templates/orgs/data/detail_data.html:167
-#: templates/orgs/devs/org_dev_details.html:196
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:269
-#: templates/orgs/funding_opport/pers/detail.html:333
-#: templates/orgs/media/media_detail.html:158
-#: templates/orgs/news/orgs_news_detail.html:156
-#: templates/orgs/news/orgs_news_detail.html:175
+#: templates/orgs/capacity/org_capacity_details.html:247
+#: templates/orgs/data/detail_data.html:175
+#: templates/orgs/devs/org_dev_details.html:209
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:279
+#: templates/orgs/funding_opport/pers/detail.html:343
+#: templates/orgs/media/media_detail.html:167
+#: templates/orgs/news/orgs_news_detail.html:164
+#: templates/orgs/news/orgs_news_detail.html:183
 #: templates/orgs/rapport/detail_rapport.html:168
 #: templates/orgs/research/detail_research.html:175
-#: templates/orgs/resources/org_job_details.html:274
+#: templates/orgs/resources/org_job_details.html:284
 msgid "مشاركة على فيسبوك"
 msgstr "Parvekirin li ser Facebookê"
 
-#: templates/orgs/capacity/org_capacity_details.html:240
-#: templates/orgs/data/detail_data.html:170
-#: templates/orgs/devs/org_dev_details.html:199
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:272
-#: templates/orgs/funding_opport/pers/detail.html:336
-#: templates/orgs/media/media_detail.html:161
-#: templates/orgs/news/orgs_news_detail.html:163
-#: templates/orgs/news/orgs_news_detail.html:178
+#: templates/orgs/capacity/org_capacity_details.html:250
+#: templates/orgs/data/detail_data.html:178
+#: templates/orgs/devs/org_dev_details.html:212
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:282
+#: templates/orgs/funding_opport/pers/detail.html:346
+#: templates/orgs/media/media_detail.html:170
+#: templates/orgs/news/orgs_news_detail.html:171
+#: templates/orgs/news/orgs_news_detail.html:186
 #: templates/orgs/rapport/detail_rapport.html:171
 #: templates/orgs/research/detail_research.html:178
-#: templates/orgs/resources/org_job_details.html:277
+#: templates/orgs/resources/org_job_details.html:287
 msgid "مشاركة على تويتر"
 msgstr "Li Twitter-ê parve bikin"
 
-#: templates/orgs/capacity/org_capacity_details.html:243
-#: templates/orgs/data/detail_data.html:173
-#: templates/orgs/devs/org_dev_details.html:202
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:275
-#: templates/orgs/funding_opport/pers/detail.html:339
-#: templates/orgs/media/media_detail.html:164
-#: templates/orgs/news/orgs_news_detail.html:171
-#: templates/orgs/news/orgs_news_detail.html:181
+#: templates/orgs/capacity/org_capacity_details.html:253
+#: templates/orgs/data/detail_data.html:181
+#: templates/orgs/devs/org_dev_details.html:215
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:285
+#: templates/orgs/funding_opport/pers/detail.html:349
+#: templates/orgs/media/media_detail.html:173
+#: templates/orgs/news/orgs_news_detail.html:179
+#: templates/orgs/news/orgs_news_detail.html:189
 #: templates/orgs/rapport/detail_rapport.html:174
 #: templates/orgs/research/detail_research.html:181
-#: templates/orgs/resources/org_job_details.html:280
+#: templates/orgs/resources/org_job_details.html:290
 msgid "مشاركة على لينكدين"
 msgstr "Li LinkedIn parve bikin"
 
-#: templates/orgs/capacity/org_capacity_details.html:246
-#: templates/orgs/data/detail_data.html:176
-#: templates/orgs/devs/org_dev_details.html:205
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:278
-#: templates/orgs/funding_opport/pers/detail.html:342
-#: templates/orgs/media/media_detail.html:167
-#: templates/orgs/news/orgs_news_detail.html:184
+#: templates/orgs/capacity/org_capacity_details.html:256
+#: templates/orgs/data/detail_data.html:184
+#: templates/orgs/devs/org_dev_details.html:218
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:288
+#: templates/orgs/funding_opport/pers/detail.html:352
+#: templates/orgs/media/media_detail.html:176
+#: templates/orgs/news/orgs_news_detail.html:192
 #: templates/orgs/rapport/detail_rapport.html:177
 #: templates/orgs/research/detail_research.html:184
-#: templates/orgs/resources/org_job_details.html:283
+#: templates/orgs/resources/org_job_details.html:293
 msgid "مشاركة على واتس اب"
 msgstr "Li Whatsappê parve bikin"
 
-#: templates/orgs/capacity/org_capacity_details.html:260
+#: templates/orgs/capacity/org_capacity_details.html:270
 msgid "أحدث ثلاثة فرص بناء القدرات"
 msgstr "Sê derfetên çêkirina kapasîteya herî dawî"
 
@@ -2595,7 +2604,7 @@ msgstr "Serbarkirina daxuyaniyê"
 msgid "البيانات"
 msgstr "Daxuyanî"
 
-#: templates/orgs/data/data.html:139
+#: templates/orgs/data/data.html:149
 msgid " لا يوجد حالياً بيانات منشورة للمنظمات"
 msgstr "Niha daxuyanîne belavkirî yên rêxistinan tunene"
 
@@ -2604,7 +2613,7 @@ msgstr "Niha daxuyanîne belavkirî yên rêxistinan tunene"
 msgid "بيانات قيد الدراسة"
 msgstr "Daxuyanîne li jêr xwendinê"
 
-#: templates/orgs/data/data_not_pub.html:132
+#: templates/orgs/data/data_not_pub.html:142
 msgid " لا يوجد حالياً بيانات قيد الدراسة منشورة للمنظمات"
 msgstr "Niha daxyuanîne belavkirî yên rêxistinan yên li jêr xwendinê tunene"
 
@@ -2643,23 +2652,23 @@ msgstr "Serastkirina daxuyaniyê"
 msgid "تاريخ إضافة البيان"
 msgstr "Dîroka serbarkirina daxuyaniyê"
 
-#: templates/orgs/data/detail_data.html:118
+#: templates/orgs/data/detail_data.html:126
 msgid "اسم الذي أضاف البيان"
 msgstr "Navê kesê ku daxuyanî serbar kiriye"
 
-#: templates/orgs/data/detail_data.html:132
+#: templates/orgs/data/detail_data.html:140
 msgid "محتوى البيان"
 msgstr "Naveroka daxuyaniyê"
 
-#: templates/orgs/data/detail_data.html:142
+#: templates/orgs/data/detail_data.html:150
 msgid "للاطلاع على البيان"
 msgstr "Ku daxuyaniyê bibînin"
 
-#: templates/orgs/data/detail_data.html:190
+#: templates/orgs/data/detail_data.html:198
 msgid "أحدث ثلاثة بيانات"
 msgstr "Sê daxuyaniyê herî paşîn"
 
-#: templates/orgs/data/detail_data.html:201
+#: templates/orgs/data/detail_data.html:209
 msgid "لعرض ملف المحتوى , ادخل على التفاصيل"
 msgstr "Ji bo dîtina pelê naverokê, hûrguliyan têkevinê"
 
@@ -2673,7 +2682,7 @@ msgstr "Rêbernameya pêşxistinê yên li jêr xwendinê"
 msgid "اضافة دليل التطوير"
 msgstr "Serbarkirina rêbernameya pêşxistinê"
 
-#: templates/orgs/devs/dev_not_pub.html:134
+#: templates/orgs/devs/dev_not_pub.html:148
 msgid "لا يوجد حالياً دليل تطوير منشور من قبل المنظمات قيد الدراسة"
 msgstr ""
 "Vêga tu rêbernameyek pêşkeftinê ya ku ji hêla rêxistinên ku vekolîn ve hatî "
@@ -2706,6 +2715,10 @@ msgstr ""
 msgid "تفاصيل دليل التطوير"
 msgstr "Hurguliyên rêbernameya pêşxistinê"
 
+#: templates/orgs/devs/org_dev_details.html:43
+msgid "إلغاء نشر الدليل"
+msgstr "Ji belavkirina rêbernameyê vegere"
+
 #: templates/orgs/devs/org_dev_details.html:49
 #: templates/orgs/devs/org_dev_details.html:60
 msgid "تعديل الدليل"
@@ -2720,19 +2733,19 @@ msgstr "Sernav"
 msgid "  تاريخ الإضافة "
 msgstr "Dîroka serbarkirinê"
 
-#: templates/orgs/devs/org_dev_details.html:130
+#: templates/orgs/devs/org_dev_details.html:143
 msgid "اسم الذي أضاف دليل التطوير"
 msgstr "Navê kesê / a ku rêberê pêşveçûnê zêde kir"
 
-#: templates/orgs/devs/org_dev_details.html:168
+#: templates/orgs/devs/org_dev_details.html:181
 msgid "تاريخ الإعداد أو النشر أو التأليف"
 msgstr "Dîroka amadekirin, weşandin an nivîsandinê"
 
-#: templates/orgs/devs/org_dev_details.html:227
+#: templates/orgs/devs/org_dev_details.html:240
 msgid "أحدث ثلاثة مدخلات"
 msgstr "Sê rêberê pêşveçûna herî dawî"
 
-#: templates/orgs/devs/org_devs.html:139
+#: templates/orgs/devs/org_devs.html:147
 msgid "لا يوجد حالياً دليل تطوير منشور من قبل المنظمات"
 msgstr "Niha rêbernameyeke pêşxistinê belavkirî ji aliyê rêxistinan ve tunene"
 
@@ -2755,7 +2768,7 @@ msgstr "Derfetên diravpêdana kesan"
 #: templates/orgs/funding_opport/orgs/fundings_not_pub.html:4
 #: templates/orgs/funding_opport/orgs/fundings_not_pub.html:13
 #: templates/orgs/funding_opport/orgs/org_funding.html:31
-#: templates/orgs/funding_opport/orgs/org_funding.html:34
+#: templates/orgs/funding_opport/orgs/org_funding.html:35
 #: templates/orgs/funding_opport/pers/pub.html:30
 #: templates/orgs/funding_opport/pers/pub.html:33
 msgid "فرص التمويل قيد الدراسة"
@@ -2769,7 +2782,7 @@ msgstr "Derfetên diravpêdanê yên li jêr xwendinê"
 msgid "اضافة فرصة تمويل"
 msgstr "Serbarkirina derfeteke diravpêdanê"
 
-#: templates/orgs/funding_opport/orgs/fundings_not_pub.html:135
+#: templates/orgs/funding_opport/orgs/fundings_not_pub.html:148
 msgid "لا يوجد حالياً فرص تمويل للموافقة على النشر"
 msgstr "Vêga ji bo erêkirina weşanê ti derfetên darayî tune"
 
@@ -2790,7 +2803,7 @@ msgstr "Serbarkirin"
 msgid "تعديل فرصة التمويل"
 msgstr "Serastkirina derfeta diravpêdanê"
 
-#: templates/orgs/funding_opport/orgs/org_funding.html:140
+#: templates/orgs/funding_opport/orgs/org_funding.html:156
 msgid "لا يوجد حالياً فرص تمويل منشورة من قبل المنظمات"
 msgstr "Niha derfetine diravpêdanê belavkirî ji aliyê rêxistinan ve tunene"
 
@@ -2810,12 +2823,19 @@ msgstr ""
 msgid "تفاصيل فرصة التمويل"
 msgstr "Hurguliyên derfeta diravpêdanê"
 
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:132
-#: templates/orgs/funding_opport/pers/detail.html:133
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:42
+#: templates/orgs/funding_opport/pers/detail.html:44
+#, fuzzy
+#| msgid "إلغاء نشر فرصة العمل"
+msgid "إلغاء نشر فرصة التمويل"
+msgstr "Ji belavkirina derfeta kar vegere"
+
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:142
+#: templates/orgs/funding_opport/pers/detail.html:143
 msgid "اسم الذي أضاف فرصة التمويل"
 msgstr "Navê kesê ku derfeta diravpêdanê serbar kiriye"
 
-#: templates/orgs/funding_opport/orgs/org_funding_details.html:291
+#: templates/orgs/funding_opport/orgs/org_funding_details.html:301
 msgid "أحدث فرص تمويل المنظمات"
 msgstr "Nûtirîn derfetên diravpêdana rêxistinan"
 
@@ -2833,7 +2853,7 @@ msgstr "Ma hûn pê ewle ne ku hûn dixwazin fersenda darayî jê bikin?"
 msgid "تفاصيل فرصة تمويل للأفراد"
 msgstr "Hurguliyên derfeta diravpêdanê ji bo kesan"
 
-#: templates/orgs/funding_opport/pers/detail.html:355
+#: templates/orgs/funding_opport/pers/detail.html:365
 msgid "أحدث ثلاثة فرص تمويل للأفراد"
 msgstr "Sê derfetên fînansê yên herî paşîn ji bo kesan"
 
@@ -2848,8 +2868,8 @@ msgstr "Serastkirina derfeta diravpêdanê ji bo kesan"
 msgid "فرص التمويل للأفراد للموافقة على النشر"
 msgstr "Derfeta diravpêdanê ji bo kesan ji bo erêkirin li ser belavkirinê"
 
-#: templates/orgs/funding_opport/pers/not_pub.html:134
-#: templates/orgs/funding_opport/pers/pub.html:139
+#: templates/orgs/funding_opport/pers/not_pub.html:151
+#: templates/orgs/funding_opport/pers/pub.html:156
 msgid "لا يوجد حالياً فرص للأفراد تمويل منشورة من قبل المنظمات"
 msgstr ""
 "Niha derfetine diravpêdanê ji bo kesan belavkirî ji aliyê rêxistinan ve "
@@ -2859,6 +2879,10 @@ msgstr ""
 #: templates/orgs/funding_opport/pers/pub.html:11
 msgid "فرص التمويل للأفراد"
 msgstr "Derfetên diravpêdanê ji bo kesan"
+
+#: templates/orgs/guid/new_filtre.html:3
+msgid "New Filtre"
+msgstr ""
 
 #: templates/orgs/guid/orgs_guid_conf_pub.html:3
 #: templates/orgs/guid/orgs_guid_conf_pub.html:16
@@ -2877,14 +2901,14 @@ msgid "تقديم طلب اشتراك"
 msgstr "Pêşkêşkirina daxwaznameya bejdariyê"
 
 #: templates/orgs/guid/orgs_guid_conf_pub.html:93
-#: templates/orgs/guid/orgs_guide.html:153 templates/orgs/home.html:147
+#: templates/orgs/guid/orgs_guide.html:164 templates/orgs/home.html:152
 #: templates/profiles/orgs_orders_etude.html:34
 #: templates/profiles/orgs_orders_published.html:33
 msgid "للمزيد عن المنظمة"
 msgstr "Bihtir derbarê rêxistinê"
 
 #: templates/orgs/guid/orgs_guid_conf_pub.html:125
-#: templates/orgs/guid/orgs_guide.html:185
+#: templates/orgs/guid/orgs_guide.html:196
 msgid "إجمالي عدد المنظمات"
 msgstr "Tevahiya hejmara rêxistinan"
 
@@ -2903,11 +2927,11 @@ msgstr "Bihtir bixwîne"
 msgid "طلبات اشتراك المنظمات قيد الدراسة"
 msgstr "Daxwaznameyên bejdariyê yên rêxistinan yên li jêr xwendinê"
 
-#: templates/orgs/guid/orgs_guide.html:125
+#: templates/orgs/guid/orgs_guide.html:136
 msgid "كافة المنظمات"
 msgstr "Hemî rêxistin"
 
-#: templates/orgs/guid/orgs_guide.html:202
+#: templates/orgs/guid/orgs_guide.html:213
 #: templates/profiles/orgs_orders_published.html:81
 msgid "حالياً لا يوجد منظمات مسجله او موافق عليها"
 msgstr "Niha rêxistinine tomarkirî yan erêkirî tunene"
@@ -2920,31 +2944,31 @@ msgstr "Naveroka civaka sivîl li gorî warê kar"
 msgid "المنظمات المضافة حديثاً"
 msgstr "Rêxistinên nû hatine serbarkirin"
 
-#: templates/orgs/home.html:171
+#: templates/orgs/home.html:176
 msgid "أحدث اﻷخبار"
 msgstr "Dawîn nûçe"
 
-#: templates/orgs/home.html:186
+#: templates/orgs/home.html:195
 msgid "للمزيد عن الخبر"
 msgstr "Bihtir li ser nûçeyê"
 
-#: templates/orgs/home.html:208
+#: templates/orgs/home.html:217
 msgid "أحدث فرص العمل"
 msgstr "Nûtirîn derfetên kar"
 
-#: templates/orgs/home.html:221
+#: templates/orgs/home.html:234
 msgid "للمزيد عن فرصة العمل"
 msgstr "Bihtir derbarê derfeta kar"
 
-#: templates/orgs/home.html:243
+#: templates/orgs/home.html:256
 msgid "أحدث فرص بناء القدرات"
 msgstr "Nûtirîn derfetên avakirina karînan"
 
-#: templates/orgs/home.html:256
+#: templates/orgs/home.html:276
 msgid "للمزيد عن فرصة بناء القدرات"
 msgstr "Bihtir derbarê derfeta avakirina karînan"
 
-#: templates/orgs/home.html:297 templates/register/signe-up.html:34
+#: templates/orgs/home.html:317 templates/register/signe-up.html:34
 msgid "اشترك"
 msgstr "Bejdar bibe"
 
@@ -2984,7 +3008,7 @@ msgstr "Serastkirina naveroka bihîstinî û dîtinî "
 msgid "المحتوى السمعي و البصري"
 msgstr "Naveroka bihîstinî û dîtinî"
 
-#: templates/orgs/media/media.html:139
+#: templates/orgs/media/media.html:149
 msgid " لا يوجد حالياً محتوى سمعي و بصري منشور من قبل المنظمات"
 msgstr ""
 "Niha naverokeke bihîstinî û dîtinî  belavkirî ji aliyê rêxistinan ve tunene"
@@ -3011,15 +3035,15 @@ msgstr "Serastkirina naverokê"
 msgid "تاريخ إضافة المحتوى"
 msgstr "Dîroka serbarkirina naverokê"
 
-#: templates/orgs/media/media_detail.html:116
+#: templates/orgs/media/media_detail.html:125
 msgid "اسم الذي أضاف المحتوى"
 msgstr "Navê kesê ku naverok serbar kiriye"
 
-#: templates/orgs/media/media_detail.html:124
+#: templates/orgs/media/media_detail.html:133
 msgid "مضمون المحتوى السمعي و البصري"
 msgstr "Hurguliyên naveroka bihîstinî û dîtinî"
 
-#: templates/orgs/media/media_detail.html:179
+#: templates/orgs/media/media_detail.html:188
 msgid "أحدث ثلاثة محتوى سمعي و بصري"
 msgstr "Sê paşiya naveroka bihîst-dîtbarî"
 
@@ -3028,7 +3052,7 @@ msgstr "Sê paşiya naveroka bihîst-dîtbarî"
 msgid "المحتوى السمعي و البصري قيد الدراسة"
 msgstr "Naveroka bihîstinî û dîtinî ya li jêr xwendinê"
 
-#: templates/orgs/media/media_not_pub.html:132
+#: templates/orgs/media/media_not_pub.html:142
 msgid ""
 "لا يوجد حالياً محتوى سمعي و بصري منشور من قبل المنظمات للموافقة على النشر"
 msgstr ""
@@ -3073,8 +3097,8 @@ msgstr "Tu ji xwesteka xwe ji bo jêbirina nûçeya bi vê navnîşanê, piştra
 msgid "حذف الخبر"
 msgstr "Jêbirina nûçeyê"
 
-#: templates/orgs/news/org_news_not_pub.html:137
-#: templates/orgs/our_news/our_news_not_pub.html:137
+#: templates/orgs/news/org_news_not_pub.html:145
+#: templates/orgs/our_news/our_news_not_pub.html:147
 msgid "لا يوجد حالياً أخبار للموافقة على النشر"
 msgstr "Niha nûçe ji bo erêkirin li ser belavkirinê tunene"
 
@@ -3090,16 +3114,16 @@ msgstr "Ji belavkirina nûçeyê vegere"
 msgid "تاريخ إضافة الخبر"
 msgstr "Dîroka serbarkirina nûçeyê"
 
-#: templates/orgs/news/orgs_news_detail.html:123
+#: templates/orgs/news/orgs_news_detail.html:131
 msgid "اسم الذي أضاف الخبر"
 msgstr "Navê kesê ku nûçe serbar kiriye"
 
-#: templates/orgs/news/orgs_news_detail.html:205
+#: templates/orgs/news/orgs_news_detail.html:213
 msgid "أحدث ثلاثة أخبار"
 msgstr "Nûtirîn sê nûçe"
 
-#: templates/orgs/news/orgs_news_news.html:146
-#: templates/orgs/rapport/rapport.html:147
+#: templates/orgs/news/orgs_news_news.html:155
+#: templates/orgs/rapport/rapport.html:157
 msgid "لا يوجد حالياً أخبار منشورة للمنظمات"
 msgstr "Niha nûçene belavkirî ji aliyê rêxistinan ve tunene"
 
@@ -3122,7 +3146,7 @@ msgstr "Nûçeyên derwazeyê"
 msgid "أخبار البوابةقيد الدراسة"
 msgstr "Nûçeyên derwazeyê yên li jêr xwendinê"
 
-#: templates/orgs/our_news/our_news.html:140
+#: templates/orgs/our_news/our_news.html:150
 msgid "لا يوجد حالياً أخبار جديدة عن البوابة"
 msgstr "Niha nûçene nû derbarê derwazeyê tunene"
 
@@ -3277,30 +3301,30 @@ msgstr " Lêkolînine derveyî yên li jêr xwendinê tunene"
 msgid "فرص العمل قيد الدراسة"
 msgstr "Derfetên kar yên li jêr xwendinê"
 
-#: templates/orgs/resources/jobs_not_pub.html:129
-#: templates/orgs/resources/org_jobs.html:124
+#: templates/orgs/resources/jobs_not_pub.html:139
+#: templates/orgs/resources/org_jobs.html:134
 msgid "اسم العمل"
 msgstr "Navê kar"
 
-#: templates/orgs/resources/jobs_not_pub.html:135
-#: templates/orgs/resources/org_job_details.html:222
-#: templates/orgs/resources/org_jobs.html:130
+#: templates/orgs/resources/jobs_not_pub.html:145
+#: templates/orgs/resources/org_job_details.html:232
+#: templates/orgs/resources/org_jobs.html:140
 msgid "مدة العمل"
 msgstr "Dema kar"
 
-#: templates/orgs/resources/jobs_not_pub.html:139
-#: templates/orgs/resources/org_job_details.html:228
-#: templates/orgs/resources/org_jobs.html:134
+#: templates/orgs/resources/jobs_not_pub.html:149
+#: templates/orgs/resources/org_job_details.html:238
+#: templates/orgs/resources/org_jobs.html:144
 msgid "شهر"
 msgstr "Meh"
 
-#: templates/orgs/resources/jobs_not_pub.html:141
-#: templates/orgs/resources/org_job_details.html:230
-#: templates/orgs/resources/org_jobs.html:136
+#: templates/orgs/resources/jobs_not_pub.html:151
+#: templates/orgs/resources/org_job_details.html:240
+#: templates/orgs/resources/org_jobs.html:146
 msgid "أشهر"
 msgstr "meh"
 
-#: templates/orgs/resources/jobs_not_pub.html:196
+#: templates/orgs/resources/jobs_not_pub.html:206
 msgid "لا يوجد حالياً فرص عمل للموافقة على النشر"
 msgstr "Niha derfetine kar ji bo erêkirin li ser belavkirinê tunene"
 
@@ -3342,27 +3366,27 @@ msgstr "Ji belavkirina derfeta kar vegere"
 msgid "اسم فرصة العمل"
 msgstr "Navê derfeta kar"
 
-#: templates/orgs/resources/org_job_details.html:149
+#: templates/orgs/resources/org_job_details.html:159
 msgid "اسم الذي أضاف فرصة العمل"
 msgstr "Navê kesê derfeta kar serbar kiriye"
 
-#: templates/orgs/resources/org_job_details.html:178
+#: templates/orgs/resources/org_job_details.html:188
 msgid "وصف فرصة العمل"
 msgstr "Danasîna derfeta kar"
 
-#: templates/orgs/resources/org_job_details.html:240
+#: templates/orgs/resources/org_job_details.html:250
 msgid "الخبرة المطلوبة"
 msgstr "Şarezahî pêwist e"
 
-#: templates/orgs/resources/org_job_details.html:249
+#: templates/orgs/resources/org_job_details.html:259
 msgid "تاريخ إغلاق التقدم للوظيفة"
 msgstr "Dîroka daxistina pêşkêşkirinê li ser fermanberiyê"
 
-#: templates/orgs/resources/org_job_details.html:295
+#: templates/orgs/resources/org_job_details.html:305
 msgid "أحدث ثلاثة فرص عمل"
 msgstr "Sê derfetên kar ên herî dawî"
 
-#: templates/orgs/resources/org_jobs.html:191
+#: templates/orgs/resources/org_jobs.html:201
 msgid "لا يوجد حالياً فرص عمل"
 msgstr "Niha derfetên kar tunene"
 
@@ -3467,15 +3491,17 @@ msgstr "Timamkirina dosiyaya kesayetî ya rêxistinê"
 #: templates/profiles/org_profile_form.html:47
 #: templates/profiles/org_profile_form.html:53
 #: templates/profiles/org_profile_form.html:83
+#: templates/profiles/org_profile_form.html:89
 #: templates/profiles/org_profile_update.html:34
 #: templates/profiles/org_profile_update.html:40
 #: templates/profiles/org_profile_update.html:46
 #: templates/profiles/org_profile_update.html:81
+#: templates/profiles/org_profile_update.html:87
 msgid "هذا الحقل لا يقبل أقل من 3 حروف و لا يقبل اﻷحرف الخاصه و الرموز"
 msgstr "Ev valahî kêmtir ji sê tîpan û tîpên taybet û nîşanan napejirîne"
 
-#: templates/profiles/org_profile_form.html:194
-#: templates/profiles/org_profile_form.html:214
+#: templates/profiles/org_profile_form.html:206
+#: templates/profiles/org_profile_form.html:226
 msgid "إضافة مكان العمل"
 msgstr "Cihê kar lê zêde bikin"
 
@@ -3528,60 +3554,60 @@ msgstr "Zaniyariyên peywendiyê bi rêxistinê"
 msgid "جديد المنظمة"
 msgstr "Nû li cem rêxistinê"
 
-#: templates/profiles/particip_detail.html:183
+#: templates/profiles/particip_detail.html:184
 #: templates/profiles/profile.html:79
 msgid "معلومات عن المنظمة"
 msgstr "Zaniyarî li ser rêxistinê"
 
-#: templates/profiles/particip_detail.html:300
+#: templates/profiles/particip_detail.html:307
 #: templates/profiles/profile.html:203
 msgid "نعم مسجلة"
 msgstr "Belê tomarkirî ye"
 
-#: templates/profiles/particip_detail.html:302
+#: templates/profiles/particip_detail.html:309
 #: templates/profiles/profile.html:205
 msgid "غير مسجلة"
 msgstr "Ne tomarkirî ye"
 
-#: templates/profiles/particip_detail.html:370
+#: templates/profiles/particip_detail.html:377
 #: templates/profiles/profile.html:277
 msgid "ليست عضو"
 msgstr "Ne endam e"
 
-#: templates/profiles/particip_detail.html:380
+#: templates/profiles/particip_detail.html:387
 #: templates/profiles/profile.html:285
 msgid "اسم الشبكة أو التحالف"
 msgstr "Navê tor yan hevpeymaniyê"
 
-#: templates/profiles/particip_detail.html:395
+#: templates/profiles/particip_detail.html:406
 msgid "هل تم التحقق من قبل اﻹدارة على أنها منظمة؟"
 msgstr "Rêveberiyê piştrast kir ku rêxistin e?"
 
-#: templates/profiles/particip_detail.html:400
+#: templates/profiles/particip_detail.html:411
 msgid "تم التحقق و الموافقة"
 msgstr "Hat piştrastkirin û erêkirin"
 
-#: templates/profiles/particip_detail.html:403
+#: templates/profiles/particip_detail.html:414
 msgid "لم يتم التحقق بعد"
 msgstr "Hîn nehatiyê piştrastkirin"
 
-#: templates/profiles/particip_detail.html:560
+#: templates/profiles/particip_detail.html:576
 msgid "أخبار المنظمة"
 msgstr "Nûçeyên rêxistinê"
 
-#: templates/profiles/particip_detail.html:567
+#: templates/profiles/particip_detail.html:583
 msgid "التقارير و الدراسات للمنظمة"
 msgstr "Raport û lêkolînên rêxistinê"
 
-#: templates/profiles/particip_detail.html:574
+#: templates/profiles/particip_detail.html:590
 msgid "البيانات للمنظمة"
 msgstr "Daxuyaniyên rêxistinê"
 
-#: templates/profiles/particip_detail.html:582
+#: templates/profiles/particip_detail.html:598
 msgid "المحتوى السمعي و البصري للمنظمة"
 msgstr "Naveroka bihîstinî û dîtinî ya rêxistinê"
 
-#: templates/profiles/particip_detail.html:590
+#: templates/profiles/particip_detail.html:606
 msgid "فرص العمل للمنظمة"
 msgstr "Derfetên kar ji bo rêxistinê"
 

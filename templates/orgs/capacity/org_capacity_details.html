@@ -41,7 +41,8 @@
                     {% csrf_token %} {{ form.publish }}
                     <div class="form-group">
                         <button type="submit" id="org_deconfirm_btn" class="dropdown-item"
-                            title="{% trans 'إلغاء نشر الدليل' %}">{% trans 'إلغاء نشر الدليل' %} <i class="fa fa-ban {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
+                            title="{% trans 'إلغاء نشر فرصة بناءالقدرات' %}">{% trans 'إلغاء نشر فرصة بناءالقدرات' %} <i
+                                class="fa fa-ban {% if LANGUAGE_CODE == 'ar' %} mr-4 float-left {% else %} ml-4 float-right
     {% endif %}" aria-hidden="true"></i></button>
                     </div>
                 </form>
@@ -108,15 +109,15 @@
             <span class="col-9">
                 {% if capacity.org_name %}
                 <a href="{% url 'particip_detail' capacity.org_name.id %}" class="nav-link text-dark pl-0 pr-0">
-                        {% if LANGUAGE_CODE != 'ar' %}
-                        {% if capacity.org_name.name_en_ku %}
-                        <h3 class="">{{ capacity.org_name.name_en_ku }}</h3>
-                        {% else %}
-                        <h3 class="">{{ capacity.org_name }}</h3>
-                        {% endif %}
-                        {% elif LANGUAGE_CODE == 'ar' %}
-                        <h3 class="">{{ capacity.org_name }}</h3>
-                        {% endif %}
+                    {% if LANGUAGE_CODE != 'ar' %}
+                    {% if capacity.org_name.name_en_ku %}
+                    <h3 class="">{{ capacity.org_name.name_en_ku }}</h3>
+                    {% else %}
+                    <h3 class="">{{ capacity.org_name }}</h3>
+                    {% endif %}
+                    {% elif LANGUAGE_CODE == 'ar' %}
+                    <h3 class="">{{ capacity.org_name }}</h3>
+                    {% endif %}
                 </a>
                 {% else %}
                 : {{ capacity.name_capacity }}
