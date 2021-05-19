@@ -118,7 +118,8 @@ DATABASES = {
         'ENGINE': 'sql_server.pyodbc',
         'NAME': 'SCG_DB_V0',
         'USER': 'khalil',
-        'PASSWORD': '5617944kK',
+        'PASSWORD': 'LOLOsoso9087!',
+        # 'PASSWORD': '5617944kK',
         'HOST': 'scg-server-v0.database.windows.net',
         'PORT': '1433',
         'OPTIONS': {
